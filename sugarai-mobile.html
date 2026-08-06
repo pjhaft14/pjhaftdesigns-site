@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A SugarAI Mobile case study by PJ Haft about redesigning mobile CRM around the field sales visit."
+    />
+    <title>From CRM Access to Visit Readiness | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260805-03" />
+    <script src="site-nav.js?v=20260724-03" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PJ Haft home">
+        <span class="brand-mark">P</span>
+        <span>PJ Haft</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
+        <a aria-current="page" href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="case-study sugarai-mobile-case">
+      <section class="case-hero" aria-labelledby="case-title">
+        <div>
+          <p class="eyebrow">SugarAI &middot; Mobile CRM &middot; Manufacturing field sales</p>
+          <h1 id="case-title">From CRM access to visit readiness.</h1>
+          <p>
+            I redesigned Sugar mobile around the field rep's day: prepare for the next
+            visit, answer customer questions in the moment, capture what changed, and
+            sync clean updates back to CRM.
+          </p>
+        </div>
+        <dl class="case-meta">
+          <div>
+            <dt>Role</dt>
+            <dd>Lead UX designer</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Prototype flows recorded</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>Product strategy, UX, UI</dd>
+          </div>
+          <div>
+            <dt>Platform</dt>
+            <dd>Mobile</dd>
+          </div>
+        </dl>
+      </section>
+
+      <aside class="case-toc" aria-label="SugarAI Mobile case study sections">
+        <p class="case-toc__label">On this page</p>
+        <nav class="case-toc__links">
+          <a href="#problem" data-toc-label="Problem">Problem</a>
+          <a href="#anatomy" data-toc-label="Problem anatomy">Problem anatomy</a>
+          <a href="#approach" data-toc-label="Research">Research</a>
+          <a href="#challenge" data-toc-label="Challenge">Challenge</a>
+          <a href="#decisions" data-toc-label="Decisions">Decisions</a>
+          <a href="#before-after" data-toc-label="Before/after">Before/after</a>
+          <a href="#concept" data-toc-label="Concept">Concept</a>
+          <a href="#testing" data-toc-label="Testing">Testing</a>
+        </nav>
+      </aside>
+
+      <section class="case-section case-intro" id="problem">
+        <div>
+          <p class="section-kicker">The problem</p>
+          <h2>Mobile CRM gave reps access, but not momentum.</h2>
+        </div>
+        <div class="case-copy">
+          <p>
+            Sugar mobile gave reps access to accounts, emails, notes, contracts, leads,
+            opportunities, dashboards, and reports. That access mattered, but the app
+            still made reps assemble what mattered while moving through a customer day.
+          </p>
+          <p>
+            Most modules reused the same pattern: list view, record view, tabs, related
+            records, and long create forms. The consistency was useful, but it reflected
+            the database more than the conditions reps worked in.
+          </p>
+          <blockquote class="case-quote">
+            The existing experience starts with the system. The redesign starts with the
+            rep&rsquo;s next customer.
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="case-section" id="anatomy">
+        <div>
+          <p class="section-kicker">Problem anatomy</p>
+          <h2>The data was there. The mobile workflow got in the way.</h2>
+        </div>
+        <div class="case-copy">
+          <p>
+            Dashboards showed activity without surfacing the next move. Lists exposed
+            records without ranking urgency. Record views scattered context across tabs
+            and field rows. Create screens asked for more input than a rep should handle
+            on a plant floor.
+          </p>
+          <p>
+            The opportunity was to move priority, context, and capture into the moment
+            of customer work.
+          </p>
+        </div>
+      </section>
+
+      <section class="current-mobile-patterns" aria-labelledby="current-mobile-title">
+        <div class="current-mobile-patterns__intro">
+          <p class="section-kicker">Current app examples</p>
+          <h2 id="current-mobile-title">The current flow made reps rebuild context on the go.</h2>
+          <p>
+            The workflow was possible, but not optimized for mobile use. That created
+            onboarding friction, lowered rep adoption, and pushed people toward pen and
+            paper or other temporary capture methods until they got back to the office.
+          </p>
+        </div>
+        <figure class="current-phone-showcase">
+          <div class="current-phone-grid" aria-label="Current Sugar mobile experience examples">
+            <article class="current-phone-card">
+              <p>Home dashboard</p>
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/current/current-home-dashboard.png"
+                  alt="Current Sugar mobile Home Dashboard with generic dashboard tiles."
+                />
+              </div>
+            </article>
+            <article class="current-phone-card">
+              <p>List view</p>
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/current/current-list-view.png"
+                  alt="Current Sugar mobile Accounts list view with dense rows of account data."
+                />
+              </div>
+            </article>
+            <article class="current-phone-card">
+              <p>Record view</p>
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/current/current-record-view.png"
+                  alt="Current Sugar mobile Account record with action icons, tabs, and field rows."
+                />
+              </div>
+            </article>
+            <article class="current-phone-card">
+              <p>Create form</p>
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/current/current-create-form.png"
+                  alt="Current Sugar mobile Create Contract form with many fields and required inputs."
+                />
+              </div>
+            </article>
+          </div>
+          <figcaption>
+            Useful data was available, but reps had to find it, interpret it, and record
+            updates through too many mobile steps.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section report-audience" id="approach">
+        <div>
+          <p class="section-kicker">Field research</p>
+          <h2>Design for the rep standing inside the plant.</h2>
+        </div>
+        <div>
+          <div class="case-copy">
+            <p>
+              I met with five sales reps to understand how field work actually happens:
+              on the road, inside customer facilities, on noisy factory floors, in
+              warehouses, and in low-connectivity areas. They needed account context,
+              product data, ERP inventory, service history, pricing, and fast capture
+              without stopping the conversation.
+            </p>
+            <p>
+              The pattern was consistent: reps were willing to capture information, but
+              not if the app interrupted the conversation or forced them to rebuild
+              context later.
+            </p>
+          </div>
+          <div class="report-persona-grid">
+            <article>
+              <p class="persona-role">Before the visit</p>
+              <h3>What should I know before I walk in?</h3>
+              <ul>
+                <li><b>Route and site</b><span>Where am I going and what site context matters?</span></li>
+                <li><b>Account health</b><span>What changed since the last visit?</span></li>
+                <li><b>Open issues</b><span>Which orders, tickets, or equipment risks need attention?</span></li>
+              </ul>
+            </article>
+            <article>
+              <p class="persona-role">During the visit</p>
+              <h3>What can I answer or promise right now?</h3>
+              <ul>
+                <li><b>Product lookup</b><span>Specs, blueprints, and compatible parts.</span></li>
+                <li><b>ERP context</b><span>Inventory, lead times, and production schedule.</span></li>
+                <li><b>Capture</b><span>Notes, cards, photos, tasks, and stage updates.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section design-challenge" id="challenge">
+        <div>
+          <p class="section-kicker">Design challenge</p>
+          <h2>The redesign had to solve four things at once.</h2>
+        </div>
+        <div class="case-copy">
+          <p>
+            The interviews made the challenge concrete. The redesign needed to show the
+            next customer action, keep account and site context close, support product
+            and service questions during the visit, and turn messy field capture into
+            reviewable CRM updates.
+          </p>
+          <p>
+            SugarAI could not simply replace modules with chat. It had to reduce the
+            work around the visit while keeping CRM, ERP, catalog, and service context
+            visible enough for reps to trust.
+          </p>
+        </div>
+      </section>
+
+      <section class="design-decisions" id="decisions" aria-labelledby="decision-title">
+        <div class="design-decisions__intro">
+          <p class="section-kicker">Key decisions</p>
+          <h2 id="decision-title">Four choices shaped the redesign.</h2>
+        </div>
+        <div class="design-decision-grid">
+          <article>
+            <span>01</span>
+            <h3>Start with Today</h3>
+            <p>
+              A field rep does not wake up needing Accounts. They need to know where to
+              go, what changed, and what to do when they arrive.
+            </p>
+            <dl class="decision-tradeoff">
+              <div><dt>Considered</dt><dd>A faster module launcher for accounts, tasks, and opportunities.</dd></div>
+              <div><dt>Chose</dt><dd>A Today view organized around the next customer visit.</dd></div>
+            </dl>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Make sites first-class</h3>
+            <p>
+              Manufacturing accounts often span plants, warehouses, HQ offices, and
+              service locations. Each site carries different contacts, risks, and work.
+            </p>
+            <dl class="decision-tradeoff">
+              <div><dt>Considered</dt><dd>Treating every location as detail inside the account record.</dd></div>
+              <div><dt>Chose</dt><dd>Site-level visit context so reps could prepare for the actual place they were entering.</dd></div>
+            </dl>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Brand the workspace</h3>
+            <p>
+              Customer identity anchors the workspace. SugarAI appears where it helps:
+              briefings, prompts, capture, and review.
+            </p>
+            <dl class="decision-tradeoff">
+              <div><dt>Considered</dt><dd>Making SugarAI the primary surface for every task.</dd></div>
+              <div><dt>Chose</dt><dd>Use AI as a layer inside customer context, not a separate destination.</dd></div>
+            </dl>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Review before saving</h3>
+            <p>
+              Messy field input becomes suggested CRM updates the rep can inspect,
+              edit, remove, and save with confidence.
+            </p>
+            <dl class="decision-tradeoff">
+              <div><dt>Considered</dt><dd>Auto-saving dictated notes directly to the CRM record.</dd></div>
+              <div><dt>Chose</dt><dd>A review step so reps could trust what changed before committing it.</dd></div>
+            </dl>
+          </article>
+        </div>
+        <div class="sugarai-system-note">
+          <p>
+            These choices became a reusable mobile system: priority visit cards, route
+            cards, offline pills, source badges, quick actions, live capture, outcome
+            controls, suggested update rows, and Ask SugarAI prompts.
+          </p>
+          <p>
+            The palette separates readiness, availability, AI assistance, and success
+            states so the interface does not make every action feel equally urgent.
+          </p>
+        </div>
+      </section>
+
+      <section class="report-transformation sugarai-transformation" id="before-after" aria-labelledby="sugarai-transformation-title">
+        <header class="report-transformation__intro">
+          <div>
+            <p class="section-kicker">Before and after</p>
+            <h2 id="sugarai-transformation-title">Move CRM work into the rhythm of the visit.</h2>
+          </div>
+          <p>
+            The redesign does not remove CRM structure. It brings the right records,
+            context, and capture steps forward when they help the rep act.
+          </p>
+        </header>
+
+        <div class="report-transformation__comparison">
+          <article class="transformation-panel transformation-panel--before">
+            <div class="transformation-panel__heading">
+              <span class="transformation-label">Before &middot; object path</span>
+              <h3>Assemble the visit</h3>
+              <p>Start with CRM objects and stitch together context across separate screens.</p>
+            </div>
+            <ol class="transformation-flow transformation-flow--before" aria-label="Legacy mobile CRM visit workflow">
+              <li><span>01</span><div><strong>Scan dashboard</strong><small>Look for a useful signal</small></div></li>
+              <li><span>02</span><div><strong>Find account</strong><small>Search or browse the right customer record</small></div></li>
+              <li><span>03</span><div><strong>Open record</strong><small>Move through tabs and related data</small></div></li>
+              <li><span>04</span><div><strong>Piece together context</strong><small>Check notes, activity, product, and service history</small></div></li>
+              <li><span>05</span><div><strong>Enter updates later</strong><small>Return to forms after the conversation</small></div></li>
+            </ol>
+          </article>
+
+          <div class="transformation-arrow" aria-hidden="true">
+            <svg viewBox="0 -960 960 960" focusable="false">
+              <path d="M647-440H160v-80h487L423-744l56-56 320 320-320 320-56-56 224-224Z" />
+            </svg>
+          </div>
+
+          <article class="transformation-panel transformation-panel--after">
+            <div class="transformation-panel__heading">
+              <span class="transformation-label">After &middot; visit loop</span>
+              <h3>Prepare, capture, and sync</h3>
+              <p>Start with the rep's day and keep the customer visit moving.</p>
+            </div>
+            <ol class="transformation-flow transformation-flow--after" aria-label="Redesigned SugarAI Mobile visit workflow">
+              <li><span>01</span><div><strong>Today</strong><small>See the next stop and what needs attention.</small></div></li>
+              <li><span>02</span><div><strong>Visit Brief</strong><small>Review account, site, route, and risk context before walking in.</small></div></li>
+              <li><span>03</span><div><strong>Active Visit</strong><small>Capture notes, products, photos, and follow-ups during the conversation.</small></div></li>
+              <li><span>04</span><div><strong>Review</strong><small>Inspect SugarAI's proposed CRM updates before saving.</small></div></li>
+              <li><span>05</span><div><strong>Sync</strong><small>Save the visit and return to Today with the next stop ready.</small></div></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="sugarai-video-showcase" id="concept">
+        <div>
+          <p class="section-kicker">The new concept</p>
+          <h2>Four flows tested the new field-sales loop.</h2>
+          <p>
+            The prototype focused on the moments where mobile CRM usually breaks down:
+            preparing before the visit, answering questions during the conversation,
+            capturing updates without a long form, and sending clean CRM updates
+            afterward.
+          </p>
+        </div>
+        <div class="sugarai-video-showcase__media">
+          <p class="section-kicker">Prototype flows</p>
+          <div class="sugarai-prototype-showcase">
+            <div class="sugarai-prototype-grid" aria-label="SugarAI mobile prototype recordings">
+              <figure class="sugarai-prototype-card">
+                <div class="sugarai-prototype-frame">
+                  <video controls playsinline preload="metadata">
+                    <source src="assets/sugarai-mobile/prototype-flows/flow-1.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <figcaption>
+                  <strong>Complete a visit</strong>
+                  <span>Prep the account, capture the conversation, review proposed updates, and save them back to Sugar.</span>
+                </figcaption>
+              </figure>
+              <figure class="sugarai-prototype-card">
+                <div class="sugarai-prototype-frame">
+                  <video controls playsinline preload="metadata">
+                    <source src="assets/sugarai-mobile/prototype-flows/flow-2.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <figcaption>
+                  <strong>Product lookup</strong>
+                  <span>Search a part mid-visit, check live availability, and add the quote follow-up.</span>
+                </figcaption>
+              </figure>
+              <figure class="sugarai-prototype-card">
+                <div class="sugarai-prototype-frame">
+                  <video controls playsinline preload="metadata">
+                    <source src="assets/sugarai-mobile/prototype-flows/flow-3.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <figcaption>
+                  <strong>Ask SugarAI</strong>
+                  <span>Pull service context during the visit and turn the answer into a follow-up.</span>
+                </figcaption>
+              </figure>
+              <figure class="sugarai-prototype-card">
+                <div class="sugarai-prototype-frame">
+                  <video controls playsinline preload="metadata">
+                    <source src="assets/sugarai-mobile/prototype-flows/flow-4.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <figcaption>
+                  <strong>Widget capture</strong>
+                  <span>Dictate a field note and send the CRM update from iOS without opening Sugar.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="flow-section-heading flow-section-heading--supporting">
+          <p class="section-kicker">Supporting actions</p>
+          <h3>Keep small tasks attached to the visit.</h3>
+          <p>
+            The visit flow also needed to handle the actions reps take around a meeting:
+            directions, calls, inventory checks, and follow-up messages.
+          </p>
+          <dl class="decision-tradeoff">
+            <div>
+              <dt>Before</dt>
+              <dd>Reps left the CRM flow to navigate, call, check stock, or draft follow-up, then had to find their place again.</dd>
+            </div>
+            <div>
+              <dt>After</dt>
+              <dd>Those supporting actions stay attached to the visit context, so reps can act quickly without turning the main visit flow into a pile of extra steps.</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="sugarai-supporting-actions">
+          <div class="current-phone-grid" aria-label="Visit Brief supporting action screenshots">
+            <figure class="current-phone-card">
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/flow-1/visit-brief-navigate-modal.png"
+                  alt="Visit Brief Apple Maps confirmation modal."
+                />
+              </div>
+              <figcaption>
+                <strong>Navigate modal</strong>
+                <span>Confirm the route handoff without adding directions to the main visit recording.</span>
+              </figcaption>
+            </figure>
+            <figure class="current-phone-card">
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/flow-1/visit-brief-stock-drawer.png"
+                  alt="Visit Brief stock drawer showing bearing inventory."
+                />
+              </div>
+              <figcaption>
+                <strong>Stock drawer</strong>
+                <span>Check nearby inventory from the brief while staying in account context.</span>
+              </figcaption>
+            </figure>
+            <figure class="current-phone-card">
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/flow-1/visit-brief-call-modal.png"
+                  alt="Visit Brief call confirmation modal for Alisha Hester."
+                />
+              </div>
+              <figcaption>
+                <strong>Call modal</strong>
+                <span>Confirm the contact before calling without losing place.</span>
+              </figcaption>
+            </figure>
+            <figure class="current-phone-card">
+              <div class="current-phone-frame">
+                <img
+                  src="assets/sugarai-mobile/flow-1/visit-brief-email-drawer.png"
+                  alt="Visit Brief email composer drawer with a prefilled message."
+                />
+              </div>
+              <figcaption>
+                <strong>Email drawer</strong>
+                <span>Draft a follow-up from visit context without opening a separate email workflow.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section case-closing" id="testing">
+        <div>
+          <p class="section-kicker">Current status and testing</p>
+          <h2>What the concept test showed.</h2>
+        </div>
+        <div class="case-copy sugarai-test-summary">
+          <p>
+            To test the concept, reps simulated an on-site visit using the prototype.
+            Three findings shaped the next pass:
+          </p>
+          <ul class="sugarai-test-findings">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>One-tap visit prep worked</strong>
+                <p>
+                  Reps could brief themselves without digging through emails or the
+                  account record to reconstruct the latest context.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Voice replaced pen and paper</strong>
+                <p>
+                  Every rep used voice dictation for the information they wanted to save
+                  instead of writing notes to clean up later.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Product lookup felt faster</strong>
+                <p>
+                  Reps could search by product name instead of opening the Products
+                  module and locating the item manually.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="case-note sugarai-next-test">
+            The next pass should test the four flows under more realistic field
+            conditions: noisy facilities, low connectivity, longer visits, real CRM
+            data, and rep confidence in proposed updates before saving.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

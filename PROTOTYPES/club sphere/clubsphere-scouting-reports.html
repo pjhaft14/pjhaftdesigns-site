@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ClubSphere scouting reports prototype by PJ Haft."
+    />
+    <title>ClubSphere Scouting Reports Prototype | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cs-prototype-page">
+    <svg class="cs-icon-sprite" aria-hidden="true">
+      <symbol id="cs-icon-calendar" viewBox="0 -960 960 960">
+        <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Z" />
+      </symbol>
+      <symbol id="cs-icon-chevron" viewBox="0 -960 960 960">
+        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+      </symbol>
+      <symbol id="cs-icon-filter" viewBox="0 -960 960 960">
+        <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
+      </symbol>
+      <symbol id="cs-icon-plus" viewBox="0 -960 960 960">
+        <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+      </symbol>
+      <symbol id="cs-icon-search" viewBox="0 -960 960 960">
+        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+      </symbol>
+      <symbol id="cs-icon-soccer" viewBox="0 -960 960 960">
+        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+      </symbol>
+      <symbol id="cs-icon-star" viewBox="0 -960 960 960">
+        <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+      </symbol>
+    </svg>
+
+    <main class="cs-prototype-shell" aria-label="ClubSphere Scouting Reports prototype">
+      <div class="cs-browser">
+        <section class="cs-app">
+          <header class="cs-topbar">
+            <a class="cs-brand" href="../../clubsphere.html" aria-label="Back to ClubSphere case study">
+              <span class="cs-brand__mark"><svg><use href="#cs-icon-soccer"></use></svg></span>
+              <strong>ClubSphere</strong>
+            </a>
+            <nav class="cs-tabs" aria-label="ClubSphere sections">
+              <a href="clubsphere-squad-hub.html">Squad Hub</a>
+              <a href="clubsphere-match-center.html">Match Center</a>
+              <a class="is-active" href="clubsphere-scouting-reports.html">Scouting</a>
+              <a href="clubsphere-analytics.html">Analytics</a>
+            </nav>
+            <div class="cs-match-pill">
+              <svg><use href="#cs-icon-calendar"></use></svg>
+              <span>Next: vs Stars FC</span>
+              <strong>Sat 12pm</strong>
+            </div>
+            <button class="cs-avatar-button" type="button">SC</button>
+          </header>
+
+          <section class="cs-scout-reports-screen" aria-label="Previous scouting reports">
+            <header class="cs-reports-header">
+              <div>
+                <p class="cs-kicker">Scouting</p>
+                <h1>Scouting Reports</h1>
+                <p>Review previous evaluations and start a new player report.</p>
+              </div>
+              <button class="cs-primary-button" type="button" data-open-scout-modal>
+                <svg><use href="#cs-icon-plus"></use></svg>
+                New Player
+              </button>
+            </header>
+
+            <div class="cs-reports-toolbar">
+              <label class="cs-search cs-reports-search">
+                <svg><use href="#cs-icon-search"></use></svg>
+                <span class="sr-only">Search scouting reports</span>
+                <input type="search" placeholder="Search players..." />
+              </label>
+              <button class="cs-secondary-button" type="button">
+                <svg><use href="#cs-icon-filter"></use></svg>
+                Position
+                <svg><use href="#cs-icon-chevron"></use></svg>
+              </button>
+              <button class="cs-secondary-button" type="button">
+                <svg><use href="#cs-icon-star"></use></svg>
+                Recommendation
+                <svg><use href="#cs-icon-chevron"></use></svg>
+              </button>
+            </div>
+
+            <section class="cs-reports-table-card" aria-label="Scouted players table">
+              <table class="cs-reports-table">
+                <thead>
+                  <tr>
+                    <th><button type="button" data-sort-key="name">Name <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="from">From <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="age">Age <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="position">Position <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="height">Height <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="weight">Weight <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="score">Score <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th><button type="button" data-sort-key="recommendation">Recommendation <svg><use href="#cs-icon-chevron"></use></svg></button></th>
+                    <th>Scout Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-name="Andre Costa" data-from="Porto" data-age="17" data-position="Left Winger" data-height="70" data-weight="158" data-score="7.7" data-recommendation="Monitor Closely">
+                    <td><strong>Andre Costa</strong><small>U18 Regional Finals</small></td>
+                    <td>Porto</td>
+                    <td>17</td>
+                    <td>Left Winger</td>
+                    <td>5'10"</td>
+                    <td>158 lbs</td>
+                    <td><span class="cs-report-score is-strong">7.7</span></td>
+                    <td><span class="cs-report-pill is-monitor">Monitor Closely</span></td>
+                    <td>Direct runner with strong separation pace. Needs more consistent crossing choices.</td>
+                  </tr>
+                  <tr data-name="Mateo Silva" data-from="Lisbon" data-age="18" data-position="Center Mid" data-height="71" data-weight="162" data-score="8.6" data-recommendation="Sign Immediately">
+                    <td><strong>Mateo Silva</strong><small>Academy Showcase</small></td>
+                    <td>Lisbon</td>
+                    <td>18</td>
+                    <td>Center Mid</td>
+                    <td>5'11"</td>
+                    <td>162 lbs</td>
+                    <td><span class="cs-report-score is-elite">8.6</span></td>
+                    <td><span class="cs-report-pill is-sign">Sign Immediately</span></td>
+                    <td>Controls tempo well and scans before receiving under pressure.</td>
+                  </tr>
+                  <tr data-name="Noah Kim" data-from="Seoul" data-age="16" data-position="Right Back" data-height="68" data-weight="148" data-score="6.8" data-recommendation="Follow Up Later">
+                    <td><strong>Noah Kim</strong><small>Regional Tournament</small></td>
+                    <td>Seoul</td>
+                    <td>16</td>
+                    <td>Right Back</td>
+                    <td>5'8"</td>
+                    <td>148 lbs</td>
+                    <td><span class="cs-report-score is-watch">6.8</span></td>
+                    <td><span class="cs-report-pill is-follow">Follow Up Later</span></td>
+                    <td>Strong recovery pace. Decision making in final third still inconsistent.</td>
+                  </tr>
+                  <tr data-name="Luca Romano" data-from="Milan" data-age="19" data-position="Striker" data-height="73" data-weight="174" data-score="5.9" data-recommendation="Pass">
+                    <td><strong>Luca Romano</strong><small>Winter Cup</small></td>
+                    <td>Milan</td>
+                    <td>19</td>
+                    <td>Striker</td>
+                    <td>6'1"</td>
+                    <td>174 lbs</td>
+                    <td><span class="cs-report-score is-watch">5.9</span></td>
+                    <td><span class="cs-report-pill is-pass">Pass</span></td>
+                    <td>Good frame, but pressing intensity and first touch lag the role needs.</td>
+                  </tr>
+                  <tr data-name="Elias Marin" data-from="Valencia" data-age="18" data-position="Center Back" data-height="74" data-weight="181" data-score="7.4" data-recommendation="Monitor Closely">
+                    <td><strong>Elias Marin</strong><small>Coastal Invitational</small></td>
+                    <td>Valencia</td>
+                    <td>18</td>
+                    <td>Center Back</td>
+                    <td>6'2"</td>
+                    <td>181 lbs</td>
+                    <td><span class="cs-report-score is-strong">7.4</span></td>
+                    <td><span class="cs-report-pill is-monitor">Monitor Closely</span></td>
+                    <td>Reads early danger well and wins first contact. Distribution needs more range.</td>
+                  </tr>
+                  <tr data-name="Samir Haddad" data-from="Casablanca" data-age="17" data-position="Attacking Mid" data-height="68" data-weight="150" data-score="8.2" data-recommendation="Sign Immediately">
+                    <td><strong>Samir Haddad</strong><small>Academy Showcase</small></td>
+                    <td>Casablanca</td>
+                    <td>17</td>
+                    <td>Attacking Mid</td>
+                    <td>5'8"</td>
+                    <td>150 lbs</td>
+                    <td><span class="cs-report-score is-elite">8.2</span></td>
+                    <td><span class="cs-report-pill is-sign">Sign Immediately</span></td>
+                    <td>Creative between lines and consistently finds runners with disguised passes.</td>
+                  </tr>
+                  <tr data-name="Owen Brooks" data-from="Chicago" data-age="18" data-position="Goalkeeper" data-height="75" data-weight="188" data-score="6.6" data-recommendation="Follow Up Later">
+                    <td><strong>Owen Brooks</strong><small>Regional Tournament</small></td>
+                    <td>Chicago</td>
+                    <td>18</td>
+                    <td>Goalkeeper</td>
+                    <td>6'3"</td>
+                    <td>188 lbs</td>
+                    <td><span class="cs-report-score is-watch">6.6</span></td>
+                    <td><span class="cs-report-pill is-follow">Follow Up Later</span></td>
+                    <td>Strong shot stopping profile. Needs cleaner restarts under pressure.</td>
+                  </tr>
+                  <tr data-name="Diego Alvarez" data-from="Medellin" data-age="16" data-position="Right Winger" data-height="67" data-weight="145" data-score="6.1" data-recommendation="Follow Up Later">
+                    <td><strong>Diego Alvarez</strong><small>Winter Cup</small></td>
+                    <td>Medellin</td>
+                    <td>16</td>
+                    <td>Right Winger</td>
+                    <td>5'7"</td>
+                    <td>145 lbs</td>
+                    <td><span class="cs-report-score is-watch">6.1</span></td>
+                    <td><span class="cs-report-pill is-follow">Follow Up Later</span></td>
+                    <td>Explosive first step, but end product and defensive tracking remain uneven.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <div class="cs-scout-modal" data-scout-modal aria-hidden="true">
+      <div class="cs-scout-modal__backdrop" data-close-scout-modal></div>
+      <section class="cs-scout-modal__card" role="dialog" aria-modal="true" aria-labelledby="new-player-title">
+        <header>
+          <div>
+            <p class="cs-kicker">New Evaluation</p>
+            <h2 id="new-player-title">Add Player Details</h2>
+          </div>
+          <button class="cs-icon-button" type="button" aria-label="Close modal" data-close-scout-modal>×</button>
+        </header>
+        <form class="cs-new-player-form" data-new-player-form>
+          <label>
+            <span>Player name</span>
+            <input type="text" value="Joao Rodriguez" />
+          </label>
+          <label>
+            <span>From</span>
+            <input type="text" value="Sao Paulo" />
+          </label>
+          <label>
+            <span>Age</span>
+            <input type="number" value="17" />
+          </label>
+          <label>
+            <span>Position</span>
+            <input type="text" value="Left Winger" />
+          </label>
+          <label>
+            <span>Height</span>
+            <input type="text" value="5'9&quot;" />
+          </label>
+          <label>
+            <span>Weight</span>
+            <input type="text" value="154 lbs" />
+          </label>
+          <div class="cs-new-player-form__actions">
+            <button class="cs-secondary-button" type="button" data-close-scout-modal>Cancel</button>
+            <button class="cs-primary-button" type="submit">Done</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script>
+      const scoutModal = document.querySelector("[data-scout-modal]");
+      const openScoutModal = document.querySelector("[data-open-scout-modal]");
+      const closeScoutModalButtons = document.querySelectorAll("[data-close-scout-modal]");
+      const newPlayerForm = document.querySelector("[data-new-player-form]");
+      const reportsTableBody = document.querySelector(".cs-reports-table tbody");
+      const sortButtons = Array.from(document.querySelectorAll("[data-sort-key]"));
+      const numericSortKeys = new Set(["age", "height", "weight", "score"]);
+      let activeSort = { key: "score", direction: "desc" };
+
+      const setScoutModalOpen = (isOpen) => {
+        scoutModal.classList.toggle("is-open", isOpen);
+        scoutModal.setAttribute("aria-hidden", String(!isOpen));
+        document.body.classList.toggle("cs-modal-open", isOpen);
+        if (isOpen) scoutModal.querySelector("input").focus();
+      };
+
+      openScoutModal.addEventListener("click", () => setScoutModalOpen(true));
+      closeScoutModalButtons.forEach((button) => {
+        button.addEventListener("click", () => setScoutModalOpen(false));
+      });
+
+      newPlayerForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        window.location.href = "clubsphere-scouting-evaluation.html";
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && scoutModal.classList.contains("is-open")) {
+          setScoutModalOpen(false);
+        }
+      });
+
+      const getSortValue = (row, key) => {
+        const value = row.dataset[key] ?? "";
+        return numericSortKeys.has(key) ? Number(value) : value.toLowerCase();
+      };
+
+      const sortReports = () => {
+        const sortedRows = Array.from(reportsTableBody.querySelectorAll("tr")).sort((a, b) => {
+          const valueA = getSortValue(a, activeSort.key);
+          const valueB = getSortValue(b, activeSort.key);
+          const result = typeof valueA === "number"
+            ? valueA - valueB
+            : String(valueA).localeCompare(String(valueB));
+          return activeSort.direction === "asc" ? result : -result;
+        });
+
+        sortedRows.forEach((row) => reportsTableBody.appendChild(row));
+        sortButtons.forEach((button) => {
+          const isActive = button.dataset.sortKey === activeSort.key;
+          button.classList.toggle("is-active", isActive);
+          button.dataset.sortDirection = isActive ? activeSort.direction : "";
+          button.setAttribute("aria-sort", isActive ? (activeSort.direction === "asc" ? "ascending" : "descending") : "none");
+        });
+      };
+
+      sortButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const key = button.dataset.sortKey;
+          activeSort = {
+            key,
+            direction: activeSort.key === key && activeSort.direction === "desc" ? "asc" : "desc",
+          };
+          sortReports();
+        });
+      });
+
+      sortReports();
+    </script>
+  </body>
+</html>

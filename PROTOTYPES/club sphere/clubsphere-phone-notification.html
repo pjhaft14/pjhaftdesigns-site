@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ClubSphere iPhone notification prototype by PJ Haft."
+    />
+    <title>ClubSphere Phone Notification Prototype | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cs-prototype-page cs-phone-page">
+    <svg class="cs-icon-sprite" aria-hidden="true">
+      <symbol id="cs-icon-soccer" viewBox="0 -960 960 960">
+        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+      </symbol>
+    </svg>
+
+    <main class="cs-phone-stage" aria-label="ClubSphere player phone notification">
+      <aside class="cs-phone-preview cs-phone-preview--standalone" aria-label="Player push notification preview">
+        <div class="cs-phone-preview__device">
+          <img class="cs-phone-preview__art" src="clubsphere-iphone-screen.svg" alt="" />
+          <div class="cs-phone-preview__notification">
+            <img class="cs-phone-preview__notification-art" src="iphone-notification.svg" alt="" />
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script>
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          window.setTimeout(() => {
+            document.querySelector(".cs-phone-preview").classList.add("is-visible");
+          }, 450);
+        });
+      });
+    </script>
+  </body>
+</html>

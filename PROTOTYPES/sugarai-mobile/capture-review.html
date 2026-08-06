@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Capture Review concept for the customer-branded SugarAI Mobile field sales experience."
+    />
+    <title>Capture Review | SugarAI Mobile Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="capture-review.js" defer></script>
+  </head>
+  <body>
+    <main class="stage" aria-label="SugarAI Mobile Capture Review prototype">
+      <section class="phone" aria-label="Customer-branded SugarAI Mobile app">
+        <div class="status-bar" aria-hidden="true">
+          <span>10:18</span>
+          <span class="status-icons">5G 84%</span>
+        </div>
+
+        <header class="app-header fixed-app-header brief-app-header">
+          <a class="brand-back" href="active-visit.html" aria-label="Back to Active Visit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 5-7 7 7 7" />
+            </svg>
+            <img class="customer-logo" src="customer-logo.png" alt="Customer logo" />
+          </a>
+          <button class="avatar-button" type="button" aria-label="Profile">
+            <img src="avatar-alex.jpg" alt="" />
+          </button>
+        </header>
+
+        <div class="app-shell brief-shell review-shell">
+          <section class="review-hero" aria-labelledby="review-title">
+            <div class="review-status-row">
+              <span class="ai-status">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m11 4 2.25 5.75L19 12l-5.75 2.25L11 20l-2.25-5.75L3 12l5.75-2.25L11 4Z" />
+                </svg>
+                SugarAI draft
+              </span>
+              <span id="review-count">6 updates</span>
+            </div>
+            <h1 id="review-title">Review visit update</h1>
+            <p>Kelloway Plant 3</p>
+          </section>
+
+          <section class="capture-card review-summary-card" aria-labelledby="summary-title">
+            <div class="review-card-heading">
+              <div>
+                <p class="section-label">Generated summary</p>
+                <h2 id="summary-title">What SugarAI heard</h2>
+              </div>
+              <button class="review-icon-button" id="edit-summary" type="button" aria-label="Edit summary">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m4 20 4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20Z" />
+                  <path d="m13.5 7.5 3 3" />
+                </svg>
+              </button>
+            </div>
+            <p id="generated-summary">
+              Alisha confirmed the Q2 maintenance scope and asked for 40 6205-2RS bearings to be reserved for the July shutdown. Send a revised quote by Friday with lead times and include the compressor service case as a separate follow-up.
+            </p>
+          </section>
+
+          <section class="active-section review-section" aria-labelledby="updates-title">
+            <div class="section-heading">
+              <h2 id="updates-title">CRM updates</h2>
+              <span id="approved-count">4 approved</span>
+            </div>
+            <div class="review-update-list">
+              <label class="review-update-item">
+                <input type="checkbox" checked />
+                <span>
+                  <strong>Outcome</strong>
+                  <small id="review-outcome">Scope confirmed</small>
+                </span>
+              </label>
+              <label class="review-update-item">
+                <input type="checkbox" checked />
+                <span>
+                  <strong>Opportunity note</strong>
+                  <small>Q2 maintenance quote needs bearing lead times before Friday.</small>
+                </span>
+              </label>
+              <label class="review-update-item">
+                <input type="checkbox" checked />
+                <span>
+                  <strong>Product interest</strong>
+                  <small>Reserve 40 units of 6205-2RS for July shutdown.</small>
+                </span>
+              </label>
+              <label class="review-update-item">
+                <input type="checkbox" checked />
+                <span>
+                  <strong>Next step</strong>
+                  <small>Send revised quote by Friday, May 16.</small>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="active-section review-section" aria-labelledby="tasks-title">
+            <div class="section-heading">
+              <h2 id="tasks-title">Follow-up tasks</h2>
+              <span>Due this week</span>
+            </div>
+            <div class="task-review-list">
+              <label>
+                <input type="checkbox" checked />
+                <span>Update Kelloway quote with 6205-2RS lead times</span>
+                <time>Fri</time>
+              </label>
+              <label>
+                <input type="checkbox" checked />
+                <span>Confirm compressor service case owner</span>
+                <time>Mon</time>
+              </label>
+            </div>
+          </section>
+
+          <section class="review-attention-card insight-card--warm" aria-labelledby="attention-title">
+            <div class="review-attention-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 2.8 20.4h18.4L12 3Z" />
+                <path d="M12 9.2v5.2M12 17.4h.01" />
+              </svg>
+            </div>
+            <div>
+              <p class="section-label">Needs review</p>
+              <h2 id="attention-title">Stock reservation is ready to confirm.</h2>
+              <p>Available inventory covers the request, but SugarAI flagged the July shutdown date for a final check before sending.</p>
+            </div>
+          </section>
+
+          <section class="active-section review-section review-source-section" aria-labelledby="sources-title">
+            <div class="section-heading">
+              <h2 id="sources-title">Source captures</h2>
+              <span id="source-count">3 items</span>
+            </div>
+            <div class="source-chip-row">
+              <span>Voice note</span>
+              <span>Equipment photo</span>
+              <span>Business card</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="bottom-fade bottom-fade--brief" aria-hidden="true"></div>
+        <div class="visit-action-bar review-action-bar" aria-label="Capture review actions">
+          <a class="brief-secondary-action review-secondary-link" href="active-visit.html">Edit draft</a>
+          <button class="brief-primary-action" id="save-review" type="button">Save to Sugar</button>
+        </div>
+        <div class="home-indicator" aria-hidden="true"></div>
+
+        <div class="prototype-toast" id="prototype-toast" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Visit Brief concept for the customer-branded SugarAI Mobile field sales experience."
+    />
+    <title>Visit Brief | SugarAI Mobile Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="visit-brief.js" defer></script>
+  </head>
+  <body>
+    <main class="stage" aria-label="SugarAI Mobile Visit Brief prototype">
+      <section class="phone" aria-label="Customer-branded SugarAI Mobile app">
+        <div class="status-bar" aria-hidden="true">
+          <span>9:43</span>
+          <span class="status-icons">5G 84%</span>
+        </div>
+
+        <header class="app-header fixed-app-header brief-app-header">
+          <a class="brand-back" href="index.html" aria-label="Back to Today">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 5-7 7 7 7" />
+            </svg>
+            <img class="customer-logo" src="customer-logo.png" alt="Customer logo" />
+          </a>
+          <button class="avatar-button" type="button" aria-label="Profile">
+            <img src="avatar-alex.jpg" alt="" />
+          </button>
+        </header>
+
+        <div class="app-shell brief-shell">
+          <section class="brief-hero" aria-labelledby="brief-title">
+            <div class="brief-kicker-row">
+              <p class="eyebrow">Visit brief</p>
+              <span class="soft-pill">10:00 AM</span>
+            </div>
+            <div class="brief-site-row">
+              <div class="site-mark" aria-hidden="true">K</div>
+              <div>
+                <h1 id="brief-title">Kelloway Plant 3</h1>
+                <p>Kelloway Industries</p>
+              </div>
+            </div>
+            <p class="brief-address">2050 Riverside Dr, Franklin, OH</p>
+            <div class="hero-status-row" aria-label="Visit readiness">
+              <span class="status-pill status-pill--ready">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12.6 4.2 4.2L19 7" />
+                </svg>
+                Offline ready
+              </span>
+              <span class="quiet-meta" id="visit-state">15 min drive</span>
+            </div>
+          </section>
+
+          <section class="brief-section" aria-labelledby="objective-title">
+            <p class="section-label">Meeting objective</p>
+            <h2 id="objective-title">Confirm the Q2 maintenance scope and prevent a bearing stockout.</h2>
+            <p>
+              Review the draft maintenance quote with Maya and confirm whether Kelloway wants to include the
+              July line shutdown.
+            </p>
+          </section>
+
+          <section class="briefing-card" aria-labelledby="briefing-title">
+            <div class="briefing-heading">
+              <span class="sparkle" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m11 4 2.25 5.75L19 12l-5.75 2.25L11 20l-2.25-5.75L3 12l5.75-2.25L11 4Z" />
+                  <path d="m19 3 .8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="section-label">SugarAI briefing</p>
+                <h2 id="briefing-title">Three things changed since your last visit.</h2>
+              </div>
+            </div>
+            <ul class="signal-list">
+              <li>
+                <span class="signal-dot signal-dot--amber" aria-hidden="true"></span>
+                <div>
+                  <strong>Bearing inventory is running low</strong>
+                  <p>6205-2RS has about 12 days remaining at current usage.</p>
+                  <span class="source-badge">ERP</span>
+                </div>
+              </li>
+              <li>
+                <span class="signal-dot signal-dot--green" aria-hidden="true"></span>
+                <div>
+                  <strong>The draft quote is ready to revise</strong>
+                  <p>$18,420 with delivery assumptions last updated yesterday.</p>
+                  <span class="source-badge">CRM</span>
+                </div>
+              </li>
+              <li>
+                <span class="signal-dot" aria-hidden="true"></span>
+                <div>
+                  <strong>One service case remains open</strong>
+                  <p>Compressor vibration case CS-1842 is awaiting a follow-up.</p>
+                  <span class="source-badge">Service</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="brief-section people-section" aria-labelledby="people-title">
+            <div class="section-heading">
+              <h2 id="people-title">People you are meeting</h2>
+              <span>2 contacts</span>
+            </div>
+            <div class="contact-list">
+              <article class="contact-row">
+                <div class="contact-avatar contact-avatar--photo contact-avatar--alisha">
+                  <img src="alisha-hester.png" alt="" />
+                </div>
+                <div class="contact-copy">
+                  <h3>Alisha Hester</h3>
+                  <p>Maintenance Director</p>
+                </div>
+                <div class="contact-actions">
+                  <button
+                    class="contact-call"
+                    type="button"
+                    data-name="Alisha Hester"
+                    data-phone="(614) 555-0184"
+                    data-tel="+16145550184"
+                    aria-label="Call Alisha Hester"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7.2 3.8 10 8.2 8.4 10c1.1 2.4 3.1 4.4 5.6 5.6l1.8-1.6 4.4 2.8-.5 3c-.1.8-.8 1.4-1.7 1.4C9.6 21.2 2.8 14.4 2.8 6c0-.9.6-1.6 1.4-1.7l3-.5Z" />
+                    </svg>
+                  </button>
+                  <button
+                    class="contact-email"
+                    type="button"
+                    data-name="Alisha Hester"
+                    data-email="alisha.hester@example.com"
+                    aria-label="Email Alisha Hester"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m4.5 7 7.5 6 7.5-6" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="contact-row">
+                <div class="contact-avatar contact-avatar--photo">
+                  <img src="jordan-lee.png" alt="" />
+                </div>
+                <div class="contact-copy">
+                  <h3>Jordan Lee</h3>
+                  <p>Procurement Manager</p>
+                </div>
+                <div class="contact-actions">
+                  <button
+                    class="contact-call"
+                    type="button"
+                    data-name="Jordan Lee"
+                    data-phone="(614) 555-0221"
+                    data-tel="+16145550221"
+                    aria-label="Call Jordan Lee"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7.2 3.8 10 8.2 8.4 10c1.1 2.4 3.1 4.4 5.6 5.6l1.8-1.6 4.4 2.8-.5 3c-.1.8-.8 1.4-1.7 1.4C9.6 21.2 2.8 14.4 2.8 6c0-.9.6-1.6 1.4-1.7l3-.5Z" />
+                    </svg>
+                  </button>
+                  <button
+                    class="contact-email"
+                    type="button"
+                    data-name="Jordan Lee"
+                    data-email="jordan.lee@example.com"
+                    aria-label="Email Jordan Lee"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m4.5 7 7.5 6 7.5-6" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="brief-section" aria-labelledby="snapshot-title">
+            <div class="section-heading">
+              <h2 id="snapshot-title">Account snapshot</h2>
+              <span>CRM</span>
+            </div>
+            <div class="metric-grid">
+              <div>
+                <span>YTD spend</span>
+                <strong>$286K</strong>
+              </div>
+              <div>
+                <span>Open pipeline</span>
+                <strong>$42.8K</strong>
+              </div>
+              <div>
+                <span>Open cases</span>
+                <strong>1</strong>
+              </div>
+            </div>
+          </section>
+
+          <details class="context-details">
+            <summary>
+              <span>
+                <strong>Recent context</strong>
+                <small>Last visit, orders, equipment, and service</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="context-timeline">
+              <div>
+                <span>May 8</span>
+                <p>Maya requested revised downtime assumptions for the July shutdown.</p>
+              </div>
+              <div>
+                <span>Apr 29</span>
+                <p>PO-48719 shipped: 40 units of 6205-2RS bearings.</p>
+              </div>
+              <div>
+                <span>Apr 18</span>
+                <p>Service opened CS-1842 for compressor vibration on Line 2.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="bottom-fade bottom-fade--brief" aria-hidden="true"></div>
+        <div class="visit-action-bar" id="visit-action-bar" aria-label="Visit actions">
+          <button
+            class="brief-icon-action"
+            id="navigate-button"
+            type="button"
+            aria-label="Navigate to Kelloway Plant 3"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3.5 19 21l-7-3-7 3 7-17.5Z" />
+            </svg>
+          </button>
+          <button class="brief-secondary-action" id="stock-button" type="button">Check stock</button>
+          <button class="brief-primary-action" id="start-visit-button" type="button">Start visit</button>
+        </div>
+        <div class="home-indicator" aria-hidden="true"></div>
+
+        <div
+          class="phone-modal"
+          id="stock-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="stock-sheet-title"
+          hidden
+        >
+          <section class="stock-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="sheet-heading">
+              <div>
+                <p class="section-label">Quick stock check</p>
+                <h2 id="stock-sheet-title">6205-2RS bearing</h2>
+              </div>
+              <button class="sheet-close" id="stock-close" type="button" aria-label="Close stock check">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 6 12 12M18 6 6 18" />
+                </svg>
+              </button>
+            </div>
+            <div class="stock-summary">
+              <div>
+                <span>Available now</span>
+                <strong>84 units</strong>
+              </div>
+              <span class="status-pill status-pill--ready">In stock</span>
+            </div>
+            <div class="warehouse-list">
+              <div><span>Columbus</span><strong>56</strong></div>
+              <div><span>Cincinnati</span><strong>28</strong></div>
+              <div><span>Chicago</span><strong>0</strong></div>
+            </div>
+            <p class="sheet-note">ERP updated 6 minutes ago. Standard replenishment lead time is 4 business days.</p>
+            <button class="sheet-primary" id="product-next" type="button">Open product lookup</button>
+          </section>
+        </div>
+
+        <div
+          class="phone-modal phone-modal--center"
+          id="maps-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="maps-sheet-title"
+          hidden
+        >
+          <section class="stock-sheet map-confirm-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="map-confirm-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3.5 19 21l-7-3-7 3 7-17.5Z" />
+              </svg>
+            </div>
+            <h2 id="maps-sheet-title">Open Apple Maps?</h2>
+            <p>Get directions to Kelloway Plant 3 at 2050 Riverside Dr, Franklin, OH.</p>
+            <div class="map-confirm-actions">
+              <button class="brief-secondary-action" id="maps-cancel" type="button">Cancel</button>
+              <a
+                class="sheet-primary"
+                id="maps-open"
+                href="https://maps.apple.com/?daddr=2050+Riverside+Dr,+Franklin,+OH"
+                target="_blank"
+                rel="noopener"
+              >
+                Open Apple Maps
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <div
+          class="phone-modal phone-modal--center"
+          id="call-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="call-sheet-title"
+          hidden
+        >
+          <section class="stock-sheet map-confirm-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="map-confirm-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7.2 3.8 10 8.2 8.4 10c1.1 2.4 3.1 4.4 5.6 5.6l1.8-1.6 4.4 2.8-.5 3c-.1.8-.8 1.4-1.7 1.4C9.6 21.2 2.8 14.4 2.8 6c0-.9.6-1.6 1.4-1.7l3-.5Z" />
+              </svg>
+            </div>
+            <h2 id="call-sheet-title">Call <span id="call-contact-name">contact</span>?</h2>
+            <p id="call-contact-phone"></p>
+            <div class="map-confirm-actions">
+              <button class="brief-secondary-action" id="call-cancel" type="button">Cancel</button>
+              <a class="sheet-primary" id="call-confirm" href="tel:+16145550184">Call</a>
+            </div>
+          </section>
+        </div>
+
+        <div
+          class="phone-modal"
+          id="email-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="email-sheet-title"
+          hidden
+        >
+          <section class="stock-sheet email-compose-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="sheet-heading">
+              <div>
+                <p class="section-label">New message</p>
+                <h2 id="email-sheet-title">Email <span id="email-contact-name">contact</span></h2>
+              </div>
+              <button class="sheet-close" id="email-close" type="button" aria-label="Close email composer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 6 12 12M18 6 6 18" />
+                </svg>
+              </button>
+            </div>
+            <label class="compose-field">
+              <span>To</span>
+              <input id="email-to" type="email" readonly />
+            </label>
+            <label class="compose-field">
+              <span>Subject</span>
+              <input id="email-subject" type="text" value="Kelloway Plant 3 follow-up" />
+            </label>
+            <label class="compose-field compose-field--message">
+              <span>Message</span>
+              <textarea id="email-message" rows="7">Hi Alisha,
+
+Looking forward to meeting at Kelloway Plant 3 today. I’ll bring the updated Q2 maintenance quote and current bearing availability so we can review both during the visit.
+
+Best,
+Alex</textarea>
+            </label>
+            <button class="sheet-primary" id="email-send" type="button">Send email</button>
+          </section>
+        </div>
+
+        <div class="prototype-toast" id="prototype-toast" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>

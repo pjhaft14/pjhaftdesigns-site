@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SugarAI Mobile iOS widget capture concept." />
+    <title>Widget Capture | SugarAI Mobile Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="widget-capture.css?v=18" />
+    <script src="widget-capture.js" defer></script>
+  </head>
+  <body>
+    <main class="widget-stage" aria-label="SugarAI widget capture prototype">
+      <section class="widget-phone" aria-label="iPhone home screen with SugarAI widget">
+        <div class="widget-ios-screen">
+          <div class="widget-status-bar" aria-hidden="true">
+            <span>1:50</span>
+            <span>5G 37%</span>
+          </div>
+
+          <div class="widget-row">
+            <section class="sugar-widget" id="sugar-widget" aria-label="SugarAI widget for Kelloway Plant 3">
+              <header>
+                <span class="sugar-widget-logo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3.5 13.4 8l4.1 1.5-4.1 1.5L12 15.5 10.6 11 6.5 9.5 10.6 8 12 3.5Z" />
+                    <path d="M5 14.5 5.8 17l2.2.8-2.2.8L5 21l-.8-2.4-2.2-.8 2.2-.8.8-2.5ZM18.5 14l.7 2.1 1.8.7-1.8.7-.7 2.1-.7-2.1-1.8-.7 1.8-.7.7-2.1Z" />
+                  </svg>
+                </span>
+                <span>SugarAI</span>
+                <em><i aria-hidden="true"></i>Happening now</em>
+              </header>
+              <div class="sugar-widget-copy">
+                <p class="sugar-widget-kicker">Current visit</p>
+                <h1>Kelloway Plant 3</h1>
+                <p id="widget-status">Send CRM updates without opening Sugar.</p>
+              </div>
+              <div class="sugar-widget-actions" aria-label="Widget quick actions">
+                <button id="dictate-widget" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="8.2" y="3" width="7.6" height="12" rx="3.8" />
+                    <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M8.5 21h7" />
+                  </svg>
+                  Dictate
+                </button>
+                <button id="photo-widget" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4v-11Z" />
+                    <circle cx="12" cy="13" r="3.2" />
+                  </svg>
+                  Photo
+                </button>
+              </div>
+            </section>
+
+            <section class="weather-widget" aria-label="Weather widget">
+              <p>Columbus</p>
+              <strong>74°</strong>
+              <span>Cloudy</span>
+            </section>
+          </div>
+
+          <div class="widget-icon-art" aria-hidden="true">
+            <div class="ios-skeleton-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="ios-skeleton-search">Search</div>
+            <div class="ios-skeleton-dock">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <section class="widget-sheet" id="widget-sheet" aria-labelledby="widget-sheet-title" hidden>
+          <div class="widget-sheet-handle" aria-hidden="true"></div>
+          <div class="widget-sheet-heading">
+            <span class="sugar-widget-logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3.5 13.4 8l4.1 1.5-4.1 1.5L12 15.5 10.6 11 6.5 9.5 10.6 8 12 3.5Z" />
+                <path d="M5 14.5 5.8 17l2.2.8-2.2.8L5 21l-.8-2.4-2.2-.8 2.2-.8.8-2.5ZM18.5 14l.7 2.1 1.8.7-1.8.7-.7 2.1-.7-2.1-1.8-.7 1.8-.7.7-2.1Z" />
+              </svg>
+            </span>
+            <div>
+              <p class="section-label">SugarAI widget</p>
+              <h2 id="widget-sheet-title">Capture for Kelloway Plant 3</h2>
+            </div>
+          </div>
+
+          <div class="widget-listening" id="widget-listening">
+            <span class="dictation-dot" aria-hidden="true"></span>
+            <span id="widget-listening-label">Listening...</span>
+          </div>
+
+          <div class="widget-analysis-slot">
+            <div class="widget-summary-skeleton" id="widget-summary-skeleton" aria-label="Preparing suggested CRM update">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <article class="widget-summary" id="widget-summary" hidden>
+              <p class="section-label">Suggested CRM update</p>
+              <h3>Log Plant 3 vibration concern</h3>
+              <p>Customer reported increased compressor vibration and asked for service to check it before the July shutdown.</p>
+              <div class="widget-summary-tags" aria-label="CRM fields">
+                <span>Account: Kelloway</span>
+                <span>Site: Plant 3</span>
+                <span>Type: Service follow-up</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="widget-transcript" id="widget-transcript" aria-live="polite" tabindex="-1">
+            <p id="widget-transcript-text"></p>
+          </div>
+
+          <div class="widget-sheet-actions">
+            <button class="widget-send-button" id="widget-send" type="button" disabled>Send to CRM</button>
+          </div>
+        </section>
+
+        <aside class="widget-notification" id="widget-notification" aria-live="polite" aria-hidden="true">
+          <span class="sugar-widget-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3.5 13.4 8l4.1 1.5-4.1 1.5L12 15.5 10.6 11 6.5 9.5 10.6 8 12 3.5Z" />
+              <path d="M5 14.5 5.8 17l2.2.8-2.2.8L5 21l-.8-2.4-2.2-.8 2.2-.8.8-2.5ZM18.5 14l.7 2.1 1.8.7-1.8.7-.7 2.1-.7-2.1-1.8-.7 1.8-.7.7-2.1Z" />
+            </svg>
+          </span>
+          <span>
+            <strong>SugarAI</strong>
+            <small>Updated Kelloway Plant 3 service follow-up</small>
+          </span>
+        </aside>
+
+        <div class="widget-home-indicator" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>

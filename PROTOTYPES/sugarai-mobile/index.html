@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>SugarAI Mobile Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js?v=3" defer></script>
+  </head>
+  <body>
+    <main class="stage" aria-label="SugarAI Mobile Today screen prototype">
+      <section class="phone" aria-label="Customer-branded SugarAI Mobile app">
+        <div class="status-bar" aria-hidden="true">
+          <span>9:41</span>
+          <span class="status-icons">5G  84%</span>
+        </div>
+
+        <header class="app-header fixed-app-header home-app-header">
+          <img class="customer-logo" src="customer-logo.png" alt="Customer logo" />
+          <div class="header-actions" aria-label="Header actions">
+            <button class="icon-button" type="button" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.2" />
+                <path d="m15.1 15.1 4.4 4.4" />
+              </svg>
+            </button>
+            <button class="avatar-button" type="button" aria-label="Profile">
+              <img src="avatar-alex.jpg" alt="" />
+            </button>
+          </div>
+        </header>
+
+        <div class="app-shell">
+          <section class="hero-greeting" aria-labelledby="today-title">
+            <p class="eyebrow">Thursday, May 15</p>
+            <h1 id="today-title">Good morning, Alex.</h1>
+            <p id="today-summary">Your route is ready. Kelloway is prepared offline and looks like the visit to focus on first.</p>
+            <div class="hero-status-row" aria-label="Today status">
+              <span class="status-pill status-pill--ready" id="today-progress">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12.6 4.2 4.2L19 7" />
+                </svg>
+                Offline ready
+              </span>
+              <span class="quiet-meta" id="today-sync">Last synced 8:31 AM</span>
+            </div>
+          </section>
+
+          <section class="visit-completion-banner" id="visit-completion-banner" aria-live="polite" hidden>
+            <div class="completion-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m5 12.5 4.3 4.3L19 7" />
+              </svg>
+            </div>
+            <div class="completion-copy">
+              <strong>Kelloway visit complete</strong>
+              <p id="completion-summary">Voice note, photo, and follow-up saved</p>
+            </div>
+            <span class="completion-badge">1 of 3</span>
+          </section>
+
+          <section class="card next-visit-card" aria-labelledby="next-visit-title">
+            <div class="card-label-row">
+              <span class="section-label">Next visit</span>
+              <span class="soft-pill" id="next-visit-time">10:00 AM</span>
+            </div>
+            <a
+              class="visit-main visit-main-link"
+              id="next-visit-link"
+              href="visit-brief.html"
+              aria-label="Open visit brief for Kelloway Plant 3"
+            >
+              <div class="site-mark" id="next-site-mark" aria-hidden="true">K</div>
+              <div>
+                <h2 id="next-visit-title">Kelloway Plant 3</h2>
+                <p id="next-account-name">Kelloway Industries</p>
+              </div>
+            </a>
+            <div class="visit-details">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s6.4-6.1 6.4-11.1a6.4 6.4 0 0 0-12.8 0C5.6 14.9 12 21 12 21Z" />
+                  <circle cx="12" cy="9.8" r="2.1" />
+                </svg>
+                <span id="next-visit-address">2050 Riverside Dr, Franklin, OH</span>
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3.5 19 21l-7-3-7 3 7-17.5Z" />
+                </svg>
+                <span id="next-drive-time">15 min drive</span>
+              </span>
+            </div>
+            <div class="primary-actions">
+              <a
+                class="action-button action-button--primary"
+                id="next-navigate"
+                href="https://maps.apple.com/?daddr=2050+Riverside+Dr,+Franklin,+OH"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3.5 19 21l-7-3-7 3 7-17.5Z" />
+                </svg>
+                Navigate
+              </a>
+              <a class="action-button" id="next-prep" href="visit-brief.html">Prep</a>
+              <button class="action-button" type="button">Check stock</button>
+            </div>
+          </section>
+
+          <section class="route-card" aria-labelledby="route-title">
+            <div class="section-heading">
+              <h2 id="route-title">Today&rsquo;s route</h2>
+              <span id="route-progress">3 stops &middot; 42 min drive</span>
+            </div>
+            <div class="route-map" aria-hidden="true">
+              <img src="route-map.png" alt="" />
+            </div>
+            <div class="completed-route-stop" id="completed-route-stop" hidden>
+              <div class="route-stop-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m5 12.5 4.3 4.3L19 7" />
+                </svg>
+              </div>
+              <div>
+                <strong>Kelloway Plant 3</strong>
+                <p>Completed at 10:18 AM</p>
+              </div>
+              <span>Complete</span>
+            </div>
+          </section>
+
+          <section class="focus-section" aria-labelledby="focus-title">
+            <div class="section-heading">
+              <h2 id="focus-title">For you today</h2>
+              <button type="button">View all</button>
+            </div>
+            <article class="insight-card insight-card--warm">
+              <div class="insight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 2.8 20.4h18.4L12 3Z" />
+                  <path d="M12 9.2v5.2M12 17.4h.01" />
+                </svg>
+              </div>
+              <div>
+                <h3>Reorder risk is worth a gentle check-in.</h3>
+                <p>Bearing 6205-2RS has about 12 days remaining at current usage.</p>
+              </div>
+            </article>
+            <article class="insight-card">
+              <div class="insight-icon insight-icon--green" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3.5 19 21l-7-3-7 3 7-17.5Z" />
+                </svg>
+              </div>
+              <div>
+                <h3>Q2 maintenance quote is ready to revise.</h3>
+                <p>Use today&rsquo;s stock check to update lead times before sending.</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="tools-card" aria-labelledby="tools-title">
+            <div class="section-heading">
+              <h2 id="tools-title">Quick tools</h2>
+            </div>
+            <div class="tool-grid">
+              <button class="tool-tile" type="button">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4.5 7.1 12 2.9l7.5 4.2v9.8L12 21.1l-7.5-4.2V7.1Z" />
+                    <path d="m4.9 7.4 7.1 4 7.1-4M12 21v-9.6" />
+                  </svg>
+                </span>
+                Check stock
+              </button>
+              <button class="tool-tile" type="button">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.5 3.5h9.2L19 6.8V20a1.7 1.7 0 0 1-1.7 1.7H6.5A1.7 1.7 0 0 1 4.8 20V5.2a1.7 1.7 0 0 1 1.7-1.7Z" />
+                    <path d="M15.5 3.7V7h3.3M8.2 11.2h7.6M8.2 14.8h7.6M8.2 18.4h5.2" />
+                  </svg>
+                </span>
+                Build quote
+              </button>
+              <button class="tool-tile" type="button">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4.5 7.5h3l1.7-2h5.6l1.7 2h3A1.5 1.5 0 0 1 21 9v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18V9a1.5 1.5 0 0 1 1.5-1.5Z" />
+                    <circle cx="12" cy="13.2" r="3.2" />
+                  </svg>
+                </span>
+                Capture
+              </button>
+            </div>
+          </section>
+
+          <button class="ask-card" type="button">
+            <span class="sparkle" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m11 4 2.25 5.75L19 12l-5.75 2.25L11 20l-2.25-5.75L3 12l5.75-2.25L11 4Z" />
+                <path d="m19 3 .8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z" />
+              </svg>
+            </span>
+            <span>
+              <strong>Ask SugarAI</strong>
+              <small>Prep a talk track for Kelloway Plant 3</small>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9.5 5.5 6.5 6.5-6.5 6.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="bottom-fade" aria-hidden="true"></div>
+        <nav class="bottom-nav" aria-label="Prototype navigation">
+          <button class="active" type="button" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3Z" />
+            </svg>
+            Today
+          </button>
+          <button type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 20V7.5l5-3 6 3 5-3V17l-5 3-6-3-5 3Z" />
+              <path d="M9 4.5V17M15 7.5V20" />
+            </svg>
+            Accounts
+          </button>
+          <button type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 7.1 12 2.9l7.5 4.2v9.8L12 21.1l-7.5-4.2V7.1Z" />
+              <path d="m4.9 7.4 7.1 4 7.1-4M12 21v-9.6" />
+            </svg>
+            Products
+          </button>
+          <button type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 7.5h3l1.7-2h5.6l1.7 2h3A1.5 1.5 0 0 1 21 9v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18V9a1.5 1.5 0 0 1 1.5-1.5Z" />
+              <circle cx="12" cy="13.2" r="3.2" />
+            </svg>
+            Capture
+          </button>
+        </nav>
+        <div class="home-indicator" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>

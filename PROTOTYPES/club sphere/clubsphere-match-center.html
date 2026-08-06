@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ClubSphere Match Center lineup planning prototype by PJ Haft."
+    />
+    <title>ClubSphere Match Center Prototype | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cs-prototype-page">
+    <svg class="cs-icon-sprite" aria-hidden="true">
+      <symbol id="cs-icon-calendar" viewBox="0 -960 960 960">
+        <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Z" />
+      </symbol>
+      <symbol id="cs-icon-check" viewBox="0 -960 960 960">
+        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+      </symbol>
+      <symbol id="cs-icon-chevron" viewBox="0 -960 960 960">
+        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+      </symbol>
+      <symbol id="cs-icon-filter" viewBox="0 -960 960 960">
+        <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
+      </symbol>
+      <symbol id="cs-icon-flame" viewBox="0 -960 960 960">
+        <path d="M480-80q-134 0-227-93t-93-227q0-83 40.5-158.5T318-690q30-20 57-48.5t45-61.5q6-11 19-12.5t21 7.5q36 40 55 88t19 97q0 17-2 33t-7 32q29-18 51.5-43t35.5-57q5-12 17.5-14t21.5 7q73 67 111 130.5T800-400q0 134-93 227T480-80Z" />
+      </symbol>
+      <symbol id="cs-icon-heart" viewBox="0 -960 960 960">
+        <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+      </symbol>
+      <symbol id="cs-icon-refresh" viewBox="0 -960 960 960">
+        <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
+      </symbol>
+      <symbol id="cs-icon-save" viewBox="0 -960 960 960">
+        <path d="M840-680v520q0 33-23.5 56.5T760-80H200q-33 0-56.5-23.5T120-160v-640q0-33 23.5-56.5T200-880h520l120 120ZM480-200q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM240-560h360v-200H240v200Z" />
+      </symbol>
+      <symbol id="cs-icon-soccer" viewBox="0 -960 960 960">
+        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+      </symbol>
+      <symbol id="cs-icon-timer" viewBox="0 -960 960 960">
+        <path d="M360-840v-80h240v80H360Zm80 440h80v-240h-80v240Zm40 320q-74 0-139.5-28.5T226-186q-49-49-77.5-114.5T120-440q0-74 28.5-139.5T226-694q49-49 114.5-77.5T480-800q74 0 139.5 28.5T734-694q49 49 77.5 114.5T840-440q0 74-28.5 139.5T734-186q-49 49-114.5 77.5T480-80Z" />
+      </symbol>
+      <symbol id="cs-icon-vitals" viewBox="0 -960 960 960">
+        <path d="M80-440v-80h215l69 138 160-320q5-11 15-15.5t21-4.5q11 0 21 4.5t15 15.5l69 138h215v80H640q-11 0-21-5.5t-15-16.5l-44-88-124 248q-5 11-15 16.5t-21 5.5q-11 0-21-5.5T364-346l-69-94H80Z" />
+      </symbol>
+    </svg>
+
+    <main class="cs-prototype-shell" aria-label="ClubSphere Match Center prototype">
+      <div class="cs-browser">
+        <section class="cs-app">
+          <header class="cs-topbar">
+            <a class="cs-brand" href="../../clubsphere.html" aria-label="Back to ClubSphere case study">
+              <span class="cs-brand__mark"><svg><use href="#cs-icon-soccer"></use></svg></span>
+              <strong>ClubSphere</strong>
+            </a>
+            <nav class="cs-tabs" aria-label="ClubSphere sections">
+              <a href="clubsphere-squad-hub.html">Squad Hub</a>
+              <a class="is-active" href="clubsphere-match-center.html">Match Center</a>
+              <a href="clubsphere-scouting-reports.html">Scouting</a>
+              <a href="clubsphere-analytics.html">Analytics</a>
+            </nav>
+            <div class="cs-match-pill">
+              <svg><use href="#cs-icon-calendar"></use></svg>
+              <span>Next: vs Lakeland FC</span>
+              <strong>Sat 3pm</strong>
+            </div>
+            <button class="cs-avatar-button" type="button">SC</button>
+          </header>
+
+          <section class="cs-lineup-screen" aria-label="Match Center lineup planner">
+            <header class="cs-lineup-header">
+              <div>
+                <p class="cs-kicker">Match Center</p>
+                <h1>Match Readiness</h1>
+                <p>Drag players into the XI, compare readiness, and confirm the matchday squad.</p>
+              </div>
+              <div class="cs-lineup-actions" aria-label="Lineup controls">
+                <div class="cs-lineup-lens" aria-label="Readiness lens">
+                  <button class="is-active" type="button" data-lens="fitness">
+                    <svg><use href="#cs-icon-heart"></use></svg>
+                    Fitness
+                  </button>
+                  <button type="button" data-lens="fatigue">
+                    <svg><use href="#cs-icon-flame"></use></svg>
+                    Fatigue
+                  </button>
+                  <button type="button" data-lens="minutes">
+                    <svg><use href="#cs-icon-timer"></use></svg>
+                    Minutes
+                  </button>
+                </div>
+                <span class="cs-lineup-divider" aria-hidden="true"></span>
+                <button class="cs-icon-button cs-lineup-reset" type="button" aria-label="Reset lineup">
+                  <svg><use href="#cs-icon-refresh"></use></svg>
+                </button>
+                <button class="cs-primary-button cs-confirm-squad-button" type="button" data-confirm-squad>
+                  <svg class="cs-confirm-squad-button__icon"><use href="#cs-icon-save"></use></svg>
+                  <span class="cs-confirm-squad-button__spinner" aria-hidden="true"></span>
+                  <span>Confirm Squad</span>
+                </button>
+              </div>
+            </header>
+
+            <div class="cs-match-toast" data-match-toast role="status" aria-live="polite" aria-hidden="true">
+              <span><svg><use href="#cs-icon-check"></use></svg></span>
+              <p><strong>Squad saved.</strong><small>Squad and coaching staff notified.</small></p>
+            </div>
+
+            <div class="cs-readiness-strip" aria-label="Match readiness summary">
+              <article>
+                <span>Total Squad</span>
+                <strong>18</strong>
+                <svg><use href="#cs-icon-vitals"></use></svg>
+              </article>
+              <article class="is-available">
+                <span>Fully Available</span>
+                <strong>15</strong>
+                <svg><use href="#cs-icon-check"></use></svg>
+              </article>
+              <article class="is-limited">
+                <span>Limited / Managed</span>
+                <strong>2</strong>
+                <svg><use href="#cs-icon-timer"></use></svg>
+              </article>
+              <article class="is-unavailable">
+                <span>Unavailable</span>
+                <strong>1</strong>
+                <svg><use href="#cs-icon-filter"></use></svg>
+              </article>
+            </div>
+
+            <section class="cs-pitch-panel" aria-label="Interactive lineup field">
+              <div class="cs-pitch" data-pitch>
+                <div class="cs-pitch__circle"></div>
+                <div class="cs-pitch__box cs-pitch__box--top"></div>
+                <div class="cs-pitch__box cs-pitch__box--bottom"></div>
+
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="lw" style="--x: 38%; --y: 16%;">
+                  <span class="cs-slot-label">LW</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="st" style="--x: 50%; --y: 15%;">
+                  <span class="cs-slot-label">ST</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="rw" style="--x: 62%; --y: 16%;">
+                  <span class="cs-slot-label">RW</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="lcm" style="--x: 36%; --y: 38%;">
+                  <span class="cs-slot-label">M</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="dm" style="--x: 50%; --y: 45%;">
+                  <span class="cs-slot-label">DM</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="rcm" style="--x: 64%; --y: 38%;">
+                  <span class="cs-slot-label">M</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="lb" style="--x: 32%; --y: 67%;">
+                  <span class="cs-slot-label">LB</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="lcb" style="--x: 44%; --y: 67%;">
+                  <span class="cs-slot-label">CB</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="rcb" style="--x: 56%; --y: 67%;">
+                  <span class="cs-slot-label">CB</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="rb" style="--x: 68%; --y: 67%;">
+                  <span class="cs-slot-label">RB</span>
+                </div>
+                <div class="cs-lineup-slot" role="button" tabindex="-1" data-slot="gk" style="--x: 50%; --y: 88%;">
+                  <span class="cs-slot-label">GK</span>
+                </div>
+
+                <aside class="cs-player-popover" data-player-popover aria-hidden="true">
+                  <div>
+                    <span data-popover-initials>YT</span>
+                    <div>
+                      <strong data-popover-name>Yuki Tanaka</strong>
+                      <small data-popover-meta>#17 / M</small>
+                    </div>
+                  </div>
+                  <dl>
+                    <div><dt><svg><use href="#cs-icon-heart"></use></svg> Fitness</dt><dd><i data-popover-fitness-bar></i><strong data-popover-fitness>86%</strong></dd></div>
+                    <div><dt><svg><use href="#cs-icon-flame"></use></svg> Fatigue</dt><dd><i data-popover-fatigue-bar></i><strong data-popover-fatigue>14%</strong></dd></div>
+                    <div><dt><svg><use href="#cs-icon-timer"></use></svg> Last 7 days</dt><dd><strong data-popover-minutes>230 mins</strong></dd></div>
+                  </dl>
+                </aside>
+
+                <div class="cs-pitch-controls">
+                  <span class="cs-formation-context" data-formation-label>Midfield control</span>
+                  <div class="cs-pitch-legend" aria-label="Readiness legend">
+                    <span><i class="is-available"></i> Available</span>
+                    <span><i class="is-limited"></i> Limited</span>
+                    <span><i class="is-unavailable"></i> Unavailable</span>
+                    <b></b>
+                    <button class="cs-formation-cycle" type="button" data-formation-cycle="previous" aria-label="Previous formation">
+                      <svg><use href="#cs-icon-chevron"></use></svg>
+                    </button>
+                    <span class="cs-formation-control-label" data-formation-control-label>4-3-3</span>
+                    <button class="cs-formation-cycle cs-formation-cycle--next" type="button" data-formation-cycle="next" aria-label="Next formation">
+                      <svg><use href="#cs-icon-chevron"></use></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-bench-panel" aria-label="Additional players">
+              <div>
+                <h2>Additional Players</h2>
+                <p>Drag onto a field position to replace a starter.</p>
+              </div>
+              <div class="cs-bench-list" data-bench></div>
+            </section>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const players = [
+        { id: "tb", initials: "TB", name: "Tyler Brooks", number: 11, position: "LW", fitness: 70, fatigue: 32, minutes: 190, status: "limited", location: "lw" },
+        { id: "cr", initials: "CR", name: "Cristian Reyes", number: 9, position: "ST", fitness: 90, fatigue: 18, minutes: 260, status: "available", location: "st" },
+        { id: "el", initials: "EL", name: "Erik Larsson", number: 7, position: "RW", fitness: 94, fatigue: 12, minutes: 210, status: "available", location: "rw" },
+        { id: "oh", initials: "OH", name: "Omar Hassan", number: 10, position: "CAM", fitness: 89, fatigue: 16, minutes: 230, status: "available", location: "lcm" },
+        { id: "as", initials: "AS", name: "Andre Silva", number: 38, position: "DM", fitness: 74, fatigue: 28, minutes: 120, status: "limited", location: "dm" },
+        { id: "yt", initials: "YT", name: "Yuki Tanaka", number: 17, position: "M", fitness: 92, fatigue: 14, minutes: 230, status: "available", location: "rcm" },
+        { id: "jw", initials: "JW", name: "James Wright", number: 3, position: "LB", fitness: 91, fatigue: 15, minutes: 225, status: "available", location: "lb" },
+        { id: "do", initials: "DO", name: "David Okafor", number: 4, position: "CB", fitness: 88, fatigue: 19, minutes: 240, status: "available", location: "lcb" },
+        { id: "ls", initials: "LS", name: "Leo Santos", number: 5, position: "CB", fitness: 72, fatigue: 35, minutes: 170, status: "limited", location: "rcb" },
+        { id: "km", initials: "KM", name: "Kai Muller", number: 2, position: "RB", fitness: 85, fatigue: 22, minutes: 180, status: "available", location: "rb" },
+        { id: "mc", initials: "MC", name: "Marcus Chen", number: 1, position: "GK", fitness: 95, fatigue: 9, minutes: 90, status: "available", location: "gk" },
+        { id: "cg", initials: "CG", name: "Carlos Gomez", number: 18, position: "ST", fitness: 93, fatigue: 11, minutes: 85, status: "available", location: "bench" },
+        { id: "al1", initials: "AL", name: "Aiden Lee", number: 14, position: "M", fitness: 88, fatigue: 17, minutes: 70, status: "available", location: "bench" },
+        { id: "jh", initials: "JH", name: "Jonah Hill", number: 22, position: "CB", fitness: 91, fatigue: 15, minutes: 65, status: "available", location: "bench" },
+        { id: "da", initials: "DA", name: "Dylan Alvarez", number: 15, position: "RW", fitness: 86, fatigue: 20, minutes: 55, status: "available", location: "bench" },
+        { id: "sd", initials: "SD", name: "Samir Diallo", number: 23, position: "LB", fitness: 90, fatigue: 13, minutes: 80, status: "available", location: "bench" },
+        { id: "ld", initials: "LD", name: "Luca Devereux", number: 28, position: "M", fitness: 73, fatigue: 34, minutes: 140, status: "limited", location: "bench" },
+        { id: "mo", initials: "MO", name: "Mateo Ortega", number: 32, position: "LW", fitness: 61, fatigue: 42, minutes: 30, status: "unavailable", location: "bench" },
+      ];
+
+      const slots = Array.from(document.querySelectorAll("[data-slot]"));
+      const bench = document.querySelector("[data-bench]");
+      const popover = document.querySelector("[data-player-popover]");
+      const pitch = document.querySelector("[data-pitch]");
+      const formationLabel = document.querySelector("[data-formation-label]");
+      const formationControlLabel = document.querySelector("[data-formation-control-label]");
+      const formationCycleButtons = Array.from(document.querySelectorAll("[data-formation-cycle]"));
+      const confirmSquadButton = document.querySelector("[data-confirm-squad]");
+      const matchToast = document.querySelector("[data-match-toast]");
+      let toastTimer = null;
+      let draggedId = null;
+      let draggedToken = null;
+      let pointerOffset = { x: 0, y: 0 };
+      let activeFormation = "4-3-3";
+
+      const formations = {
+        "4-3-3": {
+          name: "Midfield control",
+          lw: { label: "LW", x: "38%", y: "16%" },
+          st: { label: "ST", x: "50%", y: "15%" },
+          rw: { label: "RW", x: "62%", y: "16%" },
+          lcm: { label: "M", x: "36%", y: "38%" },
+          dm: { label: "DM", x: "50%", y: "45%" },
+          rcm: { label: "M", x: "64%", y: "38%" },
+          lb: { label: "LB", x: "32%", y: "67%" },
+          lcb: { label: "CB", x: "44%", y: "67%" },
+          rcb: { label: "CB", x: "56%", y: "67%" },
+          rb: { label: "RB", x: "68%", y: "67%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-4-2": {
+          name: "Balanced classic",
+          lw: { label: "ST", x: "44%", y: "15%" },
+          st: { label: "ST", x: "56%", y: "15%" },
+          rw: { label: "RM", x: "66%", y: "40%" },
+          lcm: { label: "LM", x: "34%", y: "40%" },
+          dm: { label: "CM", x: "45%", y: "45%" },
+          rcm: { label: "CM", x: "55%", y: "45%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-2-3-1": {
+          name: "Double pivot balance",
+          lw: { label: "LAM", x: "39%", y: "26%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RAM", x: "61%", y: "26%" },
+          lcm: { label: "CAM", x: "50%", y: "34%" },
+          dm: { label: "CDM", x: "44%", y: "49%" },
+          rcm: { label: "CDM", x: "56%", y: "49%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "3-5-2": {
+          name: "Midfield overload",
+          lw: { label: "ST", x: "44%", y: "15%" },
+          st: { label: "ST", x: "56%", y: "15%" },
+          rw: { label: "CM", x: "43%", y: "40%" },
+          lcm: { label: "LM", x: "31%", y: "45%" },
+          dm: { label: "CM", x: "50%", y: "46%" },
+          rcm: { label: "RM", x: "69%", y: "45%" },
+          lb: { label: "LCB", x: "39%", y: "66%" },
+          lcb: { label: "CB", x: "50%", y: "68%" },
+          rcb: { label: "RCB", x: "61%", y: "66%" },
+          rb: { label: "CM", x: "57%", y: "40%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-1-4-1": {
+          name: "Structured compact",
+          lw: { label: "LM", x: "34%", y: "35%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RM", x: "66%", y: "35%" },
+          lcm: { label: "CM", x: "44%", y: "38%" },
+          dm: { label: "CDM", x: "50%", y: "50%" },
+          rcm: { label: "CM", x: "56%", y: "38%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "3-4-3": {
+          name: "Aggressive width",
+          lw: { label: "LW", x: "38%", y: "16%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RW", x: "62%", y: "16%" },
+          lcm: { label: "LM", x: "33%", y: "45%" },
+          dm: { label: "CM", x: "45%", y: "45%" },
+          rcm: { label: "CM", x: "55%", y: "45%" },
+          rb: { label: "RM", x: "67%", y: "45%" },
+          lb: { label: "LCB", x: "39%", y: "66%" },
+          lcb: { label: "CB", x: "50%", y: "68%" },
+          rcb: { label: "RCB", x: "61%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-5-1": {
+          name: "Packed midfield",
+          lw: { label: "LM", x: "32%", y: "40%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RM", x: "68%", y: "40%" },
+          lcm: { label: "CM", x: "42%", y: "40%" },
+          dm: { label: "CDM", x: "50%", y: "47%" },
+          rcm: { label: "CM", x: "58%", y: "40%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-3-2-1": {
+          name: "Defensive block",
+          lw: { label: "LAM", x: "43%", y: "28%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RAM", x: "57%", y: "28%" },
+          lcm: { label: "CM", x: "41%", y: "48%" },
+          dm: { label: "CM", x: "50%", y: "49%" },
+          rcm: { label: "CM", x: "59%", y: "48%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "5-4-1": {
+          name: "Deep block",
+          lw: { label: "LM", x: "34%", y: "40%" },
+          st: { label: "ST", x: "50%", y: "14%" },
+          rw: { label: "RM", x: "66%", y: "40%" },
+          lcm: { label: "CM", x: "44%", y: "43%" },
+          rcm: { label: "CM", x: "56%", y: "43%" },
+          lb: { label: "LWB", x: "29%", y: "65%" },
+          lcb: { label: "CB", x: "41%", y: "68%" },
+          dm: { label: "CB", x: "50%", y: "69%" },
+          rcb: { label: "CB", x: "59%", y: "68%" },
+          rb: { label: "RWB", x: "71%", y: "65%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+        "4-2-2-2": {
+          name: "Double striker",
+          lw: { label: "ST", x: "44%", y: "15%" },
+          st: { label: "ST", x: "56%", y: "15%" },
+          rw: { label: "RAM", x: "58%", y: "34%" },
+          lcm: { label: "LAM", x: "42%", y: "34%" },
+          dm: { label: "CDM", x: "44%", y: "49%" },
+          rcm: { label: "CDM", x: "56%", y: "49%" },
+          lb: { label: "LB", x: "32%", y: "66%" },
+          lcb: { label: "CB", x: "44%", y: "68%" },
+          rcb: { label: "CB", x: "56%", y: "68%" },
+          rb: { label: "RB", x: "68%", y: "66%" },
+          gk: { label: "GK", x: "50%", y: "88%" },
+        },
+      };
+
+      const getPlayer = (id) => players.find((player) => player.id === id);
+      const formationOrder = Object.keys(formations);
+
+      const renderToken = (player) => {
+        const token = document.createElement("button");
+        token.className = `cs-lineup-player is-${player.status}`;
+        token.type = "button";
+        token.dataset.playerId = player.id;
+        token.setAttribute("aria-label", `${player.name}, ${player.position}, ${player.status}`);
+        token.innerHTML = `
+          <span>${player.initials}</span>
+          <small>${player.number}</small>
+        `;
+        token.addEventListener("pointerdown", startDrag);
+        token.addEventListener("pointerenter", () => showPopover(player, token));
+        token.addEventListener("pointerleave", hidePopover);
+        token.addEventListener("focus", () => showPopover(player, token));
+        token.addEventListener("blur", hidePopover);
+        return token;
+      };
+
+      const renderLineup = () => {
+        slots.forEach((slot) => {
+          const label = slot.querySelector(".cs-slot-label").outerHTML;
+          slot.innerHTML = label;
+          const player = players.find((item) => item.location === slot.dataset.slot);
+          if (player) slot.appendChild(renderToken(player));
+        });
+
+        bench.innerHTML = "";
+        players.filter((player) => player.location === "bench").forEach((player) => {
+          bench.appendChild(renderToken(player));
+        });
+      };
+
+      const animateFormationChange = (fromRects) => {
+        document.querySelectorAll(".cs-lineup-slot").forEach((slot) => {
+          const from = fromRects.get(slot.dataset.slot);
+          if (!from) return;
+          const to = slot.getBoundingClientRect();
+          const dx = from.left - to.left;
+          const dy = from.top - to.top;
+          if (Math.abs(dx) < 2 && Math.abs(dy) < 2) return;
+          slot.animate(
+            [
+              { transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))` },
+              { transform: "translate(-50%, -50%)" },
+            ],
+            { duration: 360, easing: "cubic-bezier(.2, 0, 0, 1)" }
+          );
+        });
+      };
+
+      const applyFormation = (formation) => {
+        const layout = formations[formation];
+        if (!layout) return;
+        const fromRects = new Map();
+        slots.forEach((slot) => {
+          fromRects.set(slot.dataset.slot, slot.getBoundingClientRect());
+        });
+
+        activeFormation = formation;
+        slots.forEach((slot) => {
+          const config = layout[slot.dataset.slot];
+          if (!config) return;
+          slot.style.setProperty("--x", config.x);
+          slot.style.setProperty("--y", config.y);
+          slot.querySelector(".cs-slot-label").textContent = config.label;
+        });
+        formationLabel.textContent = layout.name;
+        formationControlLabel.textContent = formation;
+        requestAnimationFrame(() => animateFormationChange(fromRects));
+      };
+
+      const showPopover = (player, token) => {
+        if (draggedId) return;
+        const pitchRect = pitch.getBoundingClientRect();
+        const tokenRect = token.getBoundingClientRect();
+        const isBenchToken = Boolean(token.closest("[data-bench]"));
+        popover.querySelector("[data-popover-initials]").textContent = player.initials;
+        popover.querySelector("[data-popover-name]").textContent = player.name;
+        popover.querySelector("[data-popover-meta]").textContent = `#${player.number} / ${player.position}`;
+        popover.querySelector("[data-popover-fitness]").textContent = `${player.fitness}%`;
+        popover.querySelector("[data-popover-fatigue]").textContent = `${player.fatigue}%`;
+        popover.querySelector("[data-popover-minutes]").textContent = `${player.minutes} mins`;
+        popover.querySelector("[data-popover-fitness-bar]").style.width = `${player.fitness}%`;
+        popover.querySelector("[data-popover-fatigue-bar]").style.width = `${player.fatigue}%`;
+        popover.classList.toggle("is-bench-popover", isBenchToken);
+        if (isBenchToken) {
+          popover.style.left = `${Math.max(18, Math.min(window.innerWidth - 318, tokenRect.left + tokenRect.width / 2 - 150))}px`;
+          popover.style.top = `${Math.max(76, tokenRect.top - 202)}px`;
+        } else {
+          popover.style.left = `${Math.max(18, Math.min(window.innerWidth - 318, tokenRect.left + 78))}px`;
+          popover.style.top = `${Math.max(76, Math.min(window.innerHeight - 190, tokenRect.top - 12))}px`;
+        }
+        popover.setAttribute("aria-hidden", "false");
+      };
+
+      const hidePopover = () => {
+        popover.setAttribute("aria-hidden", "true");
+      };
+
+      const startDrag = (event) => {
+        const token = event.currentTarget;
+        const player = getPlayer(token.dataset.playerId);
+        if (!player || event.button !== 0) return;
+
+        event.preventDefault();
+        hidePopover();
+        draggedId = player.id;
+        const rect = token.getBoundingClientRect();
+        pointerOffset = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+        draggedToken = token.cloneNode(true);
+        draggedToken.classList.add("is-dragging");
+        draggedToken.style.left = `${rect.left}px`;
+        draggedToken.style.top = `${rect.top}px`;
+        draggedToken.style.width = `${rect.width}px`;
+        draggedToken.style.height = `${rect.height}px`;
+        document.body.appendChild(draggedToken);
+        token.classList.add("is-origin");
+        document.body.classList.add("cs-is-dragging-lineup");
+
+        window.addEventListener("pointermove", moveDrag);
+        window.addEventListener("pointerup", endDrag, { once: true });
+      };
+
+      const moveDrag = (event) => {
+        if (!draggedToken) return;
+        draggedToken.style.left = `${event.clientX - pointerOffset.x}px`;
+        draggedToken.style.top = `${event.clientY - pointerOffset.y}px`;
+
+        document.querySelectorAll(".cs-lineup-slot, .cs-bench-panel, .is-bench-swap-target").forEach((target) => {
+          target.classList.remove("is-drop-target");
+          target.classList.remove("is-bench-swap-target");
+        });
+        const target = getDropTarget(event.clientX, event.clientY);
+        if (target) {
+          target.classList.add("is-drop-target");
+          const benchTarget = getBenchSwapToken(event.clientX, event.clientY);
+          if (benchTarget) benchTarget.classList.add("is-bench-swap-target");
+        }
+      };
+
+      const getDropTarget = (x, y) => {
+        const element = document.elementFromPoint(x, y);
+        if (!element) return null;
+        const fieldToken = element.closest(".cs-lineup-slot .cs-lineup-player");
+        if (fieldToken && fieldToken.dataset.playerId !== draggedId) {
+          return fieldToken.closest(".cs-lineup-slot");
+        }
+        const directTarget = element.closest(".cs-lineup-slot, .cs-bench-panel");
+        if (directTarget) return directTarget;
+
+        const nearestSlot = slots
+          .map((slot) => {
+            const rect = slot.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            return { slot, distance: Math.hypot(centerX - x, centerY - y) };
+          })
+          .sort((a, b) => a.distance - b.distance)[0];
+
+        if (nearestSlot && nearestSlot.distance <= 92) return nearestSlot.slot;
+        return null;
+      };
+
+      const getBenchSwapToken = (x, y) => {
+        const element = document.elementFromPoint(x, y);
+        const exactToken = element?.closest("[data-bench] .cs-lineup-player");
+        if (exactToken && exactToken.dataset.playerId !== draggedId) return exactToken;
+
+        const benchPanel = element?.closest(".cs-bench-panel");
+        if (!benchPanel) return null;
+
+        const benchTokens = Array.from(document.querySelectorAll("[data-bench] .cs-lineup-player"))
+          .filter((token) => token.dataset.playerId !== draggedId);
+        if (!benchTokens.length) return null;
+
+        return benchTokens
+          .map((token) => {
+            const rect = token.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            return { token, distance: Math.hypot(centerX - x, centerY - y) };
+          })
+          .sort((a, b) => a.distance - b.distance)[0].token;
+      };
+
+      const animateSwap = (fromRects) => {
+        document.querySelectorAll("[data-player-id]").forEach((token) => {
+          const from = fromRects.get(token.dataset.playerId);
+          if (!from) return;
+          const to = token.getBoundingClientRect();
+          const dx = from.left - to.left;
+          const dy = from.top - to.top;
+          if (Math.abs(dx) < 2 && Math.abs(dy) < 2) return;
+          token.animate(
+            [
+              { transform: `translate(${dx}px, ${dy}px) scale(1.05)`, boxShadow: "0 18px 32px rgba(15, 34, 56, 0.22)" },
+              { transform: "translate(0, 0) scale(1)", boxShadow: "0 8px 20px rgba(15, 34, 56, 0.12)" },
+            ],
+            { duration: 340, easing: "cubic-bezier(.2, 0, 0, 1)" }
+          );
+        });
+      };
+
+      const animateSnapBack = () => {
+        if (!draggedToken || !draggedId) return Promise.resolve();
+        const origin = document.querySelector(`[data-player-id="${draggedId}"].is-origin`);
+        if (!origin) return Promise.resolve();
+        const originRect = origin.getBoundingClientRect();
+        const currentRect = draggedToken.getBoundingClientRect();
+        const animation = draggedToken.animate(
+          [
+            {
+              left: `${currentRect.left}px`,
+              top: `${currentRect.top}px`,
+              transform: "scale(1.12)",
+              boxShadow: "0 20px 38px rgba(15, 34, 56, 0.3)",
+            },
+            {
+              left: `${originRect.left}px`,
+              top: `${originRect.top}px`,
+              transform: "scale(1)",
+              boxShadow: "0 8px 20px rgba(15, 34, 56, 0.12)",
+            },
+          ],
+          { duration: 260, easing: "cubic-bezier(.2, 0, 0, 1)" }
+        );
+        draggedToken.style.left = `${originRect.left}px`;
+        draggedToken.style.top = `${originRect.top}px`;
+        draggedToken.style.transform = "scale(1)";
+        return animation.finished.catch(() => {});
+      };
+
+      const cleanupDrag = () => {
+        draggedToken?.remove();
+        draggedToken = null;
+        draggedId = null;
+        document.body.classList.remove("cs-is-dragging-lineup");
+        document.querySelectorAll(".is-origin, .is-drop-target, .is-bench-swap-target").forEach((item) => {
+          item.classList.remove("is-origin", "is-drop-target", "is-bench-swap-target");
+        });
+        window.removeEventListener("pointermove", moveDrag);
+      };
+
+      const endDrag = async (event) => {
+        const target = getDropTarget(event.clientX, event.clientY);
+        const dragged = getPlayer(draggedId);
+        const fromRects = new Map();
+        document.querySelectorAll("[data-player-id]").forEach((token) => {
+          fromRects.set(token.dataset.playerId, token.getBoundingClientRect());
+        });
+
+        if (target && dragged) {
+          if (target.classList.contains("cs-lineup-slot")) {
+            const destination = target.dataset.slot;
+            const replaced = players.find((player) => player.location === destination);
+            if (replaced && replaced.id !== dragged.id) replaced.location = dragged.location;
+            dragged.location = destination;
+          } else {
+            const replacementToken = getBenchSwapToken(event.clientX, event.clientY);
+            const replacement = replacementToken ? getPlayer(replacementToken.dataset.playerId) : null;
+            if (replacement && dragged.location !== "bench") {
+              replacement.location = dragged.location;
+              dragged.location = "bench";
+            } else {
+              dragged.location = "bench";
+            }
+          }
+          renderLineup();
+          requestAnimationFrame(() => animateSwap(fromRects));
+          cleanupDrag();
+          return;
+        }
+
+        await animateSnapBack();
+        cleanupDrag();
+      };
+
+      document.querySelectorAll("[data-lens]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-lens]").forEach((item) => {
+            item.classList.toggle("is-active", item === button);
+          });
+          document.body.dataset.lineupLens = button.dataset.lens;
+        });
+      });
+
+      document.querySelector(".cs-lineup-reset").addEventListener("click", () => {
+        players.forEach((player, index) => {
+          player.location = index < 11
+            ? ["lw", "st", "rw", "lcm", "dm", "rcm", "lb", "lcb", "rcb", "rb", "gk"][index]
+            : "bench";
+        });
+        applyFormation(activeFormation);
+        renderLineup();
+      });
+
+      formationCycleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = button.dataset.formationCycle === "next" ? 1 : -1;
+          const currentIndex = formationOrder.indexOf(activeFormation);
+          const nextIndex = (currentIndex + direction + formationOrder.length) % formationOrder.length;
+          applyFormation(formationOrder[nextIndex]);
+        });
+      });
+
+      confirmSquadButton.addEventListener("click", () => {
+        if (confirmSquadButton.classList.contains("is-busy")) return;
+        confirmSquadButton.classList.add("is-busy");
+        confirmSquadButton.disabled = true;
+
+        window.setTimeout(() => {
+          confirmSquadButton.classList.remove("is-busy");
+          confirmSquadButton.disabled = false;
+          matchToast.setAttribute("aria-hidden", "false");
+          matchToast.classList.add("is-visible");
+
+          window.clearTimeout(toastTimer);
+          toastTimer = window.setTimeout(() => {
+            matchToast.classList.remove("is-visible");
+            matchToast.setAttribute("aria-hidden", "true");
+          }, 2600);
+        }, 650);
+      });
+
+      applyFormation(activeFormation);
+      renderLineup();
+    </script>
+  </body>
+</html>

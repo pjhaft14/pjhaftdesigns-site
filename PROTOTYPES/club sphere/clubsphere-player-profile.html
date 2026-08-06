@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ClubSphere full player profile prototype screen by PJ Haft."
+    />
+    <title>ClubSphere Player Profile Prototype | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cs-prototype-page">
+    <svg class="cs-icon-sprite" aria-hidden="true">
+      <symbol id="cs-icon-arrow-back" viewBox="0 -960 960 960">
+        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+      </symbol>
+      <symbol id="cs-icon-calendar" viewBox="0 -960 960 960">
+        <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-188.5-11.5Q280-423 280-440t11.5-28.5Q303-480 320-480t28.5 11.5Q360-457 360-440t-11.5 28.5Q337-400 320-400t-28.5-11.5ZM640-400q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-188.5-11.5Q280-263 280-280t11.5-28.5Q303-320 320-320t28.5 11.5Q360-297 360-280t-11.5 28.5Q337-240 320-240t-28.5-11.5ZM640-240q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+      </symbol>
+      <symbol id="cs-icon-check" viewBox="0 -960 960 960">
+        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+      </symbol>
+      <symbol id="cs-icon-clipboard" viewBox="0 -960 960 960">
+        <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560h-80v120H280v-120h-80v560Zm308.5-571.5Q520-783 520-800t-11.5-28.5Q497-840 480-840t-28.5 11.5Q440-817 440-800t11.5 28.5Q463-760 480-760t28.5-11.5Z" />
+      </symbol>
+      <symbol id="cs-icon-chevron" viewBox="0 -960 960 960">
+        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+      </symbol>
+      <symbol id="cs-icon-contact" viewBox="0 -960 960 960">
+        <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z" />
+      </symbol>
+      <symbol id="cs-icon-heart" viewBox="0 -960 960 960">
+        <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+      </symbol>
+      <symbol id="cs-icon-height" viewBox="0 -960 960 960">
+        <path d="M480-120 320-280l56-57 64 64v-414l-64 64-56-57 160-160 160 160-56 57-64-64v414l64-64 56 57-160 160Z" />
+      </symbol>
+      <symbol id="cs-icon-location" viewBox="0 -960 960 960">
+        <path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+      </symbol>
+      <symbol id="cs-icon-medical" viewBox="0 -960 960 960">
+        <path d="M160-80q-33 0-56.5-23.5T80-160v-480q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v480q0 33-23.5 56.5T800-80H160Zm0-80h640v-480H160v480Zm240-560h160v-80H400v80ZM160-160v-480 480Zm280-200v120h80v-120h120v-80H520v-120h-80v120H320v80h120Z" />
+      </symbol>
+      <symbol id="cs-icon-more" viewBox="0 -960 960 960">
+        <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+      </symbol>
+      <symbol id="cs-icon-person" viewBox="0 -960 960 960">
+        <path d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z" />
+      </symbol>
+      <symbol id="cs-icon-school" viewBox="0 -960 960 960">
+        <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+      </symbol>
+      <symbol id="cs-icon-soccer" viewBox="0 -960 960 960">
+        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+      </symbol>
+      <symbol id="cs-icon-timer" viewBox="0 -960 960 960">
+        <path d="M360-840v-80h240v80H360Zm80 440h80v-240h-80v240Zm-99.5 291.5Q275-137 226-186t-77.5-114.5Q120-366 120-440t28.5-139.5Q177-645 226-694t114.5-77.5Q406-800 480-800q62 0 119 20t107 58l56-56 56 56-56 56q38 50 58 107t20 119q0 74-28.5 139.5T734-186q-49 49-114.5 77.5T480-80q-74 0-139.5-28.5ZM678-242q82-82 82-198t-82-198q-82-82-198-82t-198 82q-82 82-82 198t82 198q82 82 198 82t198-82ZM480-440Z" />
+      </symbol>
+      <symbol id="cs-icon-trend" viewBox="0 -960 960 960">
+        <path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" />
+      </symbol>
+      <symbol id="cs-icon-vitals" viewBox="0 -960 960 960">
+        <path d="M80-600v-120q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v120h-80v-120H160v120H80Zm80 440q-33 0-56.5-23.5T80-240v-120h80v120h640v-120h80v120q0 33-23.5 56.5T800-160H160Zm261-125.5q10-5.5 15-16.5l124-248 44 88q5 11 15 16.5t21 5.5h240v-80H665l-69-138q-5-11-15-15.5t-21-4.5q-11 0-21 4.5T524-658L400-410l-44-88q-5-11-15-16.5t-21-5.5H80v80h215l69 138q5 11 15 16.5t21 5.5q11 0 21-5.5ZM480-480Z" />
+      </symbol>
+    </svg>
+
+    <main class="cs-prototype-shell" aria-label="ClubSphere player profile prototype">
+      <div class="cs-browser">
+        <section class="cs-app">
+          <header class="cs-topbar">
+            <a class="cs-brand" href="../../clubsphere.html" aria-label="Back to ClubSphere case study">
+              <span class="cs-brand__mark"><svg><use href="#cs-icon-soccer"></use></svg></span>
+              <strong>ClubSphere</strong>
+            </a>
+            <nav class="cs-tabs" aria-label="ClubSphere sections">
+              <a class="is-active" href="clubsphere-squad-hub.html">Squad Hub</a>
+              <a href="clubsphere-match-center.html">Match Center</a>
+              <a href="clubsphere-scouting-reports.html">Scouting</a>
+              <a href="clubsphere-analytics.html">Analytics</a>
+            </nav>
+            <div class="cs-match-pill">
+              <svg><use href="#cs-icon-calendar"></use></svg>
+              <span>Next: vs Lakeland FC</span>
+              <strong>Sat 3pm</strong>
+            </div>
+            <button class="cs-avatar-button" type="button">SC</button>
+          </header>
+
+          <section class="cs-profile-screen" aria-label="Omar Hassan full player profile">
+            <div class="cs-profile-breadcrumb">
+              <a href="clubsphere-squad-hub.html" aria-label="Back to Squad Hub">
+                <svg><use href="#cs-icon-arrow-back"></use></svg>
+                Squad Hub
+              </a>
+              <span>/</span>
+              <strong>Omar Hassan</strong>
+            </div>
+
+            <header class="cs-profile-hero">
+              <div class="cs-profile-hero__main">
+                <div class="cs-profile-avatar" aria-hidden="true">OH</div>
+                <div>
+                  <div class="cs-profile-name-row">
+                    <h1>Omar Hassan</h1>
+                    <span>#10</span>
+                    <span>CAM</span>
+                  </div>
+                  <ul class="cs-profile-meta" aria-label="Player details">
+                    <li><svg><use href="#cs-icon-location"></use></svg> Cairo, Egypt</li>
+                    <li><svg><use href="#cs-icon-person"></use></svg> Age 22</li>
+                    <li><svg><use href="#cs-icon-height"></use></svg> 5'11" / 165 lbs</li>
+                  </ul>
+                  <span class="cs-status-pill cs-status-pill--available">
+                    <svg><use href="#cs-icon-check"></use></svg>
+                    Available
+                  </span>
+                </div>
+              </div>
+
+              <div class="cs-profile-actions">
+                <button class="cs-secondary-button" type="button">
+                  <svg><use href="#cs-icon-contact"></use></svg>
+                  Contact
+                </button>
+                <button class="cs-primary-button" type="button">
+                  <svg><use href="#cs-icon-clipboard"></use></svg>
+                  Add Note
+                </button>
+                <button class="cs-icon-button" type="button" aria-label="More actions">
+                  <svg><use href="#cs-icon-more"></use></svg>
+                </button>
+              </div>
+
+            </header>
+
+            <nav class="cs-profile-tabs" aria-label="Player profile sections">
+              <a class="is-active" href="#overview" data-profile-tab="overview"><svg><use href="#cs-icon-soccer"></use></svg> Overview</a>
+              <a href="#"><svg><use href="#cs-icon-trend"></use></svg> Performance</a>
+              <a href="#medical" data-profile-tab="medical"><svg><use href="#cs-icon-heart"></use></svg> Medical & Availability</a>
+              <a href="#"><svg><use href="#cs-icon-clipboard"></use></svg> Training Notes</a>
+              <a href="#"><svg><use href="#cs-icon-school"></use></svg> Academy History</a>
+            </nav>
+
+            <div class="cs-profile-content" data-profile-panel="overview">
+              <aside class="cs-profile-sidebar" aria-label="Quick stats">
+                <section class="cs-profile-card">
+                  <p class="cs-profile-section-label">Quick Stats</p>
+                  <div class="cs-stat-card cs-stat-card--season">
+                    <span>Season 2024/25</span>
+                    <div class="cs-quick-readiness" aria-label="Readiness summary">
+                      <strong>89% <span>Fitness</span></strong>
+                      <strong>8.8 <span>Form</span></strong>
+                    </div>
+                    <dl>
+                      <div><dt>Goals</dt><dd>12</dd></div>
+                      <div><dt>Assists</dt><dd>8</dd></div>
+                      <div><dt>Minutes</dt><dd>700'</dd></div>
+                      <div><dt>Matches</dt><dd>9</dd></div>
+                    </dl>
+                  </div>
+                </section>
+
+                <section class="cs-stat-card">
+                  <div class="cs-stat-card__header">
+                    <span>Fitness Trend</span>
+                    <strong>+5% this week</strong>
+                  </div>
+                  <div class="cs-week-bars" aria-hidden="true">
+                    <i style="height: 58%"></i>
+                    <i style="height: 62%"></i>
+                    <i style="height: 55%"></i>
+                    <i style="height: 66%"></i>
+                    <i style="height: 72%"></i>
+                    <i style="height: 68%"></i>
+                    <i style="height: 76%"></i>
+                  </div>
+                  <ol class="cs-week-labels">
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                    <li>Sun</li>
+                  </ol>
+                </section>
+
+                <section class="cs-stat-card">
+                  <span>Last 5 Matches</span>
+                  <div class="cs-rating-row" aria-label="Last five ratings">
+                    <strong>7.5</strong>
+                    <strong>8.2</strong>
+                    <strong>8.8</strong>
+                    <strong>7.9</strong>
+                    <strong>8.8</strong>
+                  </div>
+                </section>
+
+              </aside>
+
+              <section class="cs-profile-updates" aria-label="Recent updates">
+                <div class="cs-profile-updates__header">
+                  <p class="cs-profile-section-label">Recent Updates</p>
+                  <div class="cs-update-filter" aria-label="Update filters">
+                    <button class="is-active" type="button">All</button>
+                    <button type="button">Medical</button>
+                    <button type="button">Performance</button>
+                  </div>
+                </div>
+
+                <div class="cs-timeline">
+                  <article class="cs-update-card cs-update-card--medical">
+                    <span><svg><use href="#cs-icon-heart"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-28">Mar 28, 2026</time>
+                      <h2>Fitness Assessment Complete</h2>
+                      <p>Player cleared for full training. Minor hamstring tightness resolved.</p>
+                      <small>Dr. Sarah Mitchell <i></i> Medical Staff</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card cs-update-card--performance">
+                    <span><svg><use href="#cs-icon-trend"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-26">Mar 26, 2026</time>
+                      <h2>Match Rating: 8.8</h2>
+                      <p>Outstanding performance vs Metro United. 2 goals, 1 assist. Player of the match.</p>
+                      <small>Steve Thompson <i></i> Head Coach</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card cs-update-card--training">
+                    <span><svg><use href="#cs-icon-vitals"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-24">Mar 24, 2026</time>
+                      <h2>Extra Shooting Session</h2>
+                      <p>Player requested additional finishing drills. Showed excellent work rate.</p>
+                      <small>Carlos Mendez <i></i> Assistant Coach</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card cs-update-card--scout">
+                    <span><svg><use href="#cs-icon-clipboard"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-22">Mar 22, 2026</time>
+                      <h2>Scout Report Added</h2>
+                      <p>Updated scouting notes from regional tournament. Strong aerial ability noted.</p>
+                      <small>Miguel Santos <i></i> Regional Scout</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card cs-update-card--medical">
+                    <span><svg><use href="#cs-icon-heart"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-20">Mar 20, 2026</time>
+                      <h2>Minor Injury Report</h2>
+                      <p>Slight hamstring discomfort after training. Recommended reduced intensity for 48hrs.</p>
+                      <small>Dr. Sarah Mitchell <i></i> Medical Staff</small>
+                    </div>
+                  </article>
+                </div>
+
+                <button class="cs-secondary-button cs-load-more" type="button">Load More Updates</button>
+              </section>
+            </div>
+
+            <div class="cs-profile-content" data-profile-panel="medical" hidden>
+              <aside class="cs-profile-sidebar" aria-label="Medical quick stats">
+                <section class="cs-profile-card">
+                  <p class="cs-profile-section-label">Quick Stats</p>
+                  <div class="cs-stat-card cs-stat-card--season">
+                    <span>Current Readiness</span>
+                    <div class="cs-quick-readiness" aria-label="Readiness summary">
+                      <strong>89% <span>Fitness</span></strong>
+                      <strong>8.8 <span>Form</span></strong>
+                    </div>
+                    <dl>
+                      <div><dt>Status</dt><dd>Clear</dd></div>
+                      <div><dt>Risk</dt><dd>Low</dd></div>
+                      <div><dt>Load</dt><dd>Normal</dd></div>
+                      <div><dt>Checked</dt><dd>Mar 28</dd></div>
+                    </dl>
+                  </div>
+                </section>
+
+                <section class="cs-stat-card">
+                  <div class="cs-stat-card__header">
+                    <span>Fitness Trend</span>
+                    <strong>+5% this week</strong>
+                  </div>
+                  <div class="cs-week-bars" aria-hidden="true">
+                    <i style="height: 58%"></i>
+                    <i style="height: 62%"></i>
+                    <i style="height: 55%"></i>
+                    <i style="height: 66%"></i>
+                    <i style="height: 72%"></i>
+                    <i style="height: 68%"></i>
+                    <i style="height: 76%"></i>
+                  </div>
+                  <ol class="cs-week-labels">
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                    <li>Sun</li>
+                  </ol>
+                </section>
+
+                <section class="cs-stat-card">
+                  <span>Last 5 Matches</span>
+                  <div class="cs-rating-row" aria-label="Last five ratings">
+                    <strong>7.5</strong>
+                    <strong>8.2</strong>
+                    <strong>8.8</strong>
+                    <strong>7.9</strong>
+                    <strong>8.8</strong>
+                  </div>
+                </section>
+
+              </aside>
+
+              <section class="cs-medical-panel" aria-label="Medical and availability details">
+                <div class="cs-medical-summary" aria-label="Clearance summary">
+                  <article class="cs-medical-summary-card">
+                    <span><svg><use href="#cs-icon-check"></use></svg></span>
+                    <div>
+                      <p>Availability</p>
+                      <strong>Available</strong>
+                      <small>Cleared to play</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-medical-summary-card">
+                    <span><svg><use href="#cs-icon-vitals"></use></svg></span>
+                    <div>
+                      <p>Training Status</p>
+                      <strong>Full Training</strong>
+                      <small>No limitations</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-medical-summary-card">
+                    <span><svg><use href="#cs-icon-medical"></use></svg></span>
+                    <div>
+                      <p>Injury Risk</p>
+                      <strong>Low Risk</strong>
+                      <small>Monitor workload</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-medical-summary-card">
+                    <span><svg><use href="#cs-icon-calendar"></use></svg></span>
+                    <div>
+                      <p>Last Checked</p>
+                      <strong>Mar 28</strong>
+                      <small>Dr. Sarah Mitchell</small>
+                    </div>
+                  </article>
+                </div>
+
+                <section class="cs-clearance-card">
+                  <p class="cs-profile-section-label">Clearance Path</p>
+                  <ol class="cs-clearance-steps" aria-label="Clearance path">
+                    <li>
+                      <span><svg><use href="#cs-icon-heart"></use></svg></span>
+                      <strong>Minor soreness</strong>
+                      <time datetime="2026-03-20">Mar 20</time>
+                      <small>Hamstring discomfort</small>
+                    </li>
+                    <li>
+                      <span><svg><use href="#cs-icon-vitals"></use></svg></span>
+                      <strong>Modified load</strong>
+                      <time datetime="2026-03-22">Mar 22</time>
+                      <small>Reduced intensity</small>
+                    </li>
+                    <li>
+                      <span><svg><use href="#cs-icon-trend"></use></svg></span>
+                      <strong>Sprint test passed</strong>
+                      <time datetime="2026-03-26">Mar 26</time>
+                      <small>No pain response</small>
+                    </li>
+                    <li>
+                      <span><svg><use href="#cs-icon-check"></use></svg></span>
+                      <strong>Cleared</strong>
+                      <time datetime="2026-03-28">Mar 28</time>
+                      <small>Full training & match play</small>
+                    </li>
+                  </ol>
+                </section>
+
+                <section class="cs-restrictions-card">
+                  <div>
+                    <span><svg><use href="#cs-icon-medical"></use></svg></span>
+                    <div>
+                      <p class="cs-profile-section-label">Active Restrictions</p>
+                      <h2>No active restrictions</h2>
+                      <p>Continue normal training plan. Monitor workload after high-intensity sessions.</p>
+                    </div>
+                  </div>
+                  <aside>
+                    <strong>Monitor</strong>
+                    <p>Keep weekly workload increase under 10% and reassess if soreness returns.</p>
+                  </aside>
+                </section>
+
+                <div class="cs-medical-notes">
+                  <article class="cs-update-card cs-update-card--medical">
+                    <span><svg><use href="#cs-icon-clipboard"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-28">Mar 28, 2026</time>
+                      <h2>Medical Notes</h2>
+                      <p>Cleared for full training and match play. No pain on assessment. Good functional response in sprint testing.</p>
+                      <small>Dr. Sarah Mitchell <i></i> Cleared</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card cs-update-card--training">
+                    <span><svg><use href="#cs-icon-heart"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-22">Mar 22, 2026</time>
+                      <h2>Injury History</h2>
+                      <p>Minor hamstring soreness managed with reduced load. Symptoms resolved after modified sessions.</p>
+                      <small>Medical Staff <i></i> Minor</small>
+                    </div>
+                  </article>
+
+                  <article class="cs-update-card">
+                    <span><svg><use href="#cs-icon-vitals"></use></svg></span>
+                    <div>
+                      <time datetime="2026-03-26">Mar 26, 2026</time>
+                      <h2>Treatment / Rehab</h2>
+                      <p>Mobility and strengthening block completed. Progressed to field drills and sprint protocols.</p>
+                      <small>Fitness Staff <i></i> Completed</small>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script>
+      const profileTabs = Array.from(document.querySelectorAll("[data-profile-tab]"));
+      const profilePanels = Array.from(document.querySelectorAll("[data-profile-panel]"));
+
+      profileTabs.forEach((tab) => {
+        tab.addEventListener("click", (event) => {
+          event.preventDefault();
+          const target = tab.dataset.profileTab;
+
+          profileTabs.forEach((item) => {
+            item.classList.toggle("is-active", item === tab);
+          });
+
+          profilePanels.forEach((panel) => {
+            panel.hidden = panel.dataset.profilePanel !== target;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

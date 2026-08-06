@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ask SugarAI in-visit account context concept for SugarAI Mobile." />
+    <title>Ask SugarAI | SugarAI Mobile Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="ask-sugarai.js" defer></script>
+  </head>
+  <body>
+    <main class="stage" aria-label="SugarAI Mobile in-visit question prototype">
+      <section class="phone" aria-label="Customer-branded SugarAI Mobile app">
+        <div class="status-bar" aria-hidden="true">
+          <span>10:18</span>
+          <span class="status-icons">5G 84%</span>
+        </div>
+
+        <header class="app-header fixed-app-header brief-app-header">
+          <a class="brand-back" id="ask-back" href="active-visit.html" aria-label="Back to Active Visit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
+            <img class="customer-logo" src="customer-logo.png" alt="Customer logo" />
+          </a>
+          <button class="avatar-button" type="button" aria-label="Profile"><img src="avatar-alex.jpg" alt="" /></button>
+        </header>
+
+        <div class="app-shell brief-shell ask-shell">
+          <div class="product-context ask-context"><span aria-hidden="true"></span><span>Kelloway Plant 3 - Visit in progress</span></div>
+
+          <section class="ask-view" id="ask-compose-view" aria-labelledby="ask-title">
+            <header class="ask-header">
+              <p class="section-label">Ask SugarAI</p>
+              <h1 id="ask-title">Answer the unexpected question without leaving the visit.</h1>
+              <p>Search account hierarchy, CRM notes, and service history together.</p>
+            </header>
+
+            <form class="ask-form" id="ask-form">
+              <label for="ask-query">Customer question</label>
+              <textarea
+                id="ask-query"
+                rows="4"
+                aria-describedby="ask-empty-message"
+                placeholder="Ask about this account, site, or open service work..."
+              ></textarea>
+              <button class="ask-submit" id="ask-submit" type="submit">Ask SugarAI</button>
+            </form>
+
+            <div class="ask-empty-state" id="ask-empty-state">
+              <span class="ask-empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3.5 13.4 8l4.1 1.5-4.1 1.5L12 15.5 10.6 11 6.5 9.5 10.6 8 12 3.5Z" />
+                  <path d="M5 14.5 5.8 17l2.2.8-2.2.8L5 21l-.8-2.4-2.2-.8 2.2-.8.8-2.5Z" />
+                </svg>
+              </span>
+              <strong id="ask-empty-message">Ask about the customer</strong>
+              <span>SugarAI can look across the account while the visit stays open.</span>
+            </div>
+
+            <div class="ask-results" id="ask-results" aria-live="polite" hidden>
+              <p class="result-count" id="ask-result-count">Searching account context</p>
+              <div class="ask-skeleton" id="ask-skeleton" aria-label="Searching account context">
+                <span class="skeleton-block skeleton-line skeleton-line--short"></span>
+                <span class="skeleton-block skeleton-line"></span>
+                <span class="skeleton-block skeleton-line skeleton-line--medium"></span>
+                <span class="skeleton-block skeleton-line"></span>
+              </div>
+
+              <article class="ask-answer-card" id="ask-answer-card" hidden>
+                <div class="ask-answer-status">
+                  <span>Open service case</span>
+                  <strong>CS-1842</strong>
+                </div>
+                <h2>Plant 2 compressor vibration is waiting on service dispatch.</h2>
+                <p>
+                  Maya Chen logged abnormal vibration after the last inspection. The case is assigned to field service, with a technician tentatively scheduled for Thursday morning.
+                </p>
+                <dl class="case-facts">
+                  <div><dt>Owner</dt><dd>Jordan Lee</dd></div>
+                  <div><dt>Last update</dt><dd>Yesterday, 4:42 PM</dd></div>
+                  <div><dt>Next step</dt><dd>Confirm Thursday service window</dd></div>
+                </dl>
+                <div class="product-source-row" aria-label="Answer sources">
+                  <span>Account hierarchy</span>
+                  <span>Service case</span>
+                  <span>CRM activity</span>
+                </div>
+                <button class="add-context-button" id="add-context" type="button">Add follow-up to visit</button>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="home-indicator" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>

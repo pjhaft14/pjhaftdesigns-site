@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ClubSphere scouting evaluation visual prototype by PJ Haft."
+    />
+    <title>ClubSphere Scouting Evaluation Prototype | PJ Haft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cs-prototype-page">
+    <svg class="cs-icon-sprite" aria-hidden="true">
+      <symbol id="cs-icon-arrow-back" viewBox="0 -960 960 960">
+        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+      </symbol>
+      <symbol id="cs-icon-calendar" viewBox="0 -960 960 960">
+        <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Z" />
+      </symbol>
+      <symbol id="cs-icon-chevron" viewBox="0 -960 960 960">
+        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+      </symbol>
+      <symbol id="cs-icon-check" viewBox="0 -960 960 960">
+        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+      </symbol>
+      <symbol id="cs-icon-eye" viewBox="0 -960 960 960">
+        <path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Z" />
+      </symbol>
+      <symbol id="cs-icon-height" viewBox="0 -960 960 960">
+        <path d="M280-120 120-280l56-56 64 64v-416l-64 64-56-56 160-160 160 160-56 56-64-64v416l64-64 56 56-160 160Zm280-120v-80h280v80H560Zm0-200v-80h200v80H560Zm0-200v-80h280v80H560Z" />
+      </symbol>
+      <symbol id="cs-icon-location" viewBox="0 -960 960 960">
+        <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
+      </symbol>
+      <symbol id="cs-icon-more" viewBox="0 -960 960 960">
+        <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+      </symbol>
+      <symbol id="cs-icon-note" viewBox="0 -960 960 960">
+        <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80Zm-80 320q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520Z" />
+      </symbol>
+      <symbol id="cs-icon-person" viewBox="0 -960 960 960">
+        <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+      </symbol>
+      <symbol id="cs-icon-save" viewBox="0 -960 960 960">
+        <path d="M840-680v520q0 33-23.5 56.5T760-80H200q-33 0-56.5-23.5T120-160v-640q0-33 23.5-56.5T200-880h520l120 120ZM480-200q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM240-560h360v-200H240v200Z" />
+      </symbol>
+      <symbol id="cs-icon-soccer" viewBox="0 -960 960 960">
+        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+      </symbol>
+      <symbol id="cs-icon-star" viewBox="0 -960 960 960">
+        <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+      </symbol>
+    </svg>
+
+    <main class="cs-prototype-shell" aria-label="ClubSphere Scouting evaluation visual prototype">
+      <div class="cs-browser">
+        <section class="cs-app">
+          <header class="cs-topbar">
+            <a class="cs-brand" href="../../clubsphere.html" aria-label="Back to ClubSphere case study">
+              <span class="cs-brand__mark"><svg><use href="#cs-icon-soccer"></use></svg></span>
+              <strong>ClubSphere</strong>
+            </a>
+            <nav class="cs-tabs" aria-label="ClubSphere sections">
+              <a href="clubsphere-squad-hub.html">Squad Hub</a>
+              <a href="clubsphere-match-center.html">Match Center</a>
+              <a class="is-active" href="clubsphere-scouting-reports.html">Scouting</a>
+              <a href="clubsphere-analytics.html">Analytics</a>
+            </nav>
+            <div class="cs-match-pill">
+              <svg><use href="#cs-icon-calendar"></use></svg>
+              <span>Next: vs Stars FC</span>
+              <strong>Sat 12pm</strong>
+            </div>
+            <button class="cs-avatar-button" type="button">SC</button>
+          </header>
+
+          <section class="cs-scout-screen" aria-label="Scouting evaluation workspace">
+            <div class="cs-scout-breadcrumb">
+              <svg><use href="#cs-icon-arrow-back"></use></svg>
+              <a href="clubsphere-scouting-reports.html">Scouting Reports</a>
+              <i>/</i>
+              <span>Regional Tournament</span>
+              <i>/</i>
+              <strong>New Evaluation</strong>
+            </div>
+
+            <header class="cs-scout-hero">
+              <div class="cs-scout-player">
+                <span class="cs-scout-avatar">JR</span>
+                <div>
+                  <div class="cs-scout-title">
+                    <h1>Joao Rodriguez</h1>
+                    <span>Prospect</span>
+                  </div>
+                  <div class="cs-scout-meta" aria-label="Player details">
+                    <span><svg><use href="#cs-icon-location"></use></svg>Sao Paulo</span>
+                    <span><svg><use href="#cs-icon-person"></use></svg>Age: 17</span>
+                    <span>Left Winger</span>
+                    <span><svg><use href="#cs-icon-height"></use></svg>5'9" / 154 lbs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cs-scout-session" aria-label="Evaluation context">
+                <button class="cs-scout-context-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <svg><use href="#cs-icon-calendar"></use></svg>
+                  <span>Observed Jun 24, 2025</span>
+                  <svg class="cs-scout-context-button__chevron"><use href="#cs-icon-chevron"></use></svg>
+                </button>
+                <button class="cs-scout-context-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <svg><use href="#cs-icon-eye"></use></svg>
+                  <span>U18 Regional Finals</span>
+                  <svg class="cs-scout-context-button__chevron"><use href="#cs-icon-chevron"></use></svg>
+                </button>
+              </div>
+            </header>
+
+            <div class="cs-scout-workspace">
+              <section class="cs-scout-main-card" aria-label="Scoring workspace">
+                <div class="cs-scout-bottom-grid cs-scout-status-strip">
+                  <section class="cs-scout-notes" aria-label="Scout notes">
+                    <h3><svg><use href="#cs-icon-note"></use></svg>Scout Notes</h3>
+                    <textarea
+                      data-scout-notes
+                      aria-label="Scout notes"
+                      placeholder="Add observation notes..."
+                    ></textarea>
+                  </section>
+
+                  <section class="cs-scout-recommendation" aria-label="Recommendation">
+                    <h3><svg><use href="#cs-icon-star"></use></svg>Recommendation</h3>
+                    <div>
+                      <button type="button" aria-pressed="false" data-recommendation-option>Sign Immediately</button>
+                      <button type="button" aria-pressed="false" data-recommendation-option>Monitor Closely</button>
+                      <button type="button" aria-pressed="false" data-recommendation-option>Follow Up Later</button>
+                      <button type="button" aria-pressed="false" data-recommendation-option>Pass</button>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="cs-scout-tabs" aria-label="Evaluation categories">
+                  <button class="is-active" type="button" data-category-tab="technical">Technical <span>0/6</span></button>
+                  <button type="button" data-category-tab="physical">Physical <span>0/6</span></button>
+                  <button type="button" data-category-tab="mental">Mental <span>0/6</span></button>
+                  <button type="button" data-category-tab="tactical">Tactical <span>0/6</span></button>
+                </div>
+
+                <div class="cs-scout-card-header">
+                  <div>
+                    <p class="cs-kicker">Active Category</p>
+                    <h2 data-active-category-title>Technical</h2>
+                  </div>
+                  <span data-active-category-count>0/6 rated</span>
+                </div>
+
+                <div class="cs-score-list" data-score-list aria-label="Technical scoring rows"></div>
+              </section>
+
+              <aside class="cs-scout-side-panel" aria-label="Live scouting rating">
+                <section class="cs-scout-pane-actions" aria-label="Report actions">
+                  <button class="cs-secondary-button" type="button">
+                    <svg><use href="#cs-icon-eye"></use></svg>
+                    Preview
+                  </button>
+                  <button class="cs-primary-button cs-scout-save-button" type="button" data-save-scout-report>
+                    <svg class="cs-scout-save-button__icon"><use href="#cs-icon-save"></use></svg>
+                    <span class="cs-scout-save-button__spinner" aria-hidden="true"></span>
+                    <span>Save Report</span>
+                  </button>
+                </section>
+
+                <section class="cs-rating-card">
+                  <p class="cs-kicker">Overall Rating</p>
+                  <div class="cs-rating-ring" data-rating-ring aria-label="0.0 out of 10">
+                    <svg class="cs-rating-ring__svg" viewBox="0 0 120 120" aria-hidden="true">
+                      <circle class="cs-rating-ring__track" cx="60" cy="60" r="52" pathLength="100"></circle>
+                      <circle class="cs-rating-ring__progress" cx="60" cy="60" r="52" pathLength="100" data-rating-progress></circle>
+                    </svg>
+                    <span><strong data-overall-rating>0.0</strong><small>out of 10</small></span>
+                  </div>
+                </section>
+
+                <section class="cs-breakdown-card" aria-label="Category breakdown">
+                  <h3>Category Breakdown</h3>
+                  <div class="cs-breakdown-row" data-breakdown-row="technical">
+                    <span>Technical</span>
+                    <i><b style="width: 0%"></b></i>
+                    <strong>0.0</strong>
+                  </div>
+                  <div class="cs-breakdown-row" data-breakdown-row="physical">
+                    <span>Physical</span>
+                    <i><b style="width: 0%"></b></i>
+                    <strong>0.0</strong>
+                  </div>
+                  <div class="cs-breakdown-row" data-breakdown-row="mental">
+                    <span>Mental</span>
+                    <i><b style="width: 0%"></b></i>
+                    <strong>0.0</strong>
+                  </div>
+                  <div class="cs-breakdown-row" data-breakdown-row="tactical">
+                    <span>Tactical</span>
+                    <i><b style="width: 0%"></b></i>
+                    <strong>0.0</strong>
+                  </div>
+                </section>
+
+                <section class="cs-rating-scale" aria-label="Rating scale">
+                  <h3>Rating Scale</h3>
+                  <div><span class="is-five"></span><strong>5 - Elite</strong><small>World-class potential</small></div>
+                  <div><span class="is-four"></span><strong>4 - Excellent</strong><small>Above average</small></div>
+                  <div><span class="is-three"></span><strong>3 - Good</strong><small>Meets expectations</small></div>
+                  <div><span class="is-two"></span><strong>2 - Developing</strong><small>Needs improvement</small></div>
+                  <div><span class="is-one"></span><strong>1 - Below Par</strong><small>Significant gaps</small></div>
+                </section>
+              </aside>
+            </div>
+          </section>
+
+          <div class="cs-match-toast cs-scout-toast" data-scout-toast role="status" aria-live="polite" aria-hidden="true">
+            <span><svg><use href="#cs-icon-check"></use></svg></span>
+            <p><strong>Scouting report saved.</strong><small>Joao Rodriguez evaluation is now in scouting reports.</small></p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      const scoutingCategories = {
+        technical: {
+          label: "Technical",
+          traits: ["Ball Control", "Passing", "Dribbling", "First Touch", "Crossing", "Finishing"],
+        },
+        physical: {
+          label: "Physical",
+          traits: ["Pace", "Jumping", "Strength", "Stamina", "Agility", "Balance"],
+        },
+        mental: {
+          label: "Mental",
+          traits: ["Vision", "Composure", "Positioning", "Work Rate", "Decision Making", "Leadership"],
+        },
+        tactical: {
+          label: "Tactical",
+          traits: ["Off-Ball Runs", "Pressing", "Defensive Shape", "Transition Play", "Spacing", "Role Fit"],
+        },
+      };
+
+      const categoryKeys = Object.keys(scoutingCategories);
+      const scoutingScores = Object.fromEntries(
+        categoryKeys.map((key) => [key, scoutingCategories[key].traits.map(() => 0)])
+      );
+      let activeScoutingCategory = "technical";
+
+      const scoreList = document.querySelector("[data-score-list]");
+      const activeCategoryTitle = document.querySelector("[data-active-category-title]");
+      const activeCategoryCount = document.querySelector("[data-active-category-count]");
+      const overallRating = document.querySelector("[data-overall-rating]");
+      const ratingRing = document.querySelector("[data-rating-ring]");
+      const ratingProgress = document.querySelector("[data-rating-progress]");
+      const categoryTabs = Array.from(document.querySelectorAll("[data-category-tab]"));
+      const scoutNotes = document.querySelector("[data-scout-notes]");
+      const recommendationOptions = Array.from(document.querySelectorAll("[data-recommendation-option]"));
+      const saveScoutReportButton = document.querySelector("[data-save-scout-report]");
+      const scoutToast = document.querySelector("[data-scout-toast]");
+      const demoScoutNote = "Exceptional left foot and 1v1 ability. Shows clear acceleration and composure on the ball. Needs to develop weak foot and defensive work rate.";
+      let scoutNotesTypingTimer = null;
+      let scoutToastTimer = null;
+      let hasUnsavedScoutChanges = false;
+
+      const setScoutSaveEnabled = (isEnabled) => {
+        saveScoutReportButton.disabled = !isEnabled;
+        saveScoutReportButton.setAttribute("aria-disabled", String(!isEnabled));
+      };
+
+      const markScoutReportChanged = () => {
+        hasUnsavedScoutChanges = true;
+        setScoutSaveEnabled(true);
+      };
+
+      const getScoreClass = (score) => {
+        if (score >= 5) return "is-five";
+        if (score >= 4) return "is-four";
+        if (score >= 3) return "is-three";
+        if (score >= 2) return "is-two";
+        if (score >= 1) return "is-one";
+        return "";
+      };
+
+      const getCategoryAverage = (categoryKey) => {
+        const scores = scoutingScores[categoryKey];
+        const rated = scores.filter(Boolean);
+        if (!rated.length) return 0;
+        return rated.reduce((total, score) => total + score, 0) / rated.length;
+      };
+
+      const renderScoutingScores = () => {
+        const category = scoutingCategories[activeScoutingCategory];
+        const scores = scoutingScores[activeScoutingCategory];
+        const ratedCount = scores.filter(Boolean).length;
+
+        activeCategoryTitle.textContent = category.label;
+        activeCategoryCount.textContent = `${ratedCount}/${category.traits.length} rated`;
+        scoreList.setAttribute("aria-label", `${category.label} scoring rows`);
+
+        scoreList.innerHTML = category.traits.map((trait, traitIndex) => {
+          const score = scores[traitIndex];
+          const scoreClass = getScoreClass(score);
+          const blocks = Array.from({ length: 5 }, (_, blockIndex) => {
+            const value = blockIndex + 1;
+            const activeClass = value <= score ? ` ${scoreClass}` : "";
+            return `<button class=\"${activeClass.trim()}\" type=\"button\" aria-label=\"Set ${trait} to ${value} out of 5\" data-score-index=\"${traitIndex}\" data-score-value=\"${value}\"></button>`;
+          }).join("");
+
+          return `
+            <div class="cs-score-row">
+              <span>${trait}</span>
+              <div class="cs-score-blocks" aria-label="${score} out of 5">${blocks}</div>
+              <strong class="cs-score-pill ${scoreClass}">${score ? `${score}/5` : "-"}</strong>
+            </div>
+          `;
+        }).join("");
+
+        categoryTabs.forEach((button) => {
+          const key = button.dataset.categoryTab;
+          const scoresForTab = scoutingScores[key];
+          const tabRatedCount = scoresForTab.filter(Boolean).length;
+          button.classList.toggle("is-active", key === activeScoutingCategory);
+          button.querySelector("span").textContent = `${tabRatedCount}/${scoresForTab.length}`;
+        });
+
+        categoryKeys.forEach((key) => {
+          const row = document.querySelector(`[data-breakdown-row="${key}"]`);
+          const average = getCategoryAverage(key);
+          row.querySelector("b").style.width = `${(average / 5) * 100}%`;
+          row.querySelector("strong").textContent = average.toFixed(1);
+          row.classList.toggle("is-muted", average > 0 && average < 3);
+        });
+
+        const allRatedScores = categoryKeys
+          .flatMap((key) => scoutingScores[key])
+          .filter(Boolean);
+        const overall = allRatedScores.length
+          ? (allRatedScores.reduce((total, score) => total + score, 0) / allRatedScores.length) * 2
+          : 0;
+        overallRating.textContent = overall.toFixed(1);
+        const scorePercent = Math.min(overall * 10, 100);
+        ratingRing.style.setProperty("--score", `${scorePercent}%`);
+        ratingProgress.style.strokeDashoffset = `${100 - scorePercent}`;
+        ratingRing.setAttribute("aria-label", `${overall.toFixed(1)} out of 10`);
+      };
+
+      categoryTabs.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeScoutingCategory = button.dataset.categoryTab;
+          renderScoutingScores();
+        });
+      });
+
+      scoreList.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-score-value]");
+        if (!button) return;
+        const traitIndex = Number(button.dataset.scoreIndex);
+        const scoreValue = Number(button.dataset.scoreValue);
+        scoutingScores[activeScoutingCategory][traitIndex] = scoreValue;
+        renderScoutingScores();
+        markScoutReportChanged();
+      });
+
+      recommendationOptions.forEach((button) => {
+        button.addEventListener("click", () => {
+          const shouldSelect = !button.classList.contains("is-selected");
+          recommendationOptions.forEach((option) => {
+            option.classList.remove("is-selected");
+            option.setAttribute("aria-pressed", "false");
+          });
+          if (shouldSelect) {
+            button.classList.add("is-selected");
+            button.setAttribute("aria-pressed", "true");
+          }
+          markScoutReportChanged();
+        });
+      });
+
+      const simulateScoutNotesTyping = () => {
+        window.clearInterval(scoutNotesTypingTimer);
+        scoutNotes.value = "";
+        scoutNotes.focus();
+        let index = 0;
+        scoutNotesTypingTimer = window.setInterval(() => {
+          scoutNotes.value += demoScoutNote[index];
+          scoutNotes.dispatchEvent(new Event("input", { bubbles: true }));
+          index += 1;
+          if (index >= demoScoutNote.length) window.clearInterval(scoutNotesTypingTimer);
+        }, 42);
+      };
+
+      document.addEventListener("keydown", (event) => {
+        if (event.shiftKey && event.key === "F2") {
+          event.preventDefault();
+          simulateScoutNotesTyping();
+        }
+      });
+
+      scoutNotes.addEventListener("input", markScoutReportChanged);
+
+      saveScoutReportButton.addEventListener("click", () => {
+        if (saveScoutReportButton.classList.contains("is-busy") || !hasUnsavedScoutChanges) return;
+        saveScoutReportButton.classList.add("is-busy");
+        saveScoutReportButton.disabled = true;
+
+        window.setTimeout(() => {
+          saveScoutReportButton.classList.remove("is-busy");
+          hasUnsavedScoutChanges = false;
+          setScoutSaveEnabled(false);
+          scoutToast.setAttribute("aria-hidden", "false");
+          scoutToast.classList.add("is-visible");
+
+          window.clearTimeout(scoutToastTimer);
+          scoutToastTimer = window.setTimeout(() => {
+            scoutToast.classList.remove("is-visible");
+            scoutToast.setAttribute("aria-hidden", "true");
+          }, 4200);
+        }, 650);
+      });
+
+      renderScoutingScores();
+      setScoutSaveEnabled(false);
+    </script>
+  </body>
+</html>

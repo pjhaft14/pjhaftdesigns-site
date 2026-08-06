@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact PJ Haft about product design roles, contract projects, and making complex enterprise software easier to understand and use."
+    />
+    <title>Contact PJ Haft | Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260729-03" />
+    <script src="site-nav.js?v=20260723-01" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PJ Haft home">
+        <span class="brand-mark">P</span>
+        <span>PJ Haft</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="nav-cta" aria-current="page" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-title">Want to work together?</h1>
+        <p>
+          If you’re hiring for product design, need help with a complex workflow, or
+          simply want to compare notes on software, I’d be happy to hear from you.
+        </p>
+      </section>
+
+      <section class="contact-section contact-page-section" aria-labelledby="contact-form-title">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <div>
+              <p class="section-kicker">Start a conversation</p>
+              <h2 id="contact-form-title">Tell me what you’re working on.</h2>
+            </div>
+            <p>
+              I’m open to product design roles, contract projects, and thoughtful
+              conversations about enterprise UX, analytics, workflows, and AI.
+            </p>
+            <p>
+              Prefer email? Write to
+              <a href="mailto:pjhaft@gmail.com">pjhaft@gmail.com</a>.
+            </p>
+            <div class="contact-actions">
+              <a class="button secondary" href="resume.html">View resume</a>
+              <a class="button secondary" href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn</a>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formsubmit.co/ajax/pjhaft@gmail.com"
+            method="post"
+          >
+            <input type="hidden" name="_subject" value="New portfolio inquiry for PJ Haft" />
+            <input type="hidden" name="_template" value="table" />
+            <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+
+            <label>
+              <span>What would you like to talk about?</span>
+              <input
+                type="text"
+                name="inquiry"
+                placeholder="A role, project, or introduction"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Tell me a little more</span>
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Share a few details about what you have in mind."
+                required
+              ></textarea>
+            </label>
+
+            <div class="form-submit-row">
+              <button class="button primary" type="submit">Send message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; 2026 PJ Haft</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn</a>
+      </nav>
+    </footer>
+
+    <script>
+      const contactForm = document.querySelector("#contact-form");
+      const formStatus = document.querySelector("#form-status");
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) return;
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        submitButton.disabled = true;
+        contactForm.setAttribute("aria-busy", "true");
+        formStatus.className = "form-status";
+        formStatus.textContent = "Sending your message...";
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) throw new Error("Form submission failed");
+
+          contactForm.reset();
+          formStatus.classList.add("is-success");
+          formStatus.textContent = "Thanks. Your message is on its way.";
+        } catch (error) {
+          formStatus.classList.add("is-error");
+          formStatus.innerHTML =
+            'Something went wrong. You can email me at <a href="mailto:pjhaft@gmail.com">pjhaft@gmail.com</a>.';
+        } finally {
+          submitButton.disabled = false;
+          contactForm.removeAttribute("aria-busy");
+        }
+      });
+    </script>
+  </body>
+</html>

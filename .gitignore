@@ -1,0 +1,15 @@
+tmp/
+output/
+
+# Local design/export scripts and source working files
+*.jsx
+*.psd
+*.ai
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Unused/raw video exports that exceed GitHub's file limit
+assets/puro/story-demo.mp4
+assets/puro/vault-demo.mp4
