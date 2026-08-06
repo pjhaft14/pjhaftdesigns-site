@@ -5818,6 +5818,17 @@ html.has-image-lightbox {
 }
 
 @media (max-width: 640px) {
+  .case-video-frame--flow-2 {
+    aspect-ratio: 16 / 9;
+  }
+
+  .case-video .case-video-frame--flow-2 video {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+  }
+
   .sugarai-prototype-grid {
     grid-template-columns: 1fr;
   }
