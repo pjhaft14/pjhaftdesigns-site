@@ -68,12 +68,14 @@
           <form
             class="contact-form"
             id="contact-form"
-            action="https://formsubmit.co/ajax/pjhaft@gmail.com"
+            action="https://api.web3forms.com/submit"
             method="post"
           >
-            <input type="hidden" name="_subject" value="New portfolio inquiry for PJ Haft" />
-            <input type="hidden" name="_template" value="table" />
-            <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="access_key" value="423f40ff-0047-4daa-a281-93c9c3b83704" />
+            <input type="hidden" name="subject" value="New portfolio inquiry for PJ Haft" />
+            <input type="hidden" name="from_name" value="PJ Haft portfolio" />
+            <input type="hidden" name="page_url" id="contact-page-url" />
+            <input class="form-honey" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
 
             <div class="form-row">
               <label>
@@ -136,8 +138,13 @@
         if (!contactForm.reportValidity()) return;
 
         const submitButton = contactForm.querySelector('button[type="submit"]');
+        const pageUrlField = document.querySelector("#contact-page-url");
+
+        if (pageUrlField) {
+          pageUrlField.value = window.location.href;
+        }
+
         const formData = new FormData(contactForm);
-        const payload = Object.fromEntries(formData.entries());
 
         submitButton.disabled = true;
         contactForm.setAttribute("aria-busy", "true");
@@ -149,12 +156,15 @@
             method: "POST",
             headers: {
               Accept: "application/json",
-              "Content-Type": "application/json",
             },
-            body: JSON.stringify(payload),
+            body: formData,
           });
 
-          if (!response.ok) throw new Error("Form submission failed");
+          const result = await response.json().catch(() => ({}));
+
+          if (!response.ok || result.success !== true) {
+            throw new Error("Form submission failed");
+          }
 
           contactForm.reset();
           formStatus.classList.add("is-success");
