@@ -1333,7 +1333,7 @@ h3 {
 .resume-impact div {
   border: 1px solid rgba(23, 23, 23, 0.1);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--panel);
   padding: 0.92rem 1rem 0.95rem;
   box-shadow: 0 14px 34px rgba(20, 16, 12, 0.06);
 }
