@@ -1290,6 +1290,10 @@ h3 {
   margin-bottom: 0.4rem;
 }
 
+.resume-positioning {
+  max-width: 740px;
+}
+
 .resume-hero > p:not(.eyebrow) {
   margin-bottom: 1.4rem;
   color: var(--resume-slate);
@@ -1300,12 +1304,53 @@ h3 {
 .resume-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  gap: 0.45rem 0.7rem;
+  align-items: center;
+}
+
+.resume-links a {
+  white-space: nowrap;
+}
+
+.resume-links a:not(:last-child)::after {
+  margin-left: 0.7rem;
+  color: var(--resume-slate);
+  content: "|";
 }
 
 .resume-links a,
 .contact-list a {
   border-bottom: 1px solid var(--line);
+}
+
+.resume-impact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: clamp(1.65rem, 3vw, 2.15rem) 0 0;
+}
+
+.resume-impact div {
+  border: 1px solid rgba(23, 23, 23, 0.1);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 0.92rem 1rem 0.95rem;
+  box-shadow: 0 14px 34px rgba(20, 16, 12, 0.06);
+}
+
+.resume-impact dt {
+  margin-bottom: 0.32rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resume-impact dd {
+  margin: 0;
+  color: #3f3f3a;
+  font-size: 0.9rem;
+  line-height: 1.36;
 }
 
 .resume-layout {
@@ -1317,18 +1362,18 @@ h3 {
 
 .resume-sidebar {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.6rem;
 }
 
 .resume-panel {
   padding-top: 0;
 }
 
-.resume-panel:nth-of-type(2) {
+.resume-panel:nth-of-type(n + 2) {
   border: var(--surface-border);
   border-radius: var(--radius-md);
   background: var(--panel);
-  padding: 1.5rem 1rem 1rem;
+  padding: 1.2rem 1rem 1rem;
 }
 
 .resume-panel h2,
@@ -1361,6 +1406,19 @@ h3 {
   color: var(--resume-slate);
 }
 
+.resume-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.resume-location svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
 .skill-stack {
   display: flex;
   flex-wrap: wrap;
@@ -1372,9 +1430,11 @@ h3 {
   border: 1px solid rgba(23, 23, 23, 0.08);
   border-radius: var(--radius-pill);
   background: var(--resume-lavender);
-  padding: 0.42rem 0.68rem;
+  padding: 0.18rem 0.48rem;
   color: var(--ink);
+  font-size: 0.82rem;
   font-weight: 600;
+  line-height: 1.25;
   overflow-wrap: anywhere;
 }
 
@@ -1391,7 +1451,7 @@ h3 {
 
 .resume-main {
   display: grid;
-  gap: 2rem;
+  gap: 1.45rem;
 }
 
 .experience-item {
@@ -1401,7 +1461,7 @@ h3 {
   border: var(--surface-border);
   border-radius: var(--radius-md);
   background: var(--panel);
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .experience-meta h3 {
@@ -1436,8 +1496,8 @@ h3 {
 
 .experience-detail ul {
   display: grid;
-  gap: 0.7rem;
-  margin-top: 1rem;
+  gap: 0.58rem;
+  margin-top: 0.85rem;
 }
 
 .experience-detail li {
@@ -6107,6 +6167,24 @@ html.has-image-lightbox {
 
   .resume-links {
     gap: 0.55rem 0.9rem;
+  }
+
+  .resume-impact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding-top: 0.9rem;
+  }
+
+  .resume-impact div {
+    display: grid;
+    gap: 0.12rem;
+    max-width: none;
+  }
+
+  .experience-item {
+    gap: 0.9rem;
+    padding: 1.15rem;
   }
 
   .signal-bar {
