@@ -1,0 +1,38 @@
+.resume-page{padding-top:90px;padding-bottom:110px}
+.resume-hero{max-width:900px}
+.resume-hero h1{font-size:64px;line-height:1.08;font-weight:650;margin:22px 0 20px}
+.resume-positioning{max-width:760px;color:var(--muted);font-size:22px;line-height:1.5}
+.resume-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;font-size:14px}
+.resume-links a,.contact-list a{border-bottom:1px solid var(--line)}
+.resume-links a:hover,.contact-list a:hover{color:var(--accent)}
+.resume-impact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1120px;margin:58px 0 90px}
+.resume-impact div{min-width:0;padding:20px;border:1px solid var(--line);border-radius:1.25rem;background:var(--stage)}
+.resume-impact dt{font-size:24px;font-weight:600;line-height:1.2}
+.resume-impact dd{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
+.resume-layout{display:grid;grid-template-columns:minmax(230px,300px) minmax(0,1fr);gap:clamp(48px,7vw,110px);align-items:start}
+.resume-sidebar{display:grid;gap:16px}
+.resume-panel,.resume-main{min-width:0}
+.resume-panel{padding:22px;border:1px solid var(--line);border-radius:1.25rem;background:var(--stage)}
+.resume-panel h2{font-size:15px;font-weight:600;margin-bottom:16px}
+.resume-panel p,.education-item p{color:var(--muted);font-size:14px;line-height:1.65}
+.contact-list,.skill-stack,.experience-detail ul{list-style:none;padding:0;margin:0}
+.contact-list{display:grid;gap:10px;margin-top:18px;font-size:14px;color:var(--muted)}
+.resume-location{display:flex;align-items:center;gap:8px}
+.resume-location svg{width:16px;height:16px;fill:currentColor}
+.skill-stack{display:flex;flex-wrap:wrap;gap:8px}
+.skill-stack li{max-width:100%;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--stage-raised);color:var(--ink);font-size:12px;line-height:1.35;overflow-wrap:anywhere}
+.education-item+.education-item{margin-top:20px}
+.education-item h3{font-size:14px;font-weight:600;line-height:1.4;margin:0 0 4px}
+.education-item p+p{margin-top:4px}
+.resume-main>h2{font-size:40px;font-weight:600;line-height:1.15;margin-bottom:30px}
+.experience-item{display:grid;grid-template-columns:minmax(150px,190px) minmax(0,1fr);gap:32px;margin-bottom:16px;padding:24px;border:1px solid var(--line);border-radius:1.25rem;background:var(--stage)}
+.experience-meta h3{font-size:17px;font-weight:600;line-height:1.35}
+.experience-meta p{margin-top:8px;color:var(--muted);font-size:12px}
+.experience-detail h4{display:inline;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--stage-raised);font-size:14px;font-weight:600;line-height:1.7;margin:0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.experience-detail ul{display:grid;gap:10px;margin-top:16px}
+.experience-detail li{position:relative;padding-left:16px;color:var(--muted);font-size:14px;line-height:1.65}
+.experience-detail li::before{position:absolute;top:.65em;left:0;width:5px;height:5px;border-radius:50%;background:var(--accent);content:""}
+@media(max-width:900px){.resume-layout{grid-template-columns:minmax(200px,250px) minmax(0,1fr);gap:44px}.experience-item{grid-template-columns:1fr;gap:15px}}
+@media(max-width:640px){.resume-page{padding-top:60px;padding-bottom:70px}.resume-hero h1{font-size:40px}.resume-positioning{font-size:17px}.resume-links{gap:8px 18px;font-size:13px}.resume-impact{grid-template-columns:1fr;gap:12px;margin:44px 0 52px}.resume-impact div{padding:18px}.resume-impact dt{font-size:22px}.resume-impact dd{margin-top:4px}.resume-layout{grid-template-columns:1fr;gap:52px}.resume-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.resume-panel{padding:18px}.resume-panel:first-child,.resume-panel:last-child{grid-column:1/-1}.resume-main>h2{font-size:30px}.experience-item{padding:20px}.experience-meta h3{font-size:16px}}
+@media(max-width:380px){.resume-sidebar{grid-template-columns:1fr}.resume-panel:first-child,.resume-panel:last-child{grid-column:auto}}
+@media print{.site-header,.site-footer,.skip-link{display:none}.resume-page{padding:0;width:100%;color:#111}.resume-impact{margin:26px 0 36px}.resume-layout{gap:40px}.experience-item,.resume-panel{break-inside:avoid}.experience-item{padding-block:15px}}

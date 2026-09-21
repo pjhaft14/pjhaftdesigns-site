@@ -1,28 +1,53 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="When match week runs on memory: a ClubSphere case study by PJ Haft about designing clearer operations for football clubs."
-    />
-    <title>When Match Week Runs on Memory | PJ Haft</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260804-01" />
-    <script src="site-nav.js?v=20260724-03" defer></script>
-    <script src="image-lightbox.js?v=20260729-02" defer></script>
-  </head>
+<html lang="en" data-theme="dark"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sports operations product design case study by PJ Haft, designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
+    <title>Sports Operations Product Design Case Study | PJ Haft</title>
+    <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://www.pjhaftdesigns.com/clubsphere">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PJ Haft Portfolio">
+    <meta property="og:title" content="Sports Operations Product Design Case Study | PJ Haft">
+    <meta property="og:description" content="Designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
+    <meta property="og:url" content="https://www.pjhaftdesigns.com/clubsphere">
+    <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sports Operations Product Design Case Study | PJ Haft">
+    <meta name="twitter:description" content="Designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
+    <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Sports Operations Product Design Case Study",
+        "description": "A product design case study about creating clearer football club operations for match-week readiness, scouting, medical, and analytics workflows.",
+        "url": "https://www.pjhaftdesigns.com/clubsphere",
+        "image": "https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png",
+        "author": {
+          "@type": "Person",
+          "name": "Pejman Haft",
+          "url": "https://www.pjhaftdesigns.com/"
+        }
+      }
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="live-base-1.css">
+    <script src="site-nav.js?v=20260724-03" defer=""></script>
+    <script src="image-lightbox.js?v=20260729-02" defer=""></script>
+  <link rel="stylesheet" href="live-case-theme.css?v=20260921-03"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+</head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="PJ Haft home">
-        <span class="brand-mark">P</span>
-        <span>PJ Haft</span>
+      <a class="brand" href="index.html" aria-label="Pejman Haft home">
+        <img src="assets/favicon.svg" alt="" width="36" height="36">
+        <span>Pejman Haft</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -33,7 +58,7 @@
         <a href="resume.html">Resume</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
-    </header>
+    <div class="header-actions"></div></header>
 
     <main class="case-study">
       <section class="case-hero" aria-labelledby="case-title">
@@ -74,20 +99,7 @@
         </dl>
       </section>
 
-      <aside class="case-toc" aria-label="ClubSphere case study sections">
-        <p class="case-toc__label">On this page</p>
-        <nav class="case-toc__links">
-          <a href="#context" data-toc-label="Context">Context</a>
-          <a href="#problem" data-toc-label="Problem">Problem</a>
-          <a href="#research" data-toc-label="Research">Research</a>
-          <a href="#journeys" data-toc-label="Journeys">Journeys</a>
-          <a href="#exploration" data-toc-label="Exploration">Exploration</a>
-          <a href="#architecture" data-toc-label="IA">IA</a>
-          <a href="#targets" data-toc-label="Targets">Targets</a>
-          <a href="#solution" data-toc-label="Solution">Solution</a>
-          <a href="#testing" data-toc-label="Testing">Testing</a>
-        </nav>
-      </aside>
+
 
       <section class="case-section case-intro" id="context">
         <div>
@@ -151,29 +163,29 @@
             <div class="tool-flow-heading tool-flow-heading--problem">
               <span aria-hidden="true">
                 <svg viewBox="0 0 16 16" focusable="false">
-                  <path d="M4.5 4.5 11.5 11.5M11.5 4.5 4.5 11.5" />
+                  <path d="M4.5 4.5 11.5 11.5M11.5 4.5 4.5 11.5"></path>
                 </svg>
               </span>
               <p>Too many apps to manage</p>
             </div>
 
             <div class="tool-flow-apps" aria-hidden="true">
-              <div class="tool-flow-tile tool-flow-tile--onedrive"><img src="assets/clubsphere/tool-icons/onedrive.svg" alt="" /></div>
-              <div class="tool-flow-tile"><img src="assets/clubsphere/tool-icons/excel.svg" alt="" /></div>
-              <div class="tool-flow-tile"><img src="assets/clubsphere/tool-icons/word.svg" alt="" /></div>
-              <div class="tool-flow-tile"><img src="assets/clubsphere/tool-icons/pdf.svg" alt="" /></div>
-              <div class="tool-flow-tile"><img src="assets/clubsphere/tool-icons/messages.svg" alt="" /></div>
-              <div class="tool-flow-tile tool-flow-tile--whiteboard"><img src="assets/clubsphere/tool-icons/whiteboard.webp" alt="" /></div>
+              <div class="tool-flow-tile tool-flow-tile--onedrive"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/onedrive.svg" alt=""></div>
+              <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/excel.svg" alt=""></div>
+              <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/word.svg" alt=""></div>
+              <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/pdf.svg" alt=""></div>
+              <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/messages.svg" alt=""></div>
+              <div class="tool-flow-tile tool-flow-tile--whiteboard"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/whiteboard.webp" alt=""></div>
             </div>
 
             <svg class="tool-flow-lines" viewBox="0 0 1130 430" preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <defs>
                 <linearGradient id="tool-flow-gradient-base">
-                  <stop offset="0" stop-color="#9ee5e2" />
-                  <stop offset="0.38" stop-color="#9ee5e2" />
-                  <stop offset="0.5" stop-color="#68cfca" />
-                  <stop offset="0.62" stop-color="#9ee5e2" />
-                  <stop offset="1" stop-color="#9ee5e2" />
+                  <stop offset="0" stop-color="#9ee5e2"></stop>
+                  <stop offset="0.38" stop-color="#9ee5e2"></stop>
+                  <stop offset="0.5" stop-color="#68cfca"></stop>
+                  <stop offset="0.62" stop-color="#9ee5e2"></stop>
+                  <stop offset="1" stop-color="#9ee5e2"></stop>
                 </linearGradient>
                 <linearGradient id="tool-flow-gradient-1" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="82" y1="138" x2="500" y2="276">
                 </linearGradient>
@@ -189,46 +201,46 @@
                 </linearGradient>
               </defs>
               <g transform="translate(181.28 0) scale(.76744 1)">
-              <path id="tool-flow-path-1" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-1)" d="M83.03 138 C150 214 250 233 360 241 C440 241 488 251 500 276" />
-              <path id="tool-flow-path-2" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-2)" d="M249.82 138 C292 188 360 228 420 238 C462 242 492 250 500 276" />
-              <path id="tool-flow-path-3" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-3)" d="M416.6 138 C424 204 454 238 478 252 C492 260 498 270 500 276" />
-              <path id="tool-flow-path-4" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-4)" d="M583.4 138 C576 204 546 238 522 252 C508 260 502 270 500 276" />
-              <path id="tool-flow-path-5" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-5)" d="M750.18 138 C708 188 640 228 580 238 C538 242 508 250 500 276" />
-              <path id="tool-flow-path-6" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-6)" d="M916.97 138 C850 214 750 233 640 241 C560 241 512 251 500 276" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-1)" d="M83.03 134 C150 214 250 233 360 235 C440 237 488 245 500 266 L500 288 C488 271 440 255 360 247 C250 245 150 220 83.03 142 Z" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-2)" d="M249.82 134 C292 188 360 228 420 232 C462 236 492 244 500 266 L500 288 C492 266 462 254 420 244 C360 240 292 194 249.82 142 Z" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-3)" d="M414.6 134 C420 204 451 238 476 246 C490 252 497 260 500 266 L500 288 C498 278 492 270 480 258 C457 250 427 210 418.6 142 Z" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-4)" d="M585.4 134 C580 204 549 238 524 246 C510 252 503 260 500 266 L500 288 C502 278 508 270 520 258 C543 250 573 210 581.4 142 Z" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-5)" d="M750.18 134 C708 188 640 228 580 232 C538 236 508 244 500 266 L500 288 C508 266 538 254 580 244 C640 240 708 194 750.18 142 Z" />
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-6)" d="M916.97 134 C850 214 750 233 640 235 C560 237 512 245 500 266 L500 288 C512 271 560 255 640 247 C750 245 850 220 916.97 142 Z" />
+              <path id="tool-flow-path-1" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-1)" d="M83.03 138 C150 214 250 233 360 241 C440 241 488 251 500 276"></path>
+              <path id="tool-flow-path-2" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-2)" d="M249.82 138 C292 188 360 228 420 238 C462 242 492 250 500 276"></path>
+              <path id="tool-flow-path-3" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-3)" d="M416.6 138 C424 204 454 238 478 252 C492 260 498 270 500 276"></path>
+              <path id="tool-flow-path-4" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-4)" d="M583.4 138 C576 204 546 238 522 252 C508 260 502 270 500 276"></path>
+              <path id="tool-flow-path-5" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-5)" d="M750.18 138 C708 188 640 228 580 238 C538 242 508 250 500 276"></path>
+              <path id="tool-flow-path-6" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-6)" d="M916.97 138 C850 214 750 233 640 241 C560 241 512 251 500 276"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-1)" d="M83.03 134 C150 214 250 233 360 235 C440 237 488 245 500 266 L500 288 C488 271 440 255 360 247 C250 245 150 220 83.03 142 Z"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-2)" d="M249.82 134 C292 188 360 228 420 232 C462 236 492 244 500 266 L500 288 C492 266 462 254 420 244 C360 240 292 194 249.82 142 Z"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-3)" d="M414.6 134 C420 204 451 238 476 246 C490 252 497 260 500 266 L500 288 C498 278 492 270 480 258 C457 250 427 210 418.6 142 Z"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-4)" d="M585.4 134 C580 204 549 238 524 246 C510 252 503 260 500 266 L500 288 C502 278 508 270 520 258 C543 250 573 210 581.4 142 Z"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-5)" d="M750.18 134 C708 188 640 228 580 232 C538 236 508 244 500 266 L500 288 C508 266 538 254 580 244 C640 240 708 194 750.18 142 Z"></path>
+              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-6)" d="M916.97 134 C850 214 750 233 640 235 C560 237 512 245 500 266 L500 288 C512 271 560 255 640 247 C750 245 850 220 916.97 142 Z"></path>
               </g>
             </svg>
 
             <svg class="tool-flow-lines tool-flow-lines--mobile" viewBox="0 0 1130 920" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <path id="tool-flow-mobile-path-1" class="tool-flow-path" d="M135 280 C220 420 380 520 565 610" />
-              <path id="tool-flow-mobile-path-2" class="tool-flow-path" d="M307 280 C350 400 455 520 565 610" />
-              <path id="tool-flow-mobile-path-3" class="tool-flow-path" d="M479 280 C485 410 525 535 565 610" />
-              <path id="tool-flow-mobile-path-4" class="tool-flow-path" d="M651 280 C645 410 605 535 565 610" />
-              <path id="tool-flow-mobile-path-5" class="tool-flow-path" d="M823 280 C780 400 675 520 565 610" />
-              <path id="tool-flow-mobile-path-6" class="tool-flow-path" d="M995 280 C910 420 750 520 565 610" />
-              <path class="tool-flow-flare" d="M135 274 C220 414 380 510 565 590 L565 630 C380 530 220 426 135 286 Z" />
-              <path class="tool-flow-flare" d="M307 274 C350 394 455 510 565 590 L565 630 C455 530 350 406 307 286 Z" />
-              <path class="tool-flow-flare" d="M479 274 C485 404 525 525 565 590 L565 630 C525 545 485 416 479 286 Z" />
-              <path class="tool-flow-flare" d="M651 274 C645 404 605 525 565 590 L565 630 C605 545 645 416 651 286 Z" />
-              <path class="tool-flow-flare" d="M823 274 C780 394 675 510 565 590 L565 630 C675 530 780 406 823 286 Z" />
-              <path class="tool-flow-flare" d="M995 274 C910 414 750 510 565 590 L565 630 C750 530 910 426 995 286 Z" />
+              <path id="tool-flow-mobile-path-1" class="tool-flow-path" d="M135 280 C220 420 380 520 565 610"></path>
+              <path id="tool-flow-mobile-path-2" class="tool-flow-path" d="M307 280 C350 400 455 520 565 610"></path>
+              <path id="tool-flow-mobile-path-3" class="tool-flow-path" d="M479 280 C485 410 525 535 565 610"></path>
+              <path id="tool-flow-mobile-path-4" class="tool-flow-path" d="M651 280 C645 410 605 535 565 610"></path>
+              <path id="tool-flow-mobile-path-5" class="tool-flow-path" d="M823 280 C780 400 675 520 565 610"></path>
+              <path id="tool-flow-mobile-path-6" class="tool-flow-path" d="M995 280 C910 420 750 520 565 610"></path>
+              <path class="tool-flow-flare" d="M135 274 C220 414 380 510 565 590 L565 630 C380 530 220 426 135 286 Z"></path>
+              <path class="tool-flow-flare" d="M307 274 C350 394 455 510 565 590 L565 630 C455 530 350 406 307 286 Z"></path>
+              <path class="tool-flow-flare" d="M479 274 C485 404 525 525 565 590 L565 630 C525 545 485 416 479 286 Z"></path>
+              <path class="tool-flow-flare" d="M651 274 C645 404 605 525 565 590 L565 630 C605 545 645 416 651 286 Z"></path>
+              <path class="tool-flow-flare" d="M823 274 C780 394 675 510 565 590 L565 630 C675 530 780 406 823 286 Z"></path>
+              <path class="tool-flow-flare" d="M995 274 C910 414 750 510 565 590 L565 630 C750 530 910 426 995 286 Z"></path>
             </svg>
 
             <div class="tool-flow-solution" aria-hidden="true">
               <div class="tool-flow-clubsphere">
                 <svg viewBox="0 -960 960 960" aria-hidden="true" focusable="false">
-                  <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z" />
+                  <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z"></path>
                 </svg>
               </div>
             </div>
 
             <div class="tool-flow-heading tool-flow-heading--solution">
-              <span aria-hidden="true">&#10003;</span>
+              <span aria-hidden="true">✓</span>
               <p>One solution</p>
             </div>
           </div>
@@ -367,22 +379,8 @@
 
       <figure class="clubsphere-ia-map">
         <div class="clubsphere-ia-map__frame">
-          <button
-            class="clubsphere-ia-map__trigger image-lightbox-trigger"
-            type="button"
-            aria-label="Open the ClubSphere information architecture image"
-            aria-haspopup="dialog"
-            aria-controls="clubsphere-ia-lightbox"
-            data-lightbox-target="clubsphere-ia-lightbox"
-          >
-            <img
-              src="assets/clubsphere/information-architecture.png"
-              width="6798"
-              height="4332"
-              loading="lazy"
-              decoding="async"
-              alt="Proposed ClubSphere information architecture map showing the Squad Hub and its scouting, match center, medical, training, academy, analytics, and settings branches"
-            />
+          <button class="clubsphere-ia-map__trigger image-lightbox-trigger" type="button" aria-label="Open the ClubSphere information architecture image" aria-haspopup="dialog" aria-controls="clubsphere-ia-lightbox" data-lightbox-target="clubsphere-ia-lightbox">
+            <img src="https://pjhaftdesigns.com/assets/clubsphere/information-architecture.png" width="6798" height="4332" loading="lazy" decoding="async" alt="Proposed ClubSphere information architecture map showing the Squad Hub and its scouting, match center, medical, training, academy, analytics, and settings branches">
           </button>
           <figcaption>
             This proposed architecture shows how ClubSphere could expand into a full
@@ -394,37 +392,16 @@
 
       <dialog class="image-lightbox" id="clubsphere-ia-lightbox" aria-label="ClubSphere information architecture">
         <div class="image-lightbox__shell">
-          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">&times;</button>
+          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">×</button>
           <div class="image-lightbox__viewport">
-            <img
-              class="image-lightbox__image"
-              src="assets/clubsphere/information-architecture.png"
-              width="6798"
-              height="4332"
-              decoding="async"
-              alt="Enlarged ClubSphere information architecture map"
-            />
+            <img class="image-lightbox__image" src="https://pjhaftdesigns.com/assets/clubsphere/information-architecture.png" width="6798" height="4332" decoding="async" alt="Enlarged ClubSphere information architecture map">
           </div>
         </div>
       </dialog>
 
       <figure class="case-image full clubsphere-wireframes">
-        <button
-          class="clubsphere-wireframes__trigger image-lightbox-trigger"
-          type="button"
-          aria-label="Open the ClubSphere wireframe image"
-          aria-haspopup="dialog"
-          aria-controls="clubsphere-wireframes-lightbox"
-          data-lightbox-target="clubsphere-wireframes-lightbox"
-        >
-          <img
-            src="assets/clubsphere/wireframe.png"
-            width="2500"
-            height="2301"
-            loading="lazy"
-            decoding="async"
-            alt="ClubSphere low-fidelity wireframes"
-          />
+        <button class="clubsphere-wireframes__trigger image-lightbox-trigger" type="button" aria-label="Open the ClubSphere wireframe image" aria-haspopup="dialog" aria-controls="clubsphere-wireframes-lightbox" data-lightbox-target="clubsphere-wireframes-lightbox">
+          <img src="https://pjhaftdesigns.com/assets/clubsphere/wireframe.png" width="2500" height="2301" loading="lazy" decoding="async" alt="ClubSphere low-fidelity wireframes">
         </button>
         <figcaption>
           These early wireframes tested whether the four core workflows could share a
@@ -434,16 +411,9 @@
 
       <dialog class="image-lightbox" id="clubsphere-wireframes-lightbox" aria-label="ClubSphere wireframes">
         <div class="image-lightbox__shell">
-          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">&times;</button>
+          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">×</button>
           <div class="image-lightbox__viewport">
-            <img
-              class="image-lightbox__image"
-              src="assets/clubsphere/wireframe.png"
-              width="2500"
-              height="2301"
-              decoding="async"
-              alt="Enlarged ClubSphere low-fidelity wireframes"
-            />
+            <img class="image-lightbox__image" src="https://pjhaftdesigns.com/assets/clubsphere/wireframe.png" width="2500" height="2301" decoding="async" alt="Enlarged ClubSphere low-fidelity wireframes">
           </div>
         </div>
       </dialog>
@@ -455,7 +425,7 @@
         </div>
         <div class="impact-grid">
           <article>
-            <strong>Mapped flow: 9-11 steps &rarr; 4</strong>
+            <strong>Mapped flow: 9-11 steps → 4</strong>
             <p>Bring player selection, ratings, observations, and submission into one scouting flow.</p>
           </article>
           <article>
@@ -497,11 +467,11 @@
           <div>
             <p class="section-kicker">Squad Readiness</p>
             <h3>From team status to player clearance</h3>
-            <p>Who needs attention, and why can staff trust a player&rsquo;s availability?</p>
+            <p>Who needs attention, and why can staff trust a player’s availability?</p>
           </div>
           <figure class="gallery-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/clubsphere/flow-1-squad-readiness-poster.jpg">
-              <source src="assets/clubsphere/flow-1-squad-readiness.mp4?v=20260728-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-1-squad-readiness-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-1-squad-readiness.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -517,8 +487,8 @@
             <p>Who should start, who needs managed minutes, and how does the change reach the squad?</p>
           </div>
           <figure class="gallery-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/clubsphere/flow-2-match-center-poster.jpg">
-              <source src="assets/clubsphere/flow-2-match-center.mp4?v=20260728-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-2-match-center-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-2-match-center.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -534,8 +504,8 @@
             <p>Once staff confirm the squad, the player receives the roster update before arriving at the stadium.</p>
           </div>
           <figure class="gallery-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/clubsphere/flow-2-phone-notification-poster.jpg">
-              <source src="assets/clubsphere/flow-2-phone-notification.mp4?v=20260728-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-2-phone-notification-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-2-phone-notification.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -560,8 +530,8 @@
             </dl>
           </div>
           <figure class="gallery-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/clubsphere/flow-3-scouting-poster.jpg">
-              <source src="assets/clubsphere/flow-3-scouting.mp4?v=20260728-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -577,8 +547,8 @@
             <p>How does the system turn fatigue risk into an agreed rotation plan?</p>
           </div>
           <figure class="gallery-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/clubsphere/flow-4-analytics-poster.jpg">
-              <source src="assets/clubsphere/flow-4-analytics.mp4?v=20260728-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-4-analytics-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-4-analytics.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -632,7 +602,7 @@
             </li>
           </ul>
           <blockquote class="case-quote">
-            &ldquo;I loved that everything was just a few taps.&rdquo;
+            “I loved that everything was just a few taps.”
           </blockquote>
           <p class="case-note case-next-test">
             Next, I would test voice dictation, a higher-contrast outdoor view, and
@@ -670,7 +640,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>&copy; 2026 PJ Haft</span>
+      <span>© 2026 PJ Haft</span>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html#work">Work</a>
         <a href="about.html">About</a>
@@ -679,5 +649,6 @@
         <a href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn</a>
       </nav>
     </footer>
-  </body>
-</html>
+
+
+</body></html>

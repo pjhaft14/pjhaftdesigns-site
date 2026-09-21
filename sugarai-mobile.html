@@ -1,27 +1,52 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A SugarAI Mobile case study by PJ Haft about redesigning mobile CRM around the field sales visit."
-    />
-    <title>From CRM Access to Visit Readiness | PJ Haft</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260805-03" />
-    <script src="site-nav.js?v=20260724-03" defer></script>
-  </head>
+<html lang="en" data-theme="dark"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mobile CRM product design case study by PJ Haft, redesigning SugarAI Mobile around field sales visits, visit readiness, voice capture, and CRM updates.">
+    <title>Mobile CRM Product Design Case Study | PJ Haft</title>
+    <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://www.pjhaftdesigns.com/sugarai-mobile">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PJ Haft Portfolio">
+    <meta property="og:title" content="Mobile CRM Product Design Case Study | PJ Haft">
+    <meta property="og:description" content="Redesigning mobile CRM around field sales visits, visit readiness, voice capture, and cleaner CRM updates.">
+    <meta property="og:url" content="https://www.pjhaftdesigns.com/sugarai-mobile">
+    <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/sugarai-mobile/home-thumbnail/active-visit-dictation.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mobile CRM Product Design Case Study | PJ Haft">
+    <meta name="twitter:description" content="Redesigning mobile CRM around field sales visits, visit readiness, voice capture, and cleaner CRM updates.">
+    <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/sugarai-mobile/home-thumbnail/active-visit-dictation.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Mobile CRM Product Design Case Study",
+        "description": "A product design case study about redesigning mobile CRM around field sales visits and CRM updates.",
+        "url": "https://www.pjhaftdesigns.com/sugarai-mobile",
+        "image": "https://www.pjhaftdesigns.com/assets/sugarai-mobile/home-thumbnail/active-visit-dictation.png",
+        "author": {
+          "@type": "Person",
+          "name": "Pejman Haft",
+          "url": "https://www.pjhaftdesigns.com/"
+        }
+      }
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="live-base-1.css">
+    <script src="site-nav.js?v=20260724-03" defer=""></script>
+  <link rel="stylesheet" href="live-case-theme.css"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+</head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="PJ Haft home">
-        <span class="brand-mark">P</span>
-        <span>PJ Haft</span>
+      <a class="brand" href="index.html" aria-label="Pejman Haft home">
+        <img src="assets/favicon.svg" alt="" width="36" height="36">
+        <span>Pejman Haft</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -32,12 +57,12 @@
         <a href="resume.html">Resume</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
-    </header>
+    <div class="header-actions"></div></header>
 
     <main class="case-study sugarai-mobile-case">
       <section class="case-hero" aria-labelledby="case-title">
         <div>
-          <p class="eyebrow">SugarAI &middot; Mobile CRM &middot; Manufacturing field sales</p>
+          <p class="eyebrow">SugarAI · Mobile CRM · Manufacturing field sales</p>
           <h1 id="case-title">From CRM access to visit readiness.</h1>
           <p>
             I redesigned Sugar mobile around the field rep's day: prepare for the next
@@ -65,19 +90,7 @@
         </dl>
       </section>
 
-      <aside class="case-toc" aria-label="SugarAI Mobile case study sections">
-        <p class="case-toc__label">On this page</p>
-        <nav class="case-toc__links">
-          <a href="#problem" data-toc-label="Problem">Problem</a>
-          <a href="#anatomy" data-toc-label="Problem anatomy">Problem anatomy</a>
-          <a href="#approach" data-toc-label="Research">Research</a>
-          <a href="#challenge" data-toc-label="Challenge">Challenge</a>
-          <a href="#decisions" data-toc-label="Decisions">Decisions</a>
-          <a href="#before-after" data-toc-label="Before/after">Before/after</a>
-          <a href="#concept" data-toc-label="Concept">Concept</a>
-          <a href="#testing" data-toc-label="Testing">Testing</a>
-        </nav>
-      </aside>
+
 
       <section class="case-section case-intro" id="problem">
         <div>
@@ -97,7 +110,7 @@
           </p>
           <blockquote class="case-quote">
             The existing experience starts with the system. The redesign starts with the
-            rep&rsquo;s next customer.
+            rep’s next customer.
           </blockquote>
         </div>
       </section>
@@ -136,37 +149,25 @@
             <article class="current-phone-card">
               <p>Home dashboard</p>
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/current/current-home-dashboard.png"
-                  alt="Current Sugar mobile Home Dashboard with generic dashboard tiles."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/current/current-home-dashboard.png" alt="Current Sugar mobile Home Dashboard with generic dashboard tiles.">
               </div>
             </article>
             <article class="current-phone-card">
               <p>List view</p>
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/current/current-list-view.png"
-                  alt="Current Sugar mobile Accounts list view with dense rows of account data."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/current/current-list-view.png" alt="Current Sugar mobile Accounts list view with dense rows of account data.">
               </div>
             </article>
             <article class="current-phone-card">
               <p>Record view</p>
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/current/current-record-view.png"
-                  alt="Current Sugar mobile Account record with action icons, tabs, and field rows."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/current/current-record-view.png" alt="Current Sugar mobile Account record with action icons, tabs, and field rows.">
               </div>
             </article>
             <article class="current-phone-card">
               <p>Create form</p>
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/current/current-create-form.png"
-                  alt="Current Sugar mobile Create Contract form with many fields and required inputs."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/current/current-create-form.png" alt="Current Sugar mobile Create Contract form with many fields and required inputs.">
               </div>
             </article>
           </div>
@@ -323,7 +324,7 @@
         <div class="report-transformation__comparison">
           <article class="transformation-panel transformation-panel--before">
             <div class="transformation-panel__heading">
-              <span class="transformation-label">Before &middot; object path</span>
+              <span class="transformation-label">Before · object path</span>
               <h3>Assemble the visit</h3>
               <p>Start with CRM objects and stitch together context across separate screens.</p>
             </div>
@@ -338,13 +339,13 @@
 
           <div class="transformation-arrow" aria-hidden="true">
             <svg viewBox="0 -960 960 960" focusable="false">
-              <path d="M647-440H160v-80h487L423-744l56-56 320 320-320 320-56-56 224-224Z" />
+              <path d="M647-440H160v-80h487L423-744l56-56 320 320-320 320-56-56 224-224Z"></path>
             </svg>
           </div>
 
           <article class="transformation-panel transformation-panel--after">
             <div class="transformation-panel__heading">
-              <span class="transformation-label">After &middot; visit loop</span>
+              <span class="transformation-label">After · visit loop</span>
               <h3>Prepare, capture, and sync</h3>
               <p>Start with the rep's day and keep the customer visit moving.</p>
             </div>
@@ -376,8 +377,8 @@
             <div class="sugarai-prototype-grid" aria-label="SugarAI mobile prototype recordings">
               <figure class="sugarai-prototype-card">
                 <div class="sugarai-prototype-frame">
-                  <video controls playsinline preload="metadata" poster="assets/sugarai-mobile/prototype-flows/flow-1-poster.jpg">
-                    <source src="assets/sugarai-mobile/prototype-flows/flow-1.mp4" type="video/mp4" />
+                  <video controls="" playsinline="" preload="metadata" poster="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-1-poster.jpg">
+                    <source src="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -388,8 +389,8 @@
               </figure>
               <figure class="sugarai-prototype-card">
                 <div class="sugarai-prototype-frame">
-                  <video controls playsinline preload="metadata" poster="assets/sugarai-mobile/prototype-flows/flow-2-poster.jpg">
-                    <source src="assets/sugarai-mobile/prototype-flows/flow-2.mp4" type="video/mp4" />
+                  <video controls="" playsinline="" preload="metadata" poster="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-2-poster.jpg">
+                    <source src="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -400,8 +401,8 @@
               </figure>
               <figure class="sugarai-prototype-card">
                 <div class="sugarai-prototype-frame">
-                  <video controls playsinline preload="none" poster="assets/sugarai-mobile/prototype-flows/flow-3-poster.jpg?v=20260806-02">
-                    <source src="assets/sugarai-mobile/prototype-flows/flow-3.mp4" type="video/mp4" />
+                  <video controls="" playsinline="" preload="none" poster="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-3-poster.jpg?v=20260806-02">
+                    <source src="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -412,8 +413,8 @@
               </figure>
               <figure class="sugarai-prototype-card">
                 <div class="sugarai-prototype-frame">
-                  <video controls playsinline preload="metadata" poster="assets/sugarai-mobile/prototype-flows/flow-4-poster.jpg">
-                    <source src="assets/sugarai-mobile/prototype-flows/flow-4.mp4" type="video/mp4" />
+                  <video controls="" playsinline="" preload="metadata" poster="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-4-poster.jpg">
+                    <source src="https://pjhaftdesigns.com/assets/sugarai-mobile/prototype-flows/flow-4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -447,10 +448,7 @@
           <div class="current-phone-grid" aria-label="Visit Brief supporting action screenshots">
             <figure class="current-phone-card">
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/flow-1/visit-brief-navigate-modal.png"
-                  alt="Visit Brief Apple Maps confirmation modal."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/flow-1/visit-brief-navigate-modal.png" alt="Visit Brief Apple Maps confirmation modal.">
               </div>
               <figcaption>
                 <strong>Navigate modal</strong>
@@ -459,10 +457,7 @@
             </figure>
             <figure class="current-phone-card">
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/flow-1/visit-brief-stock-drawer.png"
-                  alt="Visit Brief stock drawer showing bearing inventory."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/flow-1/visit-brief-stock-drawer.png" alt="Visit Brief stock drawer showing bearing inventory.">
               </div>
               <figcaption>
                 <strong>Stock drawer</strong>
@@ -471,10 +466,7 @@
             </figure>
             <figure class="current-phone-card">
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/flow-1/visit-brief-call-modal.png"
-                  alt="Visit Brief call confirmation modal for Alisha Hester."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/flow-1/visit-brief-call-modal.png" alt="Visit Brief call confirmation modal for Alisha Hester.">
               </div>
               <figcaption>
                 <strong>Call modal</strong>
@@ -483,10 +475,7 @@
             </figure>
             <figure class="current-phone-card">
               <div class="current-phone-frame">
-                <img
-                  src="assets/sugarai-mobile/flow-1/visit-brief-email-drawer.png"
-                  alt="Visit Brief email composer drawer with a prefilled message."
-                />
+                <img src="https://pjhaftdesigns.com/assets/sugarai-mobile/flow-1/visit-brief-email-drawer.png" alt="Visit Brief email composer drawer with a prefilled message.">
               </div>
               <figcaption>
                 <strong>Email drawer</strong>
@@ -547,5 +536,6 @@
         </div>
       </section>
     </main>
-  </body>
-</html>
+
+
+</body></html>

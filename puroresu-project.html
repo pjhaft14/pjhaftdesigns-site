@@ -1,19 +1,50 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A Puroresu Project case study by PJ Haft about turning Japanese professional wrestling history into a researched, navigable digital archive." />
-    <title>When Wrestling History Becomes a Living System | PJ Haft</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260805-01" />
-    <script src="site-nav.js?v=20260725-02" defer></script>
-  </head>
+<!doctype html>
+<html lang="en" data-theme="dark"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Puroresu Project case study by PJ Haft, turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
+    <title>Puroresu Project Case Study | Japanese Wrestling History Archive</title>
+    <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://www.pjhaftdesigns.com/puroresu-project">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PJ Haft Portfolio">
+    <meta property="og:title" content="Puroresu Project Case Study | Japanese Wrestling History Archive">
+    <meta property="og:description" content="Turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
+    <meta property="og:url" content="https://www.pjhaftdesigns.com/puroresu-project">
+    <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puroresu Project Case Study | Japanese Wrestling History Archive">
+    <meta name="twitter:description" content="Turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
+    <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Puroresu Project Case Study",
+        "description": "A product design case study about turning Japanese professional wrestling history into an interactive archive and research system.",
+        "url": "https://www.pjhaftdesigns.com/puroresu-project",
+        "image": "https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png",
+        "author": {
+          "@type": "Person",
+          "name": "Pejman Haft",
+          "url": "https://www.pjhaftdesigns.com/"
+        }
+      }
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="live-base-1.css">
+    <script src="site-nav.js?v=20260725-02" defer=""></script>
+  <link rel="stylesheet" href="live-case-theme.css"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+</head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="PJ Haft home"><span class="brand-mark">P</span><span>PJ Haft</span></a>
+      <a class="brand" href="index.html" aria-label="Pejman Haft home"><img src="assets/favicon.svg" alt="" width="36" height="36"><span>Pejman Haft</span></a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
       </button>
@@ -23,7 +54,7 @@
         <a href="resume.html">Resume</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
-    </header>
+    <div class="header-actions"></div></header>
 
     <main class="case-study puro-case">
       <section class="case-hero case-hero--puro" aria-labelledby="case-title">
@@ -43,26 +74,12 @@
         </dl>
       </section>
 
-      <aside class="case-toc" aria-label="Puroresu Project case study sections">
-        <p class="case-toc__label">On this page</p>
-        <nav class="case-toc__links">
-          <a href="#context" data-toc-label="Context">Context</a>
-          <a href="#architecture" data-toc-label="Problem">Problem</a>
-          <a href="#approach" data-toc-label="Approach">Approach</a>
-          <a href="#homepage" data-toc-label="Homepage">Homepage</a>
-          <a href="#lineage" data-toc-label="Lineage">Lineage</a>
-          <a href="#content" data-toc-label="Content">Content</a>
-          <a href="#visual-system" data-toc-label="Visual system">Visual system</a>
-          <a href="#experiences" data-toc-label="Experiences">Experiences</a>
-          <a href="#signals" data-toc-label="Signals">Signals</a>
-          <a href="#validation" data-toc-label="Validation">Validation</a>
-        </nav>
-      </aside>
+
 
       <figure class="puro-hero-art" aria-label="Puroresu Project visual identity">
-        <img class="puro-hero-art__background" src="assets/puro/hero-home.webp" alt="Japanese wrestling crowd and ring" />
+        <img class="puro-hero-art__background" src="https://pjhaftdesigns.com/assets/puro/hero-home.webp" alt="Japanese wrestling crowd and ring">
         <div class="puro-hero-art__shade" aria-hidden="true"></div>
-        <img class="puro-hero-art__logo" src="assets/puro/puro-logo.svg" alt="Puroresu Project" />
+        <img class="puro-hero-art__logo" src="https://pjhaftdesigns.com/assets/puro/puro-logo.svg" alt="Puroresu Project">
         <figcaption>One archive connecting history, matches, people, places, and culture.</figcaption>
       </figure>
 
@@ -113,8 +130,8 @@
           </header>
 
           <svg class="puro-ia-icon-defs" aria-hidden="true">
-            <symbol id="material-arrow-forward" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" /></symbol>
-            <symbol id="material-swap-horiz" viewBox="0 0 24 24"><path d="M6.99 11 3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z" /></symbol>
+            <symbol id="material-arrow-forward" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></symbol>
+            <symbol id="material-swap-horiz" viewBox="0 0 24 24"><path d="M6.99 11 3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"></path></symbol>
           </svg>
 
           <ol class="puro-ia-path">
@@ -126,7 +143,7 @@
                 <li>Start Here</li>
                 <li>Learning Paths</li>
               </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward" /></svg>
+              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
             </li>
             <li class="puro-ia-stage">
               <span>02</span>
@@ -137,7 +154,7 @@
                 <li>Promotions</li>
                 <li>Venues</li>
               </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward" /></svg>
+              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
             </li>
             <li class="puro-ia-stage puro-ia-stage--core">
               <span>03</span>
@@ -149,7 +166,7 @@
                 <li>Lineage</li>
                 <li>Vault</li>
               </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward" /></svg>
+              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
             </li>
             <li class="puro-ia-stage">
               <span>04</span>
@@ -169,12 +186,12 @@
               <h3>Readers can move sideways without starting over.</h3>
             </div>
             <ul aria-label="Examples of relationships between archive sections">
-              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Promotions</span></li>
-              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Match Guide</span></li>
-              <li><span>Match Guide</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Styles</span></li>
-              <li><span>Timeline</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Promotions</span></li>
-              <li><span>Lineage</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Wrestlers</span></li>
-              <li><span>Vault</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz" /></svg><span>Match Guide</span></li>
+              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Promotions</span></li>
+              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Match Guide</span></li>
+              <li><span>Match Guide</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Styles</span></li>
+              <li><span>Timeline</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Promotions</span></li>
+              <li><span>Lineage</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Wrestlers</span></li>
+              <li><span>Vault</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Match Guide</span></li>
             </ul>
           </div>
         </div>
@@ -192,34 +209,36 @@
           <div class="puro-home-devices" aria-label="Puroresu Project homepage on desktop and mobile">
             <figure class="puro-home-desktop">
               <span>Desktop homepage</span>
-              <img src="assets/puro/home-desktop.png?v=20260809-02" alt="Puroresu Project homepage on desktop with full navigation, wide hero, archive trails, and footer" />
+              <img src="https://pjhaftdesigns.com/assets/puro/home-desktop.png?v=20260809-02" alt="Puroresu Project homepage on desktop with full navigation, wide hero, archive trails, and footer">
             </figure>
+            <div class="puro-device-notes puro-device-notes--desktop" aria-label="Desktop homepage design decision">
+              <article><strong>Desktop</strong><p>Expose more of the system early: hero, navigation, stats, trails, and support all visible enough to invite branching.</p></article>
+            </div>
             <figure class="puro-home-mobile-showcase">
               <span>Mobile homepage</span>
               <div class="puro-home-mobile-grid" aria-label="Puroresu Project mobile homepage progression">
                 <article class="puro-home-mobile-card">
                   <p>Homepage entry</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="assets/puro/home-mobile-top.png?v=20260809-02" alt="Top of the Puroresu Project mobile homepage with navigation, hero, and archive overview" />
+                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-top.png?v=20260809-02" alt="Top of the Puroresu Project mobile homepage with navigation, hero, and archive overview">
                   </div>
                 </article>
                 <article class="puro-home-mobile-card">
                   <p>Archive Trails</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="assets/puro/home-mobile-trails.png?v=20260809-02" alt="Archive Trails section of the Puroresu Project mobile homepage showing the Muta Mythology trail" />
+                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-trails.png?v=20260809-02" alt="Archive Trails section of the Puroresu Project mobile homepage showing the Muta Mythology trail">
                   </div>
                 </article>
                 <article class="puro-home-mobile-card">
                   <p>Deeper trail actions</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="assets/puro/home-mobile-deeper.png?v=20260809-02" alt="Lower portion of the Puroresu Project mobile homepage with trail actions and footer navigation" />
+                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-deeper.png?v=20260809-02" alt="Lower portion of the Puroresu Project mobile homepage with trail actions and footer navigation">
                   </div>
                 </article>
               </div>
             </figure>
-            <div class="puro-device-notes" aria-label="Responsive homepage design decisions">
+            <div class="puro-device-notes puro-device-notes--mobile" aria-label="Mobile homepage design decision">
               <article><strong>Mobile</strong><p>Reduce simultaneous choices and let the trail read as a guided path through one theme at a time.</p></article>
-              <article><strong>Desktop</strong><p>Expose more of the system early: hero, navigation, stats, trails, and support all visible enough to invite branching.</p></article>
             </div>
           </div>
         </div>
@@ -243,8 +262,8 @@
       </section>
 
       <figure class="case-image full lineage-feature">
-        <video controls playsinline muted preload="metadata" poster="assets/puro/lineage-connected-data-poster.jpg">
-          <source src="assets/puro/lineage-connected-data-no-audio.mp4?v=20260723-01" type="video/mp4" />
+        <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/lineage-connected-data-poster.jpg">
+          <source src="https://pjhaftdesigns.com/assets/puro/lineage-connected-data-no-audio.mp4?v=20260723-01" type="video/mp4">
           Your browser does not support embedded video.
         </video>
         <figcaption>
@@ -271,7 +290,7 @@
       </section>
 
       <figure class="case-image full lineage-architecture-map">
-        <img src="assets/puro/lineage-architecture-map.png" alt="Large Puroresu Project lineage architecture map showing wrestlers and influence paths across decades" />
+        <img src="https://pjhaftdesigns.com/assets/puro/lineage-architecture-map.png" alt="Large Puroresu Project lineage architecture map showing wrestlers and influence paths across decades">
         <figcaption>
           The broader architecture map shows the raw complexity behind the simpler lineage experience: decades of wrestlers, eras, AJW lineages, and influence paths reduced into focused stories.
         </figcaption>
@@ -330,15 +349,15 @@
         </div>
 
         <div class="puro-design-photos" aria-label="Monochrome photography treatment">
-          <figure><img src="assets/puro/history-card.webp" alt="Monochrome ringside photograph" /><figcaption><span>01</span> Human drama</figcaption></figure>
-          <figure><img src="assets/puro/timeline-card.webp" alt="Monochrome historical wrestling photograph" /><figcaption><span>02</span> Archival weight</figcaption></figure>
-          <figure><img src="assets/puro/vault-card.webp" alt="Monochrome wrestling broadcast photograph" /><figcaption><span>03</span> Broadcast memory</figcaption></figure>
+          <figure><img src="https://pjhaftdesigns.com/assets/puro/history-card.webp" alt="Monochrome ringside photograph"><figcaption><span>01</span> Human drama</figcaption></figure>
+          <figure><img src="https://pjhaftdesigns.com/assets/puro/timeline-card.webp" alt="Monochrome historical wrestling photograph"><figcaption><span>02</span> Archival weight</figcaption></figure>
+          <figure><img src="https://pjhaftdesigns.com/assets/puro/vault-card.webp" alt="Monochrome wrestling broadcast photograph"><figcaption><span>03</span> Broadcast memory</figcaption></figure>
         </div>
 
         <div class="puro-design-specimens">
           <div class="puro-type-specimen">
             <p class="puro-specimen-label">DISPLAY / CONDENSED / UPPERCASE</p>
-            <strong>THE GOLDEN<br /><span>AGE OF PURORESU</span></strong>
+            <strong>THE GOLDEN<br><span>AGE OF PURORESU</span></strong>
             <p class="puro-type-specimen__meta">1970s-1990s &nbsp; / &nbsp; ERA AND EVENT HEADLINES</p>
           </div>
 
@@ -374,7 +393,7 @@
             <span>Main app</span>
             <div class="puro-phone-frame puro-social-phone">
               <div class="puro-social-post-header">
-                <img src="assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true" />
+                <img src="https://pjhaftdesigns.com/assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true">
                 <div>
                   <strong>puroresu.project</strong>
                   <span>Japan</span>
@@ -383,32 +402,32 @@
               </div>
               <div class="puro-social-carousel" style="--slide-count:7;">
                 <div class="puro-social-carousel__track">
-                  <img class="is-active" src="assets/puro/social/main-app-carousel/1.png" alt="Puroresu Project social carousel introducing the interactive guide to Japanese professional wrestling" />
-                  <img src="assets/puro/social/main-app-carousel/2.png" alt="Puroresu Project social carousel slide about discovering wrestlers" />
-                  <img src="assets/puro/social/main-app-carousel/3.png" alt="Puroresu Project social carousel slide about The Vault" />
-                  <img src="assets/puro/social/main-app-carousel/4.png" alt="Puroresu Project social carousel slide about lineage" />
-                  <img src="assets/puro/social/main-app-carousel/5.png" alt="Puroresu Project social carousel slide about the timeline" />
-                  <img src="assets/puro/social/main-app-carousel/6.png" alt="Puroresu Project social carousel slide about styles" />
-                  <img src="assets/puro/social/main-app-carousel/7.png" alt="Puroresu Project social carousel slide about going beyond the ring" />
+                  <img class="is-active" src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/1.png" alt="Puroresu Project social carousel introducing the interactive guide to Japanese professional wrestling">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/2.png" alt="Puroresu Project social carousel slide about discovering wrestlers">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/3.png" alt="Puroresu Project social carousel slide about The Vault">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/4.png" alt="Puroresu Project social carousel slide about lineage">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/5.png" alt="Puroresu Project social carousel slide about the timeline">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/6.png" alt="Puroresu Project social carousel slide about styles">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/main-app-carousel/7.png" alt="Puroresu Project social carousel slide about going beyond the ring">
                 </div>
               </div>
               <div class="puro-social-post-footer" aria-hidden="true">
                 <div class="puro-social-dots"><i class="is-active"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="puro-social-actions">
                   <div>
-                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="m7 23-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                   </div>
-                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"></path></svg>
                 </div>
                 <div class="puro-social-skeleton">
                   <i class="puro-skeleton-line puro-skeleton-line--likes"></i>
                   <i class="puro-skeleton-line puro-skeleton-line--caption"></i>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
                   <i class="puro-skeleton-line puro-skeleton-line--date"></i>
                 </div>
               </div>
@@ -418,7 +437,7 @@
             <span>Lineage story</span>
             <div class="puro-phone-frame puro-social-phone">
               <div class="puro-social-post-header">
-                <img src="assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true" />
+                <img src="https://pjhaftdesigns.com/assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true">
                 <div>
                   <strong>puroresu.project</strong>
                   <span>Japan</span>
@@ -427,31 +446,31 @@
               </div>
               <div class="puro-social-carousel" style="--slide-count:6;">
                 <div class="puro-social-carousel__track">
-                  <img class="is-active" src="assets/puro/social/tanahashi-carousel/1.jpg" alt="Puroresu Project social carousel introducing Hiroshi Tanahashi as the ace of the universe" />
-                  <img src="assets/puro/social/tanahashi-carousel/2.jpg" alt="Puroresu Project Tanahashi carousel slide showing Rikidozan lineage roots" />
-                  <img src="assets/puro/social/tanahashi-carousel/3.jpg" alt="Puroresu Project Tanahashi carousel slide showing Antonio Inoki in the 1960s" />
-                  <img src="assets/puro/social/tanahashi-carousel/4.jpg" alt="Puroresu Project Tanahashi carousel slide showing New Japan Dojo lineage" />
-                  <img src="assets/puro/social/tanahashi-carousel/5.jpg" alt="Puroresu Project Tanahashi carousel slide showing Keiji Mutoh and Kensuke Sasaki in the 1980s" />
-                  <img src="assets/puro/social/tanahashi-carousel/6.jpg" alt="Puroresu Project Tanahashi carousel slide ending with Hiroshi Tanahashi" />
+                  <img class="is-active" src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/1.jpg" alt="Puroresu Project social carousel introducing Hiroshi Tanahashi as the ace of the universe">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/2.jpg" alt="Puroresu Project Tanahashi carousel slide showing Rikidozan lineage roots">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/3.jpg" alt="Puroresu Project Tanahashi carousel slide showing Antonio Inoki in the 1960s">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/4.jpg" alt="Puroresu Project Tanahashi carousel slide showing New Japan Dojo lineage">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/5.jpg" alt="Puroresu Project Tanahashi carousel slide showing Keiji Mutoh and Kensuke Sasaki in the 1980s">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/tanahashi-carousel/6.jpg" alt="Puroresu Project Tanahashi carousel slide ending with Hiroshi Tanahashi">
                 </div>
               </div>
               <div class="puro-social-post-footer" aria-hidden="true">
                 <div class="puro-social-dots"><i class="is-active"></i><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="puro-social-actions">
                   <div>
-                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="m7 23-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                   </div>
-                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"></path></svg>
                 </div>
                 <div class="puro-social-skeleton">
                   <i class="puro-skeleton-line puro-skeleton-line--likes"></i>
                   <i class="puro-skeleton-line puro-skeleton-line--caption"></i>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
                   <i class="puro-skeleton-line puro-skeleton-line--date"></i>
                 </div>
               </div>
@@ -461,7 +480,7 @@
             <span>Vault story</span>
             <div class="puro-phone-frame puro-social-phone">
               <div class="puro-social-post-header">
-                <img src="assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true" />
+                <img src="https://pjhaftdesigns.com/assets/puro/social-logo.png?v=20260725-01" alt="" aria-hidden="true">
                 <div>
                   <strong>puroresu.project</strong>
                   <span>Japan</span>
@@ -470,32 +489,32 @@
               </div>
               <div class="puro-social-carousel" style="--slide-count:7;">
                 <div class="puro-social-carousel__track">
-                  <img class="is-active" src="assets/puro/social/mil-mascaras-carousel/1.jpg" alt="Puroresu Project Mil Mascaras carousel cover reading The Man of a 1000 Masks" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/2.jpg" alt="Puroresu Project Mil Mascaras carousel ringside action photograph" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/3.jpg" alt="Puroresu Project Mil Mascaras carousel entrance photograph with championship belt" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/4.jpg" alt="Puroresu Project Mil Mascaras carousel submission hold photograph" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/5.jpg" alt="Puroresu Project Mil Mascaras carousel close-up mask photograph" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/6.jpg" alt="Puroresu Project Mil Mascaras carousel in-ring photograph" />
-                  <img src="assets/puro/social/mil-mascaras-carousel/7.jpg" alt="Puroresu Project Mil Mascaras carousel closing slide inviting readers to visit The Vault" />
+                  <img class="is-active" src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/1.jpg" alt="Puroresu Project Mil Mascaras carousel cover reading The Man of a 1000 Masks">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/2.jpg" alt="Puroresu Project Mil Mascaras carousel ringside action photograph">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/3.jpg" alt="Puroresu Project Mil Mascaras carousel entrance photograph with championship belt">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/4.jpg" alt="Puroresu Project Mil Mascaras carousel submission hold photograph">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/5.jpg" alt="Puroresu Project Mil Mascaras carousel close-up mask photograph">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/6.jpg" alt="Puroresu Project Mil Mascaras carousel in-ring photograph">
+                  <img src="https://pjhaftdesigns.com/assets/puro/social/mil-mascaras-carousel/7.jpg" alt="Puroresu Project Mil Mascaras carousel closing slide inviting readers to visit The Vault">
                 </div>
               </div>
               <div class="puro-social-post-footer" aria-hidden="true">
                 <div class="puro-social-dots"><i class="is-active"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="puro-social-actions">
                   <div>
-                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="m7 23-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                    <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                   </div>
-                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"></path></svg>
                 </div>
                 <div class="puro-social-skeleton">
                   <i class="puro-skeleton-line puro-skeleton-line--likes"></i>
                   <i class="puro-skeleton-line puro-skeleton-line--caption"></i>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
-                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"/></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
+                  <div class="puro-skeleton-comment"><b></b><span><i></i><i></i></span><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54Z"></path></svg></div>
                   <i class="puro-skeleton-line puro-skeleton-line--date"></i>
                 </div>
               </div>
@@ -512,8 +531,8 @@
             <p>The Story gives newcomers a structured introduction before they branch into profiles, matches, eras, and cultural references. It works less like a static article and more like an orientation path through the archive.</p>
           </div>
           <figure class="gallery-figure puro-video-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/puro/story-demo-poster.jpg">
-              <source src="assets/puro/story-demo-no-audio.mp4?v=20260723-02" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/story-demo-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/puro/story-demo-no-audio.mp4?v=20260723-02" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">The Story introduces Japanese wrestling through a guided editorial path with clear next steps into the wider archive.</figcaption>
@@ -526,8 +545,8 @@
             <p>The timeline connects eras, promotions, major events, and turning points in a format that supports both quick orientation and slower study.</p>
           </div>
           <figure class="gallery-figure puro-video-figure">
-            <video controls playsinline muted preload="metadata" poster="assets/puro/timeline-demo-poster.jpg">
-              <source src="assets/puro/timeline-demo.mp4?v=20260723-03" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/timeline-demo-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/puro/timeline-demo.mp4?v=20260723-03" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">Timeline turns historical eras, promotions, and major moments into a chronological reading surface.</figcaption>
@@ -544,8 +563,8 @@
             <p>I treated relationship labels as data with consequences. Rivalries are shown only when the feud or recurring program is documented; mentors, partners, and stablemates remain useful without being mislabeled for the sake of a more dramatic interface.</p>
           </div>
           <figure class="gallery-figure puro-video-figure puro-profile-screen">
-            <video controls playsinline muted preload="metadata" poster="assets/puro/wrestlers-page.png">
-              <source src="assets/puro/wrestler-rivalries-demo.mp4?v=20260725-01" type="video/mp4" />
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/wrestlers-page.png">
+              <source src="https://pjhaftdesigns.com/assets/puro/wrestler-rivalries-demo.mp4?v=20260725-01" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">The Wrestlers page keeps roster browsing, profile detail, and rivalry paths in one connected archive view.</figcaption>
@@ -567,16 +586,16 @@
             </dl>
           </div>
           <div class="puro-portrait-grid" aria-label="Selected wrestler portraits from the archive">
-          <img src="assets/puro/rikidozan.webp" alt="Rikidōzan" />
-          <img src="assets/puro/antonio-inoki.webp" alt="Antonio Inoki" />
-          <img src="assets/puro/giant-baba.webp" alt="Giant Baba" />
-          <img src="assets/puro/mitsuharu-misawa.webp" alt="Mitsuharu Misawa" />
-          <img src="assets/puro/tiger-mask.webp" alt="Tiger Mask" />
-          <img src="assets/puro/bull-nakano.webp" alt="Bull Nakano" />
-          <img src="assets/puro/manami-toyota.webp" alt="Manami Toyota" />
-          <img src="assets/puro/atsushi-onita.webp" alt="Atsushi Onita" />
-          <img src="assets/puro/bobo-brazil.webp" alt="Bobo Brazil" />
-          <img src="assets/puro/jushin-thunder-liger.webp" alt="Jushin Thunder Liger" />
+          <img src="https://pjhaftdesigns.com/assets/puro/rikidozan.webp" alt="Rikidōzan">
+          <img src="https://pjhaftdesigns.com/assets/puro/antonio-inoki.webp" alt="Antonio Inoki">
+          <img src="https://pjhaftdesigns.com/assets/puro/giant-baba.webp" alt="Giant Baba">
+          <img src="https://pjhaftdesigns.com/assets/puro/mitsuharu-misawa.webp" alt="Mitsuharu Misawa">
+          <img src="https://pjhaftdesigns.com/assets/puro/tiger-mask.webp" alt="Tiger Mask">
+          <img src="https://pjhaftdesigns.com/assets/puro/bull-nakano.webp" alt="Bull Nakano">
+          <img src="https://pjhaftdesigns.com/assets/puro/manami-toyota.webp" alt="Manami Toyota">
+          <img src="https://pjhaftdesigns.com/assets/puro/atsushi-onita.webp" alt="Atsushi Onita">
+          <img src="https://pjhaftdesigns.com/assets/puro/bobo-brazil.webp" alt="Bobo Brazil">
+          <img src="https://pjhaftdesigns.com/assets/puro/jushin-thunder-liger.webp" alt="Jushin Thunder Liger">
           </div>
         </div>
       </section>
@@ -599,76 +618,76 @@
               </div>
             </dl>
           </div>
-          <figure class="gallery-figure puro-video-figure puro-vault-video"><video controls playsinline muted preload="metadata" poster="assets/puro/vault-room-update-poster.png?v=20260724-02"><source src="assets/puro/vault.mp4?v=20260909-01" type="video/mp4" />Your browser does not support embedded video.</video><figcaption class="gallery-caption">With both utility panels closed, the room becomes the primary navigation surface: part imagined childhood bedroom, part match archive, with the selector still available along the bottom.</figcaption></figure>
+          <figure class="gallery-figure puro-video-figure puro-vault-video"><video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/vault-room-update-poster.png?v=20260724-02"><source src="https://pjhaftdesigns.com/assets/puro/vault.mp4?v=20260909-02" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">With both utility panels closed, the room becomes the primary navigation surface: part imagined childhood bedroom, part match archive, with the selector still available along the bottom.</figcaption></figure>
         </article>
         <article class="puro-showcase-wide puro-venues-story">
           <div><p class="section-kicker">Venues</p><h3>Move between the archive and its geography</h3><p>The venue explorer lets readers browse places as an archive or switch to a map to understand how wrestling history spread across regions. Both views use the same filters and venue records.</p></div>
-          <figure class="gallery-figure puro-video-figure"><video controls playsinline muted preload="metadata" poster="assets/puro/venues-demo-poster.jpg"><source src="assets/puro/venues-demo.mp4?v=20260723-01" type="video/mp4" />Your browser does not support embedded video.</video><figcaption class="gallery-caption">The venue explorer moves between list and map views, turning the same archive records into both a searchable reference and a geographic reading of the history.</figcaption></figure>
+          <figure class="gallery-figure puro-video-figure"><video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/venues-demo-poster.jpg"><source src="https://pjhaftdesigns.com/assets/puro/venues-demo.mp4?v=20260723-01" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">The venue explorer moves between list and map views, turning the same archive records into both a searchable reference and a geographic reading of the history.</figcaption></figure>
         </article>
       </section>
 
       <section class="case-section early-signals" id="signals">
-        <div><p class="section-kicker">Early traction</p><h2>Social attention turned into deeper exploration.</h2></div>
+        <div><p class="section-kicker">Traction</p><h2>Social attention turned into deeper exploration.</h2></div>
         <div>
           <div class="early-signals__group">
             <div class="case-copy">
               <p class="early-signals__label">Instagram performance</p>
-              <p>Instagram introduced Puroresu Project to a much wider audience. More than four out of five views came from non-followers, while profile visits and bio-link taps showed that people were moving from individual stories toward the larger project.</p>
+              <p>From July 28 to August 26, 2026, Instagram introduced Puroresu Project to a much wider audience. More than four out of five views came from non-followers, while profile visits and link clicks showed that people were moving from individual stories toward the larger archive.</p>
             </div>
             <div class="early-signals__grid" aria-label="Puroresu Project Instagram traction summary">
               <article>
-                <strong data-count-up data-count-target="206000">206k</strong>
+                <strong data-count-up="" data-count-target="411000">411k+</strong>
                 <span>Instagram content views</span>
-                <p>81.4% of views came from non-followers</p>
+                <p>81% of views came from non-followers</p>
               </article>
               <article>
-                <strong data-count-up data-count-target="71000">71k</strong>
+                <strong data-count-up="" data-count-target="148000">148k+</strong>
                 <span>accounts reached</span>
-                <p>Across posts, reels, and stories</p>
+                <p>146,651 came from non-followers</p>
               </article>
               <article>
-                <strong data-count-up data-count-target="899">899</strong>
-                <span>bio-link taps</span>
-                <p>From 5,600 profile visits</p>
+                <strong data-count-up="" data-count-target="32000">32k+</strong>
+                <span>content interactions</span>
+                <p>75% came from non-followers</p>
               </article>
             </div>
-            <p class="early-signals__note">The audience growth showed that multiple stories were finding readers, not just one post carrying the result.</p>
+            <p class="early-signals__note">The audience growth showed that multiple stories were finding readers, not just one post carrying the result. It also led to 7.6k profile visits and 2k Instagram link clicks.</p>
           </div>
 
           <div class="early-signals__group">
             <div class="case-copy">
               <p class="early-signals__label">Website performance</p>
-              <p>The website data shows that attention continued after the click. Visitors viewed multiple pages and spent more than two minutes actively engaged on average, with archive sections such as Classic Matches, Wrestlers, The Vault, Lineage, and Timeline drawing meaningful traffic.</p>
+              <p>For the same late-July to late-August window, Google Analytics showed that attention continued after the click. Visitors viewed multiple pages and spent more than two minutes actively engaged on average, with archive sections such as Classic Matches, Wrestlers, The Vault, Lineage, and Timeline drawing meaningful traffic.</p>
             </div>
             <div class="early-signals__grid" aria-label="Puroresu Project website traction summary">
               <article>
-                <strong data-count-up data-count-target="2990">2,990</strong>
+                <strong data-count-up="" data-count-target="2066">2,066</strong>
                 <span>active website users</span>
-                <p>2,989 were new users</p>
+                <p>1,984 were new users</p>
               </article>
               <article>
-                <strong data-count-up data-count-target="15000">15k</strong>
-                <span>page views</span>
+                <strong data-count-up="" data-count-target="10000">10k+</strong>
+                <span>website views</span>
                 <p>Across archive and story pages</p>
               </article>
               <article>
-                <strong>2m 13s</strong>
+                <strong>2m 09s</strong>
                 <span>average engagement time</span>
                 <p>Per active user</p>
               </article>
             </div>
             <figure class="early-signals__map">
               <div class="early-signals__map-frame">
-                <img loading="lazy" src="assets/puro/metrics/global-traffic-map.png" alt="World map showing Puroresu Project website traffic across North America, South America, Europe, Asia, Australia, and New Zealand" />
+                <img loading="lazy" src="https://pjhaftdesigns.com/assets/puro/metrics/global-traffic-map.png" alt="World map showing Puroresu Project website traffic across North America, South America, Europe, Asia, Australia, and New Zealand">
               </div>
               <figcaption>
                 Traffic reached wrestling fans across North America, South America, Europe, Asia, and Australia, showing interest beyond a local or personal network.
               </figcaption>
             </figure>
-            <p class="early-signals__note">Google Analytics attributed 1,465 sessions to Instagram, connecting the social reach to continued exploration on the site.</p>
+            <p class="early-signals__note">Google Analytics attributed 1,999 sessions to Instagram-related sources, connecting the social reach to continued exploration on the site.</p>
           </div>
 
-          <p class="case-note">Sources: Instagram Insights, Google Analytics, and Cloudflare traffic reporting.</p>
+          <p class="case-note">Sources: Instagram Insights and Google Analytics.</p>
         </div>
       </section>
 
@@ -692,7 +711,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>&copy; 2026 PJ Haft</span>
+      <span>© 2026 PJ Haft</span>
       <nav class="footer-links" aria-label="Footer navigation"><a href="index.html#work">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a><a href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn</a></nav>
     </footer>
     <script>
@@ -768,5 +787,6 @@
         observer.observe(section);
       })();
     </script>
-  </body>
-</html>
+
+
+</body></html>

@@ -1,27 +1,52 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A SugarAI case study by PJ Haft about helping people build reports by asking a business question and checking the setup before anything is built."
-    />
-    <title>What If Building a Report Started With a Question? | PJ Haft</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260805-01" />
-    <script src="site-nav.js?v=20260724-03" defer></script>
-  </head>
+<html lang="en" data-theme="dark"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI report builder product design case study by PJ Haft, showing how a seven-step report wizard became a question-led workflow users could inspect and trust.">
+    <title>AI Report Builder Product Design Case Study | PJ Haft</title>
+    <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://www.pjhaftdesigns.com/report-builder">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PJ Haft Portfolio">
+    <meta property="og:title" content="AI Report Builder Product Design Case Study | PJ Haft">
+    <meta property="og:description" content="How a seven-step report wizard became a question-led AI workflow users could inspect, refine, and trust.">
+    <meta property="og:url" content="https://www.pjhaftdesigns.com/report-builder">
+    <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Report Builder Product Design Case Study | PJ Haft">
+    <meta name="twitter:description" content="How a seven-step report wizard became a question-led AI workflow users could inspect, refine, and trust.">
+    <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "AI Report Builder Product Design Case Study",
+        "description": "A product design case study about turning a seven-step report wizard into a question-led AI workflow.",
+        "url": "https://www.pjhaftdesigns.com/report-builder",
+        "image": "https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png",
+        "author": {
+          "@type": "Person",
+          "name": "Pejman Haft",
+          "url": "https://www.pjhaftdesigns.com/"
+        }
+      }
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="live-base-1.css">
+    <script src="site-nav.js?v=20260724-03" defer=""></script>
+  <link rel="stylesheet" href="live-case-theme.css"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+</head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="PJ Haft home">
-        <span class="brand-mark">P</span>
-        <span>PJ Haft</span>
+      <a class="brand" href="index.html" aria-label="Pejman Haft home">
+        <img src="assets/favicon.svg" alt="" width="36" height="36">
+        <span>Pejman Haft</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -32,12 +57,12 @@
         <a href="resume.html">Resume</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
-    </header>
+    <div class="header-actions"></div></header>
 
     <main class="case-study report-builder-case">
       <section class="case-hero report-builder-hero" aria-labelledby="case-title">
         <div>
-          <p class="eyebrow">SugarAI &middot; Enterprise reporting</p>
+          <p class="eyebrow">SugarAI · Enterprise reporting</p>
           <h1 id="case-title">What if building a report started with a question?</h1>
           <p>
             I designed a SugarAI reporting concept that starts with a business question
@@ -60,19 +85,7 @@
         </dl>
       </section>
 
-      <aside class="case-toc" aria-label="Report Builder case study sections">
-        <p class="case-toc__label">On this page</p>
-        <nav class="case-toc__links">
-          <a href="#problem" data-toc-label="Problem">Problem</a>
-          <a href="#old-flow" data-toc-label="Problem anatomy">Problem anatomy</a>
-          <a href="#users" data-toc-label="Research">Research</a>
-          <a href="#challenge" data-toc-label="Challenge">Challenge</a>
-          <a href="#decisions" data-toc-label="Decisions">Decisions</a>
-          <a href="#before-after" data-toc-label="Before/after">Before/after</a>
-          <a href="#concept" data-toc-label="Concept">Concept</a>
-          <a href="#testing" data-toc-label="Testing">Testing</a>
-        </nav>
-      </aside>
+
 
       <section class="case-section case-intro" id="problem">
         <div>
@@ -83,7 +96,7 @@
           <p>
             A sales leader knows what they need: open opportunities closing
             this quarter, grouped by sales stage. The existing workflow begins somewhere
-            else, with the product&rsquo;s data structure.
+            else, with the product’s data structure.
           </p>
           <p>
             Users first choose a report type and module, navigate relationships,
@@ -95,8 +108,8 @@
             head while working through one fragment at a time.
           </p>
           <blockquote class="case-quote">
-            The current experience begins with the system&rsquo;s data model. The redesign
-            begins with the user&rsquo;s question.
+            The current experience begins with the system’s data model. The redesign
+            begins with the user’s question.
           </blockquote>
         </div>
       </section>
@@ -107,18 +120,14 @@
           <h2>Seven setup screens before users see an answer</h2>
         </header>
         <figure class="legacy-carousel">
-          <img
-            id="legacy-carousel-image"
-            src="assets/report-builder/legacy-cropped/legacy-report-wizard-1.png"
-            alt="Existing Report Wizard module selection screen with dozens of modules"
-          />
+          <img id="legacy-carousel-image" src="https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-1.png" alt="Existing Report Wizard module selection screen with dozens of modules">
           <figcaption id="legacy-carousel-caption" aria-live="polite">
             <span>01</span><b>Choose the module.</b> The first step asks for a data-source decision before the report question can even be described.
           </figcaption>
           <div class="legacy-carousel-controls" aria-label="Existing journey screen controls">
-            <button type="button" class="legacy-carousel-button" data-legacy-prev aria-label="Previous screen">
+            <button type="button" class="legacy-carousel-button" data-legacy-prev="" aria-label="Previous screen">
               <svg aria-hidden="true" viewBox="0 -960 960 960" focusable="false">
-                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"></path>
               </svg>
             </button>
             <div class="legacy-carousel-pages" role="tablist" aria-label="Existing journey screens">
@@ -131,9 +140,9 @@
               <button type="button" role="tab" aria-selected="false" aria-controls="legacy-carousel-image" aria-label="Show screen 7" tabindex="-1" data-legacy-page="6">7</button>
               <button type="button" role="tab" aria-selected="false" aria-controls="legacy-carousel-image" aria-label="Show completed report" tabindex="-1" data-legacy-page="7">8</button>
             </div>
-            <button type="button" class="legacy-carousel-button" data-legacy-next aria-label="Next screen">
+            <button type="button" class="legacy-carousel-button" data-legacy-next="" aria-label="Next screen">
               <svg aria-hidden="true" viewBox="0 -960 960 960" focusable="false">
-                <path d="m504-480-184-184 56-56 240 240-240 240-56-56 184-184Z" />
+                <path d="m504-480-184-184 56-56 240 240-240 240-56-56 184-184Z"></path>
               </svg>
             </button>
           </div>
@@ -149,7 +158,7 @@
           <div class="case-copy">
             <p>
               I met with sales reps and leaders to understand what they repeatedly needed
-              reports to answer. Reps focused on today&rsquo;s priorities; leaders looked for
+              reports to answer. Reps focused on today’s priorities; leaders looked for
               team health, forecast risk, and pipeline patterns.
             </p>
           </div>
@@ -245,9 +254,9 @@
         <div class="report-transformation__comparison">
           <article class="transformation-panel transformation-panel--before">
             <div class="transformation-panel__heading">
-              <span class="transformation-label">Before &middot; 7 steps</span>
+              <span class="transformation-label">Before · 7 steps</span>
               <h3>Configure the system</h3>
-              <p>Start with the CRM&rsquo;s structure and work through seven separate decisions.</p>
+              <p>Start with the CRM’s structure and work through seven separate decisions.</p>
             </div>
             <ol class="transformation-flow transformation-flow--before" aria-label="Seven legacy configuration steps">
               <li><span>01</span><div><strong>Choose a module</strong><small>Know where the data lives</small></div></li>
@@ -262,19 +271,19 @@
 
           <div class="transformation-arrow" aria-hidden="true">
             <svg viewBox="0 -960 960 960" focusable="false">
-              <path d="M647-440H160v-80h487L423-744l56-56 320 320-320 320-56-56 224-224Z" />
+              <path d="M647-440H160v-80h487L423-744l56-56 320 320-320 320-56-56 224-224Z"></path>
             </svg>
           </div>
 
           <article class="transformation-panel transformation-panel--after">
             <div class="transformation-panel__heading">
-              <span class="transformation-label">After &middot; 3 steps</span>
+              <span class="transformation-label">After · 3 steps</span>
               <h3>Ask, review, and build</h3>
               <p>Start with the business question and confirm the structure before building.</p>
             </div>
             <ol class="transformation-flow transformation-flow--after" aria-label="Three redesigned report-building steps">
               <li><span>01</span><div><strong>Ask</strong><small>Describe the business question in familiar language.</small></div></li>
-              <li><span>02</span><div><strong>Review</strong><small>Check SugarAI&rsquo;s interpretation before anything is built.</small></div></li>
+              <li><span>02</span><div><strong>Review</strong><small>Check SugarAI’s interpretation before anything is built.</small></div></li>
               <li><span>03</span><div><strong>Build</strong><small>Create a report that shows its setup and can be changed without starting over.</small></div></li>
             </ol>
           </article>
@@ -308,8 +317,8 @@
           </div>
           <figure class="case-video">
             <div class="case-video-frame case-video-frame--flow-1">
-              <video class="case-video--fill" controls playsinline muted preload="metadata" poster="assets/report-builder/flow-1-main-poster.jpg" aria-describedby="report-flow-1-caption">
-                <source src="assets/report-builder/flow-1-main-no-audio.mp4?v=20260723-01" type="video/mp4" />
+              <video class="case-video--fill" controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/report-builder/flow-1-main-poster.jpg" aria-describedby="report-flow-1-caption">
+                <source src="https://pjhaftdesigns.com/assets/report-builder/flow-1-main-no-audio.mp4?v=20260723-01" type="video/mp4">
                 Your browser does not support embedded video.
               </video>
             </div>
@@ -336,7 +345,7 @@
           </div>
           <figure class="gallery-figure">
             <div class="case-focus-crop case-focus-crop--assistant">
-              <img loading="lazy" src="assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-1.png?v=20260723-01" alt="SugarAI report assistant welcoming the user with helper text and four common reporting questions" />
+              <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-1.png?v=20260723-01" alt="SugarAI report assistant welcoming the user with helper text and four common reporting questions">
             </div>
             <figcaption class="gallery-caption">
               Suggested questions teach the input format without making users start from a blank prompt.
@@ -356,7 +365,7 @@
           </div>
           <figure class="gallery-figure">
             <div class="case-focus-crop case-focus-crop--assistant">
-              <img loading="lazy" src="assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-2.png?v=20260723-01" alt="SugarAI showing two existing reports that may answer the user's pipeline question, with Pipeline by sales stage hovered" />
+              <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-2.png?v=20260723-01" alt="SugarAI showing two existing reports that may answer the user's pipeline question, with Pipeline by sales stage hovered">
             </div>
             <figcaption class="gallery-caption">
               Similar reports appear before generation, giving reuse a chance without blocking creation.
@@ -375,7 +384,7 @@
           </div>
           <figure class="gallery-figure">
             <div class="case-focus-crop case-focus-crop--assistant case-focus-crop--review-lower">
-              <img loading="lazy" src="assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-3.png?v=20260723-01" alt="SugarAI review card showing the complete report definition before building" />
+              <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-3.png?v=20260723-01" alt="SugarAI review card showing the complete report definition before building">
             </div>
             <figcaption class="gallery-caption">
               The review card turns the request into editable report settings.
@@ -394,7 +403,7 @@
           </div>
           <figure class="gallery-figure">
             <div class="case-focus-crop case-focus-crop--assistant">
-              <img loading="lazy" src="assets/report-builder/05-building-progress.png?v=20260723-02" alt="SugarAI building progress with completed checks, an active grouping step, and an upcoming chart-and-table step" />
+              <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/05-building-progress.png?v=20260723-02" alt="SugarAI building progress with completed checks, an active grouping step, and an upcoming chart-and-table step">
             </div>
             <figcaption class="gallery-caption">
               Progress labels make each step legible while the result is being assembled.
@@ -413,7 +422,7 @@
           </div>
           <figure class="gallery-figure">
             <div class="case-detail-crop">
-              <img loading="lazy" src="assets/report-builder/11-report-definition.png?v=20260722-01" alt="Report definition drawer showing the report data source, report type, grouping, metric, filters, and visible columns" />
+              <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/11-report-definition.png?v=20260722-01" alt="Report definition drawer showing the report data source, report type, grouping, metric, filters, and visible columns">
             </div>
             <figcaption class="gallery-caption">
               Report setup remains one click away after the result appears.
@@ -441,8 +450,8 @@
           </div>
           <figure class="case-video">
             <div class="case-video-frame case-video-frame--flow-2">
-              <video controls playsinline muted preload="metadata" poster="assets/report-builder/flow-2-refine-history-poster.jpg?v=20260806-02" aria-describedby="report-flow-2-caption">
-                <source src="assets/report-builder/flow-2-refine-history.mp4?v=20260723-01" type="video/mp4" />
+              <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/report-builder/flow-2-refine-history-poster.jpg?v=20260806-02" aria-describedby="report-flow-2-caption">
+                <source src="https://pjhaftdesigns.com/assets/report-builder/flow-2-refine-history.mp4?v=20260723-01" type="video/mp4">
                 Your browser does not support embedded video.
               </video>
             </div>
@@ -465,19 +474,19 @@
           <div class="gallery-figure-pair refinement-detail-gallery">
             <figure class="gallery-figure">
               <div class="case-detail-crop">
-                <img loading="lazy" src="assets/report-builder/06-why-this-report-v2.png" alt="Why this report drawer showing the original request, logic applied, and assumption" />
+                <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/06-why-this-report-v2.png" alt="Why this report drawer showing the original request, logic applied, and assumption">
               </div>
               <figcaption class="gallery-caption">The drawer separates the original request, applied logic, and assumption.</figcaption>
             </figure>
             <figure class="gallery-figure">
               <div class="case-detail-crop">
-                <img loading="lazy" src="assets/report-builder/08-change-history-v5.png" alt="Change history drawer showing report refinements with a Restore action" />
+                <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/08-change-history-v5.png" alt="Change history drawer showing report refinements with a Restore action">
               </div>
               <figcaption class="gallery-caption">Each refinement becomes a visible history entry with a Restore action.</figcaption>
             </figure>
             <figure class="gallery-figure">
               <div class="case-detail-crop">
-                <img loading="lazy" src="assets/report-builder/10-data-checked.png" alt="Data checked drawer showing source information and a data quality warning" />
+                <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/10-data-checked.png" alt="Data checked drawer showing source information and a data quality warning">
               </div>
               <figcaption class="gallery-caption">Source, access, freshness, and quality warnings are grouped in one place.</figcaption>
             </figure>
@@ -513,7 +522,7 @@
               <div>
                 <strong>Verify before building</strong>
                 <p>
-                  Participants review SugarAI&rsquo;s interpretation, check the proposed
+                  Participants review SugarAI’s interpretation, check the proposed
                   structure, preview refinements, and recover an earlier version.
                 </p>
               </div>
@@ -530,7 +539,7 @@
             </li>
           </ul>
           <blockquote class="case-quote">
-            &ldquo;How do we get this in the hands of my team next week?&rdquo;
+            “How do we get this in the hands of my team next week?”
           </blockquote>
           <p>
             Early feedback suggests that the core premise is understandable, with
@@ -547,7 +556,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>&copy; 2026 PJ Haft</span>
+      <span>© 2026 PJ Haft</span>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html#work">Work</a>
         <a href="about.html">About</a>
@@ -559,42 +568,42 @@
     <script>
       const legacyScreens = [
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-1.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-1.png",
           alt: "Existing Report Wizard module selection screen with dozens of modules",
           caption: '<span>01</span><b>Choose the module.</b> The first step asks for a data-source decision before the report question can even be described.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-2.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-2.png",
           alt: "Existing Report Wizard filter screen with related modules, fields, and operators",
           caption: '<span>02</span><b>Select the filters.</b> Query logic appears before the visible fields, reversing the expected flow and introducing complexity too early.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-3.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-3.png",
           alt: "Existing Report Wizard group-by screen with a selected assigned-user field",
           caption: '<span>03</span><b>Define the grouping.</b> Available options depend on the earlier module choice, so one wrong assumption can narrow the rest of the setup.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-4.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-4.png",
           alt: "Existing Report Wizard display summaries screen with grouping and count calculations",
           caption: '<span>04</span><b>Select the summaries.</b> Rollups and headline metrics are chosen before there is a way to confirm the underlying records are right.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-5.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-5.png",
           alt: "Existing Report Wizard display columns screen with selected table fields",
           caption: '<span>05</span><b>Choose the visible columns.</b> Table fields are selected without the assembled report in view, making completeness and scanability hard to judge.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-6.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-6.png",
           alt: "Existing Report Wizard chart options screen",
           caption: '<span>06</span><b>Configure the chart.</b> Visualization choices arrive late, after earlier setup decisions have already constrained what is available.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-7.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-7.png",
           alt: "Existing Report Wizard report details screen with name, owner, team, and save controls",
           caption: '<span>07</span><b>Name, assign, and save.</b> The report has to be named and saved before anyone can confirm whether it answers the original question.'
         },
         {
-          src: "assets/report-builder/legacy-cropped/legacy-report-wizard-8.png",
+          src: "https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-8.png",
           alt: "Completed report view showing a chart, table, and filter panel after the report wizard is finished",
           fit: "contain",
           caption: '<span>08</span><b>See the finished report.</b> The chart and table finally appear after saving; changing the result means leaving the answer and returning to edit mode.'
@@ -681,5 +690,6 @@
         });
       });
     </script>
-  </body>
-</html>
+
+
+</body></html>
