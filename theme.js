@@ -1,7 +1,7 @@
 (() => {
   const key = 'pj-editorial-theme';
-  let theme = 'dark';
-  try { theme = localStorage.getItem(key) === 'light' ? 'light' : 'dark'; } catch {}
+  let theme = 'light';
+  try { theme = localStorage.getItem(key) === 'dark' ? 'dark' : 'light'; } catch {}
   document.documentElement.dataset.theme = theme;
   document.addEventListener('DOMContentLoaded', () => {
     const actions = document.querySelector('.header-actions');
@@ -27,7 +27,7 @@
     update();
     window.addEventListener('storage', event => {
       if (event.key !== key) return;
-      document.documentElement.dataset.theme = event.newValue === 'light' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = event.newValue === 'dark' ? 'dark' : 'light';
       update();
     });
   });
