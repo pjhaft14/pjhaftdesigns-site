@@ -1,0 +1,52 @@
+.site-footer.site-footer--unified {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1180px, calc(100% - 40px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 32px 0 40px;
+  gap: 24px;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.site-footer--unified .footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+}
+
+.site-footer--unified .footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.site-footer--unified .footer-links a:hover { color: var(--ink); }
+.site-footer--unified svg { width: 16px; height: 16px; }
+
+@media (max-width: 640px) {
+  .site-footer.site-footer--unified {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 24px 0 32px;
+  }
+
+  .site-footer--unified .footer-links {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0 18px;
+  }
+
+  .site-footer--unified .footer-links a:last-child { margin-left: auto; }
+}
