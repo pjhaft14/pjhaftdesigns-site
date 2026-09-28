@@ -1,0 +1,35 @@
+/* Typography and section spacing come from the shared portfolio styles. */
+.ride-case h1, .ride-case h2, .ride-case h3 { letter-spacing: 0; }
+.ride-case .case-hero .case-meta { grid-template-columns: repeat(4,minmax(0,1fr)); width: min(100%,900px); }
+.ride-comparison { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.ride-downtime-impact { margin-top: 24px; padding: 16px 0 0; border-top: 1px solid currentColor; }
+.ride-downtime-impact strong { display: block; }
+.ride-downtime-impact p { margin: 8px 0 0; }
+.ride-prototype-link { display: inline-block; padding-block: 12px; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.ride-case .ride-story { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding-inline: 0; }
+.ride-case .ride-story>div { max-width: 760px; }
+.ride-case .ride-story figure { min-width: 0; }
+.ride-case .ride-story-portrait { max-width: 580px; }
+.ride-case .ride-story img, .ride-overview img { display: block; width: 100%; height: auto; }
+.ride-overview { margin: 0; }
+.ride-case .overview-image-frame { padding: 16px; background: #f3f5f6; border-radius: 1.25rem; border: 1px solid var(--line); }
+.ride-case .overview-image-frame img { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+.ride-case .solution-gallery article.drawer-explainer { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 48px; align-items: start; }
+.drawer-guide { margin: 24px 0 0; }
+.drawer-guide > div { padding: 20px 0; border-top: 1px solid var(--line); }
+.drawer-guide dt { font-weight: 600; color: var(--ink); }
+.drawer-guide dd { margin: 8px 0 0; }
+@media (max-width: 760px) { .ride-case .solution-gallery article.drawer-explainer { grid-template-columns: minmax(0, 1fr); gap: 24px; } .drawer-explainer > figure { width: 100%; max-width: 480px; margin-inline: auto; } }
+#location-context .gallery-figure > img { box-sizing: border-box; padding: 5px 19px 0; background: #f3f5f6; }
+.ride-case .design-decision-grid article { display: grid; grid-template-columns: 2.2rem minmax(0,1fr); grid-template-rows: auto 1fr; column-gap: .85rem; row-gap: 1rem; align-content: start; }
+.ride-case .design-decision-grid article>span { float: none; margin: 0; }
+.ride-case .design-decision-grid h3 { margin: 0; min-width: 0; }
+.ride-case .design-decision-grid article>p { grid-column: 1 / -1; margin: 0; }
+.ride-case .design-decisions>.case-note { margin-top: 24px; }
+@media(max-width:760px) {
+  .ride-case .case-hero .case-meta { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ride-comparison { grid-template-columns: 1fr; }
+}
+@media(max-width:420px) {
+  .ride-case .case-hero .case-meta { grid-template-columns: 1fr; }
+}

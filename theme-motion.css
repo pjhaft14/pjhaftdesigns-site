@@ -1,0 +1,18 @@
+.icon-button.theme-toggle { display: grid; place-items: center; padding: 0; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.icon-button.theme-toggle:hover { border-radius: 50%; }
+.theme-sky { position: relative; display: block; width: 26px; height: 26px; overflow: hidden; pointer-events: none; }
+.theme-sky > span { position: absolute; inset: 3px; display: grid; place-items: center; }
+.theme-sky svg { display: block; width: 20px; height: 20px; }
+.theme-sun { color: #73737b; transform: translate(0,0) rotate(0); opacity: 1; }
+.theme-moon { color: #c9d8fa; transform: translate(22px,30px) rotate(65deg); opacity: 0; }
+:root[data-theme="dark"] .theme-sun { transform: translate(-22px,30px) rotate(-65deg); opacity: 0; }
+:root[data-theme="dark"] .theme-moon { transform: translate(0,0) rotate(0); opacity: 1; }
+:root.theme-switching body,
+:root.theme-switching :is(.site-header,.project-media,.about-band,.contact-band,.case-meta > div,.transformation-panel,.case-note) {
+  transition: background-color 600ms ease, color 600ms ease, border-color 600ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-sky > span { transition: none; }
+  :root.theme-switching body,
+  :root.theme-switching :is(.site-header,.project-media,.about-band,.contact-band,.case-meta > div,.transformation-panel,.case-note) { transition: none; }
+}
