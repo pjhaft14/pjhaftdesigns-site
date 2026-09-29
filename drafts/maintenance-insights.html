@@ -12,15 +12,15 @@
   <div class="case-copy">
     <p>During our Disney visit, the engineer we spoke with described a reactive workflow. The system sent email notifications when something went wrong. Engineers needed to check their inbox, then investigate the affected ride area to identify the problem.</p>
     <p>Downtime interrupted operations, contributed to longer queues, and frustrated guests. The opportunity was to support earlier investigation and, where engineering judgment allowed, plan maintenance overnight rather than respond during park hours.</p>
-    <blockquote class="case-quote">The observed workflow began with a breakdown notification. The proposed experience gives engineers earlier context for a maintenance decision.</blockquote>
+    <blockquote class="case-quote">From waiting for an email to actively checking component health, wherever the engineer is working.</blockquote>
   </div>
 </section>
 <section class="case-section" id="old-flow"><div><p class="section-kicker">Problem anatomy</p><h2>The email started an investigation, not a maintenance plan.</h2></div><div class="case-copy"><p>Limited sensor coverage meant a notification identified an affected ride area without identifying the exact faulty component. Email delivery also depended on network connectivity.</p><ol><li><strong>Check email.</strong> Discover a notification after an issue occurs.</li><li><strong>Investigate the area.</strong> Find the specific component behind the broad location.</li><li><strong>Determine the response.</strong> Establish the work needed through investigation.</li><li><strong>Email the parts team.</strong> Request replacement parts separately.</li></ol><p class="case-note">Reconstructed from the research account, not an original email artifact or a description of Disney's operations today. A dashboard alone would not solve network reliability.</p></div></section>
 <section class="case-section report-audience" id="research" aria-labelledby="research-title">
-  <div><p class="section-kicker">Field research</p><h2 id="research-title">Design around the engineer's next decision.</h2></div>
-  <div><div class="case-copy"><p>I led research and persona interviews, including an on-site visit to Disney where we spoke with an engineer about daily routines and the information they monitored.</p><p>The research shaped two connected questions: what needs attention, and what needs to happen next.</p></div>
+  <div><p class="section-kicker">Field research</p><h2 id="research-title">Put component health in the engineer's hands.</h2></div>
+  <div><div class="case-copy"><p>I led research and persona interviews, including an on-site visit to Disney where we spoke with an engineer about daily routines and the information they monitored.</p><p>Our team's central finding was the need for proactive access to component health on portable devices such as tablets and phones. Engineers needed to check status while moving through the ride environment, rather than wait for an email to tell them something had gone wrong.</p></div>
   <div class="report-persona-grid">
-    <article><p class="persona-role">Identify the issue</p><h3>What needs my attention?</h3><ul><li><b>Discovery</b><span>Notifications depended on checking email.</span></li><li><b>Location</b><span>The affected area was known, but the exact component needed investigation.</span></li><li><b>Evidence</b><span>Additional sensors could provide more specific health context.</span></li></ul></article>
+    <article><p class="persona-role">Check component health</p><h3>What needs my attention?</h3><ul><li><b>Access</b><span>Check status from a tablet or phone without waiting for an email.</span></li><li><b>Location</b><span>Connect the health information to a specific component and ride area.</span></li><li><b>Evidence</b><span>Additional sensors could provide more specific health context.</span></li></ul></article>
     <article><p class="persona-role">Coordinate the response</p><h3>What needs to happen next?</h3><ul><li><b>Urgency</b><span>Engineers needed to determine the appropriate response.</span></li><li><b>Parts</b><span>Requests went separately to the parts team by email.</span></li><li><b>Opportunity</b><span>Connect the component and evidence to the maintenance handoff.</span></li></ul></article>
   </div></div>
 </section>
@@ -28,7 +28,7 @@
   <div><p class="section-kicker">Design challenge</p><h2 id="challenge-title">Make the next step clear. Keep the engineer in control.</h2></div>
   <div class="case-copy"><p>More sensors could provide more data, but not an automatic answer. The experience needed to connect the affected component, evidence of change, and a practical next step.</p><p>A prediction must not look like a guaranteed failure time. Proposed overnight work is not an approved schedule, and requesting a part does not confirm availability. The design needed to make those boundaries clear while helping engineers coordinate the response.</p></div>
 </section>
-<section class="design-decisions" id="decisions"><div class="design-decisions__intro"><p class="section-kicker">Design decisions</p><h2>Four choices shaped the experience.</h2></div><div class="design-decision-grid"><article><span>01</span><h3>Put the component in context</h3><p>A ride map and prioritized alerts connect the problem to its location and component ID.</p></article><article><span>02</span><h3>Lead with the change</h3><p>Show the latest reading against its normal range, then explain the trend and estimated downtime risk.</p></article><article><span>03</span><h3>Keep timing subject to review</h3><p>Place the overnight window alongside an escalation path. Engineers retain responsibility for urgency and operating decisions.</p></article><article><span>04</span><h3>Keep work and parts connected</h3><p>Link the component, work, and suggested part while separating engineering review from parts confirmation.</p></article></div><p class="case-note">These choices describe the refreshed prototype, which revisits the original pilot experience and extends the parts-coordination flow.</p></section>
+<section class="design-decisions" id="decisions"><div class="design-decisions__intro"><p class="section-kicker">Design decisions</p><h2>Four choices shaped the experience.</h2></div><div class="design-decision-grid"><article><span>01</span><h3>Make status easy to check</h3><p>A scannable overview gives engineers a starting point for checking component health from a portable device.</p></article><article><span>02</span><h3>Connect health to location</h3><p>The ride map links each issue to a named component, with readings and trends available for closer inspection.</p></article><article><span>03</span><h3>Bring timing into the decision</h3><p>Show the next maintenance window alongside the component's condition and a path to escalate urgent issues.</p></article><article><span>04</span><h3>Keep work and parts connected</h3><p>Carry component details and evidence into the work request and parts handoff, without rebuilding the context in email.</p></article></div></section>
 <section class="report-transformation" id="before-after"><header class="report-transformation__intro"><div><p class="section-kicker">Before and after</p><h2>From separate emails to a connected maintenance story.</h2></div><p>A proposed workflow change, not a measured reduction in time or downtime.</p></header><div class="report-transformation__comparison ride-comparison"><article class="transformation-panel transformation-panel--before"><div class="transformation-panel__heading"><span class="transformation-label">Workflow observed</span><h3>React and investigate</h3></div><ol class="transformation-flow transformation-flow--before"><li><span>01</span><div><strong>Ride goes down</strong><small>An issue interrupts operation during park hours.</small></div></li><li><span>02</span><div><strong>Engineer receives an email</strong><small>The notification identifies the affected ride area, not the exact component.</small></div></li><li><span>03</span><div><strong>Travel to the ride</strong><small>The engineer makes their way to the ride location.</small></div></li><li><span>04</span><div><strong>Investigate the problem</strong><small>Identify the failed component and determine the work needed.</small></div></li><li><span>05</span><div><strong>Email the parts team</strong><small>Request a replacement through a separate email exchange.</small></div></li><li><span>06</span><div><strong>Wait for the part</strong><small>The repair waits on the replacement part.</small></div></li></ol><div class="ride-downtime-impact"><strong>The ride stays down throughout.</strong><p>Guests are left waiting, lines build, and frustration grows while the engineer travels, investigates, and waits for parts.</p></div></article><article class="transformation-panel transformation-panel--after"><div class="transformation-panel__heading"><span class="transformation-label">Proposed experience</span><h3>Assess, plan, and coordinate</h3></div><ol class="transformation-flow transformation-flow--after"><li><span>01</span><div><strong>Review the alert</strong><small>See the flagged component, review its health, and assess urgency.</small></div></li><li><span>02</span><div><strong>Propose the work</strong><small>Carry context into a request for engineering review.</small></div></li><li><span>03</span><div><strong>Link the parts</strong><small>Keep work, parts and pending decisions connected.</small></div></li></ol><div class="ride-downtime-impact"><strong>Planned for after park hours.</strong><p>Coordinate the work and replacement parts for the overnight maintenance window, when the park is closed and guests are not affected by the repair.</p></div></article></div></section>
 <section class="solution-gallery report-builder-gallery" id="concept" aria-label="Design stories">
 <article class="flow-story ride-story"><div class="ride-story-copy"><p class="section-kicker">Story 01</p><h3>Review the alert and assess the issue</h3><dl class="decision-tradeoff"><div><dt>Before</dt><dd>Engineers checked email for a notification with broad location context.</dd></div><div><dt>After</dt><dd>A prioritized alert opens the component's location, readings, and trend for review.</dd></div></dl></div><figure class="case-video"><div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-1-poster.jpg" aria-label="Story 1: reviewing a brake actuator alert" aria-describedby="maintenance-story-1-caption"><source src="drafts/assets/maintenance-insights/story-1.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-1-caption">Story 1: reviewing a brake alert and assessing its health evidence.</figcaption></figure></article>
@@ -47,7 +47,7 @@
   </div>
   <figure class="gallery-figure">
     <div class="overview-image-frame"><img loading="lazy" src="drafts/assets/maintenance-insights/overview-strip-tight.png" alt="Dashboard summary showing monitoring coverage, issues needing attention, vehicle activity, and the next overnight maintenance window."></div>
-    <figcaption class="gallery-caption">Illustrative readings. The overnight window supports planning; the engineer still decides whether an issue can wait.</figcaption>
+    <figcaption class="gallery-caption">A quick overview of ride health, activity, and the next maintenance window.</figcaption>
   </figure>
 </article>
 <article class="ride-story" id="location-context">
@@ -65,7 +65,7 @@
 <article class="ride-story drawer-explainer" id="component-evidence">
   <figure class="gallery-figure">
     <img loading="lazy" src="drafts/assets/maintenance-insights/component-drawer.png" alt="Brake actuator component-health drawer showing its location, latest response versus normal range, estimated downtime risk, maintenance window, six-hour trend, and response actions.">
-    <figcaption class="gallery-caption">Component health details from the refreshed prototype. Readings and risk estimates are illustrative.</figcaption>
+    <figcaption class="gallery-caption">Component readings and trends stay beside the ride map, keeping the wider context visible.</figcaption>
   </figure>
   <div>
     <p class="section-kicker">Understanding the issue</p>
@@ -74,7 +74,7 @@
     <dl class="drawer-guide">
       <div><dt>The exact component</dt><dd>The high-priority label, track side, zone, and component ID establish which brake actuator needs review.</dd></div>
       <div><dt>What has changed</dt><dd>A plain-language summary explains that the brake is responding more slowly. The latest reading of 420 ms sits beside the normal 280–340 ms range, with the 80 ms difference called out directly.</dd></div>
-      <div><dt>Urgency and the maintenance window</dt><dd>The estimated downtime risk appears alongside tonight's 23:00–05:00 window. This gives the engineer planning context, not permission to wait: inspection and engineering judgment still determine the response.</dd></div>
+      <div><dt>Urgency and the maintenance window</dt><dd>The estimated downtime risk appears alongside tonight's 23:00–05:00 window, bringing condition and timing into the same view.</dd></div>
       <div><dt>The trend behind the alert</dt><dd>The six-hour chart shows how response time has changed. A shaded normal range makes the departure visible, and the sensor readings are available for closer review.</dd></div>
       <div><dt>A choice of next steps</dt><dd>Create a work request with the evidence attached, or escalate for immediate engineering review.</dd></div>
     </dl>
@@ -83,7 +83,7 @@
 <article class="ride-story drawer-explainer" id="work-request-context">
   <figure class="gallery-figure">
     <img loading="lazy" src="drafts/assets/maintenance-insights/work-request-detail.png" width="1400" height="1520" alt="Create work request modal with the brake actuator and location prefilled, health evidence attached, an editable work description, a proposed overnight maintenance window, and notes.">
-    <figcaption class="gallery-caption">The request carries the component context forward while leaving the work and proposed timing open to engineering review.</figcaption>
+    <figcaption class="gallery-caption">Prefilled component details and attached evidence reduce the information the engineer needs to re-enter.</figcaption>
   </figure>
   <div>
     <p class="section-kicker">From evidence to action</p>
@@ -93,7 +93,6 @@
       <div><dt>Component details are already there</dt><dd>The actuator name, ride location, and component ID carry over from the alert, keeping the request tied to the asset under review.</dd></div>
       <div><dt>The evidence stays attached</dt><dd>Current readings, the normal range, and the estimated risk travel with the request. The engineer can expand the evidence summary to check the readings before submitting.</dd></div>
       <div><dt>The engineer defines the work</dt><dd>An editable description and notes provide a starting point for the inspection or maintenance needed. The engineer can adjust them to reflect their assessment.</dd></div>
-      <div><dt>Timing is proposed, not promised</dt><dd>The overnight window is a proposal for engineering review, not a confirmed repair schedule.</dd></div>
     </dl>
   </div>
 </article>
@@ -108,20 +107,34 @@
     <p>Instead of opening a separate email to the parts team, the engineer continues from the submitted work request with the component context already in place.</p>
     <dl class="drawer-guide">
       <div><dt>The work request stays linked</dt><dd>The confirmation and request ID show that the work request is saved. The engineer can request a part now or skip this step without losing it.</dd></div>
-      <div><dt>The suggested part is visible</dt><dd>A photo, part name, and catalog reference identify the suggested replacement alongside the affected component. The suggestion still needs compatibility confirmation from the parts team.</dd></div>
+      <div><dt>The suggested part is visible</dt><dd>A photo, part name, and catalog reference identify the suggested replacement alongside the affected component.</dd></div>
       <div><dt>Delivery needs are captured</dt><dd>Quantity, needed-by time, and delivery location give the parts team the details needed to coordinate the request around the proposed overnight maintenance window.</dd></div>
-      <div><dt>Availability stays explicit</dt><dd>The pending message separates requesting a part from securing it. Submission does not reserve stock or confirm the repair schedule; the parts team still verifies compatibility, availability, and delivery timing.</dd></div>
+      <div><dt>Availability stays explicit</dt><dd>A pending status shows that compatibility, stock, and delivery timing still need confirmation from the parts team.</dd></div>
     </dl>
   </div>
 </article>
 </section>
 <section class="case-section case-closing" id="pilot">
-  <div><p class="section-kicker">Pilot and learnings</p><h2>Earlier insight needs a clear path to action.</h2></div>
-  <div class="case-copy">
-    <p>This work was developed with Disney for a ride-maintenance pilot. As lead UX designer, I led the on-site research, engineer interviews, workflows, and overall experience, partnering with a junior designer on production assets. The project progressed to pilot.</p>
-    <p>The research helped me see that earlier detection alone would not solve the problem. Engineers still needed to locate the affected component, understand what had changed, and coordinate the work and replacement parts. The design needed to support that entire response, not just deliver another alert.</p>
-    <p>That insight shaped the experience: connect component health to a clear next step, carry the evidence into work requests, and support planning for the overnight maintenance window. The goal was to help engineers address issues before they interrupted park hours, while keeping decisions about urgency and repairs in their hands.</p>
-    <p class="case-note">The project reached pilot; measured operational results were not available for this case study. Demonstrations use illustrative data.</p>
+  <div><p class="section-kicker">Pilot and learnings</p><h2>From waiting for alerts to checking proactively.</h2></div>
+  <div class="case-copy case-test-summary">
+    <p>The project progressed to pilot with Disney. Our team's research shaped three priorities for the experience:</p>
+    <ul class="case-test-findings">
+      <li>
+        <span>01</span>
+        <div><strong>Engineers needed to check proactively</strong><p>Waiting for an email kept the workflow reactive. Engineers needed a way to actively check component health and investigate emerging issues without waiting for a notification.</p></div>
+      </li>
+      <li>
+        <span>02</span>
+        <div><strong>That access needed to travel with them</strong><p>Tablets and phones could put health information where engineers were working. Portable access was central to the experience, not simply a smaller version of a desktop dashboard.</p></div>
+      </li>
+      <li>
+        <span>03</span>
+        <div><strong>Status needed component-level context</strong><p>A broad ride-area alert still left engineers searching for the problem. The proposed additional sensors and ride map connected health information to a specific component and its location.</p></div>
+      </li>
+    </ul>
+    <h3>What I learned</h3>
+    <p>Proactive maintenance required more than sending alerts earlier. It meant giving engineers the ability to check conditions when they chose to investigate, wherever they were working. That insight shaped the quick overview, component-level evidence, and connected maintenance workflow.</p>
+    <p class="case-note">Measured pilot outcomes were not available for this case study. Demonstrations use illustrative data; reductions in downtime have not been verified here.</p>
   </div>
 </section>
 </main><footer class="site-footer site-footer--unified">
