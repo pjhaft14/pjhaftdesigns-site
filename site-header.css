@@ -115,12 +115,12 @@
     gap: 12px;
   }
 
-  .site-header.menu-open { margin-bottom: 80px; }
   .site-header .brand { min-width: 0; font-size: 14px; }
   .site-header .header-actions { margin-left: auto; padding: 0; border: 0; }
   .site-header .menu-toggle { display: grid; }
   .site-header nav {
-    display: none;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 68px;
     left: 0;
@@ -131,7 +131,22 @@
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--stage, var(--panel));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
   }
 
-  .site-header.menu-open nav { display: flex; justify-content: space-between; }
+  .site-header.menu-open nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header nav { transition: none; }
 }
