@@ -1,37 +1,30 @@
-const siteHeader = document.querySelector(".site-header");
-const navigationToggle = document.querySelector(".nav-toggle");
-const primaryNavigation = document.querySelector("#primary-navigation");
+const siteHeader = document.querySelector('.site-header');
+const menuButton = siteHeader?.querySelector('.menu-toggle');
 
-if (siteHeader && navigationToggle && primaryNavigation) {
+if (siteHeader && menuButton) {
   const closeNavigation = () => {
-    siteHeader.classList.remove("nav-open");
-    navigationToggle.setAttribute("aria-expanded", "false");
+    siteHeader.classList.remove('menu-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation');
+    menuButton.title = 'Open navigation';
   };
 
-  navigationToggle.addEventListener("click", () => {
-    const willOpen = navigationToggle.getAttribute("aria-expanded") !== "true";
-    siteHeader.classList.toggle("nav-open", willOpen);
-    navigationToggle.setAttribute("aria-expanded", String(willOpen));
+  menuButton.addEventListener('click', () => {
+    const open = siteHeader.classList.toggle('menu-open');
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menuButton.title = open ? 'Close navigation' : 'Open navigation';
   });
 
-  primaryNavigation.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
+  siteHeader.querySelectorAll('nav a').forEach(link => link.addEventListener('click', closeNavigation));
+  document.addEventListener('click', event => { if (!siteHeader.contains(event.target)) closeNavigation(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && siteHeader.classList.contains('menu-open')) {
       closeNavigation();
+      menuButton.focus();
     }
   });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && siteHeader.classList.contains("nav-open")) {
-      closeNavigation();
-      navigationToggle.focus();
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 640) {
-      closeNavigation();
-    }
-  });
+  window.addEventListener('resize', () => { if (window.innerWidth > 640) closeNavigation(); });
 }
 
 const caseTocLinks = [...document.querySelectorAll(".case-toc a[href^='#']")];
