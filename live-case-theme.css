@@ -30,6 +30,8 @@ h1,h2{font-family:inherit}
 h1,h2,h3,h4,p,a,dt,dd,span{letter-spacing:0}
 .case-hero h1,.case-study h2{font-weight:600}
 .case-hero h1{font-size:64px;line-height:1.08}
+/* Contextual project titles need the full hero column, rather than short-title ch limits. */
+.case-study .case-hero h1{max-width:900px;text-wrap:balance}
 .case-study h2{font-size:40px;line-height:1.15}
 .case-copy p,.case-hero>div>p:not(.eyebrow){color:var(--body)}
 .icon-button{display:grid;place-items:center;width:38px;height:38px;padding:8px;border:0;border-radius:6px;background:transparent;color:var(--ink);cursor:pointer}
@@ -48,3 +50,47 @@ h1,h2,h3,h4,p,a,dt,dd,span{letter-spacing:0}
 .puro-device-notes{background:transparent;border-radius:1.25rem;overflow:hidden}
 @media(max-width:1000px){.case-hero h1{font-size:52px}.case-study h2{font-size:34px}}
 @media(max-width:640px){.case-hero h1{font-size:38px}.case-study h2{font-size:30px}}
+
+/* Project facts read as an editorial overview, rather than a collection of cards. */
+.case-study .case-hero .case-meta{
+  width:min(100%,900px);
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0 32px;
+  padding-top:8px;
+  border-top:2px solid var(--ink);
+}
+.case-study .case-hero .case-meta:has(>div:nth-child(4)):not(:has(>div:nth-child(5))){grid-template-columns:repeat(2,minmax(0,1fr))}
+.case-study .case-hero .case-meta>div{
+  min-width:0;
+  padding:22px 0 24px;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--line);
+  border-radius:0;
+  box-shadow:none;
+}
+.case-study .case-hero .case-meta dt{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.1em;
+  color:var(--muted);
+}
+.case-study .case-hero .case-meta dd{
+  margin:10px 0 0;
+  font-size:18px;
+  font-weight:500;
+  line-height:1.4;
+  color:var(--ink);
+  text-wrap:pretty;
+}
+@media(max-width:640px){
+  .case-study .case-hero .case-meta{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+  .case-study .case-hero .case-meta>div{padding:18px 0 20px}
+  .case-study .case-hero .case-meta dd{font-size:16px}
+}
+@media(max-width:360px){
+  .case-study .case-hero .case-meta,
+  .case-study .case-hero .case-meta:has(>div:nth-child(4)):not(:has(>div:nth-child(5))){grid-template-columns:1fr}
+}
