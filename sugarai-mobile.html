@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="live-base-1.css">
     <script src="site-nav.js?v=20261001-shared" defer=""></script>
-  <link rel="stylesheet" href="live-case-theme.css?v=20261008-project-overview"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
 </head>
@@ -62,11 +62,7 @@
         <div>
           <p class="eyebrow">SugarAI · Mobile CRM · Manufacturing field sales</p>
           <h1 id="case-title">Designing mobile CRM around the customer visit.</h1>
-          <p>
-            I redesigned Sugar mobile around the field rep's day: prepare for the next
-            visit, answer customer questions in the moment, capture what changed, and
-            sync clean updates back to CRM.
-          </p>
+          <p>I redesigned Sugar mobile around the field rep's day: prepare for visits, answer questions, capture changes, and update CRM. Feedback from two prototype participants supported the approach and put personal-calendar sync on the next-release roadmap.</p>
         </div>
         <dl class="case-meta">
           <div>
@@ -96,16 +92,8 @@
           <h2>Mobile CRM gave reps access, but not momentum.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            Sugar mobile gave reps access to accounts, emails, notes, contracts, leads,
-            opportunities, dashboards, and reports. That access mattered, but the app
-            still made reps assemble what mattered while moving through a customer day.
-          </p>
-          <p>
-            Most modules reused the same pattern: list view, record view, tabs, related
-            records, and long create forms. The consistency was useful, but it reflected
-            the database more than the conditions reps worked in.
-          </p>
+          <p>Reps had access to customer data, but had to assemble context across records and tabs during visits. Long create forms added work on the plant floor.</p>
+
           <blockquote class="case-quote">
             The existing experience starts with the system. The redesign starts with the
             rep’s next customer.
@@ -113,34 +101,13 @@
         </div>
       </section>
 
-      <section class="case-section" id="anatomy">
-        <div>
-          <p class="section-kicker">Problem anatomy</p>
-          <h2>The data was there. The mobile workflow got in the way.</h2>
-        </div>
-        <div class="case-copy">
-          <p>
-            Dashboards showed activity without surfacing the next move. Lists exposed
-            records without ranking urgency. Record views scattered context across tabs
-            and field rows. Create screens asked for more input than a rep should handle
-            on a plant floor.
-          </p>
-          <p>
-            The opportunity was to move priority, context, and capture into the moment
-            of customer work.
-          </p>
-        </div>
-      </section>
+
 
       <section class="current-mobile-patterns" aria-labelledby="current-mobile-title">
         <div class="current-mobile-patterns__intro">
           <p class="section-kicker">Current app examples</p>
           <h2 id="current-mobile-title">The current flow made reps rebuild context on the go.</h2>
-          <p>
-            The workflow was possible, but required reps to navigate records and
-            complete forms while moving through customer visits. The redesign aimed
-            to reduce that effort rather than reproduce the desktop workflow on a phone.
-          </p>
+          <p>These four screens show where reps had to gather context and enter updates during a visit.</p>
         </div>
         <figure class="current-phone-showcase">
           <div class="current-phone-grid" aria-label="Current Sugar mobile experience examples">
@@ -490,11 +457,7 @@
           <h2>What the concept test showed.</h2>
         </div>
         <div class="case-copy sugarai-test-summary">
-          <p>
-            Due to time constraints, I tested the prototype with two of the five
-            sales reps interviewed during research. Their feedback supported the
-            visit-centered approach and informed a roadmap item for the next release.
-          </p>
+          <p>I tested with two of the five reps interviewed during research. Both valued having customer context within the visit workflow.</p>
           <ul class="sugarai-test-findings">
             <li>
               <span>01</span>
@@ -512,33 +475,12 @@
               <span>02</span>
               <div>
                 <strong>Their day extended beyond the CRM</strong>
-                <p>
-                  They requested synchronization with their personal calendars so
-                  their schedule would be visible in both SugarAI and their native
-                  calendar app. Some reps combine work and personal commitments
-                  and did not want another schedule to manage separately.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Calendar sync became a next-release roadmap item</strong>
-                <p>
-                  This feedback put personal-calendar synchronization on the roadmap
-                  for the next release. It was a planned follow-up, not a capability
-                  delivered in the tested prototype.
-                </p>
+                <p>They wanted their schedule in both SugarAI and their native calendar app. That request put personal-calendar sync on the next-release roadmap; it was not delivered in the tested prototype.</p>
               </div>
             </li>
           </ul>
           <h3>What I learned</h3>
-          <p>
-            Organizing the app around customer visits was only part of the solution.
-            It also needed to fit into the tools reps already used to manage their
-            day. The calendar request showed that reducing effort meant connecting
-            to those existing habits, not asking reps to maintain another schedule.
-          </p>
+          <p>The calendar request showed that the app needed to fit the tools reps already used, rather than give them another schedule to maintain.</p>
           <p class="case-note sugarai-next-test">
             These findings reflect feedback from two prototype participants, not
             verified offline performance or measured productivity gains. Further
