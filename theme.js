@@ -10,10 +10,16 @@ window.siteIcon = (name, extra = '') => `<svg xmlns="http://www.w3.org/2000/svg"
   document.addEventListener('DOMContentLoaded', () => {
     const actions = document.querySelector('.header-actions');
     if (!actions) return;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'icon-button theme-toggle';
-    button.innerHTML = `<span class="theme-sky" aria-hidden="true"><span class="theme-sun">${window.siteIcon('sun')}</span><span class="theme-moon">${window.siteIcon('moon')}</span></span>`;
+    // The toggle is part of each page's header markup, so the header never shifts when this
+    // script runs. Older markup without it still gets one inserted.
+    let button = actions.querySelector('.theme-toggle');
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'icon-button theme-toggle';
+      button.innerHTML = `<span class="theme-sky" aria-hidden="true"><span class="theme-sun">${window.siteIcon('sun')}</span><span class="theme-moon">${window.siteIcon('moon')}</span></span>`;
+      actions.prepend(button);
+    }
     let transitionTimer;
     function applyTheme(next, animate = false) {
       const root = document.documentElement;
@@ -49,7 +55,6 @@ window.siteIcon = (name, extra = '') => `<svg xmlns="http://www.w3.org/2000/svg"
       applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark', true);
       try { localStorage.setItem(key, theme); } catch {}
     });
-    actions.prepend(button);
     update();
     window.addEventListener('storage', event => {
       if (event.key !== key) return;
