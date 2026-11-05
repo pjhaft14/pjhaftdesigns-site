@@ -3,7 +3,7 @@
 .portrait-animated > img { opacity: 0; }
 .portrait-eye-sample { transform-box: view-box; transform-origin: 0 0; }
 :root[data-theme="dark"] :is(.intro-portrait, .about-portrait) {
-  background: var(--stage, #17171a);
+  background: var(--color-surface, #17171a);
   isolation: isolate;
 }
 :root[data-theme="dark"] :is(.intro-portrait, .about-portrait) > :is(img, .portrait-animation) {

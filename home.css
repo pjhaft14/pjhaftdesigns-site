@@ -9,7 +9,6 @@
   --home-pill: #ffffff08;
 }
 :root[data-theme="light"] .home-page {
-  --paper: #fafafa;
   --home-card: #fff;
   --home-border: #17171a0a;
   --home-shadow: 0 10px 28px #17171a05, 0 2px 6px #17171a02;
@@ -27,7 +26,7 @@
 .home-page .intro h1 { margin: 0 0 20px; font-size: 40px; line-height: 1.14; font-weight: 600; letter-spacing: -.035em; white-space: normal; text-wrap: balance; }
 .home-page .intro-copy { max-width: 650px; margin: 0; font-size: 17px; line-height: 1.6; text-align: left; }
 .home-page .intro-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.home-page .intro-action { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 10px 20px; border: 1px solid var(--line); border-radius: 99px; color: var(--ink); font-size: 14px; font-weight: 500; transition: background .2s ease, border-color .2s ease; }
+.home-page .intro-action { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 10px 20px; border: 1px solid var(--color-border); border-radius: 99px; color: var(--color-text); font-size: 14px; font-weight: 500; transition: background .2s ease, border-color .2s ease; }
 .home-page .intro-action svg { width: 17px; height: 17px; }
 .home-page .intro-action-icon { position: relative; display: inline-block; flex: 0 0 18px; width: 18px; height: 18px; overflow: hidden; }
 .home-page .intro-action-icon svg { position: absolute; inset: 0; width: 18px; height: 18px; transition: transform .3s cubic-bezier(.44, 0, .56, 1), opacity .3s ease; }
@@ -35,45 +34,45 @@
 .home-page .intro-action-icon .icon-hover { transform: translateY(-110%); opacity: 0; }
 .home-page .intro-action:is(:hover, :focus-visible) .icon-rest { transform: translateY(110%); opacity: 0; }
 .home-page .intro-action:is(:hover, :focus-visible) .icon-hover { transform: translateY(0); opacity: 1; }
-.home-page .intro-action:hover { background: var(--home-card); border-color: var(--muted); }
-.home-page .intro-action--primary { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.home-page .intro-action--primary:hover { background: var(--ink); opacity: .85; }
-.home-page .intro-action:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.home-page .intro-action:hover { background: var(--home-card); border-color: var(--color-text-muted); }
+.home-page .intro-action--primary { background: var(--color-text); border-color: var(--color-text); color: var(--color-bg); }
+.home-page .intro-action--primary:hover { background: var(--color-text); opacity: .85; }
+.home-page .intro-action:focus-visible { outline: 2px solid var(--color-text); outline-offset: 4px; }
 .home-page .intro-impact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 48px 0 0; }
 .home-page .intro-impact > div { min-width: 0; padding: 28px 30px; border-radius: 28px; background: var(--home-card); box-shadow: 0 0 0 1px var(--home-border), var(--home-shadow); }
 .home-page .intro-impact dt { font-size: 34px; font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
-.home-page .intro-impact dt span { color: var(--muted); font-size: 24px; font-weight: 400; }
+.home-page .intro-impact dt span { color: var(--color-text-muted); font-size: 24px; font-weight: 400; }
 .home-page .intro-impact .impact-journey { display: flex; align-items: center; gap: 10px; }
-.home-page .impact-arrow { width: 26px; height: 26px; fill: currentColor; stroke: none; color: var(--muted); }
-.home-page .intro-impact dd { margin: 14px 0 0; max-width: 42ch; font-size: 16px; line-height: 1.55; color: var(--muted); }
-.home-page .intro-link { margin-top: 32px; min-height: 44px; padding: 10px 20px; border-radius: 99px; background: var(--ink); color: var(--paper); }
+.home-page .impact-arrow { width: 26px; height: 26px; fill: currentColor; stroke: none; color: var(--color-text-muted); }
+.home-page .intro-impact dd { margin: 14px 0 0; max-width: 42ch; font-size: 16px; line-height: 1.55; color: var(--color-text-muted); }
+.home-page .intro-link { margin-top: 32px; min-height: 44px; padding: 10px 20px; border-radius: 99px; background: var(--color-text); color: var(--color-bg); }
 .home-page .intro-link:hover { opacity: .85; }
 .home-page .section-heading { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 42px; text-align: center; }
-.home-page .section-heading h2 { font-size: clamp(30px, 3vw, 40px); line-height: 1.15; letter-spacing: -.025em; font-weight: 600; }
-.home-page .section-heading p { color: var(--muted); font-size: 17px; text-align: center; }
+.home-page .section-heading h2 { font-size: var(--text-xl); line-height: 1.15; letter-spacing: -.025em; font-weight: 600; }
+.home-page .section-heading p { color: var(--color-text-muted); font-size: 17px; text-align: center; }
 .home-page .work-section { padding-bottom: clamp(88px, 10vw, 144px); }
 .home-page .project-grid { gap: 28px; }
 .home-page .project { min-width: 0; border: 0; border-radius: 32px; background: var(--home-card); box-shadow: var(--home-project-shadow); transition: transform .5s var(--home-ease), box-shadow .5s var(--home-ease); }
 .home-page .project:is(:hover, :has(.project-link:focus-visible)) { transform: translateY(-4px); box-shadow: var(--home-hover-shadow); }
 .home-page .project-link { display: flex; flex-direction: column; height: 100%; padding: 14px 14px 26px; border-radius: inherit; }
-.home-page .project-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.home-page .project-link:focus-visible { outline: 2px solid var(--color-text); outline-offset: 4px; }
 .home-page .project-grid .project-media { border-radius: 22px; aspect-ratio: 16 / 10; }
 .home-page .project-grid .project-media > :is(img, video, .phone-preview) { transform-origin: center; transition: transform 1.1s var(--home-ease); }
 .home-page .project-link:is(:hover, :focus-visible) .project-media > :is(img, video, .phone-preview) { transform: scale(1.04); }
 .home-page .project-caption { margin: 22px 10px 0; }
 .home-page .project-category { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 9px; font-size: 14px; line-height: 1.4; }
-.home-page .project-company { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 500; }
+.home-page .project-company { display: inline-flex; align-items: center; gap: 12px; color: var(--color-text); font-weight: 500; }
 .home-page .project-company-logo { display: block; flex: 0 0 24px; width: 24px; height: 24px; border-radius: 6px; object-fit: contain; background: #fff; }
-.home-page .project-meta-separator { color: var(--muted); }
+.home-page .project-meta-separator { color: var(--color-text-muted); }
 .home-page .project h3 { font-size: clamp(19px, 1.5vw, 21px); line-height: 1.3; font-weight: 500; letter-spacing: -.015em; text-wrap: pretty; }
 .home-page .project h3 strong { font-weight: 600; }
-.home-page .project-read-time { font-size: 13px; font-weight: 400; color: var(--muted); white-space: nowrap; }
+.home-page .project-read-time { font-size: 13px; font-weight: 400; color: var(--color-text-muted); white-space: nowrap; }
 .home-page .contact-band { border: 0; }
 .home-page .contact-layout { flex-direction: column; text-align: center; padding: 120px 0 100px; gap: 24px; }
 .home-page .contact-layout .eyebrow { font-family: inherit; text-transform: none; }
-.home-page .contact-layout h2 { font-size: clamp(36px, 4vw, 48px); letter-spacing: -.025em; margin: 14px 0 20px; }
+.home-page .contact-layout h2 { font-size: var(--text-2xl); letter-spacing: -.025em; margin: 14px 0 20px; }
 .home-page .contact-layout h2 br { display: none; }
-.home-page .contact-link { border: 0; border-radius: 99px; padding: 13px 24px; background: var(--ink); color: var(--paper); font-size: 15px; gap: 14px; }
+.home-page .contact-link { border: 0; border-radius: 99px; padding: 13px 24px; background: var(--color-text); color: var(--color-bg); font-size: 15px; gap: 14px; }
 .home-page .contact-link svg { width: 19px; height: 19px; }
 .home-page .contact-link:hover { opacity: .85; }
 .home-page .site-footer--unified { width: min(1060px, calc(100% - 64px)); border-top: 1px solid var(--home-border); }

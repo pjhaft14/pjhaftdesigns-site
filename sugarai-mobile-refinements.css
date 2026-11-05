@@ -100,15 +100,15 @@
   min-width: 0;
   padding: 28px;
   border-radius: 28px;
-  background: var(--case-card);
-  box-shadow: var(--case-card-shadow);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
 }
 .case-study.sugarai-mobile-case .supporting-action-comparison dt {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: var(--case-label);
+  color: var(--color-label);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
@@ -117,7 +117,7 @@
 .case-study.sugarai-mobile-case .supporting-action-comparison dd { margin: 16px 0 0; }
 .case-study.sugarai-mobile-case .supporting-action-comparison dd > strong {
   display: block;
-  color: var(--ink);
+  color: var(--color-text);
   font-size: 21px;
   font-weight: 600;
   line-height: 1.3;
@@ -125,7 +125,7 @@
 }
 .case-study.sugarai-mobile-case .supporting-action-comparison dd > p {
   margin: 16px 0 0;
-  color: var(--body);
+  color: var(--color-text-body);
   font-size: 16px;
   line-height: 1.65;
   text-wrap: pretty;
@@ -138,22 +138,22 @@
 /* Task headings and key moments make each recorded flow scannable. */
 .case-study.sugarai-mobile-case .sugarai-flow-title {
   display: flex; align-items: flex-start; gap: 10px; margin: 0;
-  color: var(--ink); font-size: 21px; font-weight: 600; line-height: 1.3; letter-spacing: -.02em;
+  color: var(--color-text); font-size: 21px; font-weight: 600; line-height: 1.3; letter-spacing: -.02em;
 }
 .case-study.sugarai-mobile-case .sugarai-flow-number {
   display: grid; place-items: center; flex: 0 0 26px; width: 26px; height: 26px;
-  border-radius: 50%; background: color-mix(in srgb, var(--case-accent) 12%, var(--case-card));
-  color: var(--case-accent); font-size: 11px; font-weight: 600; line-height: 1; letter-spacing: 0;
+  border-radius: 50%; background: color-mix(in srgb, var(--color-link) 12%, var(--color-card));
+  color: var(--color-link); font-size: 11px; font-weight: 600; line-height: 1; letter-spacing: 0;
 }
 .case-study.sugarai-mobile-case .sugarai-prototype-card figcaption .sugarai-flow-moments-label {
-  margin: 8px 0 -4px; color: var(--case-label); font-size: 11px; font-weight: 600; line-height: 1.5;
+  margin: 8px 0 -4px; color: var(--color-label); font-size: 11px; font-weight: 600; line-height: 1.5;
   letter-spacing: .08em; text-transform: uppercase; text-align: left;
 }
 .case-study.sugarai-mobile-case .sugarai-flow-moments {
   display: flex; flex-wrap: wrap; gap: 8px 0; margin: 0; padding: 0; list-style: none;
-  color: var(--body); font-size: 13px; font-weight: 500; line-height: 1.5; text-align: left;
+  color: var(--color-text-body); font-size: 13px; font-weight: 500; line-height: 1.5; text-align: left;
 }
 .case-study.sugarai-mobile-case .sugarai-flow-moments li { display: inline-flex; align-items: center; white-space: nowrap; }
 .case-study.sugarai-mobile-case .sugarai-flow-moments li:not(:last-child)::after {
-  content: "→"; padding-inline: 8px; color: var(--muted); font-weight: 400;
+  content: "→"; padding-inline: 8px; color: var(--color-text-muted); font-weight: 400;
 }

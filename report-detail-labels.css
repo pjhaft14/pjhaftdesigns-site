@@ -4,7 +4,7 @@
   font-size: 13px; line-height: 1.55;
 }
 .case-study.report-builder-case .report-detail-caption > .report-detail-label {
-  margin: 0; color: var(--case-label); font-size: 14px; font-weight: 600;
+  margin: 0; color: var(--color-label); font-size: 14px; font-weight: 600;
   line-height: 1.5; text-align: center; flex-shrink: 0;
 }
 .case-study.report-builder-case .design-decision-grid { grid-template-columns: minmax(0, 1fr); }

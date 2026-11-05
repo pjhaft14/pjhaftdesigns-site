@@ -25,7 +25,7 @@
 .ride-downtime-impact { margin-top: 24px; padding: 16px 0 0; border-top: 1px solid currentColor; }
 .ride-downtime-impact strong { display: block; }
 .ride-downtime-impact p { margin: 8px 0 0; }
-.ride-prototype-link { display: inline-block; padding-block: 12px; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.ride-prototype-link { display: inline-block; padding-block: 12px; color: var(--color-text); text-decoration: underline; text-underline-offset: 4px; }
 .ride-case .ride-story { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding-inline: 0; }
 :root[data-theme="dark"] .ride-case .solution-gallery article.ride-story { background: transparent; box-shadow: none; }
 .ride-case .ride-story>div { max-width: 760px; }
@@ -33,16 +33,16 @@
 .ride-case .ride-story-portrait { max-width: 580px; }
 .ride-case .ride-story img, .ride-overview img { display: block; width: 100%; height: auto; }
 .ride-overview { margin: 0; }
-.ride-case .overview-image-frame { padding: 16px; background: #f3f5f6; border-radius: 1.25rem; border: 1px solid var(--line); }
+.ride-case .overview-image-frame { padding: 16px; background: #f3f5f6; border-radius: 1.25rem; border: 1px solid var(--color-border); }
 .ride-case .overview-image-frame img { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
 .ride-case .solution-gallery article.drawer-explainer { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 48px; align-items: start; }
 .ride-case .drawer-guide { --guide-accent: #21796f; display: grid; gap: 12px; margin: 0; }
-.ride-case .drawer-guide > div { min-width: 0; padding: 18px; border: 0; border-radius: 16px; background: color-mix(in srgb, var(--guide-accent) 5%, var(--case-card)); }
-.ride-case .drawer-guide dt { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 16px; font-weight: 600; line-height: 1.4; }
-.ride-guide-icon { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border-radius: 11px; color: var(--guide-accent); background: var(--case-card); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--guide-accent) 17%, transparent); }
+.ride-case .drawer-guide > div { min-width: 0; padding: 18px; border: 0; border-radius: 16px; background: color-mix(in srgb, var(--guide-accent) 5%, var(--color-card)); }
+.ride-case .drawer-guide dt { display: flex; align-items: center; gap: 12px; color: var(--color-text); font-size: 16px; font-weight: 600; line-height: 1.4; }
+.ride-guide-icon { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border-radius: 11px; color: var(--guide-accent); background: var(--color-card); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--guide-accent) 17%, transparent); }
 .ride-guide-icon svg { width: 19px; height: 19px; stroke-width: 1.7; }
-.ride-case .drawer-guide dd { margin: 8px 0 0 46px; color: var(--body); font-size: 14px; line-height: 1.65; text-wrap: pretty; }
-.ride-guide-value { padding: 2px 5px; border-radius: 5px; background: color-mix(in srgb, var(--guide-accent) 9%, var(--case-card)); color: var(--guide-accent); font-weight: 600; white-space: nowrap; }
+.ride-case .drawer-guide dd { margin: 8px 0 0 46px; color: var(--color-text-body); font-size: 14px; line-height: 1.65; text-wrap: pretty; }
+.ride-guide-value { padding: 2px 5px; border-radius: 5px; background: color-mix(in srgb, var(--guide-accent) 9%, var(--color-card)); color: var(--guide-accent); font-weight: 600; white-space: nowrap; }
 .ride-case .drawer-guide > .ride-guide-pending { --guide-accent: #8d681c; }
 :root[data-theme="dark"] .ride-case .drawer-guide { --guide-accent: #92d2c6; }
 :root[data-theme="dark"] .ride-case .drawer-guide > .ride-guide-pending { --guide-accent: #dfbd87; }
@@ -64,9 +64,9 @@
 /* Numbered evidence connects each explanation to its place in the UI. */
 :is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .ride-annotated-screen { position: relative; width: 100%; }
 :is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .ride-annotated-screen img { display: block; width: 100%; height: auto; margin: 0; border-radius: 20px; }
-.ride-screen-pin { position: absolute; display: grid; place-items: center; width: 26px; height: 26px; transform: translate(-50%, -50%); border: 2px solid #fff; border-radius: 50%; background: #2563eb; box-shadow: 0 2px 6px #17203333; color: #fff; font: 600 12px/1 var(--portfolio-font); pointer-events: none; }
-:is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .drawer-guide { --guide-accent: var(--case-accent); }
-.ride-guide-number { display: grid; place-items: center; flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; background: color-mix(in srgb, var(--case-accent) 12%, var(--case-card)); color: var(--case-accent); font-size: 12px; font-weight: 600; line-height: 1; }
+.ride-screen-pin { position: absolute; display: grid; place-items: center; width: 26px; height: 26px; transform: translate(-50%, -50%); border: 2px solid #fff; border-radius: 50%; background: #2563eb; box-shadow: 0 2px 6px #17203333; color: #fff; font: 600 12px/1 var(--font-sans); pointer-events: none; }
+:is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .drawer-guide { --guide-accent: var(--color-link); }
+.ride-guide-number { display: grid; place-items: center; flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; background: color-mix(in srgb, var(--color-link) 12%, var(--color-card)); color: var(--color-link); font-size: 12px; font-weight: 600; line-height: 1; }
 :is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .drawer-guide dd { margin-left: 38px; }
 @media (max-width: 760px) {
   :is(#location-context, #component-evidence, #work-request-context, #parts-request-context) .drawer-guide dd { margin-left: 0; }

@@ -49,9 +49,9 @@
     padding: 12px 20px;
     gap: 16px;
     border-radius: 99px;
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--paper);
+    background: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-bg);
     transition: opacity .25s ease;
   }
   .resume-hero .resume-action:hover { opacity: .86; }

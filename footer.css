@@ -5,10 +5,10 @@
   width: min(1180px, calc(100% - 40px));
   max-width: none;
   margin: 0 auto;
-  padding: 32px 0 40px;
-  gap: 24px;
-  color: var(--muted);
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: var(--space-8) 0 var(--space-10);
+  gap: var(--space-6);
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
   font-size: 13px;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 8px 26px;
+  gap: var(--space-2) 26px;
 }
 
 .site-footer--unified .footer-links a {
@@ -31,15 +31,15 @@
   white-space: nowrap;
 }
 
-.site-footer--unified .footer-links a:hover { color: var(--ink); }
+.site-footer--unified .footer-links a:hover { color: var(--color-text); }
 .site-footer--unified svg { width: 16px; height: 16px; }
 
 @media (max-width: 640px) {
   .site-footer.site-footer--unified {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    padding: 24px 0 32px;
+    gap: var(--space-2);
+    padding: var(--space-6) 0 var(--space-8);
   }
 
   .site-footer--unified .footer-links {

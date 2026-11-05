@@ -4,7 +4,7 @@
   .case-hero > div > *,
   .case-hero > .case-meta,
   .puro-hero-art {
-    animation: page-enter .9s cubic-bezier(.28,.11,.32,1) both;
+    animation: page-enter var(--duration-page) var(--ease-entrance) both;
     animation-delay: .05s;
   }
   :is(.intro, .about-intro, .contact-hero, .resume-hero) > :nth-child(2),

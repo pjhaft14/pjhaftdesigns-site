@@ -2,11 +2,11 @@
 .resume-page > :is(.resume-hero, .resume-teams, .resume-main, .resume-skills, .resume-education) { width: 100%; max-width: 1060px; margin-inline: auto; }
 .resume-skills, .resume-education { margin-top: 48px; }
 .resume-skills > h2, .resume-education > h2 { margin: 0 0 28px; font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -.03em; }
-.resume-skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; padding-top: 28px; border-top: 1px solid var(--line); }
+.resume-skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; padding-top: 28px; border-top: 1px solid var(--color-border); }
 .resume-skills-grid > section { min-width: 0; }
 .resume-skills h3 { margin: 0 0 16px; font-size: 16px; font-weight: 600; line-height: 1.5; }
 .resume-skills .skill-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; }
-.resume-education { padding-top: 28px; border-top: 1px solid var(--line); }
+.resume-education { padding-top: 28px; border-top: 1px solid var(--color-border); }
 @media (max-width: 640px) {
   .resume-skills, .resume-education { margin-top: 36px; }
   .resume-skills > h2, .resume-education > h2 { font-size: 26px; margin-bottom: 22px; }
