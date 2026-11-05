@@ -1,10 +1,17 @@
-# Maintenance Insights draft
+# drafts/ — Maintenance Insights assets (live)
 
-This is an unfinished, local-only editorial version of the Maintenance Insights case study. It is not linked from the portfolio and has not been pushed to the live site's `main` branch. The HTML retains `noindex` while it is in progress.
+Maintenance Insights is published at https://www.pjhaftdesigns.com/maintenance-insights
+(source: `../maintenance-insights.html`, linked from the home page and listed in `sitemap.xml`).
 
-- Draft page: `maintenance-insights.html`
-- Original case study: `../../Portfolio Site 2026/maintenance-insights.html`
-- Editorial source: `../../Portfolio Site 2026/PROTOTYPES/portfolio-editorial/maintenance-insights.html`
-- Local preview from the Publish folder: `http://127.0.0.1:5174/drafts/maintenance-insights.html`
+This folder began as the local-only editorial draft, but the live page still loads its
+stylesheet and media from here, so **do not delete or rename this folder**:
 
-The draft uses the published site's shared layout and theme files, with its own CSS and local image assets in this folder.
+- `maintenance-insights.css` — case-study styles
+- `assets/maintenance-insights/` — screenshots, posters and story videos
+
+`drafts/maintenance-insights.html` is the old draft page. It is not part of the build
+(`scripts/build.cjs` only ships files reachable from published pages), and `_redirects`
+sends `/drafts/maintenance-insights` to `/maintenance-insights`.
+
+If you ever tidy this up, move the CSS and assets next to the other case-study files,
+update the references in `maintenance-insights.html`, then remove this folder.

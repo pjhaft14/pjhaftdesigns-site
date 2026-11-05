@@ -1,0 +1,9 @@
+{
+  "name": "pjhaftdesigns-site",
+  "private": true,
+  "description": "Portfolio site for www.pjhaftdesigns.com",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "icons": "node scripts/icons.cjs"
+  }
+}

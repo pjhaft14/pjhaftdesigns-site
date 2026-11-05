@@ -1,6 +1,7 @@
 tmp/
 output/
 .wrangler/
+dist/
 
 # Local design/export scripts and source working files
 *.jsx

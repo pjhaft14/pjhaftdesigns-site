@@ -1,3 +1,7 @@
+// Icon markup for scripts that inject icons: the same <svg> the pages use, referencing the
+// shared sprite in assets/icons.svg (regenerate it with `node scripts/icons.cjs`).
+window.siteIcon = (name, extra = '') => `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="${name}"${extra} class="lucide lucide-${name}"><use href="assets/icons.svg#${name}"></use></svg>`;
+
 (() => {
   const key = 'pj-editorial-theme';
   let theme = 'light';
@@ -9,7 +13,7 @@
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'icon-button theme-toggle';
-    button.innerHTML = '<span class="theme-sky" aria-hidden="true"><span class="theme-sun"><i data-lucide="sun"></i></span><span class="theme-moon"><i data-lucide="moon"></i></span></span>';
+    button.innerHTML = `<span class="theme-sky" aria-hidden="true"><span class="theme-sun">${window.siteIcon('sun')}</span><span class="theme-moon">${window.siteIcon('moon')}</span></span>`;
     let transitionTimer;
     function applyTheme(next, animate = false) {
       const root = document.documentElement;
@@ -46,7 +50,6 @@
       try { localStorage.setItem(key, theme); } catch {}
     });
     actions.prepend(button);
-    if (window.lucide) window.lucide.createIcons();
     update();
     window.addEventListener('storage', event => {
       if (event.key !== key) return;

@@ -1,0 +1,6 @@
+# Cloudflare Pages project for www.pjhaftdesigns.com (connected to GitHub: every push deploys).
+# Cloudflare runs the build command set in the dashboard, `npm run build`, which writes only the
+# referenced production files to dist/; this file tells Pages to publish that folder.
+name = "pjhaftdesigns-site"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-11-05"

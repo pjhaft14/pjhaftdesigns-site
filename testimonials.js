@@ -1,9 +1,6 @@
 (() => {
   if (!document.querySelector(".testimonial")) return;
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  function renderIcons() {
-    if (window.lucide) window.lucide.createIcons();
-  }
 
 const testimonials = [
   { name: 'Adrian Venables', role: 'Product Owner / Manager', photo: 'Adrian.jpg', quote: 'He balances strategic vision with attention to detail, applies sharp critical thinking, and helps teams make stronger decisions.' },
@@ -42,7 +39,7 @@ function renderQuoteSlides() {
     items.forEach(item => {
       const card = cardTemplate.cloneNode(true);
       card.querySelector('blockquote').textContent = `"${item.quote}"`;
-      const photo = item.photo.replace('.png', '-color.png');
+      const photo = item.photo.replace(/\.png$/, '-color.webp');
       card.querySelector('img').src = `assets/testimonials/${photo}`;
       const person = card.querySelector('.quote-person p');
       person.firstChild.textContent = item.name;
@@ -98,8 +95,7 @@ function updateQuotePause() {
   const label = quotePaused ? 'Play testimonials' : 'Pause testimonials';
   quotePause.setAttribute('aria-label', label);
   quotePause.title = label;
-  quotePause.innerHTML = `<i data-lucide="${quotePaused ? 'play' : 'pause'}" aria-hidden="true"></i>`;
-  renderIcons();
+  quotePause.innerHTML = window.siteIcon(quotePaused ? 'play' : 'pause', ' aria-hidden="true"');
   scheduleQuote();
 }
 document.querySelector('.quote-previous').addEventListener('click', () => changeQuote(-1, true));
