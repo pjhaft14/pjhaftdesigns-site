@@ -1,23 +1,42 @@
-.puro-portrait-rotation { min-width: 0; }
-.case-study .puro-portrait-grid img { border: 1px solid #c7c7ce; }
-:root[data-theme="dark"] .case-study .puro-portrait-grid img { border-color: #56565f; }
-.puro-portrait-slides { display: grid; gap: 24px; }
-.puro-portrait-rotation.is-enhanced .puro-portrait-slides { gap: 0; }
-.puro-portrait-rotation.is-enhanced [data-portrait-set] { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s .7s; }
-.puro-portrait-rotation.is-enhanced [data-portrait-set].is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
-.puro-portrait-controls { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 14px; }
-.puro-portrait-controls[hidden] { display: none; }
-.puro-portrait-controls button[hidden] { display: none; }
-.puro-portrait-controls button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color-text-muted); cursor: pointer; }
-.puro-portrait-dot span { width: 6px; height: 6px; border-radius: 50%; background: var(--color-text-subtle); opacity: .45; }
-.puro-portrait-dot[aria-pressed="true"] span { background: var(--color-text); opacity: 1; }
-.puro-portrait-controls button:hover { background: var(--color-surface); }
-.puro-portrait-controls button:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
-.puro-portrait-pause svg { width: 16px; height: 16px; }
-@media (prefers-reduced-motion: reduce) {
-  .puro-portrait-rotation.is-enhanced [data-portrait-set] { transition: none; }
-}
-@media print {
-  .puro-portrait-rotation.is-enhanced [data-portrait-set] { grid-area: auto; opacity: 1; visibility: visible; margin-top: 16px; }
-  .puro-portrait-controls { display: none; }
+@layer pages {
+  .puro-portrait-rotation { min-width: 0; }
+
+  .case-study .puro-portrait-grid img { border: 1px solid #c7c7ce; }
+
+  :root[data-theme="dark"] .case-study .puro-portrait-grid img { border-color: #56565f; }
+
+  .puro-portrait-slides { display: grid; gap: 24px; }
+
+  .puro-portrait-rotation.is-enhanced .puro-portrait-slides { gap: 0; }
+
+  .puro-portrait-rotation.is-enhanced [data-portrait-set] { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s .7s; }
+
+  .puro-portrait-rotation.is-enhanced [data-portrait-set].is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
+
+  .puro-portrait-controls { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 14px; }
+
+  .puro-portrait-controls[hidden] { display: none; }
+
+  .puro-portrait-controls button[hidden] { display: none; }
+
+  .puro-portrait-controls button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color-text-muted); cursor: pointer; }
+
+  .puro-portrait-dot span { width: 6px; height: 6px; border-radius: 50%; background: var(--color-text-subtle); opacity: .45; }
+
+  .puro-portrait-dot[aria-pressed="true"] span { background: var(--color-text); opacity: 1; }
+
+  .puro-portrait-controls button:hover { background: var(--color-surface); }
+
+  .puro-portrait-controls button:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
+
+  .puro-portrait-pause svg { width: 16px; height: 16px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .puro-portrait-rotation.is-enhanced [data-portrait-set] { transition: none; }
+  }
+
+  @media print {
+    .puro-portrait-rotation.is-enhanced [data-portrait-set] { grid-area: auto; opacity: 1; visibility: visible; margin-top: 16px; }
+    .puro-portrait-controls { display: none; }
+  }
 }

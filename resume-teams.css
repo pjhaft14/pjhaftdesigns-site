@@ -1,32 +1,49 @@
-.resume-teams { max-width: 1060px; margin: 0 auto clamp(48px, 6vw, 72px); }
-.resume-teams > h2 { margin: 0 0 28px; text-align: center; font-size: clamp(26px, 3vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
-.resume-teams .experience-panel { padding: 32px; border: 1px solid var(--color-border); border-radius: 32px; background: var(--color-surface); }
-.resume-teams .experience-numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0 0 28px; border-bottom: 1px solid var(--color-border); }
-.resume-teams .experience-numbers > div { display: flex; flex-direction: column; gap: 12px; padding: 8px 24px; }
-.resume-teams .experience-numbers > div + div { border-left: 1px solid var(--color-border); }
-.resume-teams .experience-numbers dt { color: var(--color-text-muted); font-size: 14px; line-height: 1.5; }
-.resume-teams .experience-numbers dd { order: -1; margin: 0; font-size: 40px; font-weight: 600; line-height: 1.1; }
-.resume-teams .experience-companies { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; gap: 28px; margin-top: 28px; }
-.resume-teams .experience-companies > span { display: flex; align-items: center; justify-content: center; min-width: 0; height: 56px; }
-.resume-teams .experience-companies img { width: 100%; max-width: 140px; max-height: 36px; object-fit: contain; filter: brightness(0) invert(1); opacity: .85; }
-.resume-teams .experience-companies img[alt="Abila"] { max-width: 105px; }
-:root[data-theme="light"] .resume-teams .experience-companies img { filter: brightness(0); opacity: .7; }
-@media (max-width: 800px) {
-  .resume-teams .experience-panel { padding: 24px; border-radius: 28px; }
-  .resume-teams .experience-numbers > div { padding-inline: 12px; }
-  .resume-teams .experience-companies { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-}
-@media (max-width: 560px) {
-  .resume-teams .experience-numbers { grid-template-columns: 1fr; padding-bottom: 20px; }
-  .resume-teams .experience-numbers > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 16px; padding: 16px 0; }
-  .resume-teams .experience-numbers > div + div { border-left: 0; border-top: 1px solid var(--color-border); }
-  .resume-teams .experience-numbers dd { grid-column: 1; grid-row: 1; font-size: 32px; }
-  .resume-teams .experience-numbers dt { grid-column: 2; grid-row: 1; }
-  .resume-teams .experience-companies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .resume-teams .experience-companies > span:last-child { grid-column: 1 / -1; }
-  .resume-teams .experience-companies img { max-width: 120px; }
-}
-@media print {
-  .resume-teams { break-inside: avoid; margin-bottom: 24px; }
-  .resume-teams .experience-companies img { filter: brightness(0); opacity: 1; }
+@layer pages {
+  .resume-teams { max-width: 1060px; margin: 0 auto clamp(48px, 6vw, 72px); }
+
+  .resume-teams > h2 { margin: 0 0 28px; text-align: center; font-size: clamp(26px, 3vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
+
+  .resume-teams .experience-panel { padding: 32px; border: 1px solid var(--color-border); border-radius: 32px; background: var(--color-surface); }
+
+  .resume-teams .experience-numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0 0 28px; border-bottom: 1px solid var(--color-border); }
+
+  .resume-teams .experience-numbers > div { display: flex; flex-direction: column; gap: 12px; padding: 8px 24px; }
+
+  .resume-teams .experience-numbers > div + div { border-left: 1px solid var(--color-border); }
+
+  .resume-teams .experience-numbers dt { color: var(--color-text-muted); font-size: 14px; line-height: 1.5; }
+
+  .resume-teams .experience-numbers dd { order: -1; margin: 0; font-size: 40px; font-weight: 600; line-height: 1.1; }
+
+  .resume-teams .experience-companies { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; gap: 28px; margin-top: 28px; }
+
+  .resume-teams .experience-companies > span { display: flex; align-items: center; justify-content: center; min-width: 0; height: 56px; }
+
+  .resume-teams .experience-companies img { width: 100%; max-width: 140px; max-height: 36px; object-fit: contain; filter: brightness(0) invert(1); opacity: .85; }
+
+  .resume-teams .experience-companies img[alt="Abila"] { max-width: 105px; }
+
+  :root[data-theme="light"] .resume-teams .experience-companies img { filter: brightness(0); opacity: .7; }
+
+  @media (max-width: 800px) {
+    .resume-teams .experience-panel { padding: 24px; border-radius: 28px; }
+    .resume-teams .experience-numbers > div { padding-inline: 12px; }
+    .resume-teams .experience-companies { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  }
+
+  @media (max-width: 560px) {
+    .resume-teams .experience-numbers { grid-template-columns: 1fr; padding-bottom: 20px; }
+    .resume-teams .experience-numbers > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 16px; padding: 16px 0; }
+    .resume-teams .experience-numbers > div + div { border-left: 0; border-top: 1px solid var(--color-border); }
+    .resume-teams .experience-numbers dd { grid-column: 1; grid-row: 1; font-size: 32px; }
+    .resume-teams .experience-numbers dt { grid-column: 2; grid-row: 1; }
+    .resume-teams .experience-companies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .resume-teams .experience-companies > span:last-child { grid-column: 1 / -1; }
+    .resume-teams .experience-companies img { max-width: 120px; }
+  }
+
+  @media print {
+    .resume-teams { break-inside: avoid; margin-bottom: 24px; }
+    .resume-teams .experience-companies img { filter: brightness(0); opacity: 1; }
+  }
 }

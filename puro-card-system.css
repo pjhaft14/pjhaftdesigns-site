@@ -1,120 +1,140 @@
 /* Card specimens mirror the archive's square imagery and rounded dark surfaces. */
-.puro-design-board .puro-card-examples {
-  border-top: 1px solid rgba(255, 255, 255, .15);
-  margin-top: 36px;
-  padding-top: 32px;
-}
-.puro-design-board .puro-card-examples__intro {
-  color: #c8c4bd;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 28px;
-  text-align: left;
-}
-.puro-card-examples__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-.puro-card-example { display: flex; flex-direction: column; margin: 0; min-width: 0; }
-.puro-card-example > figcaption {
-  color: #bcb8b1;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 12px;
-  text-align: left;
-}
-.puro-design-board .puro-archive-sample {
-  box-sizing: border-box;
-  background: #222;
-  border: 1px solid #222;
-  border-radius: 32px;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, .24);
-  color: #f4f1e9;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-height: 420px;
-  overflow: hidden;
-  padding: 9px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
-}
-.puro-archive-sample__image {
-  aspect-ratio: 1;
-  background: #2a2a2a;
-  border-radius: 24px;
-  display: block;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-.puro-design-board .puro-archive-sample__image img {
-  display: block;
-  filter: saturate(.78) contrast(1.04);
-  height: 100%;
-  object-fit: cover;
-  transition: filter 180ms ease;
-  width: 100%;
-}
-.puro-design-board .puro-archive-sample--mask img { filter: none; }
-.puro-archive-sample__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 14px 6px 42px;
-}
-.puro-archive-sample__name {
-  color: #f4f1e9;
-  display: block;
-  font-size: 23.52px;
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-}
-.puro-archive-sample__secondary {
-  color: #bcb8b1;
-  font-size: 12.48px;
-  font-weight: 800;
-  line-height: 1.4;
-  margin-top: 5px;
-}
-.puro-archive-sample__location { color: #bcb8b1; font-size: 12px; margin-top: 5px; }
-.puro-archive-sample__description {
-  color: #c8c4bd;
-  font-size: 13.12px;
-  font-weight: 400;
-  line-height: 1.38;
-  margin-top: 10px;
-}
-.puro-archive-sample__arrow {
-  bottom: 16px;
-  fill: currentColor;
-  height: 20px;
-  position: absolute;
-  right: 16px;
-  width: 20px;
-}
-.puro-design-board .puro-archive-sample:is(:hover, :focus-visible) {
-  border-color: #bc1c23;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, .24), 0 0 0 1px #bc1c23;
-  outline: none;
-}
-.puro-design-board .puro-archive-sample:is(:hover, :focus-visible) img {
-  filter: saturate(1) contrast(1.04);
-}
-@media (max-width: 1000px) {
-  .puro-card-examples__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
-}
-@media (max-width: 560px) {
-  .puro-card-examples__grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .puro-card-example { width: min(100%, 320px); margin-inline: auto; }
-  .puro-design-board .puro-card-examples { margin-top: 28px; padding-top: 28px; }
-  .puro-design-board .puro-archive-sample { min-height: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .puro-design-board .puro-archive-sample,
-  .puro-design-board .puro-archive-sample img { transition: none; }
+@layer pages {
+  .puro-design-board .puro-card-examples {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    margin-top: 36px;
+    padding-top: 32px;
+  }
+
+  .puro-design-board .puro-card-examples__intro {
+    color: #c8c4bd;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+    text-align: left;
+  }
+
+  .puro-card-examples__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .puro-card-example { display: flex; flex-direction: column; margin: 0; min-width: 0; }
+
+  .puro-card-example > figcaption {
+    color: #bcb8b1;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .puro-design-board .puro-archive-sample {
+    box-sizing: border-box;
+    background: #222;
+    border: 1px solid #222;
+    border-radius: 32px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .24);
+    color: #f4f1e9;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 420px;
+    overflow: hidden;
+    padding: 9px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .puro-archive-sample__image {
+    aspect-ratio: 1;
+    background: #2a2a2a;
+    border-radius: 24px;
+    display: block;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .puro-design-board .puro-archive-sample__image img {
+    display: block;
+    filter: saturate(.78) contrast(1.04);
+    height: 100%;
+    object-fit: cover;
+    transition: filter 180ms ease;
+    width: 100%;
+  }
+
+  .puro-design-board .puro-archive-sample--mask img { filter: none; }
+
+  .puro-archive-sample__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 14px 6px 42px;
+  }
+
+  .puro-archive-sample__name {
+    color: #f4f1e9;
+    display: block;
+    font-size: 23.52px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .puro-archive-sample__secondary {
+    color: #bcb8b1;
+    font-size: 12.48px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+
+  .puro-archive-sample__location { color: #bcb8b1; font-size: 12px; margin-top: 5px; }
+
+  .puro-archive-sample__description {
+    color: #c8c4bd;
+    font-size: 13.12px;
+    font-weight: 400;
+    line-height: 1.38;
+    margin-top: 10px;
+  }
+
+  .puro-archive-sample__arrow {
+    bottom: 16px;
+    fill: currentColor;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    width: 20px;
+  }
+
+  .puro-design-board .puro-archive-sample:is(:hover, :focus-visible) {
+    border-color: #bc1c23;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .24), 0 0 0 1px #bc1c23;
+    outline: none;
+  }
+
+  .puro-design-board .puro-archive-sample:is(:hover, :focus-visible) img {
+    filter: saturate(1) contrast(1.04);
+  }
+
+  @media (max-width: 1000px) {
+    .puro-card-examples__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  }
+
+  @media (max-width: 560px) {
+    .puro-card-examples__grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .puro-card-example { width: min(100%, 320px); margin-inline: auto; }
+    .puro-design-board .puro-card-examples { margin-top: 28px; padding-top: 28px; }
+    .puro-design-board .puro-archive-sample { min-height: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .puro-design-board .puro-archive-sample,
+    .puro-design-board .puro-archive-sample img { transition: none; }
+  }
 }

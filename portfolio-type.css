@@ -17,25 +17,30 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-html body { font-family: var(--font-sans); font-weight: 400; font-optical-sizing: auto; }
-html body :is(button, input, textarea, select),
-html .site-footer.site-footer--unified,
-html .personal-page .experience-numbers dd { font-family: var(--font-sans); }
-/* Explicit labels, dates, counters and case styles do not inherit the body font. */
-html .resume-page .resume-panel h2,
-html .resume-page .experience-meta p,
-html .resume-page .experience-item::before,
-html .testimonial .testimonial-count,
-html .case-study .early-signals__label,
-html .conditional-formatting-case,
-html .case-study .cf-screenshot-pin,
-html .case-study .ride-screen-pin { font-family: var(--font-sans); }
-/* Keep the hierarchy in size and spacing, with medium rather than bold headings. */
-html body :is(h1, h2, h3, h4) { font-weight: 500 !important; }
-.home-page .intro-impact dt,
-.personal-page .experience-numbers dd,
-.resume-page .resume-impact dt,
-.case-study .impact-grid strong,
-.case-study .early-signals__grid strong,
-.site-header .brand { font-weight: 500; }
-html body :is(strong, b) { font-weight: 600; }
+/* Typographic defaults: components and pages may set their own. */
+@layer base {
+  html body { font-family: var(--font-sans); font-weight: 400; font-optical-sizing: auto; }
+  html body :is(button, input, textarea, select) { font-family: var(--font-sans); }
+  html body :is(strong, b) { font-weight: 600; }
+}
+
+/* Deliberate site-wide exceptions that win over component and page styles. */
+@layer overrides {
+  html .site-footer.site-footer--unified,
+  html .personal-page .experience-numbers dd { font-family: var(--font-sans); }
+
+  /* Explicit labels, dates, counters and case styles do not inherit the body font. */
+  html .resume-page .resume-panel h2,
+  html .resume-page .experience-meta p,
+  html .resume-page .experience-item::before,
+  html .testimonial .testimonial-count,
+  html .case-study .early-signals__label,
+  html .conditional-formatting-case,
+  html .case-study .cf-screenshot-pin,
+  html .case-study .ride-screen-pin { font-family: var(--font-sans); }
+
+  /* Keep the hierarchy in size and spacing, with medium rather than bold headings. */
+  html body :is(h1, h2, h3, h4) { font-weight: 500; }
+
+  .home-page .intro-impact dt, .personal-page .experience-numbers dd, .resume-page .resume-impact dt, .case-study .impact-grid strong, .case-study .early-signals__grid strong { font-weight: 500; }
+}

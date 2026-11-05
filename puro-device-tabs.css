@@ -1,10 +1,17 @@
-.puro-home-devices .puro-device-tabs[hidden],
-.puro-device-panels > [hidden] { display: none; }
-.puro-device-panels { min-width: 0; }
-.puro-home-devices .puro-device-tabs button::before { content: none; }
-.puro-device-tabs svg { width: 18px; height: 18px; flex: none; }
-.puro-device-panels > figure:focus-visible { outline: 2px solid var(--color-link); outline-offset: 5px; }
-@media print {
-  .puro-home-devices .puro-device-tabs { display: none; }
-  .puro-device-panels > [hidden] { display: block; margin-top: 24px; }
+@layer pages {
+  .puro-home-devices .puro-device-tabs[hidden],
+  .puro-device-panels > [hidden] { display: none; }
+
+  .puro-device-panels { min-width: 0; }
+
+  .puro-home-devices .puro-device-tabs button::before { content: none; }
+
+  .puro-device-tabs svg { width: 18px; height: 18px; flex: none; }
+
+  .puro-device-panels > figure:focus-visible { outline: 2px solid var(--color-link); outline-offset: 5px; }
+
+  @media print {
+    .puro-home-devices .puro-device-tabs { display: none; }
+    .puro-device-panels > [hidden] { display: block; margin-top: 24px; }
+  }
 }

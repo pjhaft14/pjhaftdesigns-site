@@ -1,52 +1,55 @@
-.site-footer.site-footer--unified {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: min(1180px, calc(100% - 40px));
-  max-width: none;
-  margin: 0 auto;
-  padding: var(--space-8) 0 var(--space-10);
-  gap: var(--space-6);
-  color: var(--color-text-muted);
-  font-family: var(--font-sans);
-  font-size: 13px;
-}
-
-.site-footer--unified .footer-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: var(--space-2) 26px;
-}
-
-.site-footer--unified .footer-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 40px;
-  color: inherit;
-  font: inherit;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.site-footer--unified .footer-links a:hover { color: var(--color-text); }
-.site-footer--unified svg { width: 16px; height: 16px; }
-
-@media (max-width: 640px) {
+@layer components {
   .site-footer.site-footer--unified {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-2);
-    padding: var(--space-6) 0 var(--space-8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1180px, calc(100% - 40px));
+    max-width: none;
+    margin: 0 auto;
+    padding: var(--space-8) 0 var(--space-10);
+    gap: var(--space-6);
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-size: 13px;
   }
 
   .site-footer--unified .footer-links {
-    justify-content: flex-start;
-    width: 100%;
-    gap: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-2) 26px;
   }
 
-  .site-footer--unified .footer-links a:last-child { margin-left: auto; }
+  .site-footer--unified .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 40px;
+    color: inherit;
+    font: inherit;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .site-footer--unified .footer-links a:hover { color: var(--color-text); }
+
+  .site-footer--unified svg { width: 16px; height: 16px; }
+
+  @media (max-width: 640px) {
+    .site-footer.site-footer--unified {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2);
+      padding: var(--space-6) 0 var(--space-8);
+    }
+
+    .site-footer--unified .footer-links {
+      justify-content: flex-start;
+      width: 100%;
+      gap: 0 18px;
+    }
+
+    .site-footer--unified .footer-links a:last-child { margin-left: auto; }
+  }
 }

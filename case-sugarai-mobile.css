@@ -1,0 +1,324 @@
+/* SugarAI Mobile case study: page-specific components (split from live-base-1.css). */
+@layer components {
+  .sugarai-video-showcase {
+    display: grid;
+    gap: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: clamp(54px, 8vw, 92px);
+  }
+
+  .sugarai-video-showcase > div {
+    max-width: 760px;
+  }
+
+  .sugarai-video-showcase h2 {
+    margin: 0;
+    max-width: 18ch;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    letter-spacing: 0;
+  }
+
+  .sugarai-video-showcase > .sugarai-video-showcase__media {
+    display: grid;
+    max-width: none;
+    gap: 0.7rem;
+  }
+
+  .sugarai-video-showcase__media > .section-kicker {
+    margin: 0;
+  }
+
+  .sugarai-video-showcase p:not(.section-kicker) {
+    margin: 0.85rem 0 0;
+    max-width: 720px;
+    color: var(--color-text-muted);
+    font-size: 1.04rem;
+    line-height: 1.6;
+  }
+
+  .sugarai-prototype-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.8rem, 1.6vw, 1.15rem);
+    align-items: start;
+  }
+
+  .sugarai-prototype-showcase {
+    margin: 0;
+  }
+
+  .sugarai-prototype-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-self: start;
+    gap: 0.85rem;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .sugarai-prototype-frame {
+    width: 100%;
+    aspect-ratio: 942 / 1920;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #0f172a;
+    box-shadow: 0 16px 36px rgba(45, 72, 112, 0.13);
+    clip-path: inset(1px 1px 0 1px round var(--radius-lg));
+  }
+
+  .sugarai-prototype-card video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .sugarai-prototype-card:nth-child(4) video {
+    object-position: 26% center;
+  }
+
+  .sugarai-prototype-card figcaption {
+    display: grid;
+    align-self: start;
+    align-content: start;
+    gap: 0.25rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.94rem;
+    line-height: 1.48;
+  }
+
+  .sugarai-prototype-card figcaption span {
+    display: block;
+  }
+
+  .current-phone-showcase {
+    margin: 0;
+    padding: clamp(1rem, 2.4vw, 1.5rem);
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.98), rgba(247, 247, 245, 0.72) 58%, rgba(232, 232, 228, 0.5)),
+      var(--color-surface);
+    box-shadow: none;
+  }
+
+  .current-phone-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.9rem, 2vw, 1.4rem);
+    align-items: start;
+  }
+
+  .current-phone-card {
+    display: grid;
+    gap: 0.6rem;
+    align-self: start;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .current-phone-frame {
+    position: relative;
+    overflow: hidden;
+    border: clamp(4px, 0.55vw, 6px) solid #121519;
+    border-radius: clamp(20px, 2.3vw, 34px);
+    background: #fff;
+    box-shadow:
+      0 20px 42px rgba(15, 23, 42, 0.18),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.48);
+  }
+
+  .current-phone-frame::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 50%;
+    width: 28%;
+    height: 2.2%;
+    min-height: 12px;
+    border-radius: 999px;
+    background: #05070a;
+    transform: translateX(-50%);
+    opacity: 0.92;
+  }
+
+  .current-phone-frame img {
+    width: 100%;
+    display: block;
+  }
+
+  .current-phone-card p {
+    min-height: 1.35rem;
+    margin: 0;
+    color: var(--color-text);
+    font-size: clamp(0.78rem, 1vw, 0.9rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .sugarai-supporting-actions {
+    margin: 0;
+    width: 100%;
+  }
+
+  .sugarai-video-showcase > .sugarai-supporting-actions { max-width: none; }
+
+  .sugarai-supporting-actions .current-phone-grid {
+    width: 100%;
+    gap: clamp(0.8rem, 1.6vw, 1.15rem);
+  }
+
+  .sugarai-supporting-actions .current-phone-card {
+    gap: 0.85rem;
+  }
+
+  .sugarai-supporting-actions .current-phone-frame {
+    width: 100%;
+    aspect-ratio: 402 / 874;
+    border: clamp(4px, 0.55vw, 6px) solid #121519;
+    border-radius: clamp(20px, 2.3vw, 34px);
+    box-shadow:
+      0 20px 42px rgba(15, 23, 42, 0.18),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.48);
+  }
+
+  .sugarai-supporting-actions .current-phone-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .sugarai-supporting-actions .current-phone-card figcaption {
+    display: grid;
+    align-content: start;
+    gap: 0.25rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.94rem;
+    line-height: 1.48;
+  }
+
+  .sugarai-supporting-actions .current-phone-card figcaption strong {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .sugarai-supporting-actions .current-phone-card figcaption span {
+    display: block;
+  }
+
+  .current-phone-showcase figcaption {
+    max-width: 780px;
+    margin-top: clamp(1rem, 2vw, 1.35rem);
+    color: var(--color-text-muted);
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.55;
+  }
+
+  .sugarai-transformation .transformation-panel--after {
+    background: linear-gradient(145deg, rgba(229, 246, 235, 0.95), rgba(232, 242, 255, 0.82));
+  }
+
+  .sugarai-transformation .transformation-flow--after {
+    gap: 0.55rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before {
+    gap: 0.55rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before li {
+    min-height: 3.85rem;
+    padding: 0.68rem 0.75rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before li > span {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before strong {
+    font-size: 1rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before small {
+    font-size: 0.78rem;
+  }
+
+  .sugarai-transformation .transformation-flow--before li:not(:last-child)::after {
+    bottom: -0.58rem;
+    left: 1.75rem;
+    height: 0.58rem;
+  }
+
+  .sugarai-transformation .transformation-flow--after li {
+    min-height: 3.85rem;
+    padding: 0.68rem 0.75rem;
+    box-shadow: none;
+  }
+
+  .sugarai-transformation .transformation-flow--after li > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+
+  .sugarai-transformation .transformation-flow--after strong {
+    font-size: 1rem;
+  }
+
+  .sugarai-transformation .transformation-flow--after small {
+    max-width: 38ch;
+    font-size: 0.78rem;
+  }
+
+  .sugarai-transformation .transformation-flow--after li:not(:last-child)::after {
+    bottom: -0.58rem;
+    left: 1.75rem;
+    height: 0.58rem;
+  }
+
+  .flow-section-heading p:not(.section-kicker) {
+    max-width: 620px;
+    margin: 1rem 0 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 1.45vw, 1.15rem);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .sugarai-prototype-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sugarai-prototype-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .current-phone-showcase {
+      overflow-x: auto;
+      scrollbar-color: rgba(15, 23, 42, 0.28) transparent;
+      scrollbar-width: thin;
+    }
+
+    .sugarai-supporting-actions {
+      overflow-x: auto;
+      scrollbar-color: rgba(15, 23, 42, 0.28) transparent;
+      scrollbar-width: thin;
+    }
+
+    .current-phone-grid {
+      min-width: 920px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
