@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <script src="theme.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A product design case study about giving CRM values consistent visual meaning across the SugarAI platform.">
+  <title>Making data easier for sales reps and leaders to recognize across an entire platform | PJ Haft</title>
+  <link rel="canonical" href="https://www.pjhaftdesigns.com/conditional-formatting">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="PJ Haft Portfolio">
+  <meta property="og:title" content="Making data easier for sales reps and leaders to recognize across an entire platform | PJ Haft">
+  <meta property="og:description" content="Shared value styling that stays recognizable across lists, reports, dashboards, and the SugarAI platform.">
+  <meta property="og:url" content="https://www.pjhaftdesigns.com/conditional-formatting">
+  <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/conditional-formatting/solution-dashboard.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="live-base-1.css">
+  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle">
+  <link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels">
+  <link rel="stylesheet" href="conditional-formatting.css?v=20261103-findings">
+  <script src="site-nav.js?v=20261001-shared" defer></script>
+  <script src="assets/lucide.min.js" defer></script>
+  <script src="conditional-formatting.js?v=20261019-themed-map" defer></script>
+  <script src="case-video-autoplay.js?v=20261017-1" defer></script>
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Pejman Haft home"><img src="assets/favicon.svg" alt="" width="36" height="36"><span>Pejman Haft</span></a>
+    <nav aria-label="Main navigation"><a aria-current="location" href="index.html#work">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></nav>
+    <div class="header-actions"><button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" title="Open navigation"><i data-lucide="menu" aria-hidden="true"></i></button></div>
+  </header>
+  <main class="case-study conditional-formatting-case">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div><p class="eyebrow">SugarAI · Conditional formatting</p><h1 id="case-title">Making data easier for sales reps and leaders to recognize across an entire platform.</h1><p>A sales manager set up dropdown styles for an entire dataset in <strong>under 5 minutes</strong>. Previously, a system admin spent <strong>hours</strong> configuring the same field separately for every module and view.</p></div>
+      <dl class="case-meta case-meta--icon">
+        <div><dt><i data-lucide="briefcase" aria-hidden="true"></i>Role</dt><dd>Lead product designer</dd></div>
+        <div><dt><i data-lucide="compass" aria-hidden="true"></i>Scope</dt><dd>Research, UX, UI, developer handoff</dd></div>
+        <div><dt><i data-lucide="clock" aria-hidden="true"></i>Timeline</dt><dd>Approximately six months</dd></div>
+        <div><dt><i data-lucide="flag" aria-hidden="true"></i>Status</dt><dd>Shipped · Rolled out to 2,000+ organizations</dd></div>
+      </dl>
+    </section>
+
+    <section class="case-section" id="problem">
+      <div><p class="section-kicker">The problem</p><h2>The value stayed the same. Its visual meaning didn’t.</h2></div>
+      <div class="case-copy"><p>Sales leaders could define a region like APAC in a dropdown. Its color, however, came from each chart’s palette or a separately configured field highlight.</p><p>APAC might appear third in one chart and tenth in another. When its position changed, so did its color. Readers had to check the legend again.</p></div>
+      <figure class="cf-color-comparison" id="problem-visual" aria-labelledby="color-comparison-caption">
+        <div class="cf-problem-toolbar"><span class="cf-problem-label">Color follows chart order</span><button class="cf-problem-toggle" type="button" hidden>Pause animation</button></div>
+        <div class="cf-problem-intro"><h3>Same value. Different colors.</h3><p>Watch APAC change color as its position changes across charts.</p></div>
+        <div class="cf-comparison-grid">
+          <div class="cf-mini-chart" data-problem-chart="0" data-chart-type="pie" role="img" aria-label="Regional pipeline pie chart: APAC is third of three data points and amber."><div class="cf-mini-chart-heading"><strong>Regional pipeline</strong><span class="cf-chart-position">3 data points · APAC 3rd</span></div><div class="cf-pie-plot" aria-hidden="true"><svg class="cf-pie" viewBox="0 0 180 180"><path data-pie-segment="0" d="M90 90L90 8A82 82 0 0 1 161.014 131Z" fill="var(--cf-neutral-bar)"/><path data-pie-segment="1" d="M90 90L161.014 131A82 82 0 0 1 18.986 131Z" fill="var(--cf-neutral-bar-alt)"/><path data-pie-segment="2" d="M90 90L18.986 131A82 82 0 0 1 90 8Z" fill="var(--cf-chart-amber)"/></svg></div><span class="cf-chart-key"><i style="background:var(--cf-chart-amber)"></i>APAC <b>Amber</b></span></div>
+          <div class="cf-mini-chart" data-problem-chart="1" role="img" aria-label="Regional performance: APAC is tenth of ten data points and blue."><div class="cf-mini-chart-heading"><strong>Regional performance</strong><span class="cf-chart-position">10 data points · APAC 10th</span></div><div class="cf-bars" aria-hidden="true"><span style="--bar-height:88%"></span><span style="--bar-height:76%"></span><span style="--bar-height:72%"></span><span style="--bar-height:66%"></span><span style="--bar-height:61%"></span><span style="--bar-height:55%"></span><span style="--bar-height:50%"></span><span style="--bar-height:46%"></span><span style="--bar-height:41%"></span><span class="cf-bar-apac" style="--bar-height:35%;--apac-color:var(--cf-chart-blue)"><b>APAC</b></span></div><span class="cf-chart-key"><i style="background:var(--cf-chart-blue)"></i>APAC <b>Blue</b></span></div>
+          <div class="cf-mini-chart cf-table-card"><div class="cf-mini-chart-heading"><strong>Opportunity list</strong><span class="cf-table-position">5 records · APAC row 2</span></div><table class="cf-skeleton-table" aria-label="Illustrative opportunity list with APAC displayed as a teal Region badge in row 2"><thead><tr><th scope="col">Opportunity</th><th scope="col">Region</th></tr></thead><tbody><tr><td><span class="cf-skeleton-line" aria-label="Example opportunity"></span></td><td><span class="cf-skeleton-pill" aria-label="Other region"></span></td></tr><tr class="cf-skeleton-apac-row"><td><span class="cf-skeleton-line cf-skeleton-line--short" aria-label="Example opportunity"></span></td><td><span class="cf-table-apac">APAC</span></td></tr><tr><td><span class="cf-skeleton-line" aria-label="Example opportunity"></span></td><td><span class="cf-skeleton-pill" aria-label="Other region"></span></td></tr><tr><td><span class="cf-skeleton-line cf-skeleton-line--short" aria-label="Example opportunity"></span></td><td><span class="cf-skeleton-pill" aria-label="Other region"></span></td></tr><tr><td><span class="cf-skeleton-line" aria-label="Example opportunity"></span></td><td><span class="cf-skeleton-pill" aria-label="Other region"></span></td></tr></tbody></table><span class="cf-chart-key"><i style="background:var(--cf-chart-teal)"></i>APAC <b>Teal</b></span></div>
+        </div>
+        <p class="cf-problem-result"><i data-lucide="shuffle" aria-hidden="true"></i><span>The palette follows chart order, so APAC’s color changes.</span></p>
+        <figcaption id="color-comparison-caption">The other regions are muted so you can follow APAC across the three example views.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section" id="research" aria-labelledby="research-title">
+      <div><p class="section-kicker">Research</p><h2 id="research-title">Consistency mattered as much as customization.</h2></div>
+      <div class="case-copy case-test-summary">
+        <p>I reviewed the workarounds sales leaders and reps used to keep colors recognizable across views.</p>
+        <ul class="case-test-findings">
+          <li>
+            <span aria-hidden="true">01</span>
+            <div>
+              <strong>Admins repeated the same setup in each module.</strong>
+              <p>A field could be styled in one view and overlooked in another.</p>
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">02</span>
+            <div>
+              <strong>A region changed color when its chart position changed.</strong>
+              <p>Charts assigned colors by position, so reps had to check the legend again to find the same region.</p>
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">03</span>
+            <div>
+              <strong>Matching a company color meant writing down RGB codes.</strong>
+              <p>Teams had to keep track of those codes to reuse an exact shade.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section design-challenge" id="challenge" aria-labelledby="challenge-title">
+      <div><p class="section-kicker">Design challenge</p><h2 id="challenge-title">Give each value a visual identity that travels with it.</h2></div>
+      <div class="case-copy"><p>The style had to belong to the dropdown value so a rep could recognize it wherever it appeared.</p><p>I kept the text label visible and offered presets alongside individual color and icon controls.</p></div>
+    </section>
+
+    <section class="case-section" id="ecosystem">
+      <div><p class="section-kicker">Product ecosystem</p><h2>Connect configuration with recognition.</h2></div>
+      <div class="case-copy"><p>I mapped how a value defined in Sugar Enterprise would appear in Sugar Discover, Sugar Market, and Sugar Predict. The walkthrough below focuses on Enterprise.</p></div>
+      <figure class="cf-ecosystem" aria-labelledby="ecosystem-caption">
+        <div class="cf-animation-toolbar" hidden>
+          <div class="cf-color-controls" role="group" aria-label="Choose APAC’s shared color"><span>Style APAC</span><button class="cf-color-choice" type="button" data-color="purple" aria-pressed="true" aria-label="Apply purple to APAC" title="Purple"><span></span></button><button class="cf-color-choice" type="button" data-color="blue" aria-pressed="false" aria-label="Apply blue to APAC" title="Blue"><span></span></button><button class="cf-color-choice" type="button" data-color="teal" aria-pressed="false" aria-label="Apply teal to APAC" title="Teal"><span></span></button><button class="cf-color-choice" type="button" data-color="amber" aria-pressed="false" aria-label="Apply amber to APAC" title="Amber"><span></span></button></div>
+          <button class="cf-animation-toggle" type="button">Pause animation</button>
+        </div>
+        <object class="cf-ecosystem-artwork" data="assets/conditional-formatting/ecosystem-map.svg?v=20261019-dark-compatible" type="image/svg+xml" width="1440" height="1000" aria-label="Animated ecosystem map: a selected APAC color applies in Sugar Enterprise, then carries through the shared value to Sugar Discover, Sugar Market, and Sugar Predict."><img src="assets/conditional-formatting/ecosystem-map.svg" width="1440" height="1000" alt="A sales leader styles APAC in Sugar Enterprise. The same style carries to Sugar Discover, Sugar Market, and Sugar Predict."></object>
+        <div class="cf-ecosystem-mobile">
+          <p class="cf-mobile-step">01 · Define in Enterprise</p>
+          <div class="cf-mobile-workspace"><div class="cf-mobile-workspace-header"><i data-lucide="panel-left" aria-hidden="true"></i><strong>Sales workspace</strong></div><div class="cf-mobile-workspace-body"><span>Sugar Enterprise</span><h3>Give Region a visual meaning</h3><p>Configured by the sales leader.<br>Shared with the team.</p><div class="cf-mobile-value-row" data-map-stage="source"><span>Asia Pacific</span><b>APAC</b></div></div></div>
+          <div class="cf-mobile-shared" data-map-stage="shared"><span aria-hidden="true">↓</span><p>02 · Shared value</p><b>APAC</b><p>Same value. Same styling.</p><span aria-hidden="true">↓</span></div>
+          <div class="cf-mobile-products" data-map-stage="products"><p class="cf-mobile-step">03 · Carry it across products</p><div><strong>Sugar Discover</strong><b>APAC</b></div><div><strong>Sugar Market</strong><b>APAC</b></div><div><strong>Sugar Predict</strong><b>APAC</b></div></div>
+          <p class="cf-mobile-audience">Sales leaders + their teams<br><span>Lists · Reports · Dashboards<br>Desktop + mobile</span></p>
+        </div>
+        <div class="cf-animation-state" hidden><span class="cf-animation-step" data-step="source">1 · Define in Enterprise</span><span class="cf-animation-step" data-step="shared">2 · Share the value</span><span class="cf-animation-step is-current" data-step="products">3 · Apply across products</span></div>
+        <span class="cf-animation-announcement" role="status"></span>
+        <figcaption id="ecosystem-caption">A sales leader defines the style once; the shared value carries it across products, views, and devices. Choose a color to see the same change travel through the ecosystem.</figcaption>
+      </figure>
+    </section>
+
+    <section class="design-decisions" id="decisions" aria-labelledby="decisions-title">
+      <div class="design-decisions__intro"><p class="section-kicker">Design decisions</p><h2 id="decisions-title">Three choices connected setup with everyday use.</h2></div>
+      <div class="design-decision-grid">
+        <article><span>01</span><h3>Style the shared value</h3><dl class="decision-tradeoff cf-decision-reasoning"><div><dt>Needed</dt><dd>A stable cue across views and changing charts.</dd></div><div><dt>Chose</dt><dd>One style attached to each dropdown value.</dd></div></dl><p>Charts reuse the assigned style as the number and order of data points change.</p></article>
+        <article><span>02</span><h3>Start with presets</h3><dl class="decision-tradeoff cf-decision-reasoning"><div><dt>Needed</dt><dd>Quick setup with room for business-specific choices.</dd></div><div><dt>Chose</dt><dd>Presets, per-value controls, and a live preview.</dd></div></dl><p>Sales leaders can refine text, background, and icons while keeping the list of choices in view.</p></article>
+        <article><span>03</span><h3>Keep meaning readable</h3><dl class="decision-tradeoff cf-decision-reasoning"><div><dt>Needed</dt><dd>Values that remain understandable at a glance.</dd></div><div><dt>Chose</dt><dd>Visible labels, supported by color and optional icons.</dd></div></dl><p>Region names stay visible in badges and chart legends, giving teams a clear reference alongside the visual cue.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section" id="timeline" aria-labelledby="timeline-title">
+      <div><p class="section-kicker">Delivery plan</p><h2 id="timeline-title">A shared plan, delivered in stages.</h2></div>
+      <div class="case-copy"><p>I worked with stakeholders to ship the configuration tools and dropdown styling first. Numeric ranges depended on that foundation.</p></div>
+      <figure class="cf-roadmap" aria-labelledby="timeline-caption">
+        <div class="cf-roadmap-header"><div><span class="cf-roadmap-year"><i data-lucide="calendar-days" aria-hidden="true"></i>2025</span><p>Conditional formatting roadmap</p></div><span class="cf-roadmap-summary">Two stages shipped<br><span>One planned next</span></span></div>
+        <div class="cf-roadmap-duration" aria-hidden="true"><span>Approximately six months · Stages 1–2</span><span>Next stage</span></div>
+        <ol class="cf-roadmap-stages" aria-label="Three-stage delivery plan for 2025. The first two stages shipped across approximately six months; the third was planned next.">
+          <li class="cf-roadmap-stage cf-roadmap-stage--shipped">
+            <div class="cf-roadmap-milestone"><span class="cf-roadmap-number" aria-hidden="true">01</span><span class="cf-roadmap-status"><i data-lucide="check" aria-hidden="true"></i>Shipped</span></div>
+            <div class="cf-roadmap-stage-copy"><span class="cf-roadmap-stage-label">Stage 1 · Foundation</span><i class="cf-roadmap-icon" data-lucide="panels-top-left" aria-hidden="true"></i><h3>Build the<br> formatting setup.</h3><p>Create the configuration foundation around existing dropdown values, preparing the experience for sales leaders to define how those values look.</p><div class="cf-roadmap-result"><span>Establish the foundation</span><strong>A place to configure value styling</strong></div></div>
+          </li>
+          <li class="cf-roadmap-stage cf-roadmap-stage--shipped">
+            <div class="cf-roadmap-milestone"><span class="cf-roadmap-number" aria-hidden="true">02</span><span class="cf-roadmap-status"><i data-lucide="check" aria-hidden="true"></i>Shipped</span></div>
+            <div class="cf-roadmap-stage-copy"><span class="cf-roadmap-stage-label">Stage 2 · Visual meaning</span><i class="cf-roadmap-icon" data-lucide="palette" aria-hidden="true"></i><h3>Style dropdown<br> values consistently.</h3><p>Add value styling that stays recognizable in lists, records, reports, and dashboard report views.</p><div class="cf-roadmap-result"><span>Connect configuration to consumption</span><strong>Shared meaning across views</strong></div></div>
+          </li>
+          <li class="cf-roadmap-stage cf-roadmap-stage--planned">
+            <div class="cf-roadmap-milestone"><span class="cf-roadmap-number" aria-hidden="true">03</span><span class="cf-roadmap-status">Planned next</span></div>
+            <div class="cf-roadmap-stage-copy"><span class="cf-roadmap-stage-label">Stage 3 · Broader coverage</span><i class="cf-roadmap-icon" data-lucide="hash" aria-hidden="true"></i><h3>Extend to numbers<br> and ranges.</h3><p>Expand conditional formatting beyond dropdowns to support numeric values and numeric ranges.</p><div class="cf-roadmap-result"><span>Extend the system</span><strong>Support additional data types</strong></div></div>
+          </li>
+        </ol>
+        <figcaption id="timeline-caption">The first two stages shipped over approximately six months in 2025. Numeric ranges remained on the roadmap.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section" id="solution">
+      <div><p class="section-kicker">The solution</p><h2>Follow APAC from setup to the dashboard.</h2></div>
+      <div class="case-copy"><p>The walkthrough starts with the sales leader who sets the color and ends with the rep who reads the dashboard.</p></div>
+    </section>
+    <section class="solution-gallery" aria-label="Sugar Enterprise solution walkthrough and annotated views">
+      <article class="cf-solution-story" id="setup">
+        <div><p class="section-kicker">Define</p><h3>Give a value its visual meaning.</h3><p>A sales leader chooses a preset for APAC, adjusts the style, previews it, and saves. The recording follows the same value into the team’s everyday views.</p></div>
+        <figure class="gallery-figure"><video controls playsinline muted preload="metadata" width="1920" height="952" poster="assets/conditional-formatting/walkthrough-poster.jpg" aria-label="Conditional formatting walkthrough" aria-describedby="cf-walkthrough-caption"><source src="assets/conditional-formatting/conditional-formatting-walkthrough.mp4" type="video/mp4"><a href="assets/conditional-formatting/conditional-formatting-walkthrough.mp4">Watch the conditional formatting walkthrough</a>.</video><figcaption class="gallery-caption" id="cf-walkthrough-caption">1:38 walkthrough · Configure Region values with color and icons, then follow blue APAC across the dashboard, Opportunities, and report charts.</figcaption></figure>
+      </article>
+      <article class="cf-solution-story" id="styling-panel">
+        <div><p class="section-kicker">Configure</p><h3>A simple starting point. Control over the details.</h3><p>The settings and preview sit beside the dropdown list, so a leader can compare values while editing.</p></div>
+        <figure class="gallery-figure">
+          <div class="cf-panel-detail">
+            <div class="cf-screenshot cf-panel-screenshot"><img src="assets/conditional-formatting/styling-panel-2x.png" width="700" height="1584" loading="lazy" decoding="async" alt="APAC styling panel showing a live blue badge preview, eight presets including None, text emphasis controls, custom text and background colors, fourteen icon choices including no icon, and an icon color control"><span class="cf-screenshot-pin" style="left:104%;top:8%" aria-hidden="true">1</span><span class="cf-screenshot-pin" style="left:104%;top:28%" aria-hidden="true">2</span><span class="cf-screenshot-pin" style="left:104%;top:46%" aria-hidden="true">3</span><span class="cf-screenshot-pin" style="left:104%;top:57%" aria-hidden="true">4</span><span class="cf-screenshot-pin" style="left:104%;top:73%" aria-hidden="true">5</span></div>
+            <ol class="cf-annotations" aria-label="Styling panel controls and their purpose">
+              <li><span class="cf-note-number" aria-hidden="true">1</span><div><h4>See the result as you style.</h4><p>The live preview shows the selected value’s appearance before saving, so each adjustment is easy to assess.</p></div></li>
+              <li><span class="cf-note-number" aria-hidden="true">2</span><div><h4>Start with a preset.</h4><p>Seven color presets give sales leaders a quick starting point. None keeps a value unstyled when it needs no visual emphasis.</p></div></li>
+              <li><span class="cf-note-number" aria-hidden="true">3</span><div><h4>Add text emphasis.</h4><p>Bold, italic, underline, and strikethrough provide ways to distinguish values alongside color.</p></div></li>
+              <li><span class="cf-note-number" aria-hidden="true">4</span><div><h4>Match a specific visual meaning.</h4><p>Separate text, background, and icon colors support precise brand or team conventions, with HEX inputs for exact choices.</p></div></li>
+              <li><span class="cf-note-number" aria-hidden="true">5</span><div><h4>Make recognition more than color.</h4><p>Icons add a recognizable cue beside the label. Geographic, status, and attention symbols let the same controls support different kinds of field values.</p></div></li>
+            </ol>
+          </div>
+          <figcaption class="gallery-caption">Styling panel detail · The label stays visible alongside its color, text treatment, and icon.</figcaption>
+        </figure>
+      </article>
+      <article class="cf-solution-story" id="list-view">
+        <div><p class="section-kicker">Recognize</p><h3>Scan familiar values in daily work.</h3><p>In the opportunity list, reps see the blue APAC badge beside each matching record.</p></div>
+        <figure class="gallery-figure cf-annotated-figure"><div class="cf-screenshot"><img src="assets/conditional-formatting/solution-list.png?v=20261021-walkthrough-colors" width="1280" height="720" loading="lazy" decoding="async" alt="Opportunity list with blue APAC, teal EMEA, and coral AMER badges in the Region column"><span class="cf-screenshot-pin" style="left:40.859%;top:54.306%" aria-hidden="true">1</span><span class="cf-screenshot-pin" style="left:40.859%;top:77.639%" aria-hidden="true">2</span></div><ol class="cf-annotations" id="cf-list-notes"><li><span class="cf-note-number" aria-hidden="true">1</span><div><h4>A familiar cue in daily work.</h4><p>APAC keeps the same blue treatment on every opportunity, giving the team a consistent cue while scanning records.</p></div></li><li><span class="cf-note-number" aria-hidden="true">2</span><div><h4>Meaning stays readable.</h4><p>Labels and icons accompany the color. Each region remains identifiable alongside its visual styling.</p></div></li></ol><figcaption class="gallery-caption">One shared Region definition, carried into the records the sales team uses every day.</figcaption></figure>
+      </article>
+      <article class="cf-solution-story" id="report">
+        <div><p class="section-kicker">Analyze</p><h3>Carry recognition into reporting.</h3><p>The report groups those opportunities by region. APAC stays blue when the chart type or sort order changes.</p></div>
+        <figure class="gallery-figure cf-annotated-figure"><div class="cf-screenshot"><img src="assets/conditional-formatting/solution-report.png?v=20261021-walkthrough-colors" width="1280" height="720" loading="lazy" decoding="async" alt="Regional pipeline report showing APAC in blue in both the bar chart and donut chart"><span class="cf-screenshot-pin" style="left:20.2%;top:83.92%" aria-hidden="true">1</span><span class="cf-screenshot-pin" style="left:78.125%;top:76.389%" aria-hidden="true">2</span></div><ol class="cf-annotations" id="cf-report-notes"><li><span class="cf-note-number" aria-hidden="true">1</span><div><h4>Styling follows the value.</h4><p>APAC stays blue when the bar chart orders regions by pipeline amount.</p></div></li><li><span class="cf-note-number" aria-hidden="true">2</span><div><h4>Recognition across chart types.</h4><p>The donut uses the same regional styling, even though its legend presents the values in a different order.</p></div></li></ol><figcaption class="gallery-caption">The chart changes. APAC’s visual identity carries through.</figcaption></figure>
+      </article>
+      <article class="cf-solution-story" id="dashboard">
+        <div><p class="section-kicker">Monitor</p><h3>Keep the same meaning at a glance.</h3><p>On the dashboard, the regional treemap, weekly trends, and opportunity records all use the same saved style.</p></div>
+        <figure class="gallery-figure cf-annotated-figure"><div class="cf-screenshot"><img src="assets/conditional-formatting/solution-dashboard.png?v=20261021-walkthrough-colors" width="1280" height="720" loading="lazy" decoding="async" alt="Sales dashboard with blue APAC styling in a regional treemap and opportunities widget"><span class="cf-screenshot-pin" style="left:16.522%;top:72.361%" aria-hidden="true">1</span><span class="cf-screenshot-pin" style="left:78.594%;top:64.861%" aria-hidden="true">2</span></div><div class="cf-dashboard-detail"><div class="cf-trend-detail"><p class="cf-detail-label">Dashboard detail · Expected close by week</p><div class="cf-screenshot"><img src="assets/conditional-formatting/dashboard-trend-2x.png" width="1172" height="1070" loading="lazy" decoding="async" alt="Weekly expected-close chart with a blue APAC line, teal EMEA line, and coral AMER line, alongside four additional regions"><span class="cf-screenshot-pin" style="left:53.16%;top:58.41%" aria-hidden="true">3</span></div></div><ol class="cf-annotations" id="cf-dashboard-notes"><li><span class="cf-note-number" aria-hidden="true">1</span><div><h4>Recognizable in the overview.</h4><p>Tile area shows each region’s share of pipeline, while APAC keeps its assigned blue styling.</p></div></li><li><span class="cf-note-number" aria-hidden="true">2</span><div><h4>Connected to the records.</h4><p>The opportunities widget uses the same blue APAC badge as the list view.</p></div></li><li><span class="cf-note-number" aria-hidden="true">3</span><div><h4>Consistent across time.</h4><p>APAC retains its blue color family in the weekly expected-close chart as pipeline amounts change.</p></div></li></ol></div><figcaption class="gallery-caption">A consistent visual language connects the dashboard’s summaries, trends, and underlying records.</figcaption></figure>
+      </article>
+    </section>
+
+    <section class="case-section" id="testing" aria-labelledby="testing-title">
+      <div><p class="section-kicker">Results</p><h2 id="testing-title">How long setup took and what reviewers wanted.</h2></div>
+      <div class="case-copy case-test-summary">
+        <ul class="case-test-findings">
+          <li>
+            <span aria-hidden="true">01</span>
+            <div>
+              <strong>A sales manager set up dropdown styles in under 5 minutes.</strong>
+              <p>The manager styled each value once for the whole dataset. Previously, a system admin spent hours configuring the same field for every module and view.</p>
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">02</span>
+            <div>
+              <strong>Reviewers expected the same value to keep its color across views.</strong>
+              <p>I attached the style to the dropdown value so its color stayed consistent across lists, reports, and dashboards, even when chart order changed.</p>
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">03</span>
+            <div>
+              <strong>Reviewers wanted presets first, with exact colors when needed.</strong>
+              <p>I made presets the starting point and kept custom colors, text styling, and icons available for individual values.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section retrospective" id="retrospective">
+      <div id="delivery"><p class="section-kicker">Retrospective</p><h2>Shared styling rolled out to more than 2,000 organizations.</h2></div>
+      <div class="case-copy case-test-summary"><p>I led the design from research through developer handoff. We shipped the setup tools first, then brought the saved styles into records, reports, and dashboards. Numeric ranges remained a separate piece of work.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer site-footer--unified">
+    <span>&copy; 2026 Pejman Haft</span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html#work">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Back to top" title="Back to top"><i data-lucide="arrow-up" aria-hidden="true"></i></a>
+    </nav>
+  </footer>
+</body>
+</html>

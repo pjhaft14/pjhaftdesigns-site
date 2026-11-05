@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f8">
+  <title>Space Mountain | Maintenance Insights</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accessibility.css">
+  <link rel="stylesheet" href="hierarchy.css">
+  <script src="assets/lucide.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="app-header">
+    <a class="brand" href="#overview" aria-label="Maintenance Insights home"><span class="brand-symbol"><i data-lucide="orbit"></i></span><span>Maintenance<span class="brand-light"> Insights</span></span></a>
+    <nav aria-label="Main navigation"><button class="nav-link active" data-view="overview"><i data-lucide="layout-dashboard"></i>Overview</button><button class="nav-link" data-view="requests"><i data-lucide="clipboard-list"></i>Work requests<span id="request-count" class="count">0</span></button></nav>
+    <div class="header-end"><span class="prototype-tag">Pilot prototype</span><span class="avatar" title="Andrew Jennings · Maintenance engineer">AJ</span></div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section id="overview-view">
+      <div class="breadcrumb">Attractions <i data-lucide="chevron-right"></i> Magic Kingdom <i data-lucide="chevron-right"></i> <span>Space Mountain</span></div>
+      <div class="page-heading"><div><div class="heading-line"><h1>Space Mountain</h1><span class="status operating"><span class="dot"></span>Operating</span></div><p>Component health &amp; maintenance planning</p></div><div class="telemetry"><span class="dot"></span><div>Simulated telemetry<small id="telemetry-time">Updating now</small></div></div></div>
+      <div class="metrics" aria-label="Ride health summary">
+        <div class="metric"><span>Components monitored<i data-lucide="radio-tower"></i></span><div><strong>128</strong><small>Across both tracks</small></div></div>
+        <div class="metric"><span>Needs attention<i data-lucide="triangle-alert"></i></span><div><strong>3</strong><small><b class="red-text">1 high</b><span class="separator">/</span>2 watch</small></div></div>
+        <div class="metric"><span>Vehicles on this track<i data-lucide="tram-front"></i></span><div><strong id="running-vehicles">0</strong><small id="bay-summary">3 in loading bay</small></div></div>
+        <div class="metric maintenance-metric"><span>Plan for tonight<i data-lucide="moon"></i></span><div><strong class="time-value">8h 28m</strong><small>Until maintenance</small></div><p>23:00–05:00 · Park closed</p></div>
+      </div>
+      <div class="workspace">
+        <section class="track-section" aria-labelledby="track-title">
+          <div class="section-heading"><div><h2 id="track-title">Ride health map</h2><p>Component alerts and vehicle positions</p></div><div class="segmented" role="group" aria-label="Select track"><button class="active" data-track="A" aria-pressed="true">Side A<span>2</span></button><button data-track="B" aria-pressed="false">Side B<span>1</span></button></div></div>
+          <div class="map-surface">
+            <div class="dispatch-strip" aria-label="Vehicle dispatch sequence">
+              <div class="dispatch-heading"><h3>Dispatch sequence</h3><span id="dispatch-countdown">First departure in 0:03</span><button id="restart-sequence" class="icon-button" aria-label="Restart dispatch sequence" title="Restart dispatch sequence"><i data-lucide="rotate-ccw"></i></button></div>
+              <div class="dispatch-vehicles">
+                <div><strong>Vehicle 01</strong><span id="vehicle-status-1">In loading bay</span><span id="vehicle-countdown-1">Departs in 0:03</span></div>
+                <div><strong>Vehicle 02</strong><span id="vehicle-status-2">In loading bay</span><span id="vehicle-countdown-2">Departs in 0:11</span></div>
+                <div><strong>Vehicle 03</strong><span id="vehicle-status-3">In loading bay</span><span id="vehicle-countdown-3">Departs in 0:19</span></div>
+              </div>
+            </div>
+            <div class="map-canvas">
+            <div class="map-topline"><span class="map-label"><span class="dot"></span><span id="side-label">SIDE A</span></span><div class="map-key"><div class="map-legend"><span><b class="legend-dot high"></b>High</span><span><b class="legend-dot watch"></b>Watch</span><span><b class="legend-vehicle"></b>Vehicle</span></div><span class="map-note">Schematic · not to scale</span></div></div>
+            <div class="map-controls" aria-label="Map controls"><button class="icon-button" id="zoom-in" title="Zoom in" aria-label="Zoom in"><i data-lucide="plus"></i></button><button class="icon-button" id="zoom-out" title="Zoom out" aria-label="Zoom out"><i data-lucide="minus"></i></button><button class="icon-button" id="reset-map" title="Reset map" aria-label="Reset map"><i data-lucide="maximize"></i></button></div>
+            <div class="map-viewport">
+              <div id="map-art" class="map-art">
+                <img class="track-image" src="assets/track.svg" alt="Space Mountain track schematic">
+                <svg class="motion-layer" viewBox="0 0 529 577" aria-hidden="true">
+                  <defs><filter id="vehicle-shadow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#153f37" flood-opacity=".2"/></filter></defs>
+                  <path id="vehicle-route" fill="none" stroke="none" d="M270 534 C253 534 247 516 251 501 C254 491 270 487 286 477 L438 413 C457 408 469 444 438 462 L277 534 Z"/>
+                  <g id="vehicle-1" class="vehicle" filter="url(#vehicle-shadow)"><rect x="-14" y="-5" width="8" height="10" rx="2"/><rect x="-4" y="-5" width="8" height="10" rx="2"/><rect x="6" y="-5" width="8" height="10" rx="2"/></g>
+                  <g id="vehicle-2" class="vehicle" filter="url(#vehicle-shadow)"><rect x="-14" y="-5" width="8" height="10" rx="2"/><rect x="-4" y="-5" width="8" height="10" rx="2"/><rect x="6" y="-5" width="8" height="10" rx="2"/></g>
+                  <g id="vehicle-3" class="vehicle" filter="url(#vehicle-shadow)"><rect x="-14" y="-5" width="8" height="10" rx="2"/><rect x="-4" y="-5" width="8" height="10" rx="2"/><rect x="6" y="-5" width="8" height="10" rx="2"/></g>
+                </svg>
+                <button class="map-pin pin-brake" data-event="brake" aria-label="Inspect Zone 3 brake actuator, high priority"><span class="pin-core"><i data-lucide="wrench"></i></span></button>
+                <button class="map-pin pin-lift" data-event="lift" aria-label="Inspect main lift motor, watch"><span class="pin-core"><i data-lucide="activity"></i></span></button>
+                <button class="map-pin pin-sensor" data-event="sensor" aria-label="Inspect Zone 7 sensor, watch" hidden><span class="pin-core"><i data-lucide="radio"></i></span></button>
+                <span class="station-label"><i data-lucide="map-pin"></i>Load / unload</span>
+              </div>
+              <svg class="callout-lines" aria-hidden="true"><path data-line="brake"/><path data-line="lift"/><path data-line="sensor"/></svg>
+              <button class="canvas-callout callout-right" data-callout="brake" data-event="brake"><span class="callout-meta">Z03 <b>High</b></span><strong>Brake actuator</strong><span class="callout-action">View component <i data-lucide="arrow-up-right"></i></span></button>
+              <button class="canvas-callout callout-left" data-callout="lift" data-event="lift"><span class="callout-meta">L01 <b>Watch</b></span><strong>Lift motor</strong><span class="callout-action">View component <i data-lucide="arrow-up-right"></i></span></button>
+              <button class="canvas-callout callout-right" data-callout="sensor" data-event="sensor" hidden><span class="callout-meta">Z07 <b>Watch</b></span><strong>Proximity sensor</strong><span class="callout-action">View component <i data-lucide="arrow-up-right"></i></span></button>
+            </div>
+            </div>
+          </div>
+          <div class="map-footer"><i data-lucide="circle-check"></i><span>128 of 128 sensors connected</span><span class="footer-divider"></span><span>Last sample <span id="sample-time">14:32:00</span></span></div>
+        </section>
+        <aside class="attention-section" aria-labelledby="attention-title"><div class="section-heading"><div><h2 id="attention-title">Needs attention <span class="subtle-count">3</span></h2><p>Ordered by maintenance priority</p></div><i data-lucide="list-filter"></i></div>
+          <div id="alert-list" class="alert-list"></div>
+        </aside>
+      </div>
+      <section class="fleet-section"><div class="section-heading"><div><h2>Vehicle performance</h2><p>Lap times compared with the track average</p></div><span class="muted small">Last 24 hours</span></div><div class="table-scroll"><table><thead><tr><th>Vehicle</th><th>Track</th><th>Avg. lap time</th><th>Track average</th><th>Deviation</th><th>Condition</th></tr></thead><tbody><tr><td><span class="table-icon"><i data-lucide="tram-front"></i>Vehicle 03</span></td><td>Side A</td><td>74.0 s</td><td>71.2 s</td><td class="amber-text">+2.8 s</td><td><span class="status watch">Watch</span></td></tr><tr><td><span class="table-icon"><i data-lucide="tram-front"></i>Vehicle 01</span></td><td>Side A</td><td>71.4 s</td><td>71.2 s</td><td>+0.2 s</td><td><span class="status healthy">Within range</span></td></tr><tr><td><span class="table-icon"><i data-lucide="tram-front"></i>Vehicle 05</span></td><td>Side B</td><td>70.8 s</td><td>71.0 s</td><td>−0.2 s</td><td><span class="status healthy">Within range</span></td></tr></tbody></table></div></section>
+    </section>
+    <section id="requests-view" hidden><div class="breadcrumb">Maintenance <i data-lucide="chevron-right"></i><span>Work requests</span></div><div class="page-heading"><div><h1>Work requests</h1><p>Maintenance work and associated parts requests</p></div></div><div id="requests-content"></div></section>
+    <footer class="page-footer"><span>HITACHI <span>Maintenance Insights</span></span><span>Illustrative data</span></footer>
+  </main>
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+  <section id="event-drawer" class="event-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden></section>
+  <dialog id="request-dialog" aria-labelledby="modal-title"></dialog>
+  <div id="announcer" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+</body>
+</html>

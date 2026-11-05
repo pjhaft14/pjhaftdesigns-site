@@ -1,0 +1,17 @@
+/* Keep native select behavior while giving every dropdown the same caret inset. */
+.cf-prototype select:not([multiple]), .cf-prototype #sort-choices {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+  background-image: url("select-chevron.svg");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+@media (forced-colors: active) {
+  .cf-prototype select:not([multiple]), .cf-prototype #sort-choices {
+    appearance: auto;
+    background-image: none;
+    padding-right: 10px;
+  }
+}

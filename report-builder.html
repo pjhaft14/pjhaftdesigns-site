@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en" data-theme="light"><head>
     <meta charset="utf-8">
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="AI report builder product design case study by PJ Haft, showing how a seven-step report wizard became a question-led workflow users could inspect and trust.">
-    <title>Turning business questions into CRM reports with AI | PJ Haft</title>
+    <title>Helping sales reps build CRM reports by asking a question in plain language | PJ Haft</title>
     <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://www.pjhaftdesigns.com/report-builder">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PJ Haft Portfolio">
-    <meta property="og:title" content="Turning business questions into CRM reports with AI | PJ Haft">
+    <meta property="og:title" content="Helping sales reps build CRM reports by asking a question in plain language | PJ Haft">
     <meta property="og:description" content="How a seven-step report wizard became a question-led AI workflow users could inspect, refine, and trust.">
     <meta property="og:url" content="https://www.pjhaftdesigns.com/report-builder">
     <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Turning business questions into CRM reports with AI | PJ Haft">
+    <meta name="twitter:title" content="Helping sales reps build CRM reports by asking a question in plain language | PJ Haft">
     <meta name="twitter:description" content="How a seven-step report wizard became a question-led AI workflow users could inspect, refine, and trust.">
     <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CreativeWork",
-        "name": "Turning business questions into CRM reports with AI",
+        "name": "Helping sales reps build CRM reports by asking a question in plain language",
         "description": "A product design case study about turning a seven-step report wizard into a question-led AI workflow.",
         "url": "https://www.pjhaftdesigns.com/report-builder",
         "image": "https://www.pjhaftdesigns.com/assets/report-builder/home-thumbnail-report-review-v10.png",
@@ -33,14 +34,14 @@
     </script>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="live-base-1.css">
     <script src="site-nav.js?v=20261001-shared" defer=""></script>
-  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle"><script src="assets/lucide.min.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+<link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels"><link rel="stylesheet" href="report-detail-labels.css?v=20261103-flow-2"><script src="case-presentation.js?v=20261011-5" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+    <script src="case-video-autoplay.js?v=20261017-1" defer></script>
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
 </head>
   <body>
     <header class="site-header">
@@ -61,58 +62,30 @@
       <section class="case-hero report-builder-hero" aria-labelledby="case-title">
         <div>
           <p class="eyebrow">SugarAI · Enterprise reporting</p>
-          <h1 id="case-title">Turning business questions into CRM reports with AI.</h1>
-          <p>I designed a SugarAI reporting concept that starts with a business question and keeps expert controls within reach. Testing with three sales reps supported keeping both chat and direct editing.</p>
+          <h1 id="case-title">Helping sales reps build CRM reports by asking a question in plain language.</h1>
+          <p>Average time to a complete answer fell from <strong>15–18 minutes</strong> with the previous wizard to <strong>1 minute and 20 seconds</strong> for the three sales reps who tested the new builder.</p>
         </div>
-        <dl class="case-meta">
-          <div>
-            <dt>Role</dt>
-            <dd>Lead UX designer, partnered with PM and the Engineering Lead</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Prototype in development; tested with three sales reps</dd>
-          </div>
-          <div>
-            <dt>Scope</dt>
-            <dd>Strategy, UX, UI</dd>
-          </div>
-        </dl>
+        <dl class="case-meta case-meta--icon"><div><dt><i data-lucide="briefcase" aria-hidden="true"></i>Role</dt><dd>Lead UX designer</dd></div><div><dt><i data-lucide="compass" aria-hidden="true"></i>Scope</dt><dd>Strategy, UX, UI</dd></div><div><dt><i data-lucide="users" aria-hidden="true"></i>Team</dt><dd>Partnered with PM and the Engineering Lead</dd></div><div><dt><i data-lucide="flag" aria-hidden="true"></i>Status</dt><dd>In development</dd></div></dl>
       </section>
 
 
 
-      <section class="case-section case-intro" id="problem">
+
+<section class="case-section case-intro" id="problem">
         <div>
           <p class="section-kicker">The problem</p>
-          <h2>A business question had become a technical setup project.</h2>
+          <h2>A simple sales question required seven setup screens.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            A sales leader knows what they need: open opportunities closing
-            this quarter, grouped by sales stage. The existing workflow begins somewhere
-            else, with the product’s data structure.
-          </p>
-          <p>
-            Users first choose a report type and module, navigate relationships,
-            define filters, configure summaries, select columns, and set chart options.
-            They reason through the implementation before seeing an answer.
-          </p>
-          <p>
-            Each decision lives on a separate screen, so users hold the report in their
-            head while working through one fragment at a time.
-          </p>
-          <blockquote class="case-quote">
-            The current experience begins with the system’s data model. The redesign
-            begins with the user’s question.
-          </blockquote>
+          <p>A sales leader might ask, “Which opportunities close this quarter, and how do they break down by sales stage?” Before the wizard showed any data, it asked for a module, filters, calculations, columns, and chart settings.</p>
+          <p>Without a preview, users had to remember earlier choices and hope the final report answered their question.</p>
         </div>
       </section>
 
       <section class="legacy-sequence" id="old-flow" aria-label="Existing Report Wizard sequence">
         <header class="legacy-sequence__header">
-          <p class="section-kicker">Problem anatomy</p>
-          <h2>Seven setup screens before users see an answer</h2>
+          <p class="section-kicker">Previous workflow</p>
+          <h2>The current Report Wizard</h2>
         </header>
         <figure class="legacy-carousel">
           <img id="legacy-carousel-image" src="https://pjhaftdesigns.com/assets/report-builder/legacy-cropped/legacy-report-wizard-1.png" alt="Existing Report Wizard module selection screen with dozens of modules">
@@ -157,8 +130,8 @@
               team health, forecast risk, and pipeline patterns.
             </p>
           </div>
-          <div class="report-persona-grid">
-            <article>
+          <div class="research-summary" aria-label="Research context"><span>Sales reps &amp; leaders</span><span>Reporting workflows</span><span>2 perspectives</span></div><div class="report-persona-grid" data-findings="Research findings">
+            <article data-summary="Reps needed reports to make daily priorities and follow-up clearer.">
               <p class="persona-role">Sales Representative</p>
               <h3>What do I need to work on today?</h3>
               <ul>
@@ -167,7 +140,7 @@
                 <li><b>Recent activity</b><span>Where do I need to follow up next?</span></li>
               </ul>
             </article>
-            <article>
+            <article data-summary="Leaders needed a wider view of pipeline health, forecast, and risk.">
               <p class="persona-role">Sales Leader</p>
               <h3>Is my team healthy?</h3>
               <ul>
@@ -183,53 +156,46 @@
       <section class="case-section design-challenge" id="challenge">
         <div>
           <p class="section-kicker">Design challenge</p>
-          <h2>AI had to expose the setup, not hide it.</h2>
+          <h2>Make the report’s logic visible and editable.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            The research made the central tension clear: natural language could make
-            reporting faster, but a silently generated chart would hide the reasoning
-            behind it.
-          </p>
-          <p>
-            A chat-only shortcut was not enough. SugarAI needed to propose the setup,
-            then make inspection, editing, and recovery immediate.
-          </p>
+          <p>A chart can look convincing even when it includes the wrong records. I wanted reps to see how SugarAI interpreted their question and correct its filters or grouping before building the report.</p>
+
         </div>
       </section>
 
       <section class="design-decisions" id="decisions" aria-labelledby="decision-title">
         <div class="design-decisions__intro">
-          <p class="section-kicker">Key decisions</p>
-          <h2 id="decision-title">Three choices shaped the design.</h2>
+          <p class="section-kicker">Design decisions</p>
+          <h2 id="decision-title">Review the setup, edit the report, and preview changes.</h2>
         </div>
         <div class="design-decision-grid">
           <article>
             <span>01</span>
             <h3>Review before building</h3>
-            <dl class="decision-tradeoff">
+            <dl class="decision-tradeoff decision-tradeoff--choice">
               <div><dt>Considered</dt><dd>Generating the report immediately</dd></div>
               <div><dt>Chose</dt><dd>A review step before anything is built</dd></div>
-              <div><dt>Why</dt><dd>Incorrect filters can still produce a convincing answer.</dd></div>
             </dl>
+            <p class="decision-rationale">Incorrect filters can still produce a convincing answer.</p>
           </article>
           <article>
             <span>02</span>
             <h3>Let people type or edit directly</h3>
-            <dl class="decision-tradeoff">
+            <dl class="decision-tradeoff decision-tradeoff--choice">
               <div><dt>Considered</dt><dd>A chat-only experience</dd></div>
               <div><dt>Chose</dt><dd>A prompt and direct editing together</dd></div>
-              <div><dt>Why</dt><dd>Experienced report builders still need precise control.</dd></div>
             </dl>
+            <p class="decision-rationale">Experienced report builders still need precise control.</p>
           </article>
           <article>
             <span>03</span>
             <h3>Preview changes before applying them</h3>
-            <dl class="decision-tradeoff">
+            <dl class="decision-tradeoff decision-tradeoff--choice">
               <div><dt>Considered</dt><dd>Applying refinements immediately</dd></div>
               <div><dt>Chose</dt><dd>Preview, Undo, and version history</dd></div>
-              <div><dt>Why</dt><dd>A short request can substantially change the answer.</dd></div>
             </dl>
+            <p class="decision-rationale">A short request can substantially change the answer.</p>
           </article>
         </div>
       </section>
@@ -241,14 +207,14 @@
             <h2 id="report-transformation-title">From seven setup screens to one question.</h2>
           </div>
           <p>
-            SugarAI handles the setup work. People describe what they need, check the
-            proposed structure, and build the report.
+            The rep’s first decision shifted from choosing a database module to describing the answer they needed.
           </p>
         </header>
 
         <div class="report-transformation__comparison">
           <article class="transformation-panel transformation-panel--before">
             <div class="transformation-panel__heading">
+              <span class="workflow-comparison-icon"><i data-lucide="layers" aria-hidden="true"></i></span>
               <span class="transformation-label">Before · 7 steps</span>
               <h3>Configure the system</h3>
               <p>Start with the CRM’s structure and work through seven separate decisions.</p>
@@ -272,6 +238,7 @@
 
           <article class="transformation-panel transformation-panel--after">
             <div class="transformation-panel__heading">
+              <span class="workflow-comparison-icon"><i data-lucide="route" aria-hidden="true"></i></span>
               <span class="transformation-label">After · 3 steps</span>
               <h3>Ask, review, and build</h3>
               <p>Start with the business question and confirm the structure before building.</p>
@@ -287,30 +254,18 @@
 
       <section class="solution-gallery report-builder-gallery" id="concept" aria-label="Natural-language Report Builder solution">
         <header class="solution-gallery-intro">
-          <p class="section-kicker">The new concept</p>
+          <p class="section-kicker">The solution</p>
           <h2>A question becomes a report users can inspect.</h2>
         </header>
 
-        <div class="flow-section-heading">
-          <p class="section-kicker">Flow 1</p>
-          <h3>Create a report from a business question</h3>
-          <p>
-            The primary path turns a plain-language request into a report through a few
-            deliberate checkpoints.
-          </p>
-        </div>
-
-        <article class="flow-story">
-          <div>
-            <p class="section-kicker">Demo</p>
-            <h3>See the complete creation flow</h3>
-          <p>
-            SugarAI frames the question, checks for existing work, confirms the setup,
-            and returns an editable report. Users can preview the table and switch chart
-            types without changing the definition.
-          </p>
-          </div>
-          <figure class="case-video">
+        <article class="flow-story case-evidence-story" id="flow-1-experience">
+<header class="case-evidence-intro">
+            <p class="section-kicker">Flow 1</p>
+            <h3>Create a report from a business question</h3>
+            <p>A rep can type a question or choose a suggested prompt. SugarAI checks for an existing report first.</p>
+            <p>If none fits, the rep reviews the proposed setup, corrects it, and builds the report. They can switch between the table and charts without changing the definition.</p>
+          </header>
+<figure class="case-video case-evidence-card">
             <div class="case-video-frame case-video-frame--flow-1">
               <video class="case-video--fill" controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/report-builder/flow-1-main-poster.jpg" aria-describedby="report-flow-1-caption">
                 <source src="https://pjhaftdesigns.com/assets/report-builder/flow-1-main-no-audio.mp4?v=20260723-01" type="video/mp4">
@@ -321,24 +276,16 @@
               Flow 1: creating a report from a business question.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <div class="flow-section-heading flow-section-heading--supporting">
-          <p class="section-kicker">Key moments inside Flow 1</p>
-          <h3>Supporting details that make the flow feel understandable</h3>
-        </div>
-
-        <article>
-          <div>
+        <article class="case-evidence-story" id="help-getting-started">
+<header class="case-evidence-intro">
             <p class="section-kicker">Help getting started</p>
-            <h3>Welcome users with language and examples grounded in familiar jobs</h3>
-            <p>
-              <b>Create with SugarAI</b> opens with common questions from the research:
-              pipeline by stage, at-risk opportunities, quarterly forecast, and win rate
-              by rep. The examples give users a strong starting point.
-            </p>
-          </div>
-          <figure class="gallery-figure">
+            <h3>Suggested prompts make the first step clear.</h3>
+            <p>Four prompts reflect questions from research, including pipeline by sales stage and win rate by rep.</p>
+            <p>The examples show how to specify a subject, time period, or grouping. Reps can also write their own question.</p>
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <div class="case-focus-crop case-focus-crop--assistant">
               <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-1.png?v=20260723-01" alt="SugarAI report assistant welcoming the user with helper text and four common reporting questions">
             </div>
@@ -346,10 +293,10 @@
               Suggested questions teach the input format without making users start from a blank prompt.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <article>
-          <div>
+        <article class="case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Check what already exists</p>
             <h3>Find reports that may already answer the question</h3>
             <p>
@@ -357,27 +304,27 @@
               can open one or start a new report anyway, avoiding duplicates without
               blocking creation.
             </p>
-          </div>
-          <figure class="gallery-figure">
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <div class="case-focus-crop case-focus-crop--assistant">
               <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-2.png?v=20260723-01" alt="SugarAI showing two existing reports that may answer the user's pipeline question, with Pipeline by sales stage hovered">
             </div>
             <figcaption class="gallery-caption">
-              Similar reports appear before generation, giving reuse a chance without blocking creation.
+              Two suggested reports appear as selectable results, with an option to create a new report.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <article>
-          <div>
+        <article class="case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Review before building</p>
             <h3>Show exactly what SugarAI is about to build</h3>
             <p>
               One screen brings together the data source, report type, grouping, metric,
               filters, and columns. Users can correct the setup before generation.
             </p>
-          </div>
-          <figure class="gallery-figure">
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <div class="case-focus-crop case-focus-crop--assistant case-focus-crop--review-lower">
               <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/shifted-screenshots/report-builder-flow-1-zoom-shift-fixed-3.png?v=20260723-01" alt="SugarAI review card showing the complete report definition before building">
             </div>
@@ -385,18 +332,18 @@
               The review card turns the request into editable report settings.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <article>
-          <div>
+        <article class="case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">While SugarAI builds</p>
             <h3>Keep users informed while the report is being assembled</h3>
             <p>
               A short sequence names the work underway: reading the request, checking
               records, grouping the result, and preparing the chart and table.
             </p>
-          </div>
-          <figure class="gallery-figure">
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <div class="case-focus-crop case-focus-crop--assistant">
               <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/05-building-progress.png?v=20260723-02" alt="SugarAI building progress with completed checks, an active grouping step, and an upcoming chart-and-table step">
             </div>
@@ -404,46 +351,34 @@
               Progress labels make each step legible while the result is being assembled.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <article class="report-definition-story">
-          <div>
+        <article class="report-definition-story case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">After the report is built</p>
             <h3>Keep the report setup easy to find</h3>
             <p>
               The Report definition drawer keeps the setup available after the result
               appears, so users can inspect or refine it without starting over.
             </p>
-          </div>
-          <figure class="gallery-figure">
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <div class="case-detail-crop">
               <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/11-report-definition.png?v=20260722-01" alt="Report definition drawer showing the report data source, report type, grouping, metric, filters, and visible columns">
             </div>
             <figcaption class="gallery-caption">
-              Report setup remains one click away after the result appears.
+              The report’s source, filters, grouping, metric, and columns are listed in the definition drawer.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <div class="flow-section-heading">
-          <p class="section-kicker">Flow 2</p>
-          <h3>Refine, preview, and track history</h3>
-          <p>
-            The follow-up path lets users change a completed report, preview each update,
-            and recover earlier versions.
-          </p>
-        </div>
-
-        <article class="refinement-story">
-          <div>
-            <p class="section-kicker">Demo</p>
-            <h3>Show the change-and-recovery loop in context</h3>
-            <p>
-              The recording starts from the completed report, applies two refinements,
-              previews each update, and ends with the history drawer open.
-            </p>
-          </div>
-          <figure class="case-video">
+        <article class="refinement-story case-evidence-story" id="flow-2-experience">
+<header class="case-evidence-intro">
+            <p class="section-kicker">Flow 2</p>
+            <h3>Refine, preview, and track history</h3>
+            <p>Changing a filter used to mean leaving the report. I kept the results in view so reps could ask a follow-up and preview edits before applying them. They could undo the last change or restore an earlier version.</p>
+          </header>
+<figure class="case-video case-evidence-card">
             <div class="case-video-frame case-video-frame--flow-2">
               <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/report-builder/flow-2-refine-history-poster.jpg?v=20260806-02" aria-describedby="report-flow-2-caption">
                 <source src="https://pjhaftdesigns.com/assets/report-builder/flow-2-refine-history.mp4?v=20260723-01" type="video/mp4">
@@ -454,90 +389,78 @@
               Flow 2: refining a completed report, previewing each change, and opening Change history.
             </figcaption>
           </figure>
-        </article>
+</article>
 
-        <article class="trust-story">
-          <div>
+        <article class="trust-story case-evidence-story" id="trust-details">
+<header class="case-evidence-intro">
             <p class="section-kicker">Why should I trust this?</p>
-            <h3>Use drawers for details that need inspection</h3>
-            <p>
-              Post-build drawers answer practical questions without competing with the
-              main report: <b>Why this report?</b>, <b>Change history</b>, and
-              <b>Data checked</b>.
-            </p>
-          </div>
-          <div class="gallery-figure-pair refinement-detail-gallery">
+            <h3>Give sales teams the context to judge a report.</h3>
+            <p>Before acting on a forecast, a sales leader needs to know which records it includes and whether the data is complete.</p>
+            <p>I put the applied logic, change history, and data checks in drawers so leaders can inspect an answer alongside the chart.</p>
+          </header>
+<div class="gallery-figure-pair refinement-detail-gallery case-evidence-card">
             <figure class="gallery-figure">
+              <figcaption class="gallery-caption report-detail-caption"><strong class="report-detail-label">Why this report?</strong><span>The drawer separates the original request, applied logic, and assumption.</span></figcaption>
               <div class="case-detail-crop">
                 <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/06-why-this-report-v2.png" alt="Why this report drawer showing the original request, logic applied, and assumption">
               </div>
-              <figcaption class="gallery-caption">The drawer separates the original request, applied logic, and assumption.</figcaption>
             </figure>
             <figure class="gallery-figure">
+              <figcaption class="gallery-caption report-detail-caption"><strong class="report-detail-label">Change history</strong><span>Each refinement becomes a visible history entry with a Restore action.</span></figcaption>
               <div class="case-detail-crop">
                 <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/08-change-history-v5.png" alt="Change history drawer showing report refinements with a Restore action">
               </div>
-              <figcaption class="gallery-caption">Each refinement becomes a visible history entry with a Restore action.</figcaption>
             </figure>
             <figure class="gallery-figure">
+              <figcaption class="gallery-caption report-detail-caption"><strong class="report-detail-label">Data checked</strong><span>Source, access, freshness, and quality warnings are grouped in one place.</span></figcaption>
               <div class="case-detail-crop">
                 <img loading="lazy" src="https://pjhaftdesigns.com/assets/report-builder/10-data-checked.png" alt="Data checked drawer showing source information and a data quality warning">
               </div>
-              <figcaption class="gallery-caption">Source, access, freshness, and quality warnings are grouped in one place.</figcaption>
             </figure>
           </div>
-        </article>
+</article>
       </section>
 
       <section class="case-section case-closing" id="testing">
         <div>
-          <p class="section-kicker">Testing and learnings</p>
-          <h2>One result. Different ways to get there.</h2>
+          <p class="section-kicker">Results</p>
+          <h2>How three reps built and revised a report.</h2>
         </div>
         <div class="case-copy case-test-summary">
-          <p>Three sales reps tried the prototype. I observed no confusion completing the tested flows; their different editing preferences supported keeping both interaction methods.</p>
+          <p>All three completed the build and refinement tasks.</p>
           <ul class="case-test-findings">
             <li>
               <span>01</span>
               <div>
-                <strong>The visible result made the flow understandable</strong>
-                <p>
-                  Reps liked seeing the report build before their eyes from simple
-                  statements. The visible data helped them follow what they were creating.
-                </p>
+                <strong>Average time to an answer fell from 15–18 minutes to 1 minute and 20 seconds</strong>
+                <p>I timed the new builder from the start of a report to a complete answer. The comparison uses the previous wizard’s historical average.</p>
               </div>
             </li>
             <li>
               <span>02</span>
               <div>
-                <strong>Different users preferred different controls</strong>
-                <p>
-                  Two reps preferred tweaking the report directly, while the third
-                  used chat to make updates. This supported keeping both interaction
-                  methods available rather than making chat the only path.
-                </p>
+                <strong>Two reps edited directly. One used chat.</strong>
+                <p>I kept both editing options available on the report.</p>
               </div>
             </li>
             <li>
               <span>03</span>
               <div>
-                <strong>Recovery mattered; history could be easier to discover</strong>
-                <p>
-                  One rep asked whether they could return to an earlier report state,
-                  then learned that report history supported this. The capability
-                  addressed their concern, while the question raised an opportunity
-                  to make it easier to discover.
-                </p>
+                <strong>One rep needed help finding version history</strong>
+                <p>The rep wanted to restore an earlier result but couldn’t find the control.</p>
               </div>
             </li>
           </ul>
-          <h3>What I learned</h3>
-          <p>Making the result visible helped reps understand the report. Giving them a choice of chat or direct editing let them refine it in the way that felt natural.</p>
-          <p class="case-note case-next-test">
-            These findings reflect three prototype sessions, not a measured time
-            saving or validation of every reporting workflow. Next, I would test
-            whether users can discover and restore report history without guidance.
-          </p>
+        </div>
+      </section>
+
+      <section class="case-section retrospective" id="retrospective">
+        <div>
+          <p class="section-kicker">Retrospective</p>
+          <h2>Make it easier to restore an earlier result.</h2>
+        </div>
+        <div class="case-copy">
+          <p>Next, I’d try a Restore action beside the edited result and test whether reps can recover without prompting.</p>
         </div>
       </section>
     </main>

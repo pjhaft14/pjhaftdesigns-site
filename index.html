@@ -2,15 +2,16 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
+  <script src="theme.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description" content="Pejman Haft, senior product designer. Selected work in enterprise software, AI, and digital experiences.">
   <title>Pejman Haft | Product Designer</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261026-testimonial-fade">
   <script src="assets/lucide.min.js" defer></script>
-  <script src="app.js" defer></script>
-<link rel=stylesheet href=theme.css><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src=theme.js></script>
+  <script src="app.js?v=20261026-testimonials-moved" defer></script>
+<link rel=stylesheet href=theme.css><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
   <link rel="canonical" href="https://www.pjhaftdesigns.com/">
@@ -21,8 +22,13 @@
   <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
+  <link rel="stylesheet" href="home.css?v=20261103-card-titles">
+  <link rel="stylesheet" href="portrait-animation.css?v=20261027-solid-pupils">
+  <script src="portrait-animation.js?v=20261029-mouth-weight" defer></script>
+<link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Pejman Haft home"><img src="assets/favicon.svg" width="36" height="36" alt=""><span>Pejman Haft</span></a>
@@ -38,63 +44,71 @@
   </header>
   <main id="main">
     <section class="intro wrap" id="top" aria-labelledby="intro-title">
-      <p class="eyebrow">Pejman Haft / Senior product designer</p>
-      <h1 id="intro-title">Clarity for complex<br class="desktop-break"> software.</h1>
-      <p class="intro-copy">I design enterprise products that help people understand what's happening and decide what comes next. My work spans AI, CRM, analytics, and the systems behind them.</p>
-      <a class="text-link intro-link" href="#work">Explore selected work <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+      <div class="intro-profile">
+        <figure class="intro-portrait">
+          <img src="assets/my%20photo/pejman-illustration.png" width="3200" height="3200" alt="Line drawing of Pejman Haft" fetchpriority="high">
+        </figure>
+        <div class="intro-content">
+          <h1 id="intro-title">I see where platforms could go and help get them there.</h1>
+          <p class="intro-copy">I’m Pejman, a senior product designer with 16 years in enterprise software. At SugarAI, I led design for AI-assisted tools, mobile CRM, and analytics.</p>
+          <div class="intro-actions">
+            <a class="intro-action intro-action--primary" href="contact.html">Contact me <span class="intro-action-icon" aria-hidden="true"><i class="icon-rest" data-lucide="mail"></i><i class="icon-hover" data-lucide="mail-open"></i></span></a>
+            <a class="intro-action" href="assets/resume/Pejman-Haft-Resume.pdf?v=20261027-supplied" target="_blank" rel="noopener" aria-label="Download resume (PDF, opens in a new tab)">Download resume <span class="intro-action-icon" aria-hidden="true"><i class="icon-rest" data-lucide="download"></i><i class="icon-hover" data-lucide="file-down"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <dl class="intro-impact" aria-label="Experience and selected impact">
+        <div><dt>16<span>+ years</span></dt><dd>Designing enterprise software across CRM, analytics, and AI-assisted workflows.</dd></div>
+        <div><dt class="impact-journey" aria-label="Zero to one">0 <svg class="impact-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg> 1</dt><dd>Took Puroresu Project from idea to launch, owning the product design, visual identity, and development.</dd></div>
+        <div><dt>2<span> first AI features</span></dt><dd>Led design for SugarAI’s first two AI-powered features: conversational reporting and mobile sales workflows.</dd></div>
+        <div><dt>8,928<span> active users</span><br>35,317<span> website page views</span><br>1M+<span> Instagram views</span></dt><dd>Grew Puroresu Project’s audience across 92 countries and territories.</dd></div>
+      </dl>
     </section>
 
     <section class="wrap work-section" id="work" aria-labelledby="work-title">
-      <div class="section-heading"><h2 class="eyebrow" id="work-title">Selected work</h2></div>
+      <div class="section-heading"><h2 id="work-title">Selected work</h2></div>
       <div class="project-grid">
         <article class="project">
           <a class="project-link" href="puroresu-project.html">
-            <div class="project-media puro-media"><video muted playsinline preload="metadata" poster="assets/puro/lineage-cover.png" aria-label="Puroresu Project exploring connections across Japanese wrestling history" data-loop-start="4.5" data-loop-end="23" src="assets/puro/lineage-connected-data-no-audio.mp4"></video></div>
-            <div class="project-caption"><div><p class="project-category">The Puroresu Project / Editorial systems</p><h3>Turning Japanese pro wrestling history into an interactive archive.</h3></div><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
-            <p class="project-description">An interactive guide to Japanese wrestling. A place for newcomers to start, and for longtime fans to keep exploring.</p>
+            <div class="project-media puro-media"><video muted playsinline preload="metadata" poster="assets/puro/connected-data-upload-v2-20261011-poster.jpg" aria-label="Puroresu Project exploring connections across Japanese wrestling history" data-loop-start="0" data-loop-end="35.7" src="assets/puro/connected-data-upload-v2-20261011-silent-20261015.mp4"></video></div>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/puroresu-app.svg?v=20261029-heavier-ink" width="24" height="24" alt="">Puroresu Project</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">10 min</span></p><h3>Making 72 years of Japanese pro wrestling history easier for fans to explore and understand.</h3></div></div>
           </a>
         </article>
         <article class="project">
           <a class="project-link" href="report-builder.html">
             <div class="project-media report-media"><video muted playsinline preload="metadata" poster="assets/report-builder/home-thumbnail-report-review-v10.png" aria-label="SugarAI reviewing and building a report from a natural-language request" data-loop-start="24" data-loop-end="44" src="assets/report-builder/flow-1-main-no-audio.mp4"></video></div>
-            <div class="project-caption"><div><p class="project-category">SugarAI / Enterprise AI</p><h3>Turning business questions into CRM reports with AI.</h3></div><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
-            <p class="project-description">Turning a seven-step wizard into a conversation people can review, understand, and trust.</p>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/sugarai-app.svg?v=20261029-smaller-s-3" width="24" height="24" alt="">SugarAI</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">6 min</span></p><h3>Helping sales reps build CRM reports by asking a question in plain language.</h3></div></div>
           </a>
         </article>
         <article class="project">
           <a class="project-link" href="sugarai-mobile.html">
             <div class="project-media mobile-media"><div class="phone-preview"><video muted playsinline preload="metadata" poster="assets/sugarai-mobile/home-thumbnail/active-visit-dictation.png" aria-label="SugarAI Mobile capturing live visit notes" data-loop-start="0" data-loop-end="12" src="assets/sugarai-mobile/home-thumbnail/active-visit-dictation-loop.mp4"></video></div><div class="phone-preview"><video muted playsinline preload="metadata" poster="assets/sugarai-mobile/home-thumbnail/ask-sugarai-poster.jpg" aria-label="Ask SugarAI answering a customer service question" data-loop-start="0" data-loop-end="15" src="assets/sugarai-mobile/home-thumbnail/ask-sugarai-loop.mp4"></video></div><div class="phone-preview"><video muted playsinline preload="metadata" poster="assets/sugarai-mobile/home-thumbnail/widget-capture-poster.jpg" aria-label="SugarAI Mobile home screen widget capturing a dictated CRM update" data-loop-start="0" data-loop-end="21" src="assets/sugarai-mobile/home-thumbnail/widget-capture-loop.mp4"></video></div></div>
-            <div class="project-caption"><div><p class="project-category">SugarAI / Mobile CRM</p><h3>Designing mobile CRM around the customer visit.</h3></div><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
-            <p class="project-description">A mobile experience built around a field rep's day, from visit preparation to the follow-through.</p>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/sugarai-app.svg?v=20261029-smaller-s-3" width="24" height="24" alt="">SugarAI</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">6 min</span></p><h3>Keeping customer information up to date without interrupting on-site sales visits.</h3></div></div>
+          </a>
+        </article>
+        <article class="project" id="conditional-formatting-project">
+          <a class="project-link" href="conditional-formatting.html">
+            <div class="project-media report-media conditional-media"><video muted playsinline preload="metadata" poster="assets/conditional-formatting/solution-dashboard.png?v=20261021-walkthrough-colors" aria-label="Conditional formatting keeping region colors consistent across CRM dashboard charts and opportunity records" data-loop-start="43" data-loop-end="62" src="assets/conditional-formatting/conditional-formatting-walkthrough.mp4"></video></div>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/sugarai-app.svg?v=20261029-smaller-s-3" width="24" height="24" alt="">SugarAI</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">7 min</span></p><h3>Making data easier for sales reps and leaders to recognize across an entire platform.</h3></div></div>
           </a>
         </article>
         <article class="project">
-          <a class="project-link" href="https://www.pjhaftdesigns.com/drafts/maintenance-insights">
+          <a class="project-link" href="maintenance-insights.html">
             <div class="project-media maintenance-media"><video muted playsinline loop preload="metadata" poster="assets/maintenance-insights/ride-map-poster.png" aria-label="Maintenance Insights ride map showing simulated vehicle movement and component alerts" data-loop-start="0" data-loop-end="18" src="assets/maintenance-insights/ride-map-loop.mp4"></video></div>
-            <div class="project-caption"><div><p class="project-category">Hitachi / Ride maintenance</p><h3>Helping theme park engineers move from alerts to maintenance plans.</h3></div><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
-            <p class="project-description">Helping ride engineers assess emerging issues and coordinate maintenance before park operations are disrupted.</p>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/hitachi-vantara-app.svg?v=20261029-larger" width="24" height="24" alt="">Hitachi Vantara</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">8 min</span></p><h3>Giving engineers the tools to prevent downtime at Walt Disney World’s Space Mountain.</h3></div></div>
           </a>
         </article>
         <article class="project">
           <a class="project-link" href="clubsphere.html">
             <div class="project-media club-media"><video muted playsinline preload="metadata" poster="assets/clubsphere/home-thumbnail-match-readiness.png" aria-label="ClubSphere showing squad availability and match readiness" data-loop-start="14.5" data-loop-end="30" src="assets/clubsphere/flow-2-match-center.mp4"></video></div>
-            <div class="project-caption"><div><p class="project-category">ClubSphere / Product concept</p><h3>Bringing player readiness and match planning together for football clubs.</h3></div><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
-            <p class="project-description">Bringing scouting, lineup decisions, and medical updates into one place for the whole club.</p>
+            <div class="project-caption"><div><p class="project-category"><span class="project-company"><img class="project-company-logo" src="assets/icons/clubsphere-app.svg?v=20261029-teal" width="24" height="24" alt="">ClubSphere</span><span class="project-meta-separator" aria-hidden="true">•</span><span class="project-read-time">7 min</span></p><h3>Connecting a scout’s match notes to a coach’s lineup decisions.</h3></div></div>
           </a>
         </article>
       </div>
     </section>
 
-    <section class="wrap testimonial" aria-label="Colleague recommendation">
-      <div class="testimonial-heading"><p class="eyebrow">Working together</p><div class="testimonial-controls"><span class="testimonial-count" aria-hidden="true">01 / 06</span><button class="icon-button quote-previous" type="button" aria-label="Previous testimonial" title="Previous testimonial"><i data-lucide="arrow-left" aria-hidden="true"></i></button><button class="icon-button quote-pause" type="button" aria-label="Pause testimonials" title="Pause testimonials"><i data-lucide="pause" aria-hidden="true"></i></button><button class="icon-button quote-next" type="button" aria-label="Next testimonial" title="Next testimonial"><i data-lucide="arrow-right" aria-hidden="true"></i></button></div></div>
-      <div class="testimonial-stage" aria-roledescription="carousel" aria-label="Colleague recommendations">
-        <div class="testimonial-slide"><blockquote>"He balances strategic vision with attention to detail, applies sharp critical thinking, and helps teams make stronger decisions."</blockquote><div class="quote-person"><img src="assets/testimonials/Adrian.jpg" alt="" loading="lazy"><p>Adrian Venables<span>Product Owner / Manager</span></p></div></div>
-        <div class="digital-dissolve" aria-hidden="true"></div>
-      </div>
-      <p class="quote-announcement sr-only" aria-live="polite" aria-atomic="true"></p>
-    </section>
 
-    <section class="contact-band" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><p class="eyebrow">Have something in mind?</p><h2 id="contact-title">Let's make the<br>next step clearer.</h2><p>Open to product design roles and thoughtful collaborations.</p></div><a class="contact-link" href="contact.html">Get in touch <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></section>
+
   </main>
   <footer class="site-footer site-footer--unified">
     <span>&copy; 2026 Pejman Haft</span>

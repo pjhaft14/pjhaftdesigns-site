@@ -1,0 +1,19 @@
+/* Testimonials sit beneath the About page's experience section. */
+.testimonial { max-width: 1060px; padding: 0 0 80px; }
+.testimonial .section-heading { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 42px; text-align: center; }
+.testimonial .section-heading h2 { font-size: clamp(30px, 3vw, 40px); line-height: 1.15; letter-spacing: -.025em; font-weight: 600; }
+.testimonial .section-heading p { color: var(--muted); font-size: 17px; text-align: center; }
+.testimonial-heading { margin-bottom: 16px; padding: 0 8px; }
+.testimonial .testimonial-heading .eyebrow { font-family: inherit; text-transform: none; font-size: 12px; font-weight: 400; }
+.testimonial-slide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-self: stretch; }
+.testimonial .quote-card { display: flex; flex-direction: column; padding: 32px; border-radius: 30px; border: 1px solid var(--personal-line); background: var(--personal-card); box-shadow: var(--personal-shadow); }
+.testimonial blockquote { margin: 0 0 38px; font-size: 19px; line-height: 1.65; font-weight: 400; color: var(--muted); }
+.testimonial .quote-person { margin-top: auto; }
+.testimonial .quote-person p { font-size: 14px; font-weight: 550; }
+.testimonial .quote-person span { font-weight: 400; }
+@media (max-width: 760px) {
+  .testimonial { padding-bottom: 52px; }
+  .testimonial-slide { grid-template-columns: 1fr; gap: 18px; }
+  .testimonial .quote-card { padding: 26px; border-radius: 26px; }
+  .testimonial blockquote { font-size: 18px; margin-bottom: 26px; }
+}

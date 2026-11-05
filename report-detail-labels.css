@@ -1,0 +1,58 @@
+:root[data-theme] .case-study.report-builder-case .report-detail-caption {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
+  gap: 6px 16px; width: 100%; max-width: none; margin: 0 0 16px; padding: 0;
+  font-size: 13px; line-height: 1.55;
+}
+.case-study.report-builder-case .report-detail-caption > .report-detail-label {
+  margin: 0; color: var(--case-label); font-size: 14px; font-weight: 600;
+  line-height: 1.5; text-align: center; flex-shrink: 0;
+}
+.case-study.report-builder-case .design-decision-grid { grid-template-columns: minmax(0, 1fr); }
+.case-study.report-builder-case .design-decision-grid > article:nth-child(n) { grid-column: auto; padding: 24px; }
+.case-study.report-builder-case .design-decision-grid > article,
+.case-study.report-builder-case .design-decision-grid > article > :is(span, h3, p),
+.case-study.report-builder-case .design-decision-grid .decision-tradeoff--choice,
+.case-study.report-builder-case .design-decision-grid .decision-tradeoff--choice :is(dt, dd) { text-align: center; }
+@media (min-width: 1100px) {
+  .case-study.report-builder-case .design-decision-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(1180px, calc(100vw - 48px));
+    margin-inline: calc((100% - min(1180px, calc(100vw - 48px))) / 2);
+  }
+}
+@media (max-width: 760px) {
+  .case-study.report-builder-case .report-detail-caption > span { width: 100%; }
+}
+
+/* One gap between topics; a smaller gap connects an introduction to its evidence. */
+.case-study.report-builder-case { --report-section-gap: 72px; --report-intro-gap: 32px; }
+.case-study.report-builder-case > section { margin-block: 0; padding-block: 0; }
+.case-study.report-builder-case > section + section { margin-top: var(--report-section-gap); }
+.case-study.report-builder-case .case-hero .case-meta { margin-bottom: 0; }
+.case-study.report-builder-case .solution-gallery { gap: var(--report-section-gap); }
+.case-study.report-builder-case .solution-gallery-intro { padding-top: 0; }
+.case-study.report-builder-case :is(.legacy-sequence__header, .design-decisions__intro, .report-transformation__intro) {
+  margin-bottom: var(--report-intro-gap);
+}
+.case-study.report-builder-case .case-section > div > .case-copy:last-child { margin-bottom: 0; }
+.case-study.report-builder-case .case-copy > :last-child,
+.case-study.report-builder-case :is(.legacy-sequence__header, .design-decisions__intro, .report-transformation__intro) > :last-child {
+  margin-bottom: 0;
+}
+:root[data-theme] .case-study.report-builder-case .case-evidence-story { gap: var(--report-intro-gap); }
+
+/* Let the browser adjust line breaks to avoid isolated words at paragraph endings. */
+.case-study.report-builder-case :is(p, figcaption, dd, .report-detail-caption > span) { text-wrap: pretty; }
+#flow-2-experience .case-evidence-intro > p:not(.section-kicker) {
+  max-width: 66ch;
+  margin-top: 12px;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+@media (max-width: 760px) {
+  .case-study.report-builder-case { --report-section-gap: 48px; --report-intro-gap: 24px; }
+  #flow-2-experience .case-evidence-intro > p:not(.section-kicker) {
+    text-align: start;
+    text-wrap: pretty;
+  }
+}

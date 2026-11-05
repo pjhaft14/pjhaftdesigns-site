@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" fill="none">
+  <title>One value. Shared meaning.</title>
+  <desc>A sales leader defines purple styling for the APAC region in Sugar Enterprise. The same value and styling carry to Sugar Discover, Sugar Market, and Sugar Predict, supporting consistent recognition by sales leaders and their teams across views and devices. This is a schematic ecosystem map.</desc>
+  <style>
+    :root { color-scheme: light; }
+    :root[data-theme="dark"] { color-scheme: dark; }
+    :root[data-theme="dark"] [fill="#FAFBFE"] { fill: #121218; }
+    :root[data-theme="dark"] [fill="#FFFFFF"] { fill: #1d1d26; }
+    :root[data-theme="dark"] [fill="#F1F4F9"] { fill: #161620; }
+    :root[data-theme="dark"] [fill="#1D2939"] { fill: #101017; }
+    :root[data-theme="dark"] [fill="#F1F4F8"] { fill: #272733; }
+    :root[data-theme="dark"] [fill="#DCE3EF"] { fill: #39394c; }
+    :root[data-theme="dark"] [fill="#F2F1F7"] { fill: #2b2739; }
+    :root[data-theme="dark"] [fill="#D8D5E6"] { fill: #3d3650; }
+    :root[data-theme="dark"] [fill="#D9DDE7"] { fill: #575264; }
+    :root[data-theme="dark"] [fill="#243047"], :root[data-theme="dark"] [fill="#253147"],
+    :root[data-theme="dark"] [fill="#202B40"], :root[data-theme="dark"] [fill="#283247"],
+    :root[data-theme="dark"] [fill="#293349"] { fill: #f1f1f5; }
+    :root[data-theme="dark"] [fill="#697186"], :root[data-theme="dark"] [fill="#677186"],
+    :root[data-theme="dark"] [fill="#7F8798"], :root[data-theme="dark"] [fill="#7D8799"],
+    :root[data-theme="dark"] [fill="#727D90"], :root[data-theme="dark"] [fill="#8390A1"],
+    :root[data-theme="dark"] [fill="#6D788B"], :root[data-theme="dark"] [fill="#8B7FA5"],
+    :root[data-theme="dark"] [fill="#837594"], :root[data-theme="dark"] [fill="#8790A0"],
+    :root[data-theme="dark"] [fill="#7D8798"], :root[data-theme="dark"] [fill="#59657C"],
+    :root[data-theme="dark"] [fill="#8A92A3"] { fill: #b0adbf; }
+    :root[data-theme="dark"] [fill="#746B87"] { fill: #c7bfdc; }
+    :root[data-theme="dark"] [stroke="#E5E9F0"], :root[data-theme="dark"] [stroke="#E0E5EE"],
+    :root[data-theme="dark"] [stroke="#E2E7EF"], :root[data-theme="dark"] [stroke="#E4E5EF"],
+    :root[data-theme="dark"] [stroke="#E0E3ED"] { stroke: #34343f; }
+    :root[data-theme="dark"] #wash stop:first-child { stop-color: #33274a; }
+    :root[data-theme="dark"] #wash stop:last-child { stop-color: #121218; }
+    :root[data-theme="dark"] #ink stop:first-child { stop-color: #f1f1f5; }
+    :root[data-theme="dark"] #ink stop:last-child { stop-color: #c8b5ee; }
+  </style>
+  <defs>
+    <radialGradient id="wash" cx="0" cy="0" r="1" gradientTransform="translate(1100 470) rotate(90) scale(520 640)" gradientUnits="userSpaceOnUse"><stop stop-color="#EEE8FF" stop-opacity=".68"/><stop offset="1" stop-color="#FAFBFE" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ink" x1="66" y1="115" x2="1090" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#182237"/><stop offset="1" stop-color="#4E4778"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="22" flood-color="#303253" flood-opacity=".07"/><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#303253" flood-opacity=".04"/></filter>
+    <filter id="tag-shadow" x="-40%" y="-80%" width="180%" height="260%"><feDropShadow dx="0" dy="9" stdDeviation="15" flood-color="#7452C9" flood-opacity=".14"/></filter>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#D8D5E6" opacity=".5"/></pattern>
+    <clipPath id="enterprise-clip"><rect x="64" y="334" width="640" height="374" rx="20"/></clipPath>
+  </defs>
+  <rect width="1440" height="1000" fill="#FAFBFE"/>
+  <rect width="1440" height="1000" fill="url(#wash)"/>
+  <rect x="730" y="285" width="240" height="480" fill="url(#dots)"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="64" y="57" width="7" height="7" rx="2" fill="#8057D5"/>
+    <text x="82" y="65" font-size="12" font-weight="600" letter-spacing="2" fill="#697186">CONDITIONAL FORMATTING · THE SUGAR ECOSYSTEM</text>
+    <text x="61" y="149" font-size="62" font-weight="600" letter-spacing="-2.8" fill="url(#ink)">One value. Shared meaning.</text>
+    <text x="64" y="196" font-size="21" fill="#677186">A consistent visual identity for sales data, wherever teams encounter it.</text>
+
+    <text x="64" y="277" font-size="12" font-weight="600" letter-spacing="1.7" fill="#7F8798">01 / DEFINE THE MEANING</text>
+    <text x="64" y="311" font-size="22" font-weight="600" letter-spacing="-.5" fill="#243047">Sugar Enterprise</text>
+    <text x="984" y="277" font-size="12" font-weight="600" letter-spacing="1.7" fill="#7F8798">02 / CARRY IT ACROSS PRODUCTS</text>
+
+    <rect x="64" y="334" width="640" height="374" rx="20" fill="#FFFFFF" filter="url(#shadow)"/>
+    <g clip-path="url(#enterprise-clip)">
+      <rect x="64" y="334" width="48" height="374" fill="#1D2939"/>
+      <rect x="112" y="334" width="592" height="47" fill="#FFFFFF"/>
+      <rect x="112" y="381" width="592" height="327" fill="#F1F4F9"/>
+      <path d="M112 381H704" stroke="#E5E9F0"/>
+      <rect x="78" y="355" width="20" height="3" rx="1.5" fill="#CBD2DF"/>
+      <rect x="78" y="362" width="14" height="3" rx="1.5" fill="#CBD2DF"/>
+      <rect x="77" y="406" width="22" height="22" rx="6" fill="#3D4A5E"/>
+      <rect x="83" y="412" width="10" height="10" rx="2" fill="#B6C1D2"/>
+      <rect x="81" y="453" width="14" height="14" rx="4" fill="#708098"/>
+      <rect x="81" y="493" width="14" height="14" rx="4" fill="#708098"/>
+      <rect x="81" y="533" width="14" height="14" rx="4" fill="#708098"/>
+      <text x="136" y="364" font-size="13" font-weight="600" fill="#253147">Sales workspace</text>
+      <rect x="490" y="349" width="154" height="17" rx="8.5" fill="#F1F4F8"/>
+      <circle cx="671" cy="358" r="10" fill="#DCE3EF"/>
+      <text x="136" y="420" font-size="12" fill="#7D8799">Team settings / Conditional formatting</text>
+      <text x="136" y="451" font-size="21" font-weight="600" letter-spacing="-.5" fill="#202B40">Give Region a visual meaning</text>
+      <text x="136" y="476" font-size="13" fill="#727D90">Configured by the sales leader. Shared with the team.</text>
+      <text x="149" y="515" font-size="11" font-weight="500" letter-spacing=".7" fill="#8390A1">VALUE</text>
+      <text x="418" y="515" font-size="11" font-weight="500" letter-spacing=".7" fill="#8390A1">STYLE PREVIEW</text>
+      <rect x="136" y="529" width="544" height="47" rx="9" fill="#EEE7FD"/>
+      <text x="150" y="558" font-size="14" font-weight="600" fill="#37295D">Asia Pacific</text>
+      <rect x="416" y="540" width="88" height="25" rx="12.5" fill="#E4D7FC"/>
+      <circle cx="430" cy="552.5" r="3.5" fill="#8057D5"/>
+      <text x="441" y="557" font-size="12" font-weight="600" fill="#6239A9">APAC</text>
+      <circle cx="653" cy="552" r="5" fill="#8057D5"/>
+      <path d="M148 594H667" stroke="#E2E7EF"/>
+      <text x="150" y="618" font-size="13" fill="#6D788B">Europe, Middle East &amp; Africa</text>
+      <text x="419" y="618" font-size="12" fill="#8390A1">EMEA</text>
+      <path d="M148 633H667" stroke="#E2E7EF"/>
+      <text x="150" y="658" font-size="13" fill="#6D788B">Americas</text>
+      <text x="419" y="658" font-size="12" fill="#8390A1">AMER</text>
+    </g>
+    <rect x="64.5" y="334.5" width="639" height="373" rx="19.5" stroke="#E0E5EE"/>
+    <text x="65" y="741" font-size="14" fill="#727D90">A shared definition connects configuration to consumption.</text>
+
+    <g stroke="#BBA6E4" stroke-width="2">
+      <path d="M704 552H720Q732 552 732 540V528Q732 516 744 516H756"/>
+      <path d="M920 516H934Q950 516 950 500V382Q950 366 966 366H984"/>
+      <path d="M920 516H984"/>
+      <path d="M920 516H934Q950 516 950 532V650Q950 666 966 666H984"/>
+    </g>
+    <circle cx="704" cy="552" r="4" fill="#8057D5"/>
+    <text x="770" y="465" font-size="11" font-weight="600" letter-spacing="1.1" fill="#8B7FA5">SHARED VALUE</text>
+    <rect x="756" y="482" width="164" height="68" rx="18" fill="#F0E8FF" filter="url(#tag-shadow)"/>
+    <circle cx="784" cy="516" r="5" fill="#8057D5"/>
+    <text x="801" y="523" font-size="22" font-weight="600" letter-spacing="-.5" fill="#633AA9">APAC</text>
+    <text x="769" y="578" font-size="12" fill="#837594">Same value. Same styling.</text>
+
+    <g filter="url(#shadow)"><rect x="984" y="304" width="392" height="124" rx="18" fill="#FFFFFF"/><rect x="984" y="454" width="392" height="124" rx="18" fill="#FFFFFF"/><rect x="984" y="604" width="392" height="124" rx="18" fill="#FFFFFF"/></g>
+    <g stroke="#E4E5EF"><rect x="984.5" y="304.5" width="391" height="123" rx="17.5"/><rect x="984.5" y="454.5" width="391" height="123" rx="17.5"/><rect x="984.5" y="604.5" width="391" height="123" rx="17.5"/></g>
+    <g fill="#F2F1F7"><rect x="1008" y="328" width="38" height="38" rx="11"/><rect x="1008" y="478" width="38" height="38" rx="11"/><rect x="1008" y="628" width="38" height="38" rx="11"/></g>
+    <g font-size="17" font-weight="500" fill="#746B87" text-anchor="middle"><text x="1027" y="353">D</text><text x="1027" y="503">M</text><text x="1027" y="653">P</text></g>
+    <g font-size="19" font-weight="600" letter-spacing="-.4" fill="#283247"><text x="1059" y="353">Sugar Discover</text><text x="1059" y="503">Sugar Market</text><text x="1059" y="653">Sugar Predict</text></g>
+    <g font-size="12" fill="#8790A0"><text x="1008" y="401">Region</text><text x="1008" y="551">Region</text><text x="1008" y="701">Region</text></g>
+    <g fill="#E4D7FC"><rect x="1266" y="381" width="86" height="26" rx="13"/><rect x="1266" y="531" width="86" height="26" rx="13"/><rect x="1266" y="681" width="86" height="26" rx="13"/></g>
+    <g fill="#8057D5"><circle cx="1280" cy="394" r="3.5"/><circle cx="1280" cy="544" r="3.5"/><circle cx="1280" cy="694" r="3.5"/></g>
+    <g font-size="12" font-weight="600" fill="#6239A9"><text x="1291" y="398.5">APAC</text><text x="1291" y="548.5">APAC</text><text x="1291" y="698.5">APAC</text></g>
+
+    <path d="M64 819H1376" stroke="#E0E3ED"/>
+    <text x="64" y="859" font-size="12" font-weight="600" letter-spacing="1.7" fill="#7F8798">03 / RECOGNIZE IT EVERYWHERE</text>
+    <text x="64" y="900" font-size="25" font-weight="600" letter-spacing="-.6" fill="#293349">Sales leaders + their teams</text>
+    <text x="64" y="929" font-size="15" fill="#7D8798">A familiar cue, across views and devices.</text>
+    <g font-size="15" fill="#59657C"><text x="786" y="890">Lists</text><text x="858" y="890">Reports</text><text x="959" y="890">Dashboards</text><text x="1101" y="890">Desktop</text><text x="1211" y="890">Mobile</text></g>
+    <g fill="#D9DDE7"><circle cx="835" cy="885" r="2"/><circle cx="934" cy="885" r="2"/><circle cx="1075" cy="885" r="2"/><circle cx="1186" cy="885" r="2"/></g>
+    <text x="786" y="921" font-size="12" fill="#8A92A3">Shared visual identity across supported product experiences.</text>
+  </g>
+</svg>

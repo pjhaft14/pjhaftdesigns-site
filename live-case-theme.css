@@ -21,8 +21,10 @@
 :root[data-theme="dark"] .tool-flow-clubsphere svg{fill:#147b80}
 :root[data-theme="dark"] :is(.case-test-findings li,.sugarai-test-findings li){background:var(--panel);border-color:var(--line);box-shadow:none}
 :root[data-theme="dark"] :is(.case-test-findings li>span,.sugarai-test-findings li>span){background:#224b35;border-color:#477c59;color:#d7f4df}
-:root{color-scheme:dark;--ink:#f1f1f3;--body:#c1c1c8;--muted:#a4a4ad;--subtle:#909099;--paper:#0d0d0f;--panel:#17171a;--panel-strong:#202024;--line:#ffffff20;--white:#f1f1f3;--accent-primary:#222228;--accent-primary-strong:#2d2d35;--accent-secondary:#1d2b26;--accent-tertiary:#292326;--accent-neutral:#242427;--sky:#202830;--shadow:none;--shadow-soft:none;--radius-sm:1.25rem;--radius-md:1.25rem;--radius-lg:1.25rem;--header-glass:#111114c9}
-:root[data-theme="light"]{color-scheme:light;--ink:#18181b;--body:#56565e;--muted:#66666e;--subtle:#74747d;--paper:#fff;--panel:#f5f5f7;--panel-strong:#ebebee;--line:#dbdbe1;--white:#18181b;--accent-primary:#eeeeF3;--accent-primary-strong:#e3e3eb;--accent-secondary:#edf4f0;--accent-tertiary:#f5efef;--accent-neutral:#efeff2;--sky:#edf2f6;--header-glass:#ffffffc9}
+/* Light is the base theme; dark overrides it. :where() keeps the dark block at :root specificity so the
+   dark accent block above (line 7) still takes precedence, as it did before. */
+:root{color-scheme:light;--ink:#18181b;--body:#56565e;--muted:#66666e;--subtle:#74747d;--paper:#fff;--panel:#f5f5f7;--panel-strong:#ebebee;--line:#dbdbe1;--white:#18181b;--accent-primary:#eeeeF3;--accent-primary-strong:#e3e3eb;--accent-secondary:#edf4f0;--accent-tertiary:#f5efef;--accent-neutral:#efeff2;--sky:#edf2f6;--header-glass:#ffffffc9;--shadow:none;--shadow-soft:none;--radius-sm:1.25rem;--radius-md:1.25rem;--radius-lg:1.25rem}
+:root:where([data-theme="dark"]){color-scheme:dark;--ink:#f1f1f3;--body:#c1c1c8;--muted:#a4a4ad;--subtle:#909099;--paper:#0d0d0f;--panel:#17171a;--panel-strong:#202024;--line:#ffffff20;--white:#f1f1f3;--accent-primary:#222228;--accent-primary-strong:#2d2d35;--accent-secondary:#1d2b26;--accent-tertiary:#292326;--accent-neutral:#242427;--sky:#202830;--header-glass:#111114c9}
 body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink)}
 h1,h2{font-family:inherit}
 .case-study :is(.eyebrow,.section-kicker,.case-meta dt,.early-signals__label,.persona-role,.transformation-label,.decision-tradeoff dt){font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:500;line-height:1.5;letter-spacing:0;text-transform:uppercase;color:var(--muted)}
@@ -39,10 +41,13 @@ h1,h2,h3,h4,p,a,dt,dd,span{letter-spacing:0}
 .icon-button svg{width:20px;height:20px}
 .case-image img,.case-image video,.gallery-figure>img,.gallery-figure>video{border-radius:1.25rem}
 .button.primary,.nav-cta{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.button.puro-visit-button{gap:10px;padding:8px 18px 8px 10px}
+.button.puro-visit-button{gap:10px;padding:8px 18px 8px 10px;width:fit-content;max-width:100%;justify-self:center}
 .puro-visit-button>img{display:block;width:32px;height:32px;flex-shrink:0;object-fit:contain;border-radius:4px}
+.button.primary.puro-visit-button:is(:hover,:focus-visible){background:#35353c;border-color:#50505a;color:#fff;box-shadow:0 6px 18px #00000020;transform:translateY(-2px)}
+.button.primary.puro-visit-button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 :root[data-theme="dark"] .button.primary.puro-visit-button{background:#17171a;border-color:#66666e;color:#f1f1f3}
-:root[data-theme="dark"] .button.primary.puro-visit-button:hover{background:#202024;border-color:#909099}
+:root[data-theme="dark"] .button.primary.puro-visit-button:is(:hover,:focus-visible){background:#303036;border-color:#a4a4ad;color:#fff}
+@media(prefers-reduced-motion:reduce){.button.primary.puro-visit-button{transition:none}.button.primary.puro-visit-button:is(:hover,:focus-visible){transform:none}}
 .case-meta,.impact-grid article,.design-decision-grid article{box-shadow:none}
 .transformation-panel--before,.transformation-panel--after,.sugarai-transformation .transformation-panel--after,.design-decision-grid article:nth-child(n){background:var(--panel)}
 .transformation-label,.transformation-flow li,.transformation-flow--after li,.design-decision-grid>article>span{background:var(--panel-strong);border-color:var(--line);color:var(--ink);box-shadow:none}

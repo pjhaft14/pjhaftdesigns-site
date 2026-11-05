@@ -1,0 +1,26 @@
+.icon-motion-link .button-motion-icon {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+.icon-motion-link .button-motion-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 18px;
+  height: 18px;
+  transition: transform .3s cubic-bezier(.44, 0, .56, 1), opacity .3s ease;
+}
+.icon-motion-link .icon-rest { transform: translateY(0); opacity: 1; }
+.icon-motion-link .icon-hover { transform: translateY(-110%); opacity: 0; }
+.icon-motion-link:is(:hover, :focus-visible) .icon-rest { transform: translateY(110%); opacity: 0; }
+.icon-motion-link:is(:hover, :focus-visible) .icon-hover { transform: translateY(0); opacity: 1; }
+.icon-motion-link--arrow .icon-hover { transform: translate(-110%, 110%); }
+.icon-motion-link--arrow:is(:hover, :focus-visible) .icon-rest { transform: translate(110%, -110%); }
+.icon-motion-link--arrow:is(:hover, :focus-visible) .icon-hover { transform: translate(0, 0); }
+@media (prefers-reduced-motion: reduce) {
+  .icon-motion-link .button-motion-icon svg { transition: none; }
+  .icon-motion-link .button-motion-icon :is(.icon-rest, .icon-hover) { transform: none; }
+}

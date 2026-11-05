@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en" data-theme="light"><head>
     <meta charset="utf-8">
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Puroresu Project case study by PJ Haft, turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
-    <title>Turning Japanese pro wrestling history into an interactive archive | PJ Haft</title>
+    <title>Making 72 years of Japanese pro wrestling history easier for fans to explore and understand | PJ Haft</title>
     <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://www.pjhaftdesigns.com/puroresu-project">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PJ Haft Portfolio">
-    <meta property="og:title" content="Turning Japanese pro wrestling history into an interactive archive | PJ Haft">
+    <meta property="og:title" content="Making 72 years of Japanese pro wrestling history easier for fans to explore and understand | PJ Haft">
     <meta property="og:description" content="Turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
     <meta property="og:url" content="https://www.pjhaftdesigns.com/puroresu-project">
     <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Turning Japanese pro wrestling history into an interactive archive | PJ Haft">
+    <meta name="twitter:title" content="Making 72 years of Japanese pro wrestling history easier for fans to explore and understand | PJ Haft">
     <meta name="twitter:description" content="Turning Japanese professional wrestling history into an interactive archive, lineage map, timeline, and research system.">
     <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CreativeWork",
-        "name": "Turning Japanese pro wrestling history into an interactive archive",
+        "name": "Making 72 years of Japanese pro wrestling history easier for fans to explore and understand",
         "description": "A product design case study about turning Japanese professional wrestling history into an interactive archive and research system.",
         "url": "https://www.pjhaftdesigns.com/puroresu-project",
         "image": "https://www.pjhaftdesigns.com/assets/puro/lineage-cover.png",
@@ -33,14 +34,29 @@
     </script>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="live-base-1.css">
+    <link rel="stylesheet" href="puro-architecture.css?v=20261012-7">
+    <link rel="stylesheet" href="puro-device-tabs.css?v=20261012-2">
+    <script src="puro-device-tabs.js?v=20261012-2" defer></script>
+    <script src="case-video-autoplay.js?v=20261017-1" defer></script>
+    <link rel="stylesheet" href="puro-portrait-rotation.css?v=20261012-3">
+    <script src="puro-portrait-rotation.js?v=20261012-2" defer></script>
+    <script src="image-lightbox.js?v=20261012-1" defer></script>
+    <link rel="stylesheet" href="puro-card-system.css?v=20261011-1">
     <script src="site-nav.js?v=20261001-shared" defer=""></script>
-  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <link rel="stylesheet" href="live-case-theme.css?v=20261026-puro-visit-hover"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle"><script src="assets/lucide.min.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+<link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels">
+<link rel="stylesheet" href="puro-experience-layout.css?v=20261012-7"><script src="case-presentation.js?v=20261011-5" defer></script><script src="puro-site-map.js?v=20261012-1" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
+  <style>
+    .early-signals__views-card { container-type: inline-size; }
+    .early-signals__views-card strong { font-size: clamp(2rem, 18cqi, 4rem); }
+    .puro-case .early-signals__map-frame { padding: clamp(16px, 2.5vw, 32px); }
+    .puro-case .early-signals__map-frame { padding: clamp(16px, 2vw, 24px); background: var(--panel); }
+    .puro-case .early-signals__map-frame iframe { display: block; width: 100%; border: 0; background: transparent; }
+  </style>
 </head>
   <body>
     <header class="site-header">
@@ -58,18 +74,11 @@
       <section class="case-hero case-hero--puro" aria-labelledby="case-title">
         <div>
           <p class="eyebrow">Puroresu Project</p>
-          <h1 id="case-title">Turning Japanese pro wrestling history into an interactive archive.</h1>
-          <p>I designed and built a connected archive that gives newcomers a way into Japanese pro wrestling history. It reached 2,143 active website users during July 28–August 26, 2026; usability with newcomers remains to be tested.</p>
+          <h1 id="case-title">Making 72 years of Japanese pro wrestling history easier for fans to explore and understand.</h1>
+          <p>I designed and built an interactive archive linking the wrestlers, promotions, eras, and traditions that shaped Japanese pro wrestling. The archive recorded 35,317 website views from July 1 to October 30, 2026.</p>
           <a class="button primary puro-visit-button" href="https://www.puroresuproject.com/"><img src="assets/puro/social-logo.png" width="32" height="32" alt=""><span>Visit Puroresu Project</span></a>
         </div>
-        <dl class="case-meta">
-          <div><dt>Year</dt><dd>2026</dd></div>
-          <div><dt>Status</dt><dd>Live archive; ongoing development</dd></div>
-          <div><dt>Role</dt><dd>Creator and designer</dd></div>
-          <div><dt>Scope</dt><dd>Research, UX, UI, code</dd></div>
-          <div><dt>Type</dt><dd>Independent archive</dd></div>
-          <div><dt>Platform</dt><dd>Responsive web</dd></div>
-        </dl>
+        <dl class="case-meta case-meta--icon"><div><dt><i data-lucide="briefcase" aria-hidden="true"></i>Role</dt><dd>Creator and designer</dd></div><div><dt><i data-lucide="compass" aria-hidden="true"></i>Scope</dt><dd>Research, UX, UI, visual design, code</dd></div><div><dt><i data-lucide="flag" aria-hidden="true"></i>Status</dt><dd>2026 · Live archive; ongoing development</dd></div><div><dt><i data-lucide="monitor" aria-hidden="true"></i>Platform</dt><dd>Independent archive · Responsive web</dd></div></dl>
       </section>
 
 
@@ -81,30 +90,21 @@
         <figcaption>One archive connecting history, matches, people, places, and culture.</figcaption>
       </figure>
 
-      <section class="case-section case-intro" id="context">
-        <div><p class="section-kicker">Context and brief</p><h2>Give newcomers a way in without flattening the history.</h2></div>
-        <div class="case-copy">
-          <p>Japanese wrestling history is scattered across eras, promotions, languages, biographies, and old media. Newcomers need a way to connect it without years of assumed knowledge.</p>
 
-          <p>I connected those records through information architecture, editorial design, and a content system that keeps historical claims traceable.</p>
+<section class="case-section case-intro" id="context">
+        <div><p class="section-kicker">The problem</p><h2>From VHS tapes to an interactive archive.</h2></div>
+        <div class="case-copy">
+          <p>I was about ten when I started buying All Japan Pro Wrestling and FMW matches on VHS from U.S. tape shops and traders. I learned the history one match at a time.</p>
+          <p id="architecture">For international fans, that history is scattered across articles, videos, and biographies, many available only in Japanese. A newcomer can find a match and still have no idea how the wrestlers are connected.</p>
+          <p>I built the archive to give newcomers a way in and longtime fans a way to follow those connections.</p>
         </div>
       </section>
 
-      <section class="case-section" id="architecture">
-        <div><p class="section-kicker">The problem</p><h2>An archive can be complete and still be hard to enter.</h2></div>
+<section class="case-section" id="approach">
+        <div><p class="section-kicker">Design decisions</p><h2>Organize the records around the relationships.</h2></div>
         <div class="case-copy">
-          <p>A flat catalog would make the material searchable, but not necessarily understandable. A purely editorial story would be easier to follow, but could hide the depth that makes exploration rewarding.</p>
-          <p>I had to hold both ideas at once: give newcomers a clear first path, then let the system open up into people, eras, styles, rivalries, venues, matches, and cultural artifacts without losing orientation.</p>
-          <blockquote class="case-quote">I was not trying to simplify the history. I was trying to make the complexity legible.</blockquote>
-        </div>
-      </section>
-
-      <section class="case-section" id="approach">
-        <div><p class="section-kicker">How I got there</p><h2>Design the way in before designing the rooms.</h2></div>
-        <div class="case-copy">
-          <p>I organized the experience in layers. The Story gives a guided introduction. Timeline and Styles provide historical and conceptual context. Wrestlers, Venues, Lineage, and The Vault become the working archive. Beyond the Ring extends the story into masks, games, magazines, music, and home video culture.</p>
-          <p>That structure gave each page a different job. The Timeline works like an editorial chronology. Lineage becomes a relationship map. The Vault supports browsing and viewing decisions. Shared navigation and controls hold the system together without forcing every part into the same template.</p>
-          <dl class="decision-tradeoff">
+          <p>A newcomer might arrive without knowing a name to search for. A longtime fan might come looking for a particular match.</p>
+          <dl class="decision-tradeoff decision-tradeoff--choice">
             <div>
               <dt>Considered</dt>
               <dd>A single searchable archive that exposed every record at the same level.</dd>
@@ -117,227 +117,328 @@
         </div>
       </section>
 
-      <figure class="case-image full puro-ia-figure">
-        <div class="puro-ia-diagram" role="img" aria-label="Puroresu Project information architecture moving through four stages: guided entry, historical context, core archive, and study and reference. Cross-links connect related sections across the archive.">
-          <header class="puro-ia-diagram__header">
-            <div>
-              <p>Editorial information architecture</p>
-              <h3>From a guided starting point to deep reference</h3>
+      <section class="case-section puro-ia-section" id="editorial-architecture">
+        <div><p class="section-kicker">Information architecture</p><h2 id="reader-title">Explore by section or follow a curated trail.</h2></div>
+        <div class="case-copy"><p>The Story introduces the eras and leads into Timeline. Fans who know what they want can go straight to a collection. Archive Trails offer another route. Pick a theme and follow its connections.</p></div>
+        <figure class="puro-site-map" data-puro-site-map aria-labelledby="reader-title">
+          <div class="site-map-home"><i data-lucide="house" aria-hidden="true"></i><div><span>Puroresu Project</span><h3>Homepage</h3></div></div>
+          <div class="site-map-entrances">
+            <div><i data-lucide="compass" aria-hidden="true"></i><h4>Browse the top navigation</h4><p>Open the section that interests you.</p></div>
+            <div><i data-lucide="route" aria-hidden="true"></i><h4>Follow Archive Trails</h4><p>Enter through a curated historical theme.</p></div>
+          </div>
+          <p class="site-map-navigation-label">Destinations in the top navigation</p>
+          <div class="site-map-columns">
+            <section class="site-map-group" aria-labelledby="site-map-primary-title">
+              <header><h3 id="site-map-primary-title">Main sections</h3><p>Direct access from the header</p></header>
+              <div class="site-map-primary">
+                <div class="site-map-node" data-map-node="story"><i data-lucide="newspaper" aria-hidden="true"></i><h4>The Story</h4><p>An introduction across eras</p><span class="site-map-detail">Continues into Timeline</span></div>
+                <div class="site-map-node" data-map-node="timeline"><i data-lucide="history" aria-hidden="true"></i><h4>Timeline</h4><p>Chronology and documented moments</p></div>
+                <div class="site-map-node" data-map-node="wrestlers"><i data-lucide="users" aria-hidden="true"></i><h4>Wrestlers</h4><p>Profiles and career context</p></div>
+                <div class="site-map-node" data-map-node="promotions"><i data-lucide="flag" aria-hidden="true"></i><h4>Promotions</h4><p>Organizations and their histories</p></div>
+                <div class="site-map-node" data-map-node="lineage"><i data-lucide="git-branch" aria-hidden="true"></i><h4>Lineage</h4><p>Training, institutions, and influence</p></div>
+                <div class="site-map-node" data-map-node="vault"><i data-lucide="film" aria-hidden="true"></i><h4>The Vault</h4><p>Match and game collections</p><span class="site-map-detail">Matches · Games</span></div>
+              </div>
+            </section>
+            <section class="site-map-group site-map-beyond" aria-labelledby="site-map-beyond-title">
+              <header><h3 id="site-map-beyond-title">Beyond the Ring <i data-lucide="chevron-down" aria-hidden="true"></i></h3><p>Four destinations in the navigation dropdown</p></header>
+              <div class="site-map-secondary">
+                <div class="site-map-node" data-map-node="traditions"><i data-lucide="book-open" aria-hidden="true"></i><h4>Traditions</h4><p>Styles and wrestling traditions</p></div>
+                <div class="site-map-node" data-map-node="venues"><i data-lucide="map-pin" aria-hidden="true"></i><h4>Venues</h4><p>Venue histories and geography</p></div>
+                <div class="site-map-node" data-map-node="masks"><i data-lucide="scan-face" aria-hidden="true"></i><h4>Masks</h4><p>Mask archive and identities</p></div>
+                <div class="site-map-node" data-map-node="voices"><i data-lucide="mic" aria-hidden="true"></i><h4>Voices &amp; Officials</h4><p>Referees, announcers, and other voices</p></div>
+              </div>
+            </section>
+          </div>
+          <div class="site-map-utilities"><span>Project links</span><ul><li>What’s New</li><li>Shop</li><li>Support</li><li>About</li></ul></div>
+          <section class="site-map-trails" aria-labelledby="site-map-trails-title">
+            <div><h3 id="site-map-trails-title">Trace a homepage trail</h3><p>Choose a theme to see the sections it opens.</p></div>
+            <div class="site-map-trail-buttons" role="group" aria-label="Example Archive Trail" hidden>
+              <button type="button" data-map-trail="muta" aria-pressed="true">Muta Mythology</button>
+              <button type="button" data-map-trail="tiger-mask" aria-pressed="false">Tiger Mask Phenomenon</button>
+              <button type="button" data-map-trail="four-pillars" aria-pressed="false">The Four Pillars</button>
+              <button type="button" data-map-trail="inokiism" aria-pressed="false">Inokiism</button>
+              <button type="button" data-map-trail="deathmatch-frontier" aria-pressed="false">Deathmatch Frontier</button>
+              <button type="button" data-map-trail="monster-gaijins" aria-pressed="false">Monster Gaijins</button>
             </div>
-            <p>Each layer answers a different reader need while shared relationships keep the archive connected.</p>
-          </header>
+            <p class="site-map-trail-result" aria-live="polite" aria-atomic="true"><strong data-map-trail-name>Muta Mythology</strong><i data-lucide="arrow-right" aria-hidden="true"></i><span data-map-trail-destinations>The Vault · Lineage · Masks · Timeline</span></p>
+            <p class="site-map-trail-note">The highlighted tiles show where the selected trail leads.</p>
+          </section>
+          <figcaption>Archive Trails link existing records, so a wrestler or match can appear in more than one trail.</figcaption>
+        </figure>
+      </section>
 
-          <svg class="puro-ia-icon-defs" aria-hidden="true">
-            <symbol id="material-arrow-forward" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></symbol>
-            <symbol id="material-swap-horiz" viewBox="0 0 24 24"><path d="M6.99 11 3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"></path></symbol>
-          </svg>
-
-          <ol class="puro-ia-path">
-            <li class="puro-ia-stage">
-              <span>01</span>
-              <h3>Guided entry</h3>
-              <p>Help a new reader find a clear way into the history.</p>
-              <ul>
-                <li>Start Here</li>
-                <li>Learning Paths</li>
-              </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
-            </li>
-            <li class="puro-ia-stage">
-              <span>02</span>
-              <h3>Historical context</h3>
-              <p>Establish the time, places, and institutions around the story.</p>
-              <ul>
-                <li>Timeline</li>
-                <li>Promotions</li>
-                <li>Venues</li>
-              </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
-            </li>
-            <li class="puro-ia-stage puro-ia-stage--core">
-              <span>03</span>
-              <h3>Core archive</h3>
-              <p>Explore the people, matches, and relationships at the center.</p>
-              <ul>
-                <li>Wrestlers</li>
-                <li>Match Guide</li>
-                <li>Lineage</li>
-                <li>Vault</li>
-              </ul>
-              <svg class="puro-ia-stage-arrow" aria-hidden="true" focusable="false"><use href="#material-arrow-forward"></use></svg>
-            </li>
-            <li class="puro-ia-stage">
-              <span>04</span>
-              <h3>Study and reference</h3>
-              <p>Go deeper into language, style, and the surrounding culture.</p>
-              <ul>
-                <li>Styles</li>
-                <li>Glossary</li>
-                <li>Beyond the Ring</li>
-              </ul>
-            </li>
-          </ol>
-
-          <div class="puro-ia-crosslinks">
-            <div>
-              <p>Connected across the archive</p>
-              <h3>Readers can move sideways without starting over.</h3>
-            </div>
-            <ul aria-label="Examples of relationships between archive sections">
-              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Promotions</span></li>
-              <li><span>Wrestlers</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Match Guide</span></li>
-              <li><span>Match Guide</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Styles</span></li>
-              <li><span>Timeline</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Promotions</span></li>
-              <li><span>Lineage</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Wrestlers</span></li>
-              <li><span>Vault</span><svg class="puro-ia-link-icon" aria-hidden="true" focusable="false"><use href="#material-swap-horiz"></use></svg><span>Match Guide</span></li>
-            </ul>
+      <section class="case-section" id="content-system">
+        <div><p class="section-kicker">Content system</p><h2 id="content-system-title">One place to maintain the historical record.</h2></div>
+        <div class="case-copy">
+          <p>I generate the collections from shared records. Correcting a name, date, or relationship in one place carries the correction across the archive.</p>
+        </div>
+        <div class="puro-record-system" role="group" aria-label="Shared records generate the archive’s collections">
+          <div class="puro-source-records">
+            <span class="puro-record-icon"><i data-lucide="database" aria-hidden="true"></i></span>
+            <h3>Shared source records</h3>
+            <p>Maintain the record once</p>
+            <ul><li>Identities</li><li>Dates</li><li>Relationships</li><li>Source status</li><li>Image references</li></ul>
+          </div>
+          <div class="puro-record-generation">
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+            <span>Generate<br> site data</span>
+          </div>
+          <div class="puro-record-collections" id="content" aria-label="Working archive">
+            <article><i data-lucide="users" aria-hidden="true"></i><strong>155</strong><h3>Wrestler profiles</h3><p>Biographies, relationships, key matches, and source status.</p></article>
+            <article><i data-lucide="history" aria-hidden="true"></i><strong>61</strong><h3>Timeline moments</h3><p>Across five eras, each with a compact documented record.</p></article>
+            <article><i data-lucide="film" aria-hidden="true"></i><strong>126</strong><h3>Curated matches</h3><p>Across 17 promotions, connected to context and viewing guidance.</p></article>
+            <article><i data-lucide="map-pin" aria-hidden="true"></i><strong>48</strong><h3>Venue histories</h3><p>Signature moments, regional context, and map exploration.</p></article>
           </div>
         </div>
-        <figcaption>The architecture moves from orientation to context, then into the core archive and deeper reference material. Cross-links let a reader change direction without starting over.</figcaption>
-      </figure>
+        <ul class="puro-content-rules" aria-label="Editorial rules">
+          <li><span class="puro-rule-icon"><i data-lucide="git-branch" aria-hidden="true"></i></span><h3>Specific relationships</h3><p>Keep relationship labels specific: a tag partner or stablemate is not automatically a rival.</p></li>
+          <li><span class="puro-rule-icon"><i data-lucide="calendar-check" aria-hidden="true"></i></span><h3>Honest date precision</h3><p>Use only the date precision supported by the sources, and distinguish a match date from its airdate.</p></li>
+          <li><span class="puro-rule-icon"><i data-lucide="book-open-check" aria-hidden="true"></i></span><h3>Facts with sources</h3><p>Separate documented history from editorial interpretation and viewing guidance, with traceable sources behind factual claims.</p></li>
+        </ul>
+      </section>
 
       <section class="case-section puro-home-experience" id="homepage">
-        <div><p class="section-kicker">Solution entry point</p><h2>One homepage, two ways into the archive.</h2></div>
+        <div><p class="section-kicker">The solution</p><h2>A homepage built from broadcast memory.</h2></div>
         <div>
           <div class="case-copy">
-            <p>The homepage needed to feel alive before it explained itself. I designed the hero around the feeling of old VHS tapes cycling through wrestling clips: grainy, oversized, dramatic, and already in motion when a visitor arrives.</p>
-            <p>Archive Trails became the guided entry system below that first impression. Instead of dropping someone into a flat catalog, each trail gives them a curated route through the archive, connecting wrestlers, matches, eras, masks, media, and cultural artifacts around a theme.</p>
-            <p>The device layouts then shape how that entry point behaves, including different imagery and crops to frame the emotion for each context. Desktop works as a broad orientation surface with more paths visible at once, while mobile turns the same material into a closer, more directed top-to-bottom progression for visitors arriving from search or social.</p>
+            <p>Oversized, grainy photographs recall the Japanese wrestling magazines I grew up with.</p>
+            <p>From the homepage, the Tiger Mask trail connects matches in The Vault with wrestler profiles, lineage, and masks. A fan can start with a familiar face and follow a connection they didn’t know about.</p>
           </div>
-          <div class="puro-home-devices" aria-label="Puroresu Project homepage on desktop and mobile">
-            <figure class="puro-home-desktop">
-              <span>Desktop homepage</span>
-              <img src="https://pjhaftdesigns.com/assets/puro/home-desktop.png?v=20260809-02" alt="Puroresu Project homepage on desktop with full navigation, wide hero, archive trails, and footer">
-            </figure>
-            <div class="puro-device-notes puro-device-notes--desktop" aria-label="Desktop homepage design decision">
-              <article><strong>Desktop</strong><p>Expose more of the system early: hero, navigation, stats, trails, and support all visible enough to invite branching.</p></article>
+          <div class="findings-card puro-home-devices" id="homepage-views" data-home-device-tabs>
+            <div class="findings-tabs puro-device-tabs" role="tablist" aria-label="Homepage device views" hidden>
+              <button type="button" id="homepage-desktop-tab" role="tab" aria-controls="homepage-desktop" aria-selected="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M12 16v4M8 20h8"></path></svg>
+                <span>Desktop</span>
+              </button>
+              <button type="button" id="homepage-mobile-tab" role="tab" aria-controls="homepage-mobile" aria-selected="false" tabindex="-1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>
+                <span>Mobile</span>
+              </button>
             </div>
-            <figure class="puro-home-mobile-showcase">
-              <span>Mobile homepage</span>
+            <div class="puro-device-panels">
+            <figure class="puro-home-desktop" id="homepage-desktop" role="tabpanel" aria-labelledby="homepage-desktop-tab" tabindex="0">
+              <img src="assets/puro/home-desktop-v2-20261012.png" width="2561" height="2836" alt="Updated Puroresu Project desktop homepage with navigation, wrestling hero, archive overview, Muta Mythology trail, and footer">
+            </figure>
+            <figure class="puro-home-mobile-showcase" id="homepage-mobile" role="tabpanel" aria-labelledby="homepage-mobile-tab" tabindex="0">
               <div class="puro-home-mobile-grid" aria-label="Puroresu Project mobile homepage progression">
                 <article class="puro-home-mobile-card">
                   <p>Homepage entry</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-top.png?v=20260809-02" alt="Top of the Puroresu Project mobile homepage with navigation, hero, and archive overview">
+                    <img src="assets/puro/home-mobile-top-20261012.jpg" width="500" height="1082" alt="Updated Puroresu Project mobile homepage entry with navigation, wrestling hero, and archive overview">
                   </div>
                 </article>
                 <article class="puro-home-mobile-card">
                   <p>Archive Trails</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-trails.png?v=20260809-02" alt="Archive Trails section of the Puroresu Project mobile homepage showing the Muta Mythology trail">
+                    <img src="assets/puro/home-mobile-trails-20261012.jpg" width="500" height="1082" alt="Updated mobile Archive Trails section showing Muta Mythology and its connected archive actions">
                   </div>
                 </article>
                 <article class="puro-home-mobile-card">
                   <p>Deeper trail actions</p>
                   <div class="puro-phone-frame puro-home-mobile-frame">
-                    <img src="https://pjhaftdesigns.com/assets/puro/home-mobile-deeper.png?v=20260809-02" alt="Lower portion of the Puroresu Project mobile homepage with trail actions and footer navigation">
+                    <img src="assets/puro/home-mobile-deeper-20261012.jpg" width="500" height="1082" alt="Updated mobile homepage with Muta Mythology trail actions and footer navigation">
                   </div>
                 </article>
               </div>
             </figure>
-            <div class="puro-device-notes puro-device-notes--mobile" aria-label="Mobile homepage design decision">
-              <article><strong>Mobile</strong><p>Reduce simultaneous choices and let the trail read as a guided path through one theme at a time.</p></article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="case-section">
-        <div><p class="section-kicker">Experience system</p><h2>Shared foundations, not shared templates.</h2></div>
-        <div class="case-copy">
-          <p>Across the archive, the visual system uses dark surfaces, aged-paper moments, strong condensed typography, and restrained red accents. Reusable controls such as search, filters, cards, detail panels, and navigation create familiarity across the site.</p>
-          <p>The individual experiences still needed their own behavior. That mattered more than making the component library look perfectly uniform. A historical timeline should not feel like a streaming shelf, and a lineage map should not behave like a profile grid.</p>
+      <section class="solution-gallery puro-solution-gallery puro-trail-strip" id="experiences" aria-label="Puroresu Project archive entry points">
+        <article class="puro-showcase-wide puro-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">The Story</p>
+            <h3>A guided way into unfamiliar history.</h3>
+            <p>For a reader who wants the historical context first, The Story introduces the eras and leads directly into the Timeline.</p>
+          </header>
+          <figure class="gallery-figure puro-video-figure puro-media-card">
+            <video id="story-walkthrough" controls="" playsinline="" muted="" preload="metadata" poster="assets/puro/story-demo-20261011-poster.jpg">
+              <source src="assets/puro/story-demo-20261011.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <figcaption class="gallery-caption">The Story pairs its introduction with next steps into the archive.</figcaption>
+          </figure>
+        </article>
+        <article class="puro-showcase-wide puro-experience" id="timeline-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">Timeline</p>
+            <h3>Historical context became something to browse.</h3>
+            <p>The Timeline places a match or turning point within its era, alongside the promotions and events that shaped it.</p>
+          </header>
+          <figure class="gallery-figure puro-video-figure puro-media-card">
+            <video id="timeline-walkthrough" controls="" playsinline="" muted="" preload="metadata" poster="assets/puro/timeline-upload-20261015-poster.jpg">
+              <source src="assets/puro/timeline-upload-20261015-silent-20261015.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <figcaption class="gallery-caption">Era groupings place individual events within the larger chronology.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="solution-gallery puro-solution-gallery puro-archive-showcase" id="archive" aria-label="Puroresu Project wrestler archive">
+        <article class="puro-showcase-wide puro-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">Wrestler archive</p>
+            <h3>Profiles became a network, not a stack of biographies.</h3>
+            <p>Readers can find a wrestler by name, promotion, era, gender, or rivalry. A profile opens beside the roster so they can follow an opponent without losing their place.</p>
+            <p>Each profile brings together the biography, titles, and key matches behind those connections.</p>
+          </header>
+          <figure class="gallery-figure puro-video-figure puro-profile-screen puro-media-card">
+            <video id="wrestlers-walkthrough" controls="" playsinline="" muted="" preload="metadata" poster="assets/puro/wrestlers-upload-20261011-poster.jpg">
+              <source src="assets/puro/wrestlers-upload-20261011-silent-20261015.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <figcaption class="gallery-caption">The Wrestlers page keeps roster browsing, profile detail, and rivalry paths in one connected archive view.</figcaption>
+          </figure>
+        </article>
+        <div class="puro-portrait-system puro-experience" id="portrait-system">
+          <header class="puro-portrait-intro puro-experience__intro">
+            <p class="section-kicker">Portrait system</p>
+            <h3>Consistent framing makes wrestlers easier to recognize.</h3>
+            <p>Obscured faces and uneven framing made some wrestlers hard to recognize. For several from the 1950s and 1960s, clear portraits were scarce.</p>
+            <p>Roster portraits were the only photography work where I used AI. I trained the models to preserve each wrestler’s features and kept the framing consistent across the roster.</p>
+          </header>
+          <div class="puro-portrait-rotation puro-media-card" data-portrait-rotation role="region" aria-label="Classic and modern wrestler portrait examples">
+            <div class="puro-portrait-slides">
+              <div class="puro-portrait-grid" data-portrait-set role="group" aria-label="Portrait set 1 of 3">
+                <img src="assets/puro/portraits/rikidozan-20261015.webp" alt="Rikidōzan" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/antonio-inoki.webp" alt="Antonio Inoki" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/giant-baba.webp" alt="Giant Baba" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/mitsuharu-misawa.webp" alt="Mitsuharu Misawa" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/tiger-mask.webp" alt="Tiger Mask" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/hiroshi-tanahashi.webp" alt="Hiroshi Tanahashi" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/kazuchika-okada.webp" alt="Kazuchika Okada" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/tetsuya-naito.webp" alt="Tetsuya Naito" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/mayu-iwatani.webp" alt="Mayu Iwatani" loading="eager" decoding="async">
+                <img src="assets/puro/portraits/will-ospreay.webp" alt="Will Ospreay" loading="eager" decoding="async">
+              </div>
+              <div class="puro-portrait-grid" data-portrait-set role="group" aria-label="Portrait set 2 of 3">
+                <img src="assets/puro/portraits/jumbo-tsuruta.webp" alt="Jumbo Tsuruta" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/genichiro-tenryu.webp" alt="Genichiro Tenryu" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/toshiaki-kawada.webp" alt="Toshiaki Kawada" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/jaguar-yokota.webp" alt="Jaguar Yokota" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/bull-nakano.webp" alt="Bull Nakano" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/kento-miyahara.webp" alt="Kento Miyahara" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/kaito-kiyomiya.webp" alt="Kaito Kiyomiya" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/giulia.webp" alt="Giulia" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/miyu-yamashita.webp" alt="Miyu Yamashita" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/konosuke-takeshita.webp" alt="Konosuke Takeshita" loading="lazy" decoding="async">
+              </div>
+              <div class="puro-portrait-grid" data-portrait-set role="group" aria-label="Portrait set 3 of 3">
+                <img src="assets/puro/portraits/keiji-mutoh.webp" alt="Keiji Mutoh" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/shinya-hashimoto.webp" alt="Shinya Hashimoto" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/atsushi-onita.webp" alt="Atsushi Onita" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/manami-toyota.webp" alt="Manami Toyota" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/jushin-thunder-liger.webp" alt="Jushin Thunder Liger" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/hiromu-takahashi.webp" alt="Hiromu Takahashi" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/utami-hayashishita.webp" alt="Utami Hayashishita" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/shingo-takagi.webp" alt="Shingo Takagi" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/yuki-ueno.webp" alt="Yuki Ueno" loading="lazy" decoding="async">
+                <img src="assets/puro/portraits/sareee.webp" alt="Sareee" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="puro-portrait-controls" hidden>
+              <button type="button" class="puro-portrait-dot" data-portrait-select="0" aria-label="Show portrait set 1" aria-pressed="true"><span aria-hidden="true"></span></button>
+              <button type="button" class="puro-portrait-dot" data-portrait-select="1" aria-label="Show portrait set 2" aria-pressed="false"><span aria-hidden="true"></span></button>
+              <button type="button" class="puro-portrait-dot" data-portrait-select="2" aria-label="Show portrait set 3" aria-pressed="false"><span aria-hidden="true"></span></button>
+              <button type="button" class="puro-portrait-pause" data-portrait-pause aria-label="Pause portrait rotation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"></path></svg></button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="case-section lineage-story" id="lineage">
-        <div><p class="section-kicker">Connected data</p><h2>Lineage made the archive visible as a system.</h2></div>
-        <div class="case-copy">
-          <p>A biography can explain who Antonio Inoki was. The Lineage view can show where he sits inside the larger history: the roots that shaped him, the institution he created, and the people and movements that carried parts of his philosophy forward.</p>
-          <p>Selecting Inoki focuses the graph without erasing the surrounding archive. Rikidōzan, the JWA Dojo, and Karl Gotch converge from the left. Typed paths then branch toward wrestlers including Riki Choshu, Tiger Mask, Akira Maeda, and later New Japan generations, with AJW lineages grouped around figures such as Chigusa Nagayo, Dump Matsumoto, Bull Nakano, and Manami Toyota.</p>
-          <p>The interface turns a data-model decision into a reading experience. Color explains what kind of connection the reader is seeing; direction shows how it moves through time; focus makes one story legible inside a much larger network.</p>
-        </div>
-      </section>
-
-      <figure class="case-image full lineage-feature">
-        <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/lineage-connected-data-poster.jpg">
-          <source src="https://pjhaftdesigns.com/assets/puro/lineage-connected-data-no-audio.mp4?v=20260723-01" type="video/mp4">
+      <section class="solution-gallery puro-solution-gallery" id="lineage" aria-label="Lineage exploration">
+        <article class="puro-showcase-wide puro-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">Connected data</p>
+            <h3>Lineage made the archive visible as a system.</h3>
+            <p>A biography tells Rikidōzan’s story. Lineage shows who trained, influenced, or worked alongside a wrestler.</p>
+            <p>Selecting Tiger Mask brings his connections to Antonio Inoki and New Japan into focus while the surrounding network stays visible.</p>
+            <p>Color distinguishes types of relationships. Direction shows how influence moves across generations.</p>
+          </header>
+      <figure class="gallery-figure puro-video-figure puro-media-card">
+        <video id="lineage-walkthrough" controls="" playsinline="" muted="" preload="metadata" poster="assets/puro/connected-data-upload-v2-20261011-poster.jpg">
+          <source src="assets/puro/connected-data-upload-v2-20261011-silent-20261015.mp4" type="video/mp4">
           Your browser does not support embedded video.
         </video>
+        <figcaption class="gallery-caption">
+          Selecting a wrestler reveals a focused lineage path while keeping the
+          wider network visible.
+        </figcaption>
+      </figure>
+        </article>
+      </section>
+
+      <figure class="case-image full lineage-architecture-map" id="lineage-map">
+        <ul class="puro-map-legend" aria-label="Lineage map relationship colors">
+          <li><span class="puro-map-legend__line" style="--relationship-color:#658f4f" aria-hidden="true"></span>Promotion / Movement Lineage</li>
+          <li><span class="puro-map-legend__line" style="--relationship-color:#b68a32" aria-hidden="true"></span>Dojo / Institutional Lineage</li>
+          <li><span class="puro-map-legend__line" style="--relationship-color:#b9342b" aria-hidden="true"></span>Direct Trainer</li>
+          <li><span class="puro-map-legend__line" style="--relationship-color:#477f9f" aria-hidden="true"></span>Stylistic Influence</li>
+          <li><span class="puro-map-legend__line" style="--relationship-color:#8d5aa7" aria-hidden="true"></span>Rivalry Influence</li>
+        </ul>
+        <button class="lineage-map-trigger" type="button" aria-label="Enlarge the full Lineage map" aria-haspopup="dialog" aria-controls="lineage-map-lightbox" data-lightbox-target="lineage-map-lightbox" data-lightbox-initial-zoom="true">
+          <img src="assets/puro/lineage-architecture-map-20261011-tight.png" width="1823" height="1052" alt="Puroresu Project lineage map with all relationship lines visible across wrestlers, dojos, and eras">
+          <span class="lineage-map-trigger__hint" aria-hidden="true">Enlarge map ↗</span>
+        </button>
         <figcaption>
-          The Lineage explorer follows the connection from Antonio Inoki to Hiroshi
-          Tanahashi, showing how training, promotion history, and stylistic influence
-          can turn a dense archive into a readable path through generations.
+          The full Lineage map, with all relationship types visible across generations.
         </figcaption>
       </figure>
 
-      <section class="case-section lineage-model-section">
-        <div><p class="section-kicker">Connection model</p><h2>Every line needed a reason to exist.</h2></div>
-        <div>
-          <div class="case-copy">
-            <p>Before designing the focused Lineage view, I mapped the broader network across eras: roots, promotions, dojos, trainers, stylistic branches, AJW lineages, and wrestlers who carried ideas forward. The goal was not to show every connection at once, but to understand the archive well enough to reveal one useful path at a time.</p>
-            <p>The graph is built from canonical nodes and directional links rather than lines drawn for the composition. A full-profile node points back to the wrestler record that owns the person’s identity. Each link carries a specific relationship type, and the interface derives the focused path, summary, legend, and mobile presentation from the same data.</p>
+      <dialog class="image-lightbox" id="lineage-map-lightbox" aria-label="Full Lineage map">
+        <div class="image-lightbox__shell">
+          <button class="image-lightbox__close" type="button" aria-label="Close enlarged Lineage map">×</button>
+          <div class="image-lightbox__viewport">
+            <img class="image-lightbox__image" src="assets/puro/lineage-full-map-20261012.svg" width="6264" height="4224" loading="lazy" alt="Enlarged Lineage map showing all relationship types across wrestlers, dojos, and eras" title="Click or tap the map to zoom in or out">
           </div>
-          <ol class="lineage-data-flow" aria-label="How wrestler data becomes a lineage view">
-            <li><strong>Canonical profile</strong><span>Identity, era, promotion, portrait, and profile availability begin in the wrestler record.</span></li>
-            <li><strong>Typed relationship</strong><span>Trainer, dojo, promotion branch, stylistic influence, and rivalry remain distinct meanings.</span></li>
-            <li><strong>Directional graph</strong><span>Source and target create a readable path through generations instead of a loose cloud of associations.</span></li>
-            <li><strong>Focused story</strong><span>Selecting one node computes its roots, descendants, direct links, and related archive trail.</span></li>
-          </ol>
         </div>
+      </dialog>
+
+      <section class="solution-gallery puro-solution-gallery" aria-label="Selected Puroresu Project experiences">
+        <article class="puro-showcase-wide puro-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">The Vault</p>
+            <h3>A childhood wrestling room, rebuilt as an archive.</h3>
+
+            <p>On tape, I watched Misawa dethrone Tsuruta and Jushin Liger face Great Sasuke in the 1994 Super J-Cup. I wanted fans to experience that feeling of finding a match worth passing on.</p>
+            <p>I built The Vault as a room readers can explore, with tapes, posters, and games from my own collection alongside the match archive.</p>
+
+          </header>
+          <figure class="gallery-figure puro-video-figure puro-vault-video puro-media-card">
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/vault-room-update-poster.png?v=20260724-02"><source src="assets/puro/vault-silent-20261015.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">With the panels closed, readers can browse the room or use the selector along the bottom.</figcaption></figure>
+        </article>
+        <article class="puro-showcase-wide puro-venues-story puro-experience" id="venues-experience">
+          <header class="puro-experience__intro">
+            <p class="section-kicker">Venues</p>
+            <h3>The places behind the matches.</h3>
+            <p>A match record gives the event a date. The Venues collection gives it a place, from the major arenas to regional halls.</p>
+            <p>Switching to the map keeps the same filters and shows the distances wrestlers traveled between stops.</p>
+          </header>
+          <figure class="gallery-figure puro-video-figure puro-media-card"><video id="venues-walkthrough" controls="" playsinline="" muted="" preload="metadata" poster="assets/puro/venues-upload-20261011-poster.jpg"><source src="assets/puro/venues-upload-20261011-silent-20261015.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">The map places each venue in its city.</figcaption></figure>
+        </article>
       </section>
 
-      <figure class="case-image full lineage-architecture-map">
-        <img src="https://pjhaftdesigns.com/assets/puro/lineage-architecture-map.png" alt="Large Puroresu Project lineage architecture map showing wrestlers and influence paths across decades">
-        <figcaption>
-          The broader architecture map shows the raw complexity behind the simpler lineage experience: decades of wrestlers, eras, AJW lineages, and influence paths reduced into focused stories.
-        </figcaption>
-      </figure>
 
-      <section class="case-section" id="content">
-        <div><p class="section-kicker">Working archive</p><h2>Depth needed a visible shape.</h2></div>
-        <div class="impact-grid puro-impact-grid">
-          <article><strong>155</strong><p>Wrestler profiles with biographies, relationships, key matches, and source status.</p></article>
-          <article><strong>61</strong><p>Timeline moments across five eras, each with a compact documented record.</p></article>
-          <article><strong>126</strong><p>Curated matches across 17 promotions, connected to context and viewing guidance.</p></article>
-          <article><strong>48</strong><p>Venue histories with signature moments, regional context, and map exploration.</p></article>
-        </div>
-      </section>
 
-      <section class="case-section">
-        <div><p class="section-kicker">Content system</p><h2>Research had to behave like product infrastructure.</h2></div>
-        <div>
-          <div class="case-copy">
-            <p>As the archive grew, writing directly into pages stopped being responsible. I moved the core collections into canonical data, then generated the browser-ready layer from that source. It created one place to correct a date, relationship, source status, or image reference.</p>
-            <p>I also built content rules around the mistakes an archive is most likely to make: treating an important tag partner as a rival, turning a broad era into a false exact date, confusing match date with airdate, or presenting an editorial claim as documented history.</p>
-            <dl class="decision-tradeoff">
-              <div>
-                <dt>Considered</dt>
-                <dd>Writing each page manually so the archive could move faster in the short term.</dd>
-              </div>
-              <div>
-                <dt>Chose</dt>
-                <dd>A canonical content system with generated pages, because trust depended on keeping relationships, dates, and source status consistent as the archive grew.</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="puro-principles" aria-label="Archive content principles">
-            <article><span>01</span><h3>One source of truth</h3><p>Canonical records feed the interface, generated wrappers, and verification checks.</p></article>
-            <article><span>02</span><h3>Editorial, not synthetic</h3><p>Readable public stories sit on top of a traceable factual layer.</p></article>
-            <article><span>03</span><h3>Specific when verified</h3><p>Dates, results, rivalries, ratings, and credits stay broad until the evidence is strong.</p></article>
-          </div>
+      <section class="case-section" id="experience-system">
+        <div><p class="section-kicker">Experience system</p><h2>Familiar controls across different collections.</h2></div>
+        <div class="case-copy">
+          <p>Search, filters, and detail panels work the same way across collections, so readers can follow a trail without learning new controls at every stop.</p>
         </div>
       </section>
 
       <section class="case-section design-language-intro" id="visual-system">
         <div><p class="section-kicker">Design language</p><h2>Built from broadcast memory and archival evidence.</h2></div>
         <div class="case-copy">
-          <p>The interface needed to feel specific to the material without becoming a costume. I drew from monochrome ringside photography, VHS contrast, Japanese magazine typography, television graphics, and red editorial marks used to call attention to a name, date, or turning point.</p>
-          <p>Near-black surfaces create continuity across the archive. White carries the main story. Red is reserved for active states, selected paths, dates, and the words that need to land first. The result feels historical, but the hierarchy and interaction remain contemporary.</p>
+          <p>The visual language comes from ringside photography, VHS contrast, Japanese magazine type, and television graphics.</p>
+          <p>On near-black surfaces, white carries the story. Red marks the selected path, a date, or a turning point.</p>
         </div>
       </section>
 
-      <section class="puro-design-board" aria-labelledby="design-board-title">
+      <section class="puro-design-board" id="visual-system-board" aria-labelledby="design-board-title">
         <div class="puro-design-board__header">
           <div>
             <p>ARCHIVAL DARK / VISUAL SYSTEM</p>
@@ -378,13 +479,67 @@
             </div>
           </div>
         </div>
+        <div class="puro-card-examples" id="card-system" aria-labelledby="card-system-title">
+          <p class="puro-specimen-label" id="card-system-title">CONSISTENT CARDS / ACROSS THE ARCHIVE</p>
+          <p class="puro-card-examples__intro">Shared framing, typography, and a clear path into each record.</p>
+          <div class="puro-card-examples__grid">
+            <figure class="puro-card-example">
+              <figcaption>Wrestlers</figcaption>
+              <a class="puro-archive-sample" href="https://www.puroresuproject.com/wrestlers/#antonio-inoki" target="_blank" rel="noopener noreferrer" aria-label="Explore Antonio Inoki in the wrestler archive">
+                <span class="puro-archive-sample__image"><img src="assets/puro/card-antonio-inoki.webp" alt="Antonio Inoki portrait" loading="lazy" style="object-position:center 30%"></span>
+                <span class="puro-archive-sample__body">
+                  <span class="puro-archive-sample__name">Antonio Inoki</span>
+                  <span class="puro-archive-sample__secondary" lang="ja">アントニオ猪木</span>
+                  <span class="puro-archive-sample__description">The founder who made Strong Style, crossover spectacle, and fighting spirit the language of NJPW.</span>
+                </span>
+                <svg class="puro-archive-sample__arrow" viewBox="0 -960 960 960" aria-hidden="true"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+              </a>
+            </figure>
+            <figure class="puro-card-example">
+              <figcaption>Venues</figcaption>
+              <a class="puro-archive-sample" href="https://www.puroresuproject.com/venues/" target="_blank" rel="noopener noreferrer" aria-label="Explore the venue archive">
+                <span class="puro-archive-sample__image"><img src="assets/puro/card-tokyo-dome.webp" alt="Tokyo Dome exterior" loading="lazy"></span>
+                <span class="puro-archive-sample__body">
+                  <span class="puro-archive-sample__name">Tokyo Dome</span>
+                  <span class="puro-archive-sample__secondary" lang="ja">東京ドーム</span>
+                  <span class="puro-archive-sample__location">Tokyo</span>
+                  <span class="puro-archive-sample__description">The stadium stage for New Japan's January 4 tradition and interpromotional spectacles.</span>
+                </span>
+                <svg class="puro-archive-sample__arrow" viewBox="0 -960 960 960" aria-hidden="true"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+              </a>
+            </figure>
+            <figure class="puro-card-example">
+              <figcaption>Voices &amp; officials</figcaption>
+              <a class="puro-archive-sample" href="https://www.puroresuproject.com/beyond-the-ring/voices-officials/#red-shoes-unno" target="_blank" rel="noopener noreferrer" aria-label="Explore Red Shoes Unno in Voices and Officials">
+                <span class="puro-archive-sample__image"><img src="assets/puro/card-red-shoes-unno.webp" alt="Red Shoes Unno portrait" loading="lazy" style="object-position:center 24%"></span>
+                <span class="puro-archive-sample__body">
+                  <span class="puro-archive-sample__name">Red Shoes Unno</span>
+                  <span class="puro-archive-sample__secondary" lang="ja">レッドシューズ海野</span>
+                  <span class="puro-archive-sample__description">The senior referee closely associated with New Japan's modern main-event presentation.</span>
+                </span>
+                <svg class="puro-archive-sample__arrow" viewBox="0 -960 960 960" aria-hidden="true"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+              </a>
+            </figure>
+            <figure class="puro-card-example">
+              <figcaption>Masks</figcaption>
+              <a class="puro-archive-sample puro-archive-sample--mask" href="https://www.puroresuproject.com/masks/" target="_blank" rel="noopener noreferrer" aria-label="Explore the mask archive">
+                <span class="puro-archive-sample__image"><img src="assets/puro/card-tiger-mask.webp" alt="First-generation Tiger Mask vintage gold and black mask, front view" loading="lazy"></span>
+                <span class="puro-archive-sample__body">
+                  <span class="puro-archive-sample__name">Tiger Mask I</span>
+                  <span class="puro-archive-sample__secondary">First Generation Tiger Mask Vintage Gold Black</span>
+                  <span class="puro-archive-sample__description">The First Generation Tiger Mask Vintage Gold Black worn by Tiger Mask uses a gold, black, white, and red palette across gold glitter, black leather trim, and white fur trim.</span>
+                </span>
+                <svg class="puro-archive-sample__arrow" viewBox="0 -960 960 960" aria-hidden="true"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+              </a>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="case-section puro-social-system" aria-labelledby="social-system-title">
         <div><p class="section-kicker">Social system</p><h2 id="social-system-title">The same visual language carries into social.</h2></div>
         <div class="case-copy">
-          <p>I extended the archive's dark surfaces, condensed typography, signal red, and layered photography into Instagram carousel posts. The goal was to make social media feel like part of the product ecosystem, not a separate promotion layer.</p>
-          <p>Each post uses the same editorial grammar as the site: a strong entry image, a focused story arc, and repeated visual cues that help the account become recognizable as people swipe.</p>
+          <p>For Instagram, I paired a ringside image with one story per carousel and carried over the archive’s type and red accents.</p>
         </div>
         <div class="puro-social-phones" aria-label="Animated Puroresu Project social carousel examples">
           <article class="puro-social-phone-card">
@@ -521,182 +676,100 @@
         </div>
       </section>
 
-      <section class="solution-gallery puro-solution-gallery puro-trail-strip" id="experiences" aria-label="Puroresu Project archive entry points">
-        <article class="puro-showcase-wide">
-          <div>
-            <p class="section-kicker">The Story</p>
-            <h3>A guided way into unfamiliar history.</h3>
-            <p>The Story gives newcomers a structured introduction before they branch into profiles, matches, eras, and cultural references. It works less like a static article and more like an orientation path through the archive.</p>
-          </div>
-          <figure class="gallery-figure puro-video-figure">
-            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/story-demo-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/puro/story-demo-no-audio.mp4?v=20260723-02" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <figcaption class="gallery-caption">The Story introduces Japanese wrestling through a guided editorial path with clear next steps into the wider archive.</figcaption>
-          </figure>
-        </article>
-        <article class="puro-showcase-wide">
-          <div>
-            <p class="section-kicker">Timeline</p>
-            <h3>Historical context became something to browse.</h3>
-            <p>The timeline connects eras, promotions, major events, and turning points in a format that supports both quick orientation and slower study.</p>
-          </div>
-          <figure class="gallery-figure puro-video-figure">
-            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/timeline-demo-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/puro/timeline-demo.mp4?v=20260723-03" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <figcaption class="gallery-caption">Timeline turns historical eras, promotions, and major moments into a chronological reading surface.</figcaption>
-          </figure>
-        </article>
-      </section>
-
-      <section class="solution-gallery puro-solution-gallery puro-archive-showcase" id="archive" aria-label="Puroresu Project wrestler archive">
-        <article class="puro-showcase-wide">
-          <div>
-            <p class="section-kicker">Wrestler archive</p>
-            <h3>Profiles became a network, not a stack of biographies.</h3>
-            <p>Each profile needed to work alone, but the larger value came from the links between them: training lines, faction turns, important opponents, partners, promotions, styles, and eras.</p>
-            <p>I treated relationship labels as data with consequences. Rivalries are shown only when the feud or recurring program is documented; mentors, partners, and stablemates remain useful without being mislabeled for the sake of a more dramatic interface.</p>
-          </div>
-          <figure class="gallery-figure puro-video-figure puro-profile-screen">
-            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/wrestlers-page.png">
-              <source src="https://pjhaftdesigns.com/assets/puro/wrestler-rivalries-demo.mp4?v=20260725-01" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <figcaption class="gallery-caption">The Wrestlers page keeps roster browsing, profile detail, and rivalry paths in one connected archive view.</figcaption>
-          </figure>
-        </article>
-        <div class="puro-portrait-system">
-          <div class="puro-portrait-intro">
-            <p>The profile system also needed a clearer visual rule. Action shots and editorial photos carried energy, but older images often sacrificed recognition: faces were obscured, resolution varied wildly, and some wrestlers became harder to identify than others.</p>
-            <p>I moved toward curated portrait consistency so every wrestler feels equally important and the archive preserves what they looked like before asking readers to understand their careers.</p>
-            <dl class="decision-tradeoff">
-              <div>
-                <dt>Before</dt>
-                <dd>Action-led imagery with uneven quality, inconsistent framing, and too many moments where the person was hard to read.</dd>
-              </div>
-              <div>
-                <dt>After</dt>
-                <dd>A neutral portrait system that gives each wrestler a clear, recognizable place in the archive.</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="puro-portrait-grid" aria-label="Selected wrestler portraits from the archive">
-          <img src="https://pjhaftdesigns.com/assets/puro/rikidozan.webp" alt="Rikidōzan">
-          <img src="https://pjhaftdesigns.com/assets/puro/antonio-inoki.webp" alt="Antonio Inoki">
-          <img src="https://pjhaftdesigns.com/assets/puro/giant-baba.webp" alt="Giant Baba">
-          <img src="https://pjhaftdesigns.com/assets/puro/mitsuharu-misawa.webp" alt="Mitsuharu Misawa">
-          <img src="https://pjhaftdesigns.com/assets/puro/tiger-mask.webp" alt="Tiger Mask">
-          <img src="https://pjhaftdesigns.com/assets/puro/bull-nakano.webp" alt="Bull Nakano">
-          <img src="https://pjhaftdesigns.com/assets/puro/manami-toyota.webp" alt="Manami Toyota">
-          <img src="https://pjhaftdesigns.com/assets/puro/atsushi-onita.webp" alt="Atsushi Onita">
-          <img src="https://pjhaftdesigns.com/assets/puro/bobo-brazil.webp" alt="Bobo Brazil">
-          <img src="https://pjhaftdesigns.com/assets/puro/jushin-thunder-liger.webp" alt="Jushin Thunder Liger">
-          </div>
-        </div>
-      </section>
-
-      <section class="solution-gallery puro-solution-gallery" aria-label="Selected Puroresu Project experiences">
-        <article class="puro-showcase-wide">
-          <div>
-            <p class="section-kicker">The Vault</p>
-            <h3>A childhood wrestling room, rebuilt as an archive.</h3>
-            <p>The Vault needed to do more than organize matches. It needed to make the act of browsing feel like discovery: tapes, posters, games, and broadcast memory gathered into one room.</p>
-            <p>Inside that nostalgic shell, match history and viewing guidance stay deliberately separate, helping a reader understand both what happened and why the match is worth their time.</p>
-            <dl class="decision-tradeoff">
-              <div>
-                <dt>Before</dt>
-                <dd>A functional thumbnail grid for browsing match videos.</dd>
-              </div>
-              <div>
-                <dt>After</dt>
-                <dd>An immersive room that makes the archive feel personal before asking the reader to choose what to watch.</dd>
-              </div>
-            </dl>
-          </div>
-          <figure class="gallery-figure puro-video-figure puro-vault-video"><video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/vault-room-update-poster.png?v=20260724-02"><source src="https://pjhaftdesigns.com/assets/puro/vault.mp4?v=20260909-02" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">With both utility panels closed, the room becomes the primary navigation surface: part imagined childhood bedroom, part match archive, with the selector still available along the bottom.</figcaption></figure>
-        </article>
-        <article class="puro-showcase-wide puro-venues-story">
-          <div><p class="section-kicker">Venues</p><h3>Move between the archive and its geography</h3><p>The venue explorer lets readers browse places as an archive or switch to a map to understand how wrestling history spread across regions. Both views use the same filters and venue records.</p></div>
-          <figure class="gallery-figure puro-video-figure"><video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/puro/venues-demo-poster.jpg"><source src="https://pjhaftdesigns.com/assets/puro/venues-demo.mp4?v=20260723-01" type="video/mp4">Your browser does not support embedded video.</video><figcaption class="gallery-caption">The venue explorer moves between list and map views, turning the same archive records into both a searchable reference and a geographic reading of the history.</figcaption></figure>
-        </article>
-      </section>
-
       <section class="case-section early-signals" id="signals">
-        <div><p class="section-kicker">Traction</p><h2>Social attention turned into deeper exploration.</h2></div>
+        <div><p class="section-kicker">Results</p><h2>Instagram brought 4,347 sessions to the archive.</h2></div>
         <div>
           <div class="early-signals__group">
             <div class="case-copy">
               <p class="early-signals__label">Instagram performance</p>
-              <p>From July 28 to August 26, 2026, Instagram content generated 411,381 views, with 80.7% coming from non-followers. Profile visits and bio link taps showed interest beyond the individual posts.</p>
+              <p>From August 1 to October 29, 2026, Instagram content reached an audience largely outside the account’s existing followers. Profile visits and bio link taps showed interest beyond the individual posts.</p>
             </div>
             <div class="early-signals__grid" aria-label="Puroresu Project Instagram traction summary">
-              <article>
-                <strong data-count-up="" data-count-target="411381">411,381</strong>
+              <article class="early-signals__views-card">
+                <strong data-count-up="" data-count-target="1085758">1,085,758</strong>
                 <span>Instagram content views</span>
-                <p>80.7% of views came from non-followers</p>
+                <p>73.8% of views came from non-followers</p>
               </article>
               <article>
-                <strong data-count-up="" data-count-target="139407">139,407</strong>
+                <strong data-count-up="" data-count-target="255239">255,239</strong>
                 <span>Instagram viewers</span>
                 <p>Reported in Instagram Insights</p>
               </article>
               <article>
-                <strong data-count-up="" data-count-target="29762">29,762</strong>
+                <strong data-count-up="" data-count-target="78313">78,313</strong>
                 <span>content interactions</span>
                 <p>Across Instagram content</p>
               </article>
             </div>
-            <p class="early-signals__note">Instagram also reported 3,508 net new followers, 7,807 profile visits, and 1,342 bio link taps during this period.</p>
+            <p class="early-signals__note">Instagram also reported 5,400 net new followers, approximately 15,000 profile visits, and approximately 2,500 bio link taps during this period.</p>
           </div>
 
           <div class="early-signals__group">
             <div class="case-copy">
               <p class="early-signals__label">Website performance</p>
-              <p>For the same July 28 to August 26 window, Google Analytics recorded visits across Classic Matches, Wrestlers, The Vault, Lineage, and Timeline. Average engagement time was more than two minutes per active user.</p>
+              <p>From July 1 to October 30, 2026, Google Analytics recorded visits across Classic Matches, Wrestlers, The Vault, Lineage, and Timeline.</p>
             </div>
             <div class="early-signals__grid" aria-label="Puroresu Project website traction summary">
               <article>
-                <strong data-count-up="" data-count-target="2143">2,143</strong>
+                <strong data-count-up="" data-count-target="8928">8,928</strong>
                 <span>active website users</span>
-                <p>Also reported: 2,066 new users</p>
+                <p>Also reported: 8,793 new users</p>
               </article>
               <article>
-                <strong data-count-up="" data-count-target="10543">10,543</strong>
+                <strong data-count-up="" data-count-target="35317">35,317</strong>
                 <span>website views</span>
                 <p>Across archive and story pages</p>
               </article>
               <article>
-                <strong>2m 11s</strong>
+                <strong>1m 37s</strong>
                 <span>average engagement time</span>
                 <p>Per active user</p>
               </article>
             </div>
             <figure class="early-signals__map">
               <div class="early-signals__map-frame">
-                <img loading="lazy" src="https://pjhaftdesigns.com/assets/puro/metrics/global-traffic-map.png" alt="World map showing Puroresu Project website traffic across North America, South America, Europe, Asia, Australia, and New Zealand">
+                <iframe id="datawrapper-chart-TpuuM" title="Puroresu Project traffic from 92 countries and territories" aria-label="Interactive world map of active website users by country" src="https://datawrapper.dwcdn.net/TpuuM/4/?dark=false&amp;transparent=true" data-map-src="https://datawrapper.dwcdn.net/TpuuM/4/" loading="lazy" height="446" scrolling="no"></iframe>
               </div>
               <figcaption>
-                Traffic reached wrestling fans across North America, South America, Europe, Asia, and Australia, showing interest beyond a local or personal network.
+                Active website users across 92 countries and territories, July 1–October 30, 2026. Each dot represents a country or territory; color shows active-user counts. <a href="https://datawrapper.dwcdn.net/TpuuM/4/" target="_blank" rel="noopener">Open the interactive map</a>.
               </figcaption>
             </figure>
-            <p class="early-signals__note">Google Analytics attributed 2,052 sessions to Instagram-related sources: 1,959 from ig / social, 91 from l.instagram.com / referral, and 2 from instagram.com / referral. Sessions and Instagram bio link taps are separate measures, not a one-to-one conversion count.</p>
+            <script>
+              (() => {
+                const frame = document.getElementById('datawrapper-chart-TpuuM');
+                const root = document.documentElement;
+                function syncMapTheme() {
+                  const dark = root.dataset.theme === 'dark';
+                  const url = new URL(frame.dataset.mapSrc);
+                  url.searchParams.set('dark', String(dark));
+                  url.searchParams.set('transparent', 'true');
+                  frame.style.colorScheme = dark ? 'dark' : 'light';
+                  if (frame.src !== url.href) frame.src = url.href;
+                }
+                window.addEventListener('message', event => {
+                  if (event.origin !== 'https://datawrapper.dwcdn.net' || event.source !== frame.contentWindow) return;
+                  const height = Number(event.data?.['datawrapper-height']?.TpuuM);
+                  if (Number.isFinite(height) && height > 0 && height < 3000) frame.style.height = `${Math.ceil(height)}px`;
+                });
+                new MutationObserver(syncMapTheme).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+                syncMapTheme();
+              })();
+            </script>
+            <p class="early-signals__note">Google Analytics attributed 4,347 sessions to Instagram-related sources during the July 1–October 30 period: 4,096 from ig / social, 245 from l.instagram.com / referral, 5 from instagram.com / referral, and 1 from ig / referral. Sessions and Instagram bio link taps are separate measures with different reporting periods.</p>
           </div>
 
-          <p class="case-note">Sources: Instagram Insights screenshots and Google Analytics Reports snapshot, July 28–August 26, 2026. Website views are summed across the exported page-title rows. These figures show audience activity, not proof that newcomers understood or navigated the archive successfully.</p>
+          <p class="case-note">Sources: Instagram Insights screenshots, August 1–October 29, 2026; Google Analytics Reports snapshot and Demographic details: Country export, July 1–October 30, 2026. Map created with Datawrapper; four users without country data are not plotted. Profile visits and bio link taps are rounded as displayed in Instagram Insights. Website views are summed across the exported page-title rows. These figures describe audience reach and activity during their respective reporting periods.</p>
         </div>
       </section>
 
       <section class="case-section" id="validation">
-        <div><p class="section-kicker">Validation</p><h2>The work was tested through its weak points.</h2></div>
+        <div><p class="section-kicker">Validation</p><h2>Check the records, connections, and interface.</h2></div>
         <div class="case-copy case-test-summary">
-          <p>Validation so far has focused on content integrity and interface behavior: can the archive keep growing without losing its internal logic? These were operational checks, not a usability study with newcomers.</p>
+
           <ul class="case-test-findings">
             <li>
               <span>01</span>
-              <div><strong>Check the historical records and connections</strong><p>Content audits, duplicate and reference checks, reciprocal relationship reviews, and source manifests helped check consistency across the archive.</p></div>
+              <div><strong>Check the historical records and connections</strong><p>I checked for duplicate entries, broken references, and relationships that appeared in only one of two linked records.</p></div>
             </li>
             <li>
               <span>02</span>
@@ -707,20 +780,37 @@
               <div><strong>Check interaction and motion</strong><p>I reviewed touch targets, keyboard focus, reduced-motion behavior, and media-heavy pages as their interface states changed.</p></div>
             </li>
           </ul>
-          <p class="case-note">The archive is live and still evolving. The next meaningful validation step is to watch newcomers use The Story, then see where they choose to go without prompting.</p>
+          <p class="case-note">I add new records and recheck older links as more sources become available.</p>
         </div>
       </section>
 
-      <section class="case-section retrospective">
-        <div><p class="section-kicker">Retrospective</p><h2>The connections became the story.</h2></div>
+      <section class="case-section retrospective" id="retrospective">
+        <div><p class="section-kicker">Retrospective</p><h2>Clarity also means showing the limits of the record.</h2></div>
         <div class="case-copy">
-          <p>As I researched individual careers, I kept finding connections that reached across generations: who trained whom, where their paths crossed, and how their influence carried forward. Following those relationships became central to the product, shaping Lineage, wrestler profiles, and Archive Trails.</p>
-
-          <h3>What I learned</h3>
-          <p>I learned that the challenge was not a lack of resources. There is a wealth of Japanese wrestling history online, but it is scattered across sites, articles, videos, and archives. Finding information about one wrestler does not necessarily reveal how they connect to the wider history.</p>
-          <p>The value I could bring was in researching and connecting that material, then giving people a way to follow those relationships. A reader can move from a wrestler to their trainer, an important match, or the generation they influenced without piecing the story together across separate sources. That became the purpose of the archive: make the connections as accessible as the individual records.</p>
-          <a class="button primary puro-visit-button" href="https://www.puroresuproject.com/"><img src="assets/puro/social-logo.png" width="32" height="32" alt=""><span>Visit Puroresu Project</span></a>
+          <p>The hardest decisions were often about how much certainty the interface could imply. A clear line or a precise date can look authoritative even when the underlying history is incomplete.</p>
+          <p>Readers wrote to tell me what they’d discovered. One described following the archive into 1990s All Japan, the same era I first encountered on tape.</p>
         </div>
+        <div class="puro-fan-feedback" id="fan-feedback" role="group" aria-labelledby="fan-feedback-title">
+          <h3 id="fan-feedback-title">Messages from the community</h3>
+          <div class="puro-fan-feedback__grid">
+            <figure class="puro-fan-quote">
+              <span class="puro-fan-quote__mark" aria-hidden="true">“</span>
+              <blockquote><p>I cannot thank you enough for this project, I've just started watching Japanese wrestling the last 8 years and I was able to really dive into the peak era's of AJPW in the 90s and learn tons from this site.</p></blockquote>
+              <figcaption>Fan feedback</figcaption>
+            </figure>
+            <figure class="puro-fan-quote">
+              <span class="puro-fan-quote__mark" aria-hidden="true">“</span>
+              <blockquote><p>You have built something incredible thats never been done before. I Hope this continues and brings more and more people to the puroresu world.</p></blockquote>
+              <figcaption>Fan feedback</figcaption>
+            </figure>
+            <figure class="puro-fan-quote">
+              <span class="puro-fan-quote__mark" aria-hidden="true">“</span>
+              <blockquote><p>Thank you for this awesome cotent. Hopefully I can wrestle one day in Japan and make it onto your site, its incredible.</p></blockquote>
+              <figcaption>Wrestler feedback</figcaption>
+            </figure>
+          </div>
+        </div>
+        <a class="button primary puro-visit-button" href="https://www.puroresuproject.com/"><img src="assets/puro/social-logo.png" width="32" height="32" alt=""><span>Visit Puroresu Project</span></a>
       </section>
     </main>
 

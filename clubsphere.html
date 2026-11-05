@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en" data-theme="light"><head>
     <meta charset="utf-8">
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sports operations product design case study by PJ Haft, designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
-    <title>Bringing player readiness and match planning together for football clubs | PJ Haft</title>
+    <meta name="description" content="PJ Haft designed ClubSphere for football scouts and coaches. One scout piloted the assessment at a live match. A coach interview informed the lineup design.">
+    <title>Connecting a scout’s match notes to a coach’s lineup decisions | PJ Haft</title>
     <link rel="icon" href="https://pjhaftdesigns.com/assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://www.pjhaftdesigns.com/clubsphere">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PJ Haft Portfolio">
-    <meta property="og:title" content="Bringing player readiness and match planning together for football clubs | PJ Haft">
-    <meta property="og:description" content="Designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
+    <meta property="og:title" content="Connecting a scout’s match notes to a coach’s lineup decisions | PJ Haft">
+    <meta property="og:description" content="A live-match pilot followed one scout recording player ratings. A coach interview informed the lineup design.">
     <meta property="og:url" content="https://www.pjhaftdesigns.com/clubsphere">
     <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bringing player readiness and match planning together for football clubs | PJ Haft">
-    <meta name="twitter:description" content="Designing ClubSphere to help football clubs manage match-week readiness, scouting, medical, and analytics workflows.">
+    <meta name="twitter:title" content="Connecting a scout’s match notes to a coach’s lineup decisions | PJ Haft">
+    <meta name="twitter:description" content="A live-match pilot followed one scout recording player ratings. A coach interview informed the lineup design.">
     <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CreativeWork",
-        "name": "Bringing player readiness and match planning together for football clubs",
-        "description": "A product design case study about creating clearer football club operations for match-week readiness, scouting, medical, and analytics workflows.",
+        "name": "Connecting a scout’s match notes to a coach’s lineup decisions",
+        "description": "A case study of a scout’s live-match assessment and a lineup concept informed by a coach interview.",
         "url": "https://www.pjhaftdesigns.com/clubsphere",
         "image": "https://www.pjhaftdesigns.com/assets/clubsphere/home-thumbnail-match-readiness.png",
         "author": {
@@ -33,15 +34,15 @@
     </script>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="live-base-1.css">
     <script src="site-nav.js?v=20261001-shared" defer=""></script>
-    <script src="image-lightbox.js?v=20260729-02" defer=""></script>
-  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
+  <link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle"><script src="assets/lucide.min.js" defer=""></script><script src="case-scroll-reveal.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
+<link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels"><script src="case-presentation.js?v=20261011-5" defer></script><link rel="stylesheet" href="clubsphere-architecture.css?v=20261103-retrospective"><script src="clubsphere-architecture.js?v=20261011-3" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+
+    <script src="case-video-autoplay.js?v=20261017-1" defer></script>
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
 </head>
   <body>
     <header class="site-header">
@@ -62,107 +63,33 @@
       <section class="case-hero" aria-labelledby="case-title">
         <div>
           <p class="eyebrow">ClubSphere</p>
-          <h1 id="case-title">Bringing player readiness and match planning together for football clubs.</h1>
-          <p>A self-initiated concept connecting scouting, player availability, and lineup planning for football clubs. In a live-match usability check, one scout completed the core iPad scouting task independently.</p>
+          <h1 id="case-title">Connecting a scout’s match notes to a coach’s lineup decisions.</h1>
+          <p><strong>Previously,</strong> one scout took paper notes throughout a 90-minute match and used halftime to catch up.<br>
+            <strong>Now,</strong> the scout uses ClubSphere to record player ratings <strong>in minutes during play</strong>.</p>
         </div>
-        <dl class="case-meta">
-          <div>
-            <dt>Year</dt>
-            <dd>2025</dd>
-          </div>
-          <div>
-            <dt>Timeline</dt>
-            <dd>3 weeks</dd>
-          </div>
-          <div>
-            <dt>Role</dt>
-            <dd>Solo product designer</dd>
-          </div>
-          <div>
-            <dt>Scope</dt>
-            <dd>Product strategy, UX, UI</dd>
-          </div>
-          <div>
-            <dt>Type</dt>
-            <dd>Self-initiated concept</dd>
-          </div>
-          <div>
-            <dt>Platform</dt>
-            <dd>Responsive web</dd>
-          </div>
-        </dl>
+        <dl class="case-meta case-meta--icon"><div><dt><i data-lucide="briefcase" aria-hidden="true"></i>Role</dt><dd>Solo product designer</dd></div><div><dt><i data-lucide="compass" aria-hidden="true"></i>Scope</dt><dd>Product strategy, UX, UI</dd></div><div><dt><i data-lucide="clock" aria-hidden="true"></i>Timeline</dt><dd>2025 · 3 weeks</dd></div><div><dt><i data-lucide="flag" aria-hidden="true"></i>Status</dt><dd>Pilot</dd></div></dl>
       </section>
 
 
 
-      <section class="case-section case-intro" id="context">
-        <div>
-          <p class="section-kicker">Context and brief</p>
-          <h2>Support match-week decisions without adding another slow system.</h2>
-        </div>
-        <div class="case-copy">
-          <p>
-            Football clubs do not only run on tactics. They run on half-remembered scout
-            notes, messages sent between training sessions, injury updates that arrive
-            late, and coaches trying to make good decisions with whatever information is
-            closest at hand.
-          </p>
-          <p>
-            I designed ClubSphere as a concept for regional and local football
-            organizations, using youth soccer clubs in Central Florida as the grounding
-            context. The challenge was to help small staffs coordinate scouting,
-            readiness, and lineup decisions while preserving the fast, informal rhythm
-            they already work inside.
-          </p>
-          <p>
-            The question I kept coming back to was simple: what would change if coaches,
-            scouts, and staff could see the same version of the truth before match week
-            started to move?
-          </p>
-          <p class="case-note">
-            All player and staff names shown in the concept screens are fictional.
-          </p>
-        </div>
-      </section>
 
-      <section class="case-section" id="problem">
+
+      <figure class="case-image full tool-fragmentation-figure" id="tool-flow" aria-labelledby="tool-flow-title">
+        <div class="tool-flow-copy" id="context">
         <div>
           <p class="section-kicker">The problem</p>
-          <h2>The club was organized everywhere and nowhere.</h2>
+          <h2 id="tool-flow-title">Match-week decisions relied on disconnected player information.</h2>
         </div>
-        <div class="case-copy">
-          <p>
-            At the semi-professional and youth-development level, club operations often
-            depend on a patchwork of PDFs, Word docs, spreadsheets, messaging apps, and
-            whiteboards. None of those tools are bad on their own. The problem is what
-            happens between them.
-          </p>
-          <p>
-            A scout sees potential, but the note lives in one place. A coach is building
-            a lineup, but availability lives somewhere else. Medical risk, performance
-            history, and academy development all matter, but they rarely arrive together
-            at the moment a decision is being made.
-          </p>
-          <p>
-            That made the design constraint less about storing more data and more about
-            surfacing the right evidence at decision time. The product had to feel calm,
-            move quickly, and remain realistic for a small staff to maintain.
-          </p>
+        <div class="case-copy" id="problem">
+          <p>I designed ClubSphere for small football clubs, drawing on youth soccer in Central Florida. A scout watching play and a coach picking a lineup both needed a reliable record of the same player.</p>
+          <p>A player assessment might be in a Word document, availability in a spreadsheet, and the lineup on a whiteboard. Coaches had to piece them together before picking a squad.</p>
+
+          <p class="clubsphere-context-note">All player and staff names shown in the concept screens are fictional.</p>
         </div>
-      </section>
-
-      <figure class="case-image full tool-fragmentation-figure">
-        <div class="tool-flow-diagram" role="img" aria-label="Several disconnected tools converge into one ClubSphere solution.">
-          <div class="tool-flow-board">
-            <div class="tool-flow-heading tool-flow-heading--problem">
-              <span aria-hidden="true">
-                <svg viewBox="0 0 16 16" focusable="false">
-                  <path d="M4.5 4.5 11.5 11.5M11.5 4.5 4.5 11.5"></path>
-                </svg>
-              </span>
-              <p>Too many apps to manage</p>
-            </div>
-
+      </div>
+        <div class="tool-flow-visual">
+          <div class="tool-flow-diagram" role="img" aria-label="Six separate tools connect to one ClubSphere workspace.">
+            <div class="tool-flow-board">
             <div class="tool-flow-apps" aria-hidden="true">
               <div class="tool-flow-tile tool-flow-tile--onedrive"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/onedrive.svg" alt=""></div>
               <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/excel.svg" alt=""></div>
@@ -171,60 +98,6 @@
               <div class="tool-flow-tile"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/messages.svg" alt=""></div>
               <div class="tool-flow-tile tool-flow-tile--whiteboard"><img src="https://pjhaftdesigns.com/assets/clubsphere/tool-icons/whiteboard.webp" alt=""></div>
             </div>
-
-            <svg class="tool-flow-lines" viewBox="0 0 1130 430" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id="tool-flow-gradient-base">
-                  <stop offset="0" stop-color="#9ee5e2"></stop>
-                  <stop offset="0.38" stop-color="#9ee5e2"></stop>
-                  <stop offset="0.5" stop-color="#68cfca"></stop>
-                  <stop offset="0.62" stop-color="#9ee5e2"></stop>
-                  <stop offset="1" stop-color="#9ee5e2"></stop>
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-1" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="82" y1="138" x2="500" y2="276">
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-2" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="250" y1="138" x2="500" y2="276">
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-3" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="418" y1="138" x2="500" y2="276">
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-4" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="582" y1="138" x2="500" y2="276">
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-5" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="750" y1="138" x2="500" y2="276">
-                </linearGradient>
-                <linearGradient id="tool-flow-gradient-6" href="#tool-flow-gradient-base" gradientUnits="userSpaceOnUse" x1="918" y1="138" x2="500" y2="276">
-                </linearGradient>
-              </defs>
-              <g transform="translate(181.28 0) scale(.76744 1)">
-              <path id="tool-flow-path-1" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-1)" d="M83.03 138 C150 214 250 233 360 241 C440 241 488 251 500 276"></path>
-              <path id="tool-flow-path-2" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-2)" d="M249.82 138 C292 188 360 228 420 238 C462 242 492 250 500 276"></path>
-              <path id="tool-flow-path-3" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-3)" d="M416.6 138 C424 204 454 238 478 252 C492 260 498 270 500 276"></path>
-              <path id="tool-flow-path-4" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-4)" d="M583.4 138 C576 204 546 238 522 252 C508 260 502 270 500 276"></path>
-              <path id="tool-flow-path-5" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-5)" d="M750.18 138 C708 188 640 228 580 238 C538 242 508 250 500 276"></path>
-              <path id="tool-flow-path-6" class="tool-flow-path" style="stroke: url(#tool-flow-gradient-6)" d="M916.97 138 C850 214 750 233 640 241 C560 241 512 251 500 276"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-1)" d="M83.03 134 C150 214 250 233 360 235 C440 237 488 245 500 266 L500 288 C488 271 440 255 360 247 C250 245 150 220 83.03 142 Z"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-2)" d="M249.82 134 C292 188 360 228 420 232 C462 236 492 244 500 266 L500 288 C492 266 462 254 420 244 C360 240 292 194 249.82 142 Z"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-3)" d="M414.6 134 C420 204 451 238 476 246 C490 252 497 260 500 266 L500 288 C498 278 492 270 480 258 C457 250 427 210 418.6 142 Z"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-4)" d="M585.4 134 C580 204 549 238 524 246 C510 252 503 260 500 266 L500 288 C502 278 508 270 520 258 C543 250 573 210 581.4 142 Z"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-5)" d="M750.18 134 C708 188 640 228 580 232 C538 236 508 244 500 266 L500 288 C508 266 538 254 580 244 C640 240 708 194 750.18 142 Z"></path>
-              <path class="tool-flow-flare" style="fill: url(#tool-flow-gradient-6)" d="M916.97 134 C850 214 750 233 640 235 C560 237 512 245 500 266 L500 288 C512 271 560 255 640 247 C750 245 850 220 916.97 142 Z"></path>
-              </g>
-            </svg>
-
-            <svg class="tool-flow-lines tool-flow-lines--mobile" viewBox="0 0 1130 920" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <path id="tool-flow-mobile-path-1" class="tool-flow-path" d="M135 280 C220 420 380 520 565 610"></path>
-              <path id="tool-flow-mobile-path-2" class="tool-flow-path" d="M307 280 C350 400 455 520 565 610"></path>
-              <path id="tool-flow-mobile-path-3" class="tool-flow-path" d="M479 280 C485 410 525 535 565 610"></path>
-              <path id="tool-flow-mobile-path-4" class="tool-flow-path" d="M651 280 C645 410 605 535 565 610"></path>
-              <path id="tool-flow-mobile-path-5" class="tool-flow-path" d="M823 280 C780 400 675 520 565 610"></path>
-              <path id="tool-flow-mobile-path-6" class="tool-flow-path" d="M995 280 C910 420 750 520 565 610"></path>
-              <path class="tool-flow-flare" d="M135 274 C220 414 380 510 565 590 L565 630 C380 530 220 426 135 286 Z"></path>
-              <path class="tool-flow-flare" d="M307 274 C350 394 455 510 565 590 L565 630 C455 530 350 406 307 286 Z"></path>
-              <path class="tool-flow-flare" d="M479 274 C485 404 525 525 565 590 L565 630 C525 545 485 416 479 286 Z"></path>
-              <path class="tool-flow-flare" d="M651 274 C645 404 605 525 565 590 L565 630 C605 545 645 416 651 286 Z"></path>
-              <path class="tool-flow-flare" d="M823 274 C780 394 675 510 565 590 L565 630 C675 530 780 406 823 286 Z"></path>
-              <path class="tool-flow-flare" d="M995 274 C910 414 750 510 565 590 L565 630 C750 530 910 426 995 286 Z"></path>
-            </svg>
-
             <div class="tool-flow-solution" aria-hidden="true">
               <div class="tool-flow-clubsphere">
                 <svg viewBox="0 -960 960 960" aria-hidden="true" focusable="false">
@@ -232,53 +105,39 @@
                 </svg>
               </div>
             </div>
-
-            <div class="tool-flow-heading tool-flow-heading--solution">
-              <span aria-hidden="true">✓</span>
-              <p>One solution</p>
             </div>
           </div>
+          <p class="tool-flow-caption">Separate tools <span aria-hidden="true">→</span> One ClubSphere workspace</p>
         </div>
-        <figcaption>The tool map revealed scattered information across apps.</figcaption>
       </figure>
 
       <section class="case-section" id="research">
         <div>
-          <p class="section-kicker">How I got there</p>
-          <h2>Two people, two match-week clocks.</h2>
+          <p class="section-kicker">Research</p>
+          <h2>What the scout records and what the coach needs.</h2>
         </div>
         <div>
           <div class="case-copy">
-            <p>
-              Because this was a self-initiated concept, I grounded the early direction in
-              conversations with two people from a local Orlando club. Their perspectives
-              helped me pressure-test the product from opposite sides of match week: the
-              scout capturing context in short bursts, and the coach trying to act on it
-              later.
-            </p>
+            <p>I interviewed a scout and a head coach from an Orlando club. Both interviews shaped the workflows below. Only the scout took part in the live-match pilot.</p>
           </div>
-          <div class="persona-grid">
+          <div class="research-summary" aria-label="Research context"><span>2 club conversations</span><span>Scout &amp; coach</span><span>Self-initiated concept</span></div><div class="persona-grid" data-findings="Research findings">
             <article class="persona-card">
               <p class="persona-role">Player Scout</p>
-              <h3>Working in the moment.</h3>
+              <h3>What did I just see?</h3>
               <p>
-                The scout is watching players in motion. If capturing a note takes too
-                long, the moment is gone. The workflow needs to be quick enough to
-                disappear between observations.
+                Writing up one player could mean missing the next play.
               </p>
               <ul>
-                <li>Capture notes quickly between matches</li>
+                <li>Capture ratings without looking away for long</li>
                 <li>Compare past evaluations without hunting through files</li>
                 <li>Share consistent reports with coaching staff</li>
               </ul>
             </article>
             <article class="persona-card">
               <p class="persona-role">Head Coach</p>
-              <h3>Making the call.</h3>
+              <h3>Who’s available for this match?</h3>
               <p>
-                The coach is preparing a team while the picture keeps changing. The
-                workflow needs to make uncertainty visible before it becomes a match-day
-                surprise.
+                A player’s status could change before kickoff. The coach needed to know who last updated it and when.
               </p>
               <ul>
                 <li>Understand player availability quickly</li>
@@ -292,64 +151,104 @@
 
       <section class="case-section" id="journeys">
         <div>
-          <p class="section-kicker">Journeys</p>
-          <h2>Match week showed where the system had to earn trust.</h2>
+          <p class="section-kicker">User journeys</p>
+          <h2>Two workflows, one player record.</h2>
         </div>
         <div class="journey-grid">
-          <article>
-            <h3>Scout workflow</h3>
+          <article class="club-journey club-journey--scout">
+            <header class="club-journey-heading">
+              <span class="club-journey-icon"><i data-lucide="binoculars" aria-hidden="true"></i></span>
+              <h3>Scout workflow</h3>
+              <p>Turn a player observation into a report the club can use.</p>
+            </header>
             <ol>
-              <li>Identify and select player</li>
-              <li>Rate attributes</li>
-              <li>Add observations</li>
-              <li>Submit and sync</li>
+              <li><span class="club-journey-number" aria-hidden="true">01</span><div><h4>Identify and select player</h4><p>Start with the right player record.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">02</span><div><h4>Rate attributes</h4><p>Capture an assessment of the player’s abilities.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">03</span><div><h4>Add observations</h4><p>Give the ratings context with scouting notes.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">04</span><div><h4>Submit and sync</h4><p>Save the report and share it with the club.</p></div></li>
             </ol>
+            <p class="club-journey-outcome"><i data-lucide="file-check-2" aria-hidden="true"></i>Player insight ready to share</p>
           </article>
-          <article>
-            <h3>Coach workflow</h3>
+          <article class="club-journey club-journey--coach">
+            <header class="club-journey-heading">
+              <span class="club-journey-icon"><i data-lucide="clipboard-list" aria-hidden="true"></i></span>
+              <h3>Coach workflow</h3>
+              <p>Bring player readiness and performance into the match plan.</p>
+            </header>
             <ol>
-              <li>Review squad status</li>
-              <li>Analyze performance data</li>
-              <li>Build match lineup</li>
-              <li>Finalize and communicate</li>
+              <li><span class="club-journey-number" aria-hidden="true">01</span><div><h4>Review squad status</h4><p>Check who is available and ready to play.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">02</span><div><h4>Analyze performance data</h4><p>Compare the evidence behind player selection.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">03</span><div><h4>Build match lineup</h4><p>Choose players and arrange the team.</p></div></li>
+              <li><span class="club-journey-number" aria-hidden="true">04</span><div><h4>Finalize and communicate</h4><p>Confirm the lineup and share the match plan.</p></div></li>
             </ol>
+            <p class="club-journey-outcome"><i data-lucide="users" aria-hidden="true"></i>Match plan ready for the team</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" id="targets">
+        <div>
+          <p class="section-kicker">Design challenge</p>
+          <h2 id="core-workflows">What each workflow needed to support.</h2>
+        </div>
+        <div class="impact-grid">
+          <article class="club-target club-target--ratings">
+            <div class="club-target-preview target-ratings" aria-hidden="true">
+              <div class="target-rating-row"><span>Technique</span><div class="target-rating-dots"><i></i><i></i><i></i><i></i><i class="is-empty"></i></div></div>
+              <div class="target-rating-row"><span>Tactical awareness</span><div class="target-rating-dots"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></div></div>
+              <div class="target-note"><i data-lucide="square-pen"></i><span>Add observations</span><i data-lucide="arrow-right"></i></div>
+            </div>
+            <h3>Quick ratings, then notes</h3>
+            <p>Prioritize attribute selections during the match, with space for additional notes afterward.</p>
+          </article>
+          <article class="club-target club-target--readiness">
+            <div class="club-target-preview target-readiness" aria-hidden="true">
+              <div><i data-lucide="circle-check"></i><span>Availability</span><span class="target-readiness-signal"><i></i><i></i><i></i></span></div>
+              <div><i data-lucide="activity"></i><span>Fitness</span><svg viewBox="0 0 68 20"><path d="M1 14h12l8-8 9 10 9-12 8 7h20"/></svg></div>
+              <div><i data-lucide="chart-no-axes-combined"></i><span>Performance</span><span class="target-performance-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <h3>One readiness view</h3>
+            <p>Let coaches review availability, fitness, and performance context before building the lineup.</p>
+          </article>
+          <article class="club-target club-target--lineup">
+            <div class="club-target-preview target-lineup" aria-hidden="true">
+              <svg class="target-pitch" viewBox="0 0 360 140">
+                <rect class="pitch-line" x="14" y="8" width="332" height="124" rx="5"/><path class="pitch-line" d="M14 70h332M152 8v18h56V8M152 132v-18h56v18"/><circle class="pitch-line" cx="180" cy="70" r="18"/>
+                <g class="pitch-players"><circle cx="100" cy="27" r="7"/><circle cx="180" cy="27" r="7"/><circle cx="260" cy="27" r="7"/><circle cx="110" cy="61" r="7"/><circle cx="180" cy="61" r="7"/><circle cx="250" cy="61" r="7"/><circle cx="70" cy="93" r="7"/><circle cx="143" cy="93" r="7"/><circle cx="217" cy="93" r="7"/><circle cx="290" cy="93" r="7"/><circle cx="180" cy="119" r="7"/></g>
+              </svg>
+              <span class="target-share"><i data-lucide="send"></i>Share lineup</span>
+            </div>
+            <h3>One shared lineup</h3>
+            <p>Keep lineup exploration and communication together instead of passing around whiteboard photos and emails.</p>
+          </article>
+          <article class="club-target club-target--source">
+            <div class="club-target-preview target-source" aria-hidden="true">
+              <div class="target-source-title"><i data-lucide="badge-check"></i><span>Player status</span></div>
+              <div class="target-source-row"><i data-lucide="users"></i><span>Source</span><span>Medical &amp; Rehab</span></div>
+              <div class="target-source-row"><i data-lucide="clock-3"></i><span>Updated</span><span>Time of status change</span></div>
+            </div>
+            <h3>Visible source and timing</h3>
+            <p>Show where each status came from and when it changed so staff can judge whether it is current.</p>
           </article>
         </div>
       </section>
 
       <section class="case-section" id="exploration">
         <div>
-          <p class="section-kicker">Approach</p>
-          <h2>Start with the repeated decisions.</h2>
+          <p class="section-kicker">Design decisions</p>
+          <h2>Designing the handoff between scouting and match planning.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            I started with the moments that repeat every week: checking who is ready,
-            comparing players, preparing a lineup, capturing a scouting report, and
-            sharing context with someone who was not in the room.
-          </p>
-          <p>
-            With three weeks and no access to live club data, I treated the work as a
-            focused workflow hypothesis, not a finished platform. I stayed close to two
-            connected roles and the decisions that pass between them. Scheduling,
-            messaging, payments, and club administration stayed outside the scope. They
-            could make the product broader, but they would not help answer the central
-            question.
-          </p>
-          <p>
-            My first instinct was to organize the system entirely around departments.
-            Instead, I used functional areas as stable homes and placed the Squad Hub at
-            the center, allowing readiness, scouting, lineup planning, and analytics to
-            connect without becoming one dense workspace.
-          </p>
-          <dl class="decision-tradeoff">
+
+          <p>I had three weeks and no live club data, so I focused on the handoff from scouting to match planning. Scheduling, messaging, and payments were outside the scope.</p>
+          <dl class="decision-tradeoff decision-tradeoff--choice">
             <div>
               <dt>Considered</dt>
               <dd>A department-by-department platform that mirrored how a club is staffed.</dd>
             </div>
             <div>
               <dt>Chose</dt>
-              <dd>A shared Squad Hub with specialized workflows around it, so each role could work quickly while still contributing to the same player context.</dd>
+              <dd>A shared player record. A coach could review a scout’s assessment alongside the latest availability update.</dd>
             </div>
           </dl>
         </div>
@@ -357,113 +256,191 @@
 
       <section class="case-section clubsphere-ia-section" id="architecture">
         <div>
-          <p class="section-kicker">Proposed information architecture</p>
-          <h2>Specialized work, connected through shared context.</h2>
+          <p class="section-kicker">Information architecture</p>
+          <h2 id="architecture-title">One Squad Hub, seven connected workspaces.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            The proposed architecture gives each discipline a dependable home without forcing
-            coaches and scouts to reconstruct the player story as they move between
-            tasks. Squad Hub remains the common overview, while reports, status updates,
-            performance summaries, and match records synchronize back into shared player
-            and team context.
-          </p>
+          <p>The Squad Hub puts player readiness at the center. Scouting, medical, and training staff would each update the same record from their own workspace.</p>
         </div>
       </section>
 
-      <figure class="clubsphere-ia-map">
-        <div class="clubsphere-ia-map__frame">
-          <button class="clubsphere-ia-map__trigger image-lightbox-trigger" type="button" aria-label="Open the ClubSphere information architecture image" aria-haspopup="dialog" aria-controls="clubsphere-ia-lightbox" data-lightbox-target="clubsphere-ia-lightbox">
-            <img src="https://pjhaftdesigns.com/assets/clubsphere/information-architecture.png" width="6798" height="4332" loading="lazy" decoding="async" alt="Proposed ClubSphere information architecture map showing the Squad Hub and its scouting, match center, medical, training, academy, analytics, and settings branches">
-          </button>
-          <figcaption>
-            This proposed architecture shows how ClubSphere could expand into a full
-            platform. The concept focused on a smaller set of core workflows rather than
-            building every area shown here.
-          </figcaption>
+      <figure class="architecture-system" aria-labelledby="architecture-title" aria-describedby="architecture-note">
+        <div class="architecture-key" aria-label="Node legend">
+          <span><i class="workspace-key" aria-hidden="true"></i>Workspaces</span>
+          <span><i class="feature-key" aria-hidden="true"></i>Features</span>
         </div>
+        <div class="architecture-desktop">
+          <svg viewBox="0 0 1120 628" role="img" aria-labelledby="architecture-svg-title architecture-svg-desc">
+            <title id="architecture-svg-title">ClubSphere proposed information architecture</title>
+            <desc id="architecture-svg-desc">Squad Hub connects to seven workspaces. Each workspace branches into its main features. The complete hierarchy is also available as a structured list.</desc>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 544 106 H96 Q80 106 80 122 V144" style="--d:0.15s"/>
+            <path class="architecture-edge" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V256 Q150 272 134 272" style="--d:0.40s"/>
+            <path class="architecture-edge" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V328 Q150 344 134 344" style="--d:0.49s"/>
+            <path class="architecture-edge" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V400 Q150 416 134 416" style="--d:0.58s"/>
+            <path class="architecture-edge" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V472 Q150 488 134 488" style="--d:0.67s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 544 106 H256 Q240 106 240 122 V144" style="--d:0.24s"/>
+            <path class="architecture-edge" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V256 Q310 272 294 272" style="--d:0.43s"/>
+            <path class="architecture-edge" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V328 Q310 344 294 344" style="--d:0.52s"/>
+            <path class="architecture-edge" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V400 Q310 416 294 416" style="--d:0.61s"/>
+            <path class="architecture-edge" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V472 Q310 488 294 488" style="--d:0.70s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 544 106 H416 Q400 106 400 122 V144" style="--d:0.33s"/>
+            <path class="architecture-edge" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V256 Q470 272 454 272" style="--d:0.45s"/>
+            <path class="architecture-edge" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V328 Q470 344 454 344" style="--d:0.54s"/>
+            <path class="architecture-edge" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V400 Q470 416 454 416" style="--d:0.63s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V144" style="--d:0.42s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V256 Q630 272 614 272" style="--d:0.48s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V328 Q630 344 614 344" style="--d:0.56s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V400 Q630 416 614 416" style="--d:0.66s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 576 106 H704 Q720 106 720 122 V144" style="--d:0.51s"/>
+            <path class="architecture-edge" pathLength="1" d="M720 200 V210 Q720 226 736 226 H774 Q790 226 790 242 V256 Q790 272 774 272" style="--d:0.50s"/>
+            <path class="architecture-edge" pathLength="1" d="M720 200 V210 Q720 226 736 226 H774 Q790 226 790 242 V328 Q790 344 774 344" style="--d:0.59s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 576 106 H864 Q880 106 880 122 V144" style="--d:0.60s"/>
+            <path class="architecture-edge" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V256 Q950 272 934 272" style="--d:0.53s"/>
+            <path class="architecture-edge" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V328 Q950 344 934 344" style="--d:0.61s"/>
+            <path class="architecture-edge" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V400 Q950 416 934 416" style="--d:0.71s"/>
+            <path class="architecture-edge" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V472 Q950 488 934 488" style="--d:0.80s"/>
+            <path class="architecture-edge" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V544 Q950 560 934 560" style="--d:0.89s"/>
+            <path class="architecture-edge" pathLength="1" d="M560 72 V90 Q560 106 576 106 H1024 Q1040 106 1040 122 V144" style="--d:0.69s"/>
+            <path class="architecture-edge" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V256 Q1110 272 1094 272" style="--d:0.55s"/>
+            <path class="architecture-edge" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V328 Q1110 344 1094 344" style="--d:0.64s"/>
+            <path class="architecture-edge" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V400 Q1110 416 1094 416" style="--d:0.73s"/>
+            <path class="architecture-edge" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V472 Q1110 488 1094 488" style="--d:0.82s"/>
+            <path class="architecture-edge" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V544 Q1110 560 1094 560" style="--d:0.91s"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 72 V90 Q560 106 544 106 H96 Q80 106 80 122 V144" style="--r:0;--k:0"/>
+            <path class="architecture-route route-0" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V256 Q150 272 134 272" style="--r:0;--k:1"/>
+            <path class="architecture-route route-0" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V328 Q150 344 134 344" style="--r:0;--k:2"/>
+            <path class="architecture-route route-0" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V400 Q150 416 134 416" style="--r:0;--k:3"/>
+            <path class="architecture-route route-0" pathLength="1" d="M80 200 V210 Q80 226 96 226 H134 Q150 226 150 242 V472 Q150 488 134 488" style="--r:0;--k:4"/>
+            <path class="architecture-route route-1" pathLength="1" d="M560 72 V90 Q560 106 544 106 H256 Q240 106 240 122 V144" style="--r:1;--k:0"/>
+            <path class="architecture-route route-1" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V256 Q310 272 294 272" style="--r:1;--k:1"/>
+            <path class="architecture-route route-1" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V328 Q310 344 294 344" style="--r:1;--k:2"/>
+            <path class="architecture-route route-1" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V400 Q310 416 294 416" style="--r:1;--k:3"/>
+            <path class="architecture-route route-1" pathLength="1" d="M240 200 V210 Q240 226 256 226 H294 Q310 226 310 242 V472 Q310 488 294 488" style="--r:1;--k:4"/>
+            <path class="architecture-route route-2" pathLength="1" d="M560 72 V90 Q560 106 544 106 H416 Q400 106 400 122 V144" style="--r:2;--k:0"/>
+            <path class="architecture-route route-2" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V256 Q470 272 454 272" style="--r:2;--k:1"/>
+            <path class="architecture-route route-2" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V328 Q470 344 454 344" style="--r:2;--k:2"/>
+            <path class="architecture-route route-2" pathLength="1" d="M400 200 V210 Q400 226 416 226 H454 Q470 226 470 242 V400 Q470 416 454 416" style="--r:2;--k:3"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 72 V144" style="--r:0;--k:0"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V256 Q630 272 614 272" style="--r:0;--k:1"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V328 Q630 344 614 344" style="--r:0;--k:2"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 200 V210 Q560 226 576 226 H614 Q630 226 630 242 V400 Q630 416 614 416" style="--r:0;--k:3"/>
+            <path class="architecture-route route-0" pathLength="1" d="M560 72 V90 Q560 106 576 106 H704 Q720 106 720 122 V144" style="--r:0;--k:0"/>
+            <path class="architecture-route route-0" pathLength="1" d="M720 200 V210 Q720 226 736 226 H774 Q790 226 790 242 V256 Q790 272 774 272" style="--r:0;--k:1"/>
+            <path class="architecture-route route-0" pathLength="1" d="M720 200 V210 Q720 226 736 226 H774 Q790 226 790 242 V328 Q790 344 774 344" style="--r:0;--k:2"/>
+            <path class="architecture-route route-1" pathLength="1" d="M560 72 V90 Q560 106 576 106 H864 Q880 106 880 122 V144" style="--r:1;--k:0"/>
+            <path class="architecture-route route-1" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V256 Q950 272 934 272" style="--r:1;--k:1"/>
+            <path class="architecture-route route-1" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V328 Q950 344 934 344" style="--r:1;--k:2"/>
+            <path class="architecture-route route-1" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V400 Q950 416 934 416" style="--r:1;--k:3"/>
+            <path class="architecture-route route-1" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V472 Q950 488 934 488" style="--r:1;--k:4"/>
+            <path class="architecture-route route-1" pathLength="1" d="M880 200 V210 Q880 226 896 226 H934 Q950 226 950 242 V544 Q950 560 934 560" style="--r:1;--k:5"/>
+            <path class="architecture-route route-2" pathLength="1" d="M560 72 V90 Q560 106 576 106 H1024 Q1040 106 1040 122 V144" style="--r:2;--k:0"/>
+            <path class="architecture-route route-2" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V256 Q1110 272 1094 272" style="--r:2;--k:1"/>
+            <path class="architecture-route route-2" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V328 Q1110 344 1094 344" style="--r:2;--k:2"/>
+            <path class="architecture-route route-2" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V400 Q1110 416 1094 416" style="--r:2;--k:3"/>
+            <path class="architecture-route route-2" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V472 Q1110 488 1094 488" style="--r:2;--k:4"/>
+            <path class="architecture-route route-2" pathLength="1" d="M1040 200 V210 Q1040 226 1056 226 H1094 Q1110 226 1110 242 V544 Q1110 560 1094 560" style="--r:2;--k:5"/>
+            <g class="architecture-node workspace" style="--d:0.10s"><rect x="472" y="14" width="176" height="58" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="560" y="34">Squad Hub</tspan><tspan x="560" y="52">(overview)</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.17s"><rect x="9" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="80" y="172">Scouting</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.40s"><rect x="10" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="72" y="272">All Reports</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.47s"><rect x="10" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="72" y="344">New Report</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.54s"><rect x="10" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="72" y="407">Player</tspan><tspan x="72" y="425">Comparison</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.61s"><rect x="10" y="462" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="72" y="488">Watchlist</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.24s"><rect x="169" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="240" y="172">Match Center</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.43s"><rect x="170" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="232" y="263">Upcoming</tspan><tspan x="232" y="281">Matches</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.50s"><rect x="170" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="232" y="344">Tactical Board</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.57s"><rect x="170" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="232" y="416">Lineup Builder</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.64s"><rect x="170" y="462" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="232" y="488">Match Report</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.31s"><rect x="329" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="400" y="172">Medical &amp; Rehab</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.45s"><rect x="330" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="392" y="272">Injury List</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.52s"><rect x="330" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="392" y="335">Player Injury</tspan><tspan x="392" y="353">Detail</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.59s"><rect x="330" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="392" y="416">Status Update</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.38s"><rect x="489" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="560" y="163">Training &amp;</tspan><tspan x="560" y="181">Performance</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.48s"><rect x="490" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="552" y="263">Training</tspan><tspan x="552" y="281">Sessions</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.55s"><rect x="490" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="552" y="335">Player</tspan><tspan x="552" y="353">Performance</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.61s"><rect x="490" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="552" y="407">Performance</tspan><tspan x="552" y="425">Summary</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.45s"><rect x="649" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="720" y="172">Academy</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.50s"><rect x="650" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="712" y="272">Teams</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.57s"><rect x="650" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="712" y="335">Player</tspan><tspan x="712" y="353">Development</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.52s"><rect x="809" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="880" y="172">Analytics</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.53s"><rect x="810" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="872" y="272">Squad Health</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.59s"><rect x="810" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="872" y="335">Availability</tspan><tspan x="872" y="353">Trends</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.67s"><rect x="810" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="872" y="407">Minutes</tspan><tspan x="872" y="425">Distribution</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.74s"><rect x="810" y="462" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="872" y="488">Injury History</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.81s"><rect x="810" y="534" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="872" y="551">Academy</tspan><tspan x="872" y="569">Pipeline</tspan></text></g>
+            <g class="architecture-node workspace" style="--d:0.59s"><rect x="969" y="144" width="142" height="56" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1040" y="172">Settings</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.55s"><rect x="970" y="246" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1032" y="263">Roles &amp;</tspan><tspan x="1032" y="281">Permissions</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.62s"><rect x="970" y="318" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1032" y="344">Notifications</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.69s"><rect x="970" y="390" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1032" y="407">Alerts &amp;</tspan><tspan x="1032" y="425">Reminders</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.76s"><rect x="970" y="462" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1032" y="479">Club</tspan><tspan x="1032" y="497">Preferences</tspan></text></g>
+            <g class="architecture-node feature" style="--d:0.83s"><rect x="970" y="534" width="124" height="52" rx="10"/><text text-anchor="middle" dominant-baseline="middle"><tspan x="1032" y="560">Data Access</tspan></text></g>
+          </svg>
+        </div>
+        <div class="architecture-mobile">
+          <div class="architecture-root">Squad Hub <span>(overview)</span></div>
+          <ul class="architecture-branches">
+            <li class="architecture-branch"><h3>Scouting</h3><ul><li>All Reports</li><li>New Report</li><li>Player Comparison</li><li>Watchlist</li></ul></li>
+            <li class="architecture-branch"><h3>Match Center</h3><ul><li>Upcoming Matches</li><li>Tactical Board</li><li>Lineup Builder</li><li>Match Report</li></ul></li>
+            <li class="architecture-branch"><h3>Medical &amp; Rehab</h3><ul><li>Injury List</li><li>Player Injury Detail</li><li>Status Update</li></ul></li>
+            <li class="architecture-branch"><h3>Training &amp; Performance</h3><ul><li>Training Sessions</li><li>Player Performance</li><li>Performance Summary</li></ul></li>
+            <li class="architecture-branch"><h3>Academy</h3><ul><li>Teams</li><li>Player Development</li></ul></li>
+            <li class="architecture-branch"><h3>Analytics</h3><ul><li>Squad Health</li><li>Availability Trends</li><li>Minutes Distribution</li><li>Injury History</li><li>Academy Pipeline</li></ul></li>
+            <li class="architecture-branch"><h3>Settings</h3><ul><li>Roles &amp; Permissions</li><li>Notifications</li><li>Alerts &amp; Reminders</li><li>Club Preferences</li><li>Data Access</li></ul></li>
+          </ul>
+        </div>
+        <div class="architecture-routes-key" aria-label="Animated branch groups">
+          <span><i class="route-0" aria-hidden="true"></i>Scouting &amp; development</span>
+          <span><i class="route-1" aria-hidden="true"></i>Match planning &amp; insights</span>
+          <span><i class="route-2" aria-hidden="true"></i>Status &amp; access</span>
+        </div>
+        <figcaption id="architecture-note">The map shows the proposed platform. The three-week concept focused on scouting and match planning.</figcaption>
       </figure>
-
-      <dialog class="image-lightbox" id="clubsphere-ia-lightbox" aria-label="ClubSphere information architecture">
-        <div class="image-lightbox__shell">
-          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">×</button>
-          <div class="image-lightbox__viewport">
-            <img class="image-lightbox__image" src="https://pjhaftdesigns.com/assets/clubsphere/information-architecture.png" width="6798" height="4332" decoding="async" alt="Enlarged ClubSphere information architecture map">
-          </div>
-        </div>
-      </dialog>
-
-      <figure class="case-image full clubsphere-wireframes">
-        <button class="clubsphere-wireframes__trigger image-lightbox-trigger" type="button" aria-label="Open the ClubSphere wireframe image" aria-haspopup="dialog" aria-controls="clubsphere-wireframes-lightbox" data-lightbox-target="clubsphere-wireframes-lightbox">
-          <img src="https://pjhaftdesigns.com/assets/clubsphere/wireframe.png" width="2500" height="2301" loading="lazy" decoding="async" alt="ClubSphere low-fidelity wireframes">
-        </button>
-        <figcaption>
-          These early wireframes tested whether the four core workflows could share a
-          consistent navigation and interaction model.
-        </figcaption>
-      </figure>
-
-      <dialog class="image-lightbox" id="clubsphere-wireframes-lightbox" aria-label="ClubSphere wireframes">
-        <div class="image-lightbox__shell">
-          <button class="image-lightbox__close" type="button" aria-label="Close enlarged image">×</button>
-          <div class="image-lightbox__viewport">
-            <img class="image-lightbox__image" src="https://pjhaftdesigns.com/assets/clubsphere/wireframe.png" width="2500" height="2301" decoding="async" alt="Enlarged ClubSphere low-fidelity wireframes">
-          </div>
-        </div>
-      </dialog>
-
-      <section class="case-section" id="targets">
-        <div>
-          <p class="section-kicker">Workflow targets</p>
-          <h2>What gets easier when the context is in one place.</h2>
-        </div>
-        <div class="impact-grid">
-          <article>
-            <strong>Quick ratings, then notes</strong>
-            <p>Prioritize attribute selections during the match, with space for additional notes afterward.</p>
-          </article>
-          <article>
-            <strong>One readiness view</strong>
-            <p>Let coaches review availability, fitness, and performance context before building the lineup.</p>
-          </article>
-          <article>
-            <strong>One shared lineup</strong>
-            <p>Keep lineup exploration and communication together instead of passing around whiteboard photos and emails.</p>
-          </article>
-          <article>
-            <strong>Visible source and timing</strong>
-            <p>Show where each status came from and when it changed so staff can judge whether it is current.</p>
-          </article>
-        </div>
-      </section>
 
       <section class="case-section" id="solution">
         <div>
-          <p class="section-kicker">Design solution</p>
-          <h2>Making the important signals easier to read.</h2>
+          <p class="section-kicker">The solution</p>
+          <h2>Record the assessment, then plan the lineup.</h2>
         </div>
         <div class="case-copy">
-          <p>
-            Each screen centers one practical question. Rather than carrying every data
-            point into every view, I kept the status language consistent and changed the
-            supporting evidence around the decision at hand.
-          </p>
-          <p>
-            Readiness emphasizes who needs attention. Player profiles explain why.
-            Lineup planning and analytics connect risk to action, while deeper history
-            remains available on demand.
-          </p>
+          <p>The scout tried the assessment flow at a live match. The remaining screens show the proposed coaching workflow, informed by the coach interview.</p>
+
         </div>
       </section>
 
       <section class="solution-gallery" aria-label="ClubSphere prototype flows">
-        <article class="clubsphere-video-showcase">
-          <div>
+        <article class="clubsphere-video-showcase case-evidence-story">
+<header class="case-evidence-intro">
+            <p class="section-kicker" id="scouting-design">Scouting</p>
+            <h3>Fast capture for scouts</h3>
+            <p>I split the long form into Technical, Physical, Mental, and Tactical tabs. Large rating controls put a few attributes within reach at a time.</p>
+          </header>
+<figure class="gallery-figure case-evidence-card">
+<dl class="decision-tradeoff">
+              <div>
+                <dt>Before</dt>
+                <dd>One long form made scouts scroll to find the right fields during play.</dd>
+              </div>
+              <div>
+                <dt>After</dt>
+                <dd>Category tabs bring quick ratings forward during the match, with notes added afterward.</dd>
+              </div>
+            </dl>
+            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting-poster.jpg">
+              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting.mp4?v=20260728-01" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <figcaption class="gallery-caption">
+              Saving the assessment adds it to the staff’s scouting archive.
+            </figcaption>
+          </figure>
+</article>
+        <article class="clubsphere-video-showcase case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Squad Readiness</p>
             <h3>From team status to player clearance</h3>
-            <p>Who needs attention, and why can staff trust a player’s availability?</p>
-          </div>
-          <figure class="gallery-figure">
+            <p>For the coach, the next question is who can play. The Squad Hub flags players with limited availability and links to their profiles.</p>
+            <p>The profile shows training status, medical restrictions, and dated staff notes so the coach can see who last checked the player and why their status changed.</p>
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-1-squad-readiness-poster.jpg">
               <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-1-squad-readiness.mp4?v=20260728-01" type="video/mp4">
               Your browser does not support embedded video.
@@ -473,16 +450,17 @@
               profile so staff can see the clearance context behind an availability call.
             </figcaption>
           </figure>
-        </article>
-        <article class="clubsphere-video-showcase">
-          <div>
+</article>
+        <article class="clubsphere-video-showcase case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Match Center</p>
             <h3>Lineup decisions before kickoff</h3>
-            <p>Who should start, who needs managed minutes, and how does the change reach the squad?</p>
-          </div>
-          <figure class="gallery-figure">
+            <p>In Match Center, the coach can move players between the bench and the starting XI while checking fitness, fatigue, and recent minutes.</p>
+            <p>Player details open beside the formation so the coach can compare an alternative before confirming the squad.</p>
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-2-match-center-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-2-match-center.mp4?v=20260728-01" type="video/mp4">
+              <source src="assets/clubsphere/flow-2-match-center-silent-20261015.mp4" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -490,60 +468,34 @@
               risk is visible while the lineup is still being shaped.
             </figcaption>
           </figure>
-        </article>
-        <article class="clubsphere-video-showcase clubsphere-phone-showcase">
-          <div>
+</article>
+        <article class="clubsphere-video-showcase clubsphere-phone-showcase case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Match Center follow-up</p>
             <h3>The lineup change reaches the player</h3>
-            <p>Once staff confirm the squad, the player receives the roster update before arriving at the stadium.</p>
-          </div>
-          <figure class="gallery-figure">
+            <p>Confirming a lineup change sends the player a mobile notification before they arrive at the stadium.</p>
+
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-2-phone-notification-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-2-phone-notification.mp4?v=20260728-01" type="video/mp4">
+              <source src="assets/clubsphere/flow-2-phone-notification-silent-20261015.mp4" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
               The notification closes the matchday planning loop by showing how confirmed staff decisions reach players.
             </figcaption>
           </figure>
-        </article>
-        <article class="clubsphere-video-showcase">
-          <div>
-            <p class="section-kicker">Scouting</p>
-            <h3>Fast capture for scouts</h3>
-            <p>What did the scout see, and how quickly can they record it?</p>
-            <dl class="decision-tradeoff">
-              <div>
-                <dt>Before</dt>
-                <dd>A single scrollable scouting page where the scout had to move through a long stack of fields to find the right place to capture an observation.</dd>
-              </div>
-              <div>
-                <dt>After</dt>
-                <dd>Tabs let scouts scan for the category they need, select its attributes during the match, and add additional notes afterward.</dd>
-              </div>
-            </dl>
-            <p>I used tabs to reduce the amount scouts had to scan at once. Grouping attributes by category was intended to lower cognitive load compared with a long scrolling form, while keeping quick selections central to the live-match workflow.</p>
-          </div>
-          <figure class="gallery-figure">
-            <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-3-scouting.mp4?v=20260728-01" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <figcaption class="gallery-caption">
-              Category tabs organize quick attribute selections during play, with
-              additional notes completed after the match.
-            </figcaption>
-          </figure>
-        </article>
-        <article class="clubsphere-video-showcase">
-          <div>
+</article>
+        <article class="clubsphere-video-showcase case-evidence-story">
+<header class="case-evidence-intro">
             <p class="section-kicker">Analytics</p>
             <h3>From signal to staff decision</h3>
-            <p>How does the system turn fatigue risk into an agreed rotation plan?</p>
-          </div>
-          <figure class="gallery-figure">
+            <p>Analytics helps staff spot fatigue risk and check the minutes and training status of the players behind it.</p>
+            <p>Staff can cap a player’s minutes, select an alternative, or move the player into recovery. They review the plan before sharing it.</p>
+          </header>
+<figure class="gallery-figure case-evidence-card">
             <video controls="" playsinline="" muted="" preload="metadata" poster="https://pjhaftdesigns.com/assets/clubsphere/flow-4-analytics-poster.jpg">
-              <source src="https://pjhaftdesigns.com/assets/clubsphere/flow-4-analytics.mp4?v=20260728-01" type="video/mp4">
+              <source src="assets/clubsphere/flow-4-analytics-silent-20261015.mp4" type="video/mp4">
               Your browser does not support embedded video.
             </video>
             <figcaption class="gallery-caption">
@@ -551,27 +503,26 @@
               records what was approved before sharing the plan.
             </figcaption>
           </figure>
-        </article>
+</article>
       </section>
 
       <section class="case-section" id="testing">
         <div>
-          <p class="section-kicker">Usability check</p>
-          <h2>Testing from the touchline.</h2>
+          <p class="section-kicker">Results</p>
+          <h2>What one scout could do during a live match.</h2>
         </div>
         <div class="case-copy case-test-summary">
-          <p>
-            One player scout tested the iPad prototype during an actual match, using the
-            core scouting flow to track five predefined attributes as play unfolded.
-          </p>
+          <p>The scout used an iPad to track five player attributes. I watched whether they could keep up with play and finish the assessment without prompting.</p>
           <ul class="case-test-findings">
             <li>
               <span>01</span>
               <div>
-                <strong>The core flow worked without help</strong>
+                <strong>Player ratings took minutes during play, with 10–15 minutes for detailed notes after the match</strong>
                 <p>
-                  The scout completed the task independently and rated their confidence
-                  between four and five out of five across the flow.
+                  On paper, the scout jotted notes throughout the 90-minute match and used
+                  halftime to catch up. Looking down to write could mean missing a play.
+                  On the iPad, the scout tapped ratings as play unfolded. Once saved,
+                  the report synced to the staff’s app without a separate email or attachment.
                 </p>
               </div>
             </li>
@@ -579,46 +530,28 @@
               <span>02</span>
               <div>
                 <strong>Large controls held up during live play</strong>
-                <p>
-                  The rating interaction stayed quick enough to use one-handed while
-                  holding the tablet and watching the match.
-                </p>
+                <p>The scout could rate a player one-handed while holding the iPad and watching the pitch.</p>
               </div>
             </li>
             <li>
               <span>03</span>
               <div>
-                <strong>Quick selections and notes served different moments</strong>
-                <p>
-                  The scouting workflow prioritized quick attribute selections during
-                  play. Additional notes belonged afterward, when the scout could
-                  add context without dividing attention between typing and the match.
-                </p>
+                <strong>The scout completed the evaluation independently</strong>
+                <p>Afterward, the scout rated their confidence between four and five out of five.</p>
               </div>
             </li>
           </ul>
-          <blockquote class="case-quote">
-            “I loved that everything was just a few taps.”
-          </blockquote>
-          <p class="case-note case-next-test">
-            This usability check covered one scout and the scouting flow, not the
-            broader platform. Next, I would test category navigation with more scouts,
-            outdoor readability, and whether coaches can interpret availability and
-            risk before choosing a lineup.
-          </p>
         </div>
       </section>
 
-      <section class="case-section retrospective">
+      <section class="case-section retrospective" id="retrospective">
         <div>
           <p class="section-kicker">Retrospective</p>
-          <h2>Shared context needs clear ownership.</h2>
+          <h2>Useful player information needs a clear source.</h2>
         </div>
         <div class="case-copy">
-          <h3>What I learned</h3>
-
-
-          <p>Before extending the concept, I would clarify who can edit medical status, how conflicting observations are resolved, and which decisions need a visible history. In a shared system, trust depends on ownership as well as interface design.</p>
+          <p>The scout could leave the longer notes until after the final whistle. That made the rating controls the priority during play.</p>
+          <p>My next test would be with a coach: when two staff updates disagree about a player’s availability, can the coach identify the latest source and decide who starts?</p>
         </div>
       </section>
     </main>

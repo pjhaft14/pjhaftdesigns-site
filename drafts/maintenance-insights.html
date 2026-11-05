@@ -1,126 +1,207 @@
 <!doctype html>
-<html lang="en" data-theme="light"><head><base href="../"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Helping theme park engineers move from alerts to maintenance plans | PJ Haft</title><meta name="description" content="From reactive email notifications to component-level evidence and connected maintenance planning. A UX case study by PJ Haft."><meta name="robots" content="noindex"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="live-base-1.css"><link rel="stylesheet" href="drafts/maintenance-insights.css"><script src="site-nav.js?v=20261001-shared" defer=""></script><link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script></head><body>
+<html lang="en" data-theme="light"><head><base href="../"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Helping theme park engineers prevent ride downtime and guest frustration | PJ Haft</title><meta name="description" content="From reactive email notifications to component-level evidence and connected maintenance planning. A UX case study by PJ Haft."><meta name="robots" content="noindex"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="live-base-1.css"><link rel="stylesheet" href="drafts/maintenance-insights.css?v=20261021-numbered-location"><script src="site-nav.js?v=20261001-shared" defer=""></script><link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261001-overlay"><script src="assets/lucide.min.js" defer=""></script><script src="theme.js" defer=""></script><script src="case-scroll-reveal.js" defer></script><link rel="stylesheet" href="case-presentation.css?v=20261012-3"><script src="case-presentation.js?v=20261011-5" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+</head><body>
 <header class="site-header"><a class="brand" href="index.html" aria-label="Pejman Haft home"><img src="assets/favicon.svg" alt="" width="36" height="36"><span>Pejman Haft</span></a><nav aria-label="Main navigation"><a aria-current="location" href="index.html#work">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></nav><div class="header-actions"><button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" title="Open navigation"><i data-lucide="menu" aria-hidden="true"></i></button></div></header>
 <main class="case-study ride-case">
-<section class="case-hero report-builder-hero" aria-labelledby="case-title"><div><p class="eyebrow">Hitachi · Disney ride maintenance</p><h1 id="case-title">Helping theme park engineers move from alerts to maintenance plans.</h1><p>I led UX design for a ride-maintenance experience that connects component health to work and parts requests. The project reached pilot with Disney; measured pilot outcomes were not available for this case study.</p></div><dl class="case-meta"><div><dt>Role</dt><dd>Lead UX designer</dd></div><div><dt>Scope</dt><dd>Research, interviews, workflows, experience design</dd></div><div><dt>Team</dt><dd>Junior designer supporting production assets</dd></div><div><dt>Status</dt><dd>Original project reached pilot</dd></div></dl></section>
+<section class="case-hero report-builder-hero" aria-labelledby="case-title"><div><p class="eyebrow">Hitachi · Disney ride maintenance</p><h1 id="case-title">Helping theme park engineers prevent ride downtime and guest frustration.</h1><p>I led UX design for a ride-maintenance experience for Space Mountain at Walt Disney World, giving engineers a clearer path from component-health alerts to maintenance planning. The design brings health readings, trends, and component locations together on tablets and phones, then carries that context into work and parts requests. The goal was to help engineers investigate earlier and coordinate maintenance around park operations to reduce unexpected ride downtime.</p></div><dl class="case-meta case-meta--icon"><div><dt><i data-lucide="briefcase" aria-hidden="true"></i>Role</dt><dd>Lead UX designer</dd></div><div><dt><i data-lucide="compass" aria-hidden="true"></i>Scope</dt><dd>Research, interviews, workflows, experience design</dd></div><div><dt><i data-lucide="users" aria-hidden="true"></i>Team</dt><dd>Junior designer supporting production assets</dd></div><div><dt><i data-lucide="flag" aria-hidden="true"></i>Status</dt><dd>Original project reached pilot</dd></div></dl></section>
+
 
 <section class="case-section case-intro" id="problem" aria-labelledby="problem-title">
   <div>
     <p class="section-kicker">The problem</p>
-    <h2 id="problem-title">Engineers needed a chance to act before the ride stopped.</h2>
+    <h2 id="problem-title">Engineers received alerts after ride problems occurred.</h2>
   </div>
   <div class="case-copy">
-    <p>During our Disney visit, the engineer we spoke with described a reactive workflow. The system sent email notifications when something went wrong. Engineers needed to check their inbox, then investigate the affected ride area to identify the problem.</p>
-    <p>Downtime interrupted operations, contributed to longer queues, and frustrated guests. The opportunity was to support earlier investigation and, where engineering judgment allowed, plan maintenance overnight rather than respond during park hours.</p>
-    <blockquote class="case-quote">From waiting for an email to actively checking component health, wherever the engineer is working.</blockquote>
+    <p>During our on-site Disney visit, the engineer we spoke with described a reactive workflow: engineers learned about issues through email after something had gone wrong. Limited sensor coverage meant the notification pointed to an affected ride area, rather than the exact faulty component, and email delivery depended on network connectivity.</p>
+    <p>Engineers then had to investigate the area, identify the component, and determine the repair before requesting replacement parts through a separate email exchange. When a ride stopped during park hours, that investigation and repair process interrupted operations, contributed to longer queues, and frustrated guests.</p>
+    <p>They needed proactive access to component health and location wherever they were working, with enough evidence to investigate earlier and carry the findings into work and parts requests. That context would help them assess what needed immediate attention and what could be addressed during overnight maintenance.</p>
   </div>
 </section>
-<section class="case-section" id="old-flow"><div><p class="section-kicker">Problem anatomy</p><h2>The email started an investigation, not a maintenance plan.</h2></div><div class="case-copy"><p>Limited sensor coverage meant a notification identified an affected ride area without identifying the exact faulty component. Email delivery also depended on network connectivity.</p><ol><li><strong>Check email.</strong> Discover a notification after an issue occurs.</li><li><strong>Investigate the area.</strong> Find the specific component behind the broad location.</li><li><strong>Determine the response.</strong> Establish the work needed through investigation.</li><li><strong>Email the parts team.</strong> Request replacement parts separately.</li></ol><p class="case-note">Reconstructed from the research account, not an original email artifact or a description of Disney's operations today. A dashboard alone would not solve network reliability.</p></div></section>
 <section class="case-section report-audience" id="research" aria-labelledby="research-title">
   <div><p class="section-kicker">Field research</p><h2 id="research-title">Put component health in the engineer's hands.</h2></div>
   <div><div class="case-copy"><p>I led research and persona interviews, including an on-site visit to Disney where we spoke with an engineer about daily routines and the information they monitored.</p><p>Our team's central finding was the need for proactive access to component health on portable devices such as tablets and phones. Engineers needed to check status while moving through the ride environment, rather than wait for an email to tell them something had gone wrong.</p></div>
-  <div class="report-persona-grid">
-    <article><p class="persona-role">Check component health</p><h3>What needs my attention?</h3><ul><li><b>Access</b><span>Check status from a tablet or phone without waiting for an email.</span></li><li><b>Location</b><span>Connect the health information to a specific component and ride area.</span></li><li><b>Evidence</b><span>Additional sensors could provide more specific health context.</span></li></ul></article>
-    <article><p class="persona-role">Coordinate the response</p><h3>What needs to happen next?</h3><ul><li><b>Urgency</b><span>Engineers needed to determine the appropriate response.</span></li><li><b>Parts</b><span>Requests went separately to the parts team by email.</span></li><li><b>Opportunity</b><span>Connect the component and evidence to the maintenance handoff.</span></li></ul></article>
+  <div class="research-summary" aria-label="Research context"><span>On-site Disney visit</span><span>Engineer interview</span><span>Portable devices</span><span>2 needs</span></div><div class="report-persona-grid" data-findings="Research findings">
+    <article data-summary="Engineers needed proactive access to health and location while moving through the ride environment."><p class="persona-role">Check component health</p><h3>What needs my attention?</h3><ul><li><b>Access</b><span>Check status from a tablet or phone without waiting for an email.</span></li><li><b>Location</b><span>Connect the health information to a specific component and ride area.</span></li><li><b>Evidence</b><span>Additional sensors could provide more specific health context.</span></li></ul></article>
+    <article data-summary="The maintenance handoff needed to keep component evidence and parts requests connected."><p class="persona-role">Coordinate the response</p><h3>What needs to happen next?</h3><ul><li><b>Urgency</b><span>Engineers needed to determine the appropriate response.</span></li><li><b>Parts</b><span>Requests went separately to the parts team by email.</span></li><li><b>Opportunity</b><span>Connect the component and evidence to the maintenance handoff.</span></li></ul></article>
   </div></div>
 </section>
 <section class="case-section design-challenge" id="challenge" aria-labelledby="challenge-title">
   <div><p class="section-kicker">Design challenge</p><h2 id="challenge-title">Make the next step clear. Keep the engineer in control.</h2></div>
   <div class="case-copy"><p>More sensors could provide more data, but not an automatic answer. The experience needed to connect the affected component, evidence of change, and a practical next step.</p><p>A prediction must not look like a guaranteed failure time. Proposed overnight work is not an approved schedule, and requesting a part does not confirm availability. The design needed to make those boundaries clear while helping engineers coordinate the response.</p></div>
 </section>
-<section class="design-decisions" id="decisions"><div class="design-decisions__intro"><p class="section-kicker">Design decisions</p><h2>Four choices shaped the experience.</h2></div><div class="design-decision-grid"><article><span>01</span><h3>Make status easy to check</h3><p>A scannable overview gives engineers a starting point for checking component health from a portable device.</p></article><article><span>02</span><h3>Connect health to location</h3><p>The ride map links each issue to a named component, with readings and trends available for closer inspection.</p></article><article><span>03</span><h3>Bring timing into the decision</h3><p>Show the next maintenance window alongside the component's condition and a path to escalate urgent issues.</p></article><article><span>04</span><h3>Keep work and parts connected</h3><p>Carry component details and evidence into the work request and parts handoff, without rebuilding the context in email.</p></article></div></section>
-<section class="report-transformation" id="before-after"><header class="report-transformation__intro"><div><p class="section-kicker">Before and after</p><h2>From separate emails to a connected maintenance story.</h2></div><p>A proposed workflow change, not a measured reduction in time or downtime.</p></header><div class="report-transformation__comparison ride-comparison"><article class="transformation-panel transformation-panel--before"><div class="transformation-panel__heading"><span class="transformation-label">Workflow observed</span><h3>React and investigate</h3></div><ol class="transformation-flow transformation-flow--before"><li><span>01</span><div><strong>Ride goes down</strong><small>An issue interrupts operation during park hours.</small></div></li><li><span>02</span><div><strong>Engineer receives an email</strong><small>The notification identifies the affected ride area, not the exact component.</small></div></li><li><span>03</span><div><strong>Travel to the ride</strong><small>The engineer makes their way to the ride location.</small></div></li><li><span>04</span><div><strong>Investigate the problem</strong><small>Identify the failed component and determine the work needed.</small></div></li><li><span>05</span><div><strong>Email the parts team</strong><small>Request a replacement through a separate email exchange.</small></div></li><li><span>06</span><div><strong>Wait for the part</strong><small>The repair waits on the replacement part.</small></div></li></ol><div class="ride-downtime-impact"><strong>The ride stays down throughout.</strong><p>Guests are left waiting, lines build, and frustration grows while the engineer travels, investigates, and waits for parts.</p></div></article><article class="transformation-panel transformation-panel--after"><div class="transformation-panel__heading"><span class="transformation-label">Proposed experience</span><h3>Assess, plan, and coordinate</h3></div><ol class="transformation-flow transformation-flow--after"><li><span>01</span><div><strong>Review the alert</strong><small>See the flagged component, review its health, and assess urgency.</small></div></li><li><span>02</span><div><strong>Propose the work</strong><small>Carry context into a request for engineering review.</small></div></li><li><span>03</span><div><strong>Link the parts</strong><small>Keep work, parts and pending decisions connected.</small></div></li></ol><div class="ride-downtime-impact"><strong>Planned for after park hours.</strong><p>Coordinate the work and replacement parts for the overnight maintenance window, when the park is closed and guests are not affected by the repair.</p></div></article></div></section>
+<section class="design-decisions" id="decisions"><div class="design-decisions__intro"><p class="section-kicker">Design decisions</p><h2>Four choices shaped the experience.</h2></div><div class="design-decision-grid"><article><span>01</span><h3>Make status easy to check</h3>
+<dl class="decision-tradeoff decision-tradeoff--choice">
+  <div><dt>Considered</dt><dd>Rely on email notifications to surface component issues.</dd></div>
+  <div><dt>Chose</dt><dd>A portable overview engineers can check proactively.</dd></div>
+</dl>
+<p>A scannable overview gives engineers a starting point for checking component health from a portable device.</p></article><article><span>02</span><h3>Connect health to location</h3>
+<dl class="decision-tradeoff decision-tradeoff--choice">
+  <div><dt>Considered</dt><dd>Show health readings separately from the ride map.</dd></div>
+  <div><dt>Chose</dt><dd>Link each issue to its component and location, with evidence in context.</dd></div>
+</dl>
+<p>The ride map links each issue to a named component, with readings and trends available for closer inspection.</p></article><article><span>03</span><h3>Bring timing into the decision</h3>
+<dl class="decision-tradeoff decision-tradeoff--choice">
+  <div><dt>Considered</dt><dd>Show component condition without maintenance timing.</dd></div>
+  <div><dt>Chose</dt><dd>Show the next maintenance window and a path to escalate urgent issues.</dd></div>
+</dl>
+<p>Show the next maintenance window alongside the component's condition and a path to escalate urgent issues.</p></article><article><span>04</span><h3>Keep work and parts connected</h3>
+<dl class="decision-tradeoff decision-tradeoff--choice">
+  <div><dt>Considered</dt><dd>Handle work and parts requests in separate email exchanges.</dd></div>
+  <div><dt>Chose</dt><dd>Carry component evidence into linked work and parts requests.</dd></div>
+</dl>
+<p>Carry component details and evidence into the work request and parts handoff, without rebuilding the context in email.</p></article></div></section>
+<section class="report-transformation" id="before-after"><header class="report-transformation__intro"><div><p class="section-kicker">Before and after</p><h2>From separate emails to a connected maintenance story.</h2></div><p>A proposed workflow change, not a measured reduction in time or downtime.</p></header><div class="report-transformation__comparison ride-comparison"><article class="transformation-panel transformation-panel--before"><div class="transformation-panel__heading">
+              <span class="workflow-comparison-icon"><i data-lucide="layers" aria-hidden="true"></i></span><span class="transformation-label">Before · Workflow observed</span><h3>React and investigate</h3></div><ol class="transformation-flow transformation-flow--before"><li><span>01</span><div><strong>Ride goes down</strong><small>An issue interrupts operation during park hours.</small></div></li><li><span>02</span><div><strong>Engineer receives an email</strong><small>The notification identifies the affected ride area, not the exact component.</small></div></li><li><span>03</span><div><strong>Travel to the ride</strong><small>The engineer makes their way to the ride location.</small></div></li><li><span>04</span><div><strong>Investigate the problem</strong><small>Identify the failed component and determine the work needed.</small></div></li><li><span>05</span><div><strong>Email the parts team</strong><small>Request a replacement through a separate email exchange.</small></div></li><li><span>06</span><div><strong>Wait for the part</strong><small>The repair waits on the replacement part.</small></div></li></ol><div class="ride-downtime-impact"><strong>The ride stays down throughout.</strong><p>Guests are left waiting, lines build, and frustration grows while the engineer travels, investigates, and waits for parts.</p></div></article><article class="transformation-panel transformation-panel--after"><div class="transformation-panel__heading">
+              <span class="workflow-comparison-icon"><i data-lucide="route" aria-hidden="true"></i></span><span class="transformation-label">After · Proposed experience</span><h3>Assess, plan, and coordinate</h3></div><ol class="transformation-flow transformation-flow--after"><li><span>01</span><div><strong>Review the alert</strong><small>See the flagged component, review its health, and assess urgency.</small></div></li><li><span>02</span><div><strong>Propose the work</strong><small>Carry context into a request for engineering review.</small></div></li><li><span>03</span><div><strong>Link the parts</strong><small>Keep work, parts and pending decisions connected.</small></div></li></ol><div class="ride-downtime-impact"><strong>Planned for after park hours.</strong><p>Coordinate the work and replacement parts for the overnight maintenance window, when the park is closed and guests are not affected by the repair.</p></div></article></div></section>
 <section class="solution-gallery report-builder-gallery" id="concept" aria-label="Design stories">
-<article class="flow-story ride-story"><div class="ride-story-copy"><p class="section-kicker">Story 01</p><h3>Review the alert and assess the issue</h3><dl class="decision-tradeoff"><div><dt>Before</dt><dd>Engineers checked email for a notification with broad location context.</dd></div><div><dt>After</dt><dd>A prioritized alert opens the component's location, readings, and trend for review.</dd></div></dl></div><figure class="case-video"><div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-1-poster.jpg" aria-label="Story 1: reviewing a brake actuator alert" aria-describedby="maintenance-story-1-caption"><source src="drafts/assets/maintenance-insights/story-1.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-1-caption">Story 1: reviewing a brake alert and assessing its health evidence.</figcaption></figure></article>
-<article class="flow-story ride-story"><div class="ride-story-copy"><p class="section-kicker">Story 02</p><h3>Propose the maintenance work</h3><dl class="decision-tradeoff"><div><dt>Before</dt><dd>The engineer had to assemble the information needed to plan a response.</dd></div><div><dt>After</dt><dd>The engineer submits proposed overnight work with the component evidence already attached.</dd></div></dl></div><figure class="case-video"><div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-2-poster.jpg" aria-label="Story 2: creating a maintenance work request" aria-describedby="maintenance-story-2-caption"><source src="drafts/assets/maintenance-insights/story-2.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-2-caption">Story 2: creating and submitting a work request for proposed overnight maintenance.</figcaption></figure></article>
-<article class="flow-story ride-story"><div class="ride-story-copy"><p class="section-kicker">Story 03</p><h3>Request the part and see what is pending</h3><dl class="decision-tradeoff"><div><dt>Before</dt><dd>The engineer emailed the parts team separately.</dd></div><div><dt>After</dt><dd>The engineer requests the part within the workflow and reviews what is still pending.</dd></div></dl></div><figure class="case-video"><div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-3-poster.jpg" aria-label="Story 3: requesting a replacement part and reviewing linked requests" aria-describedby="maintenance-story-3-caption"><source src="drafts/assets/maintenance-insights/story-3.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-3-caption">Story 3: submitting a parts request and checking the linked request status.</figcaption></figure></article>
+<article class="flow-story ride-story case-evidence-story">
+<header class="ride-story-copy case-evidence-intro"><p class="section-kicker">Story 01</p><h3>Review the alert and assess the issue</h3>
+  <p>The walkthrough follows a flagged brake actuator from the alert list into its component details, where location, readings, and trend data are available alongside the next maintenance window. The engineer can review the issue without losing the wider ride context.</p>
+  <p>I designed this step to support an assessment before a maintenance decision. Engineers can compare the component’s condition with normal behavior, consider timing, and choose whether to create a work request or escalate for immediate engineering review.</p>
+</header>
+<figure class="case-video case-evidence-card">
+<div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-1-poster.jpg" aria-label="Story 1: reviewing a brake actuator alert" aria-describedby="maintenance-story-1-caption"><source src="drafts/assets/maintenance-insights/story-1-silent-20261015.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-1-caption">Story 1: reviewing a brake alert and assessing its health evidence.</figcaption></figure>
+</article>
+<article class="flow-story ride-story case-evidence-story">
+<header class="ride-story-copy case-evidence-intro"><p class="section-kicker">Story 02</p><h3>Propose the maintenance work</h3>
+  <p>Once the engineer decides to propose maintenance, the same component context carries into the work request. Location and health evidence are already attached, while the work description, notes, and proposed maintenance window can be adjusted to reflect the engineer’s assessment.</p>
+  <p>The walkthrough shows an overnight maintenance proposal being submitted as a shared record for engineering review. The intent was to turn the assessment into a clear handoff, with the component evidence available to the team confirming the work and timing.</p>
+</header>
+<figure class="case-video case-evidence-card">
+<div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-2-poster.jpg" aria-label="Story 2: creating a maintenance work request" aria-describedby="maintenance-story-2-caption"><source src="drafts/assets/maintenance-insights/story-2-silent-20261015.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-2-caption">Story 2: creating and submitting a work request for proposed overnight maintenance.</figcaption></figure>
+</article>
+<article class="flow-story ride-story case-evidence-story">
+<header class="ride-story-copy case-evidence-intro"><p class="section-kicker">Story 03</p><h3>Request the part and see what is pending</h3>
+  <p>After the work request is submitted, the engineer can continue directly into a linked parts request. The affected component and work request stay connected while the engineer specifies quantity, needed-by time, and delivery location.</p>
+  <p>The final view brings engineering review, parts confirmation, and proposed timing together so the engineer can see what is still pending. This gives maintenance and parts teams a shared reference for coordinating the repair, with compatibility, availability, and delivery timing left for the parts team to confirm.</p>
+</header>
+<figure class="case-video case-evidence-card">
+<div class="case-video-frame"><video controls playsinline muted preload="metadata" poster="drafts/assets/maintenance-insights/story-3-poster.jpg" aria-label="Story 3: requesting a replacement part and reviewing linked requests" aria-describedby="maintenance-story-3-caption"><source src="drafts/assets/maintenance-insights/story-3-silent-20261015.mp4" type="video/mp4">Your browser does not support embedded video.</video></div><figcaption class="gallery-caption" id="maintenance-story-3-caption">Story 3: submitting a parts request and checking the linked request status.</figcaption></figure>
+</article>
 <div class="flow-section-heading flow-section-heading--supporting" id="behind-the-design">
   <p class="section-kicker">Behind the design</p>
   <h3>The details that support an engineer's next decision</h3>
 </div>
-<article class="ride-story">
-  <div>
+<article class="ride-story case-evidence-story">
+<header class="case-evidence-intro">
     <p class="section-kicker">At-a-glance context</p>
     <h3>Put what needs attention beside the next maintenance window</h3>
     <p>I grouped monitoring coverage, issues needing review, vehicle activity, and the next overnight window into one summary strip. Engineers can orient themselves before looking into a specific component.</p>
     <p>Neutral counts provide context, red emphasizes issues needing attention, and blue distinguishes the planning window. Labels and the priority breakdown make those differences clear without relying on color alone.</p>
-  </div>
-  <figure class="gallery-figure">
+  </header>
+<figure class="gallery-figure case-evidence-card">
     <div class="overview-image-frame"><img loading="lazy" src="drafts/assets/maintenance-insights/overview-strip-tight.png" alt="Dashboard summary showing monitoring coverage, issues needing attention, vehicle activity, and the next overnight maintenance window."></div>
     <figcaption class="gallery-caption">A quick overview of ride health, activity, and the next maintenance window.</figcaption>
   </figure>
 </article>
-<article class="ride-story" id="location-context">
-  <div>
+<article class="ride-story case-evidence-story" id="location-context">
+<header class="case-evidence-intro">
     <p class="section-kicker">Location and priority</p>
     <h3>Connect the alert to its location</h3>
-    <p>The original email identified a broad ride area. In the proposed experience, the prioritized alert list connects each issue to a named component, track side, and zone. The high-priority brake actuator appears first, giving the engineer a clear starting point for review.</p>
-    <p>Matching component markers connect the list to the ride schematic. I placed the callouts outside the track, with lines pointing to each component, so labels do not obscure the layout. Priority labels and icons reinforce the color cues.</p>
-  </div>
-  <figure class="gallery-figure">
-    <img loading="lazy" src="drafts/assets/maintenance-insights/map-alert-context.png" alt="Ride schematic beside the prioritized Needs attention list. The high-priority Side A, Zone 03 brake actuator appears at the top of the list and in an off-track callout connected to its map marker.">
+    <p>The original email identified a broad ride area. I connected a prioritized alert list to the ride schematic so engineers could identify the component, understand its priority, and locate it without losing the wider context.</p>
+  </header>
+<figure class="gallery-figure case-evidence-card">
+    <div class="ride-annotated-screen">
+      <img loading="lazy" src="drafts/assets/maintenance-insights/map-alert-context.png" alt="Ride health map and Needs attention list. Numbered markers identify: 1, the highest-priority alert; 2, the affected component on the ride schematic; 3, an off-track callout connected to the component." aria-describedby="location-context-guide">
+      <span class="ride-screen-pin" style="left:95%;top:16.8%" aria-hidden="true">1</span>
+      <span class="ride-screen-pin" style="left:42%;top:39.5%" aria-hidden="true">2</span>
+      <span class="ride-screen-pin" style="left:60.5%;top:42.5%" aria-hidden="true">3</span>
+    </div>
+    <dl class="drawer-guide ride-location-guide" id="location-context-guide">
+      <div><dt><span class="ride-guide-number">1</span><span>Start with the highest priority</span></dt><dd>The brake actuator appears first in Needs attention. Its priority label and warning icon reinforce the color cue, while the component name, track side, and zone identify what needs review.</dd></div>
+      <div><dt><span class="ride-guide-number">2</span><span>Locate the exact component</span></dt><dd>A matching component marker places the brake actuator on the ride schematic, connecting the alert to Side A, Zone 03.</dd></div>
+      <div><dt><span class="ride-guide-number">3</span><span>Keep the ride layout readable</span></dt><dd>The component callout sits outside the track, with a line connecting it to the marker. Engineers can read the label and open the component without obscuring the ride layout.</dd></div>
+    </dl>
     <figcaption class="gallery-caption">The brake actuator's name, zone, and high-priority label connect its alert to the marker on the schematic. Component-level visibility depends on the proposed additional sensors.</figcaption>
   </figure>
 </article>
-<article class="ride-story drawer-explainer" id="component-evidence">
-  <figure class="gallery-figure">
-    <img loading="lazy" src="drafts/assets/maintenance-insights/component-drawer.png" alt="Brake actuator component-health drawer showing its location, latest response versus normal range, estimated downtime risk, maintenance window, six-hour trend, and response actions.">
-    <figcaption class="gallery-caption">Component readings and trends stay beside the ride map, keeping the wider context visible.</figcaption>
-  </figure>
-  <div>
+<article class="ride-story drawer-explainer case-evidence-story" id="component-evidence">
+<header class="case-evidence-intro">
     <p class="section-kicker">Understanding the issue</p>
     <h3>Give the engineer evidence for the next decision</h3>
     <p>The drawer organizes the evidence around the engineer's assessment, from identifying the component to choosing a response.</p>
-    <dl class="drawer-guide">
-      <div><dt>The exact component</dt><dd>The high-priority label, track side, zone, and component ID establish which brake actuator needs review.</dd></div>
-      <div><dt>What has changed</dt><dd>A plain-language summary explains that the brake is responding more slowly. The latest reading of 420 ms sits beside the normal 280–340 ms range, with the 80 ms difference called out directly.</dd></div>
-      <div><dt>Urgency and the maintenance window</dt><dd>The estimated downtime risk appears alongside tonight's 23:00–05:00 window, bringing condition and timing into the same view.</dd></div>
-      <div><dt>The trend behind the alert</dt><dd>The six-hour chart shows how response time has changed. A shaded normal range makes the departure visible, and the sensor readings are available for closer review.</dd></div>
-      <div><dt>A choice of next steps</dt><dd>Create a work request with the evidence attached, or escalate for immediate engineering review.</dd></div>
-    </dl>
-  </div>
-</article>
-<article class="ride-story drawer-explainer" id="work-request-context">
-  <figure class="gallery-figure">
-    <img loading="lazy" src="drafts/assets/maintenance-insights/work-request-detail.png" width="1400" height="1520" alt="Create work request modal with the brake actuator and location prefilled, health evidence attached, an editable work description, a proposed overnight maintenance window, and notes.">
-    <figcaption class="gallery-caption">Prefilled component details and attached evidence reduce the information the engineer needs to re-enter.</figcaption>
+    
+  </header>
+<div class="case-evidence-card case-evidence-detail">
+<figure class="gallery-figure">
+    <div class="ride-annotated-screen">
+      <img loading="lazy" src="drafts/assets/maintenance-insights/component-drawer.png" alt="Brake actuator component-health drawer. Numbered markers identify: 1, the exact component; 2, what has changed; 3, urgency and the maintenance window; 4, the trend behind the alert; 5, response actions." aria-describedby="component-evidence-guide">
+      <span class="ride-screen-pin" style="left:90%;top:11.6%" aria-hidden="true">1</span>
+      <span class="ride-screen-pin" style="left:90%;top:27.5%" aria-hidden="true">2</span>
+      <span class="ride-screen-pin" style="left:95%;top:33.2%" aria-hidden="true">3</span>
+      <span class="ride-screen-pin" style="left:90%;top:50.8%" aria-hidden="true">4</span>
+      <span class="ride-screen-pin" style="left:28%;top:97.4%" aria-hidden="true">5</span>
+    </div>
+    <figcaption class="gallery-caption">Component readings and trends stay beside the ride map, keeping the wider context visible.</figcaption>
   </figure>
-  <div>
+<dl class="drawer-guide" id="component-evidence-guide">
+      <div><dt><span class="ride-guide-number">1</span><span>The exact component</span></dt><dd>The high-priority label, track side, zone, and component ID establish which brake actuator needs review.</dd></div>
+      <div><dt><span class="ride-guide-number">2</span><span>What has changed</span></dt><dd>A plain-language summary explains that the brake is responding more slowly. The latest reading of <span class="ride-guide-value">420 ms</span> sits beside the normal <span class="ride-guide-value">280–340 ms</span> range, with the <span class="ride-guide-value">80 ms</span> difference called out directly.</dd></div>
+      <div><dt><span class="ride-guide-number">3</span><span>Urgency and the maintenance window</span></dt><dd>The estimated downtime risk appears alongside tonight's <span class="ride-guide-value">23:00–05:00</span> window, bringing condition and timing into the same view.</dd></div>
+      <div><dt><span class="ride-guide-number">4</span><span>The trend behind the alert</span></dt><dd>The <span class="ride-guide-value">six-hour</span> chart shows how response time has changed. A shaded normal range makes the departure visible, and the sensor readings are available for closer review.</dd></div>
+      <div><dt><span class="ride-guide-number">5</span><span>A choice of next steps</span></dt><dd>Create a work request with the evidence attached, or escalate for immediate engineering review.</dd></div>
+    </dl>
+</div>
+</article>
+<article class="ride-story drawer-explainer case-evidence-story" id="work-request-context">
+<header class="case-evidence-intro">
     <p class="section-kicker">From evidence to action</p>
     <h3>Carry the context into the work request</h3>
     <p>The engineer can move from reviewing the alert to proposing work without rebuilding the component's story in a separate message.</p>
-    <dl class="drawer-guide">
-      <div><dt>Component details are already there</dt><dd>The actuator name, ride location, and component ID carry over from the alert, keeping the request tied to the asset under review.</dd></div>
-      <div><dt>The evidence stays attached</dt><dd>Current readings, the normal range, and the estimated risk travel with the request. The engineer can expand the evidence summary to check the readings before submitting.</dd></div>
-      <div><dt>The engineer defines the work</dt><dd>An editable description and notes provide a starting point for the inspection or maintenance needed. The engineer can adjust them to reflect their assessment.</dd></div>
-    </dl>
-  </div>
-</article>
-<article class="ride-story drawer-explainer" id="parts-request-context">
-  <figure class="gallery-figure">
-    <img loading="lazy" src="drafts/assets/maintenance-insights/parts-request-detail.png" width="1400" height="1520" alt="Replacement-part request showing the saved work request, suggested brake actuator with an illustrative photo, availability pending, quantity, needed-by time, and delivery location.">
-    <figcaption class="gallery-caption">The optional parts step follows the saved work request in the same dialog. The part photo and catalog reference are illustrative.</figcaption>
+    
+  </header>
+<div class="case-evidence-card case-evidence-detail">
+<figure class="gallery-figure">
+    <div class="ride-annotated-screen">
+      <img loading="lazy" src="drafts/assets/maintenance-insights/work-request-detail.png" width="1400" height="1520" alt="Create work request. Numbered markers identify: 1, prefilled component details; 2, attached health evidence; 3, editable work description and notes." aria-describedby="work-request-guide">
+      <span class="ride-screen-pin" style="left:91%;top:18%" aria-hidden="true">1</span>
+      <span class="ride-screen-pin" style="left:91%;top:28.8%" aria-hidden="true">2</span>
+      <span class="ride-screen-pin" style="left:91%;top:40.4%" aria-hidden="true">3</span>
+    </div>
+    <figcaption class="gallery-caption">Prefilled component details and attached evidence reduce the information the engineer needs to re-enter.</figcaption>
   </figure>
-  <div>
+<dl class="drawer-guide" id="work-request-guide">
+      <div><dt><span class="ride-guide-number">1</span><span>Component details are already there</span></dt><dd>The actuator name, ride location, and component ID carry over from the alert, keeping the request tied to the asset under review.</dd></div>
+      <div><dt><span class="ride-guide-number">2</span><span>The evidence stays attached</span></dt><dd>Current readings, the normal range, and the estimated risk travel with the request. The engineer can expand the evidence summary to check the readings before submitting.</dd></div>
+      <div><dt><span class="ride-guide-number">3</span><span>The engineer defines the work</span></dt><dd>An editable description and notes provide a starting point for the inspection or maintenance needed. The engineer can adjust them to reflect their assessment.</dd></div>
+    </dl>
+</div>
+</article>
+<article class="ride-story drawer-explainer case-evidence-story" id="parts-request-context">
+<header class="case-evidence-intro">
     <p class="section-kicker">Connected parts coordination</p>
     <h3>Request the part without starting over</h3>
     <p>Instead of opening a separate email to the parts team, the engineer continues from the submitted work request with the component context already in place.</p>
-    <dl class="drawer-guide">
-      <div><dt>The work request stays linked</dt><dd>The confirmation and request ID show that the work request is saved. The engineer can request a part now or skip this step without losing it.</dd></div>
-      <div><dt>The suggested part is visible</dt><dd>A photo, part name, and catalog reference identify the suggested replacement alongside the affected component.</dd></div>
-      <div><dt>Delivery needs are captured</dt><dd>Quantity, needed-by time, and delivery location give the parts team the details needed to coordinate the request around the proposed overnight maintenance window.</dd></div>
-      <div><dt>Availability stays explicit</dt><dd>A pending status shows that compatibility, stock, and delivery timing still need confirmation from the parts team.</dd></div>
+    
+  </header>
+<div class="case-evidence-card case-evidence-detail">
+<figure class="gallery-figure">
+    <div class="ride-annotated-screen">
+      <img loading="lazy" src="drafts/assets/maintenance-insights/parts-request-detail.png" width="1400" height="1520" alt="Request replacement part. Numbered markers identify: 1, the linked saved work request; 2, suggested replacement part; 3, delivery requirements; 4, availability awaiting confirmation." aria-describedby="parts-request-guide">
+      <span class="ride-screen-pin" style="left:90%;top:15%" aria-hidden="true">1</span>
+      <span class="ride-screen-pin" style="left:90%;top:29%" aria-hidden="true">2</span>
+      <span class="ride-screen-pin" style="left:88%;top:66.2%" aria-hidden="true">3</span>
+      <span class="ride-screen-pin" style="left:90%;top:51.5%" aria-hidden="true">4</span>
+    </div>
+    <figcaption class="gallery-caption">The optional parts step follows the saved work request in the same dialog. The part photo and catalog reference are illustrative.</figcaption>
+  </figure>
+<dl class="drawer-guide" id="parts-request-guide">
+      <div><dt><span class="ride-guide-number">1</span><span>The work request stays linked</span></dt><dd>The confirmation and request ID show that the work request is saved. The engineer can request a part now or skip this step without losing it.</dd></div>
+      <div><dt><span class="ride-guide-number">2</span><span>The suggested part is visible</span></dt><dd>A photo, part name, and catalog reference identify the suggested replacement alongside the affected component.</dd></div>
+      <div><dt><span class="ride-guide-number">3</span><span>Delivery needs are captured</span></dt><dd>Quantity, needed-by time, and delivery location give the parts team the details needed to coordinate the request around the proposed overnight maintenance window.</dd></div>
+      <div class="ride-guide-pending"><dt><span class="ride-guide-number">4</span><span>Availability stays explicit</span></dt><dd>A <span class="ride-guide-value">pending status</span> shows that compatibility, stock, and delivery timing still need confirmation from the parts team.</dd></div>
     </dl>
-  </div>
+</div>
 </article>
 </section>
 <section class="case-section case-closing" id="pilot">
-  <div><p class="section-kicker">Pilot and learnings</p><h2>A pilot built around engineering judgment.</h2></div>
+  <div><p class="section-kicker">Pilot and learnings</p><h2>Designing around the engineer’s next decision.</h2></div>
   <div class="case-copy case-test-summary">
-    <p>The project progressed to pilot with Disney. Research informed portable access to component health, location-specific evidence, and connected work and parts requests.</p>
+    <p>The original project progressed to pilot with Disney. The on-site research established the design direction: engineers needed to check component health while moving through the ride environment, understand where an issue was developing, and have enough evidence to determine the appropriate response.</p>
+    <p>The experience presented here develops that direction into a connected maintenance workflow. Component details and health evidence carry into work and parts requests, keeping the issue, proposed timing, and pending confirmations together as the response moves between teams.</p>
     <h3>What I learned</h3>
-    <p>Earlier alerts alone would not change the workflow. Engineers needed evidence they could assess where they worked, then carry into the maintenance handoff. The interface had to distinguish a proposed response from an approved plan.</p>
-    <p class="case-note">Measured pilot outcomes were not available. Demonstrations use illustrative data; reductions in downtime have not been verified here.</p>
+    <p>My main lesson was that better visibility only matters when it supports a decision. An alert needs to sit beside the component’s location, current readings, and trend so the engineer can assess the issue and choose a response. The interface should make that assessment easier while leaving urgency and repair decisions with the engineer.</p>
+    <p>I also learned to treat the handoff as part of the experience. The evidence that explains an alert should travel with the work request, and a parts request should stay connected to the same component. Clear status labels help teams distinguish what has been requested, what still needs confirmation, and what is ready to move forward.</p>
   </div>
 </section>
 </main><footer class="site-footer site-footer--unified">

@@ -79,7 +79,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Geist", "Neue Montreal", system-ui, sans-serif;
+  font-family: var(--portfolio-font);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -264,7 +264,7 @@ p {
 
 h1,
 h2 {
-  font-family: "Geist", "Neue Montreal", system-ui, sans-serif;
+  font-family: var(--portfolio-font);
   line-height: 1.04;
   font-weight: 500;
 }
@@ -4191,7 +4191,7 @@ html.has-image-lightbox {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background: #07090d;
   color: #f7f7f7;
-  font-family: "Geist", sans-serif;
+  font-family: var(--portfolio-font);
 }
 
 .puro-social-post-header img {

@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     trigger.addEventListener("click", () => {
       dialog.showModal();
+      if (trigger.dataset.lightboxInitialZoom === "true") {
+        image.classList.add("is-zoomed");
+        viewport.scrollTo({ top: 0, left: 0 });
+      }
       document.documentElement.classList.add("has-image-lightbox");
       closeButton.focus();
     });

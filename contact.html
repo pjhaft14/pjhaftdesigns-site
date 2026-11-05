@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -11,13 +12,12 @@
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="contact.css?v=20261016-1" />
     <link rel="stylesheet" href="theme.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="site-header.css?v=20261001-overlay" />
+    <link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle" />
     <script src="assets/lucide.min.js" defer></script>
     <script src="case-studies.js" defer></script>
-    <script src="theme.js" defer></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
@@ -29,8 +29,11 @@
   <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
+<link rel="stylesheet" href="page-entrance.css?v=20261011-1"><link rel="stylesheet" href="personal-pages.css?v=20261027-neutral-hover">
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
+  <link rel="stylesheet" href="button-icon-motion.css?v=20261027-1">
 </head>
-  <body>
+  <body class="personal-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Pejman Haft home"><img src="assets/favicon.svg" width="36" height="36" alt=""><span>Pejman Haft</span></a>
@@ -60,8 +63,8 @@
               conversations about enterprise UX, analytics, workflows, and AI.
             </p>
             <div class="contact-actions">
-              <a class="button secondary" href="resume.html">View resume</a>
-              <a class="button secondary" href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn</a>
+              <a class="button secondary icon-motion-link icon-motion-link--arrow" href="resume.html">View resume <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
+              <a class="button secondary icon-motion-link icon-motion-link--arrow" href="https://www.linkedin.com/in/pejmanhaft/">LinkedIn <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
             </div>
           </div>
 
@@ -117,6 +120,25 @@
       </section>
     </main>
 
+    <dialog class="contact-thanks" id="contact-thanks" aria-labelledby="thanks-title" aria-describedby="thanks-description">
+      <button class="contact-thanks-close" type="button" aria-label="Close thank-you message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+      <div class="contact-thanks-content">
+        <div class="contact-thanks-icon" aria-hidden="true">
+          <!-- Google Material Symbols: check (Apache 2.0). -->
+          <svg width="40" height="40" viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+        </div>
+        <p class="contact-thanks-eyebrow">Message received</p>
+        <h2 id="thanks-title">Thanks for reaching out.</h2>
+        <p id="thanks-description">I’m glad you got in touch. I’ll read your message and get back to you soon.</p>
+        <div class="contact-thanks-actions">
+          <button class="contact-thanks-done" type="button" autofocus>Sounds good</button>
+          <a href="index.html#work">Back to work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+        </div>
+      </div>
+    </dialog>
+
     <footer class="site-footer site-footer--unified">
       <span>&copy; 2026 Pejman Haft</span>
       <nav class="footer-links" aria-label="Footer navigation">
@@ -129,10 +151,30 @@
     <script>
       const contactForm = document.querySelector("#contact-form");
       const formStatus = document.querySelector("#form-status");
+      const thanksDialog = document.querySelector("#contact-thanks");
+      const sendButton = contactForm.querySelector('button[type="submit"]');
+
+      thanksDialog.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => thanksDialog.close());
+      });
+      // Only dismiss when both the press and release happen on the backdrop.
+      let backdropPress = false;
+      thanksDialog.addEventListener("pointerdown", (event) => {
+        backdropPress = event.target === thanksDialog;
+      });
+      thanksDialog.addEventListener("click", (event) => {
+        if (backdropPress && event.target === thanksDialog) thanksDialog.close();
+        backdropPress = false;
+      });
+      thanksDialog.addEventListener("close", () => {
+        document.documentElement.classList.remove("contact-thanks-open");
+        sendButton.focus({ preventScroll: true });
+      });
 
       contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+        if (contactForm.getAttribute("aria-busy") === "true") return;
         if (!contactForm.reportValidity()) return;
 
         const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -165,8 +207,9 @@
           }
 
           contactForm.reset();
-          formStatus.classList.add("is-success");
-          formStatus.textContent = "Thanks, I got your message and will get back to you soon.";
+          formStatus.textContent = "";
+          document.documentElement.classList.add("contact-thanks-open");
+          thanksDialog.showModal();
         } catch (error) {
           formStatus.classList.add("is-error");
           formStatus.textContent =

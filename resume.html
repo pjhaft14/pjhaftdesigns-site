@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -14,10 +15,11 @@
     <link rel="stylesheet" href="resume.css?v=20260921-02" />
     <link rel="stylesheet" href="theme.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="site-header.css?v=20261001-overlay" />
+    <link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle" />
+    <link rel="stylesheet" href="resume-editorial.css?v=20261027-section-headings" />
+    <link rel="stylesheet" href="resume-teams.css?v=20261102-1" />
     <script src="assets/lucide.min.js" defer></script>
     <script src="case-studies.js" defer></script>
-    <script src="theme.js" defer></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J5VQ08BPY3');</script>
@@ -29,6 +31,11 @@
   <meta property="og:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.pjhaftdesigns.com/assets/social-preview.png">
+<link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+<link rel="stylesheet" href="resume-intro.css?v=20261027-no-impact">
+  <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
+  <link rel="stylesheet" href="button-icon-motion.css?v=20261027-1">
+  <link rel="stylesheet" href="resume-layout.css?v=20261102-2">
 </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -43,78 +50,170 @@
         <p class="eyebrow">Resume</p>
         <h1 id="resume-title">Pejman Haft</h1>
         <p class="resume-positioning">
-          Senior product designer for complex enterprise SaaS, CRM, analytics, and
-          AI-assisted workflows.
+          <strong>Senior product designer</strong> for complex enterprise SaaS, CRM, analytics, and <span class="resume-no-break">AI-assisted workflows.</span>
         </p>
+        <div class="resume-actions">
+          <a class="resume-action icon-motion-link" href="assets/resume/Pejman-Haft-Resume.pdf?v=20261102-active" target="_blank" rel="noopener" aria-label="Download resume (PDF, opens in a new tab)">Download resume (PDF) <span class="button-motion-icon" aria-hidden="true"><i data-lucide="download" class="icon-rest"></i><i data-lucide="file-down" class="icon-hover"></i></span></a>
+        </div>
         <div class="resume-links" aria-label="Resume links">
+          <a href="mailto:pjhaft@gmail.com">pjhaft@gmail.com</a>
           <a href="index.html">pjhaftdesigns.com</a>
           <a href="https://www.puroresuproject.com/">puroresuproject.com</a>
           <a href="https://www.linkedin.com/in/pejmanhaft/">linkedin.com/in/pejmanhaft</a>
         </div>
-        <dl class="resume-impact" aria-label="Selected impact">
-          <div>
-            <dt>16+ years</dt>
-            <dd>Enterprise product design across CRM, data, and analytics tools</dd>
-          </div>
-          <div>
-            <dt>SugarCube</dt>
-            <dd>Led product design on Sugar's first AI capability</dd>
-          </div>
-          <div>
-            <dt>411k+ views</dt>
-            <dd>Grew Puroresu Project through product, content, and social strategy</dd>
-          </div>
-        </dl>
       </section>
 
-      <div class="resume-layout">
-        <aside class="resume-sidebar" aria-label="Resume overview">
-          <section class="resume-panel">
-            <h2>Profile</h2>
-            <p>
-              I help teams turn dense product systems into clear, trustworthy workflows.
-              My work spans enterprise CRM, analytics, automation, AI-assisted
-              experiences, and design systems, with a focus on giving users enough
-              context to understand what is happening and act with confidence.
-            </p>
-            <ul class="contact-list">
+      <section class="resume-teams" id="teams" aria-labelledby="teams-title">
+        <h2 id="teams-title">The teams I've been part of.</h2>
+        <div class="experience-panel">
+          <dl class="experience-numbers">
+            <div><dt>Years designing software</dt><dd>16</dd></div>
+            <div><dt>Designers mentored</dt><dd>12</dd></div>
+            <div><dt>Countries collaborated across</dt><dd>10+</dd></div>
+          </dl>
+          <div class="experience-companies" aria-label="Companies I've worked with">
+            <span><img src="assets/logos/sugarai.svg" alt="SugarAI" loading="lazy"></span>
+            <span><img src="assets/logos/abila.png" alt="Abila" loading="lazy"></span>
+            <span><img src="assets/logos/hitachi.svg" alt="Hitachi" loading="lazy"></span>
+            <span><img src="assets/logos/pentaho.svg" alt="Pentaho" loading="lazy"></span>
+            <span><img src="assets/logos/metra.png" alt="Metra Electronics" loading="lazy"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-main" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>Lead UX Designer</h3>
+            <p>Jul 2026 – Present</p>
+          </div>
+          <div class="experience-detail">
+            <h4>Puroresu Project, Independent Project</h4>
+            <ul>
+              <li>Designed and launched an interactive archive connecting 72 years of Japanese wrestling history, making scattered and Japanese-language sources more accessible to international fans.</li>
+              <li>Created guided stories and curated discovery trails for newcomers, alongside searchable profiles and interactive lineage maps for experienced fans, helping readers explore connections among wrestlers, promotions, and eras.</li>
+              <li>Built a shared content system for 155 wrestler profiles, 126 curated matches, and 48 venue histories, enabling corrections to carry across the archive and supporting consistent records as coverage expanded.</li>
+              <li>Designed and launched an integrated Shopify storefront, extending the project’s visual identity to merchandise and giving fans another way to support and connect with the project.</li>
+              <li>Generated over 1 Million (1,085,758) Instagram views, gained 5,400 net new followers, and drove 78,313 content interactions from August 1–October 29, 2026. Website analytics recorded 8,928 active users and 35,317 views from July 1–October 30, 2026.</li>
+            </ul>
+          </div>
+          <div class="experience-case-links">
+            <a class="resume-case-link icon-motion-link icon-motion-link--arrow" href="https://pjhaftdesigns.com/puroresu-project" aria-label="Puroresu Project case study">View case study <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>Lead UX Designer</h3>
+            <p>Apr 2024 – Sep 2026</p>
+          </div>
+          <div class="experience-detail">
+            <h4>SugarAI (formerly SugarCRM), California, Remote</h4>
+            <ul>
+              <li>Designed SugarAI’s first AI-assisted report builder, helping sales reps and leaders turn natural-language requests into reports they could review and build, with direct editing, previews, and version history to keep them in control.</li>
+              <li>Redesigned mobile CRM around customer visits, connecting preparation, AI-assisted answers, note capture, and review in one workflow. Prototype testing supported the approach for helping field reps update CRM without interrupting customer conversations.</li>
+              <li>Led and shipped two company-wide brand overhauls, unifying the front-end experience across Sugar’s five-product stack, acquired tools, and new features; the changes were rolled out to more than 3,000 customers.</li>
+              <li>Onboarded and mentored junior, midlevel, and senior designers through weekly check-ins, design critiques, and product guidance, integrating them into sprint teams in less than a month.</li>
+            </ul>
+          </div>
+          <div class="experience-case-links">
+            <a class="resume-case-link icon-motion-link icon-motion-link--arrow" href="https://pjhaftdesigns.com/report-builder" aria-label="Report builder case study">Report builder <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
+            <a class="resume-case-link icon-motion-link icon-motion-link--arrow" href="https://pjhaftdesigns.com/sugarai-mobile" aria-label="Mobile CRM case study">Mobile CRM <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>Senior UX Designer</h3>
+            <p>Nov 2019 – Apr 2024</p>
+          </div>
+          <div class="experience-detail">
+            <h4>SugarCRM, California, Remote</h4>
+            <ul>
+              <li>Led a responsive redesign of Flexible Dashboards, enabling sales reps, sales leaders, and account managers to arrange, resize, and share dashboard content around their workflows; rolled out to more than 2,000 customers.</li>
+              <li>Led the chart-library redesign during SugarCRM’s migration from D3 to Chart.js, standardizing chart styles and interactions across the product stack.</li>
+              <li>Maintained and evolved SugarCRM’s UX component library through three UI theme changes, keeping reusable components aligned with the platform’s evolving design standards.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>Senior UX Designer</h3>
+            <p>Sep 2013 – Nov 2019</p>
+          </div>
+          <div class="experience-detail">
+            <h4>Hitachi Vantara / Pentaho, Orlando, FL</h4>
+            <ul>
+              <li>Led UX design for a Disney Space Mountain ride-maintenance pilot used by approximately 22 engineers. The experience helped engineers review component health earlier and plan overnight repairs to avoid downtime during park hours; it connected mobile health alerts with related work and parts requests.</li>
+              <li>Modernized the Spoon interface for Pentaho Data Integration (PDI), an ETL tool used by data engineers and analytics teams to connect, transform, and move data across systems, using a Bootstrap 4 design system.</li>
+            </ul>
+          </div>
+          <div class="experience-case-links">
+            <a class="resume-case-link icon-motion-link icon-motion-link--arrow" href="https://pjhaftdesigns.com/maintenance-insights" aria-label="Space Mountain case study">View case study <span class="button-motion-icon" aria-hidden="true"><i data-lucide="arrow-up-right" class="icon-rest"></i><i data-lucide="arrow-up-right" class="icon-hover"></i></span></a>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>UX Designer</h3>
+            <p>Oct 2010 &ndash; Sep 2013</p>
+          </div>
+          <div class="experience-detail">
+            <h4>Avectra / Abila Inc., Orlando, FL</h4>
+            <ul>
               <li>
-                <a href="mailto:pjhaft@gmail.com">pjhaft@gmail.com</a>
+                Designed core experiences for NetForum Pro and NetForum Enterprise,
+                carrying the work from early sketches through implementation.
               </li>
-              <li class="resume-location">
-                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width: 16px; height: 16px;">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <span>Florida</span>
+              <li>
+                Redesigned shopping and checkout so membership and commerce tasks were
+                easier to understand and complete.
               </li>
             </ul>
-          </section>
+          </div>
+        </article>
 
-          <section class="resume-panel">
-            <h2>Core Skills</h2>
+        <article class="experience-item">
+          <div class="experience-meta">
+            <h3>Visual Designer</h3>
+            <p>Oct 2008 &ndash; Oct 2010</p>
+          </div>
+          <div class="experience-detail">
+            <h4>Metra Electronics, Daytona Beach, FL</h4>
+            <ul>
+              <li>
+                Designed catalogs, packaging, and large-format CES and SEMA displays,
+                working with print vendors from concept through final production.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="resume-skills" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills &amp; tools</h2>
+        <div class="resume-skills-grid">
+          <section aria-labelledby="design-skills-title">
+            <h3 id="design-skills-title">Product design</h3>
             <ul class="skill-stack">
-              <li>Enterprise Product Design</li>
-              <li>AI-Assisted Workflows</li>
-              <li>CRM & Enterprise SaaS</li>
-              <li>Data & Analytics</li>
-              <li>Complex Workflow Design</li>
-              <li>Design Systems</li>
-              <li>Interaction Design</li>
-              <li>Research & Prototyping</li>
-              <li>Information Architecture</li>
-              <li>Accessibility</li>
-              <li>Cross-functional Collaboration</li>
+              <li>UX/UI</li>
+              <li>interaction design</li>
+              <li>information architecture</li>
+              <li>user research</li>
+              <li>prototyping</li>
+              <li>accessibility</li>
+              <li>design systems</li>
             </ul>
           </section>
-
-          <section class="resume-panel">
-            <h2>Tools</h2>
+          <section aria-labelledby="tools-title">
+            <h3 id="tools-title">Tools</h3>
             <ul class="skill-stack">
               <li>Figma</li>
               <li>FigJam</li>
-              <li>Design Systems</li>
-              <li>Prototyping</li>
-              <li>Adobe Creative Suite</li>
+              <li>Adobe CS</li>
               <li>HTML/CSS</li>
               <li>Jira</li>
               <li>Confluence</li>
@@ -123,179 +222,21 @@
               <li>ChatGPT</li>
             </ul>
           </section>
+        </div>
+      </section>
 
-          <section class="resume-panel">
-            <h2>Education</h2>
-            <div class="education-item">
-              <h3>University of Central Florida</h3>
-              <p>2005 &ndash; 2008</p>
-              <p>Bachelor of Arts (B.A.)<br />Focus in graphic design and digital media</p>
-            </div>
-            <div class="education-item">
-              <h3>Seminole Community College</h3>
-              <p>2002 &ndash; 2005</p>
-              <p>Associate of Arts (A.A.)<br />Graphic design</p>
-            </div>
-          </section>
-        </aside>
+      <section class="resume-education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="education-item">
+          <h3>University of Central Florida</h3>
+          <p>B.A., Graphic Design and Digital Media</p>
+        </div>
+        <div class="education-item">
+          <h3>Seminole Community College</h3>
+          <p>A.A., Graphic Design</p>
+        </div>
+      </section>
 
-        <section class="resume-main" aria-labelledby="experience-title">
-          <h2 id="experience-title">Experience</h2>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>Founder &amp; Creative Director</h3>
-              <p>Jun 2026 &ndash; Present</p>
-            </div>
-            <div class="experience-detail">
-              <h4>Puroresu Project, Independent Project</h4>
-              <ul>
-                <li>
-                  Built an interactive archive of Japanese professional wrestling
-                  history, turning profiles, timelines, lineage maps, venues, matches,
-                  and editorial trails into a connected archive.
-                </li>
-                <li>
-                  Own the full product loop: research, information architecture, UX/UI,
-                  brand direction, editorial standards, front-end implementation, and
-                  growth experiments.
-                </li>
-                <li>
-                  Connected product design, editorial storytelling, and social content
-                  strategy: 411,381 Instagram views, 139,407 viewers, and 29,762
-                  interactions from July 28 to August 26, 2026. Google Analytics
-                  recorded 2,143 active users and 10,543 website views for the same period.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>Lead UX Designer</h3>
-              <p>Apr 2024 &ndash; Jul 2026</p>
-            </div>
-            <div class="experience-detail">
-              <h4>SugarAI / SugarCRM, Orlando, FL (Remote)</h4>
-              <ul>
-                <li>
-                  Worked as part of the product team that built SugarCube, SugarCRM's
-                  first AI assistant, designing CRM workflows for insights, summaries,
-                  recommendations, and system-generated guidance.
-                </li>
-                <li>
-                  Led SugarAI mobile research with five sales reps and tested the
-                  visit-centered prototype with two. Feedback informed personal-calendar
-                  synchronization on the next-release roadmap.
-                </li>
-                <li>
-                  Designed a natural-language report-building concept with direct
-                  editing, review, previews, and history. Testing with three sales reps
-                  supported offering both chat and direct controls.
-                </li>
-                <li>
-                  Partnered with product, engineering, data, and design to turn
-                  ambiguous AI capabilities into shippable experiences inside a mature
-                  enterprise CRM platform.
-                </li>
-                <li>
-                  Led and shipped 2 brand overhauls that unified the UI look and feel
-                  across the full SugarCRM product suite.
-                </li>
-                <li>
-                  Mentored five designers through product context, critique,
-                  and practical design guidance.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>Senior UX Designer</h3>
-              <p>Nov 2019 &ndash; Apr 2024</p>
-            </div>
-            <div class="experience-detail">
-              <h4>SugarCRM, Orlando, FL</h4>
-              <ul>
-                <li>
-                  Designed shipped CRM workflows and dashboards for people working
-                  through dense customer and sales data, carrying work from discovery
-                  through prototype, implementation, and release.
-                </li>
-                <li>
-                  Created reusable flows, prototypes, and design-system patterns that
-                  made complex work easier to follow and gave product teams a more
-                  consistent foundation.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>Senior UX Designer</h3>
-              <p>Sep 2013 &ndash; Nov 2019</p>
-            </div>
-            <div class="experience-detail">
-              <h4>Hitachi Vantara / Pentaho, Orlando, FL</h4>
-              <ul>
-                <li>
-                  Worked as part of the product team behind Pentaho Data Integration
-                  (PDI), making complex data integration and analytics workflows easier
-                  to understand across Pentaho&rsquo;s enterprise products.
-                </li>
-                <li>
-                  Created shared patterns, component libraries, and standards for teams
-                  working across the Pentaho product suite.
-                </li>
-                <li>
-                  Led on-site research and UX design for a Disney ride-maintenance
-                  experience that progressed to pilot. Designed portable access to
-                  component health and connected maintenance workflows, partnering
-                  with a junior designer on production assets.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>UX Designer</h3>
-              <p>Oct 2010 &ndash; Sep 2017</p>
-            </div>
-            <div class="experience-detail">
-              <h4>Avectra / Abila Inc., Orlando, FL</h4>
-              <ul>
-                <li>
-                  Designed core experiences for NetForum Pro and NetForum Enterprise,
-                  carrying the work from early sketches through implementation.
-                </li>
-                <li>
-                  Redesigned shopping and checkout so membership and commerce tasks were
-                  easier to understand and complete.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-meta">
-              <h3>Visual Designer</h3>
-              <p>Oct 2008 &ndash; Oct 2010</p>
-            </div>
-            <div class="experience-detail">
-              <h4>Metra Electronics, Daytona Beach, FL</h4>
-              <ul>
-                <li>
-                  Designed catalogs, packaging, and large-format CES and SEMA displays,
-                  working with print vendors from concept through final production.
-                </li>
-              </ul>
-            </div>
-          </article>
-        </section>
-      </div>
     </main>
 
     <footer class="site-footer site-footer--unified">
