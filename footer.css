@@ -36,6 +36,9 @@
 
   .site-footer--unified svg { width: 16px; height: 16px; }
 
+  /* The icon-only back-to-top link gets a full 44px tap target. */
+  .site-footer--unified .footer-links a[aria-label="Back to top"] { min-width: 44px; min-height: 44px; justify-content: center; }
+
   @media (max-width: 640px) {
     .site-footer.site-footer--unified {
       flex-direction: column;

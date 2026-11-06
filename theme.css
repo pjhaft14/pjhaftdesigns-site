@@ -1,11 +1,8 @@
 @import url("theme-motion.css") layer(components);
 
 @layer pages {
-  .case-media{background:var(--color-surface-strong)}
 
   :root[data-theme="light"] .experience-companies img{filter:brightness(0);opacity:.85}
-
-  :root[data-theme="light"] .image-viewer::backdrop{background:rgba(21,21,23,.65)}
 
   :root[data-theme="light"] .puro-media{background:var(--color-surface-strong)}
 

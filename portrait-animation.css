@@ -13,7 +13,7 @@
   }
 
   :root[data-theme="dark"] :is(.intro-portrait, .about-portrait) > :is(img, .portrait-animation) {
-    filter: grayscale(1) invert(1) brightness(.5);
+    filter: grayscale(1) invert(1) brightness(.75);
     mix-blend-mode: screen;
   }
 }

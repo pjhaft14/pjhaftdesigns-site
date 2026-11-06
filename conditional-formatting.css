@@ -85,15 +85,11 @@
 
   .cf-bars { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); align-items: end; gap: 6px; height: 170px; margin: 20px 0 40px; border-bottom: 1px solid var(--color-card-border); }
 
-  .cf-bars--three { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-
   .cf-bars > span { position: relative; height: var(--bar-height); min-width: 0; background: var(--cf-neutral-bar); border-radius: 3px 3px 0 0; }
 
   .cf-bars > .cf-bar-apac { z-index: 1; background: var(--apac-color); transition: background-color .5s ease; }
 
   .cf-bar-apac b { position: absolute; right: 0; bottom: -24px; color: var(--color-text); font-size: 11px; font-weight: 600; line-height: 1.6; }
-
-  .cf-bars--three .cf-bar-apac b { left: 0; text-align: center; }
 
   .cf-pie-plot { display: flex; justify-content: center; align-items: center; height: 230px; }
 
@@ -106,8 +102,6 @@
   .cf-chart-key i { width: 9px; height: 9px; border-radius: 50%; transition: background-color .5s ease; }
 
   .cf-chart-key b { margin-left: auto; color: var(--color-text); font-weight: 500; }
-
-  .cf-chart-key .cf-key-neutral { background: var(--color-text-muted); }
 
   .cf-skeleton-table { width: 100%; height: 206px; margin: 16px 0 8px; border-collapse: collapse; table-layout: fixed; text-align: left; }
 
@@ -264,10 +258,6 @@
 
   .case-study .solution-gallery > .cf-solution-story > figure { width: 100%; margin: 0; order: 1; }
 
-  .cf-video-slot { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; width: 100%; aspect-ratio: 16 / 10; border: 1px solid var(--color-card-border); border-radius: 16px; background: var(--color-surface); color: var(--color-text-muted); font-size: 14px; }
-
-  .cf-video-slot svg { width: 28px; height: 28px; stroke-width: 1.5; }
-
   .cf-solution-story .gallery-figure video { display: block; width: 100%; height: auto; border-radius: 16px; }
 
   @media (max-width: 760px) {
@@ -298,9 +288,8 @@
     .cf-roadmap-stage-copy { padding: 20px; }
     .cf-roadmap-stage-copy h3 br { display: none; }
     .cf-ecosystem figcaption { padding: 16px 20px; }
-    .cf-video-slot { aspect-ratio: 4 / 3; }
+    
   }
-
 
   /* Static solution views share the portfolio's typography and annotation style. */
   .cf-screenshot { position: relative; display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid var(--color-card-border); border-radius: 16px; background: #f4f6fa; text-align: left; }

@@ -194,6 +194,10 @@
 
   .case-study .case-copy p { font-size: 17px; line-height: 1.75; }
 
+  /* Paragraph spacing comes from the .case-copy grid gap alone; a bottom margin on
+     top of it doubled the space between paragraphs. */
+  .case-study .case-copy > p { margin-bottom: 0; }
+
   /* Narrative copy follows the centered section headings; evidence lists retain
      their own alignment and scanning structure. */
   .case-study .case-copy > :is(p, h3),
@@ -217,28 +221,6 @@
   .case-study .report-transformation__intro h2 { max-width: none; margin: 12px auto 20px; }
 
   .case-study .report-transformation__intro > p { max-width: 680px; margin-inline: auto; }
-
-  .case-study .role-overview { padding: 72px 0; }
-
-  .role-intro { text-align: center; max-width: 800px; margin: 0 auto 44px; }
-
-  .case-study .role-intro h2 { width: 100%; max-width: none; margin: 12px auto 20px; font-size: var(--text-xl); line-height: 1.2; text-align: center; }
-
-  .role-intro > p:last-child { font-size: 18px; color: var(--color-text-body); line-height: 1.65; }
-
-  .role-responsibilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--color-card-border); }
-
-  .role-responsibilities article { padding: 28px 24px; min-width: 0; }
-
-  .role-responsibilities article:first-child { padding-left: 0; }
-
-  .role-responsibilities article + article { border-left: 1px solid var(--color-card-border); }
-
-  .role-responsibilities h3 { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; font-size: 16px; }
-
-  .role-responsibilities svg { width: 40px; height: 40px; padding: 10px; border: 1px solid var(--color-border); border-radius: 13px; background: var(--color-card); stroke-width: 1.6; flex: none; }
-
-  .role-responsibilities p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--color-text-body); }
 
   .research-summary { display: flex; flex-wrap: wrap; justify-content: center; width: fit-content; max-width: 100%; padding: 10px 12px; margin: 0 auto 28px; border: 1px solid var(--color-card-border); border-radius: 99px; background: var(--color-card); color: var(--color-text-body); font-size: 13px; }
 
@@ -292,14 +274,11 @@
 
   :root[data-theme="dark"] .tool-connections path:not(.flow-highlight) { stroke: #656570; }
 
-
   .puro-design-board :is(.puro-design-board__header > div > p, .puro-specimen-label) { color: #f07980; }
 
   .puro-design-board .puro-design-photos figcaption { color: #fff; }
 
   .puro-design-board .puro-design-photos figcaption span { color: #fff; }
-
-  .puro-reader .reader-step h4 span { color: #f07980; }
 
   .findings-panels { display: grid; margin-top: clamp(28px, 4vw, 48px); }
 
@@ -349,14 +328,6 @@
   .tool-flow-visual { min-width: 0; position: relative; }
 
   .case-study .tool-flow-board { position: relative; height: 384px; min-height: 0; padding: 0; aspect-ratio: auto; }
-
-  .case-study .tool-flow-heading { position: absolute; font-size: 14px; font-weight: 550; text-transform: none; color: var(--color-text); z-index: 2; }
-
-  .case-study .tool-flow-heading p { font: inherit; }
-
-  .case-study .tool-flow-heading--problem { top: 16px; left: 24px; }
-
-  .case-study .tool-flow-heading--solution { top: auto; bottom: 16px; left: auto; right: 34px; }
 
   .case-study .tool-flow-apps { position: absolute; top: 5px; left: 8px; width: 54px; display: grid; grid-template-columns: 1fr; gap: 10px; padding: 0; margin: 0; transform: none; z-index: 2; }
 
@@ -433,10 +404,7 @@
   }
 
   @media (min-width: 761px) and (max-width: 960px) {
-    .role-responsibilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .role-responsibilities article:first-child { padding-left: 24px; }
-    .role-responsibilities article:nth-child(3) { border-left: 0; }
-    .role-responsibilities article:nth-child(n+3) { border-top: 1px solid var(--color-card-border); }
+
     .case-study .solution-gallery .clubsphere-video-showcase,
     .case-study .solution-gallery .clubsphere-video-showcase:nth-child(even),
     .case-study .puro-solution-gallery .puro-showcase-wide,
@@ -448,12 +416,8 @@
   @media (max-width: 760px) {
     .case-study { width: calc(100% - 40px); padding-top: 64px; }
     .case-study .case-hero p:not(.eyebrow) { font-size: 17px; }
-    .case-study .case-section, .case-study .role-overview { padding: 48px 0; }
-    .role-responsibilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .role-responsibilities article { padding: 22px 16px; }
-    .role-responsibilities article:first-child { padding-left: 16px; }
-    .role-responsibilities article:nth-child(3) { border-left: 0; }
-    .role-responsibilities article:nth-child(n+3) { border-top: 1px solid var(--color-card-border); }
+    .case-study .case-section { padding: 48px 0; }
+
     .findings-card { padding: 20px; border-radius: 24px; }
     .findings-tabs { width: 100%; }
     .findings-tabs button { font-size: 13px; padding: 10px 12px; }
@@ -489,14 +453,7 @@
     .case-study .tool-flow-tile { --tool-icon-size: 28px; width: 44px; height: 44px; border-radius: 12px; }
     .case-study .tool-flow-solution { right: 20px; width: 64px; height: 64px; }
     .case-study .tool-flow-clubsphere { width: 64px; height: 64px; border-radius: 18px; }
-    .case-study .tool-flow-heading--problem { left: 12px; }
-    .case-study .tool-flow-heading--solution { right: 12px; }
-  }
 
-  @media (max-width: 420px) {
-    .role-responsibilities { grid-template-columns: 1fr; }
-    .role-responsibilities article + article { border-left: 0; border-top: 1px solid var(--color-card-border); }
-    .role-responsibilities article { padding-inline: 0; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -599,8 +556,6 @@
   .case-study .solution-gallery .clubsphere-video-showcase > div:first-child,
   .case-study .puro-solution-gallery .puro-showcase-wide > div:first-child { max-width: 760px; }
 
-  .case-study .lineage-feature:has(video) { padding: 24px; }
-
   .case-study .sugarai-prototype-card { padding: 0; border: 0; background: transparent; box-shadow: none; }
 
   @media (min-width: 1000px) {
@@ -612,10 +567,6 @@
 
   @media (min-width: 761px) and (max-width: 900px) {
     .case-study .sugarai-prototype-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-
-  @media (max-width: 760px) {
-    .case-study .lineage-feature:has(video) { padding: 16px; }
   }
 
   /* Apply the same surface treatment to every case study's presentation cards,
@@ -840,4 +791,24 @@
 
   /* The preceding section already supplies the space above the retrospective. */
   .case-study > .case-section + :where(.retrospective) { margin-top: 0; padding-top: 0; }
+
+  /* Next case study: keeps reviewers moving through the portfolio in homepage order. */
+  .case-study .case-next { width: min(100%, 800px); margin: 24px auto 96px; }
+  .case-study .case-next__link { position: relative; display: grid; gap: 8px; padding: 28px 88px 28px 32px; border-radius: 28px; background: var(--color-surface); box-shadow: 0 0 0 1px var(--color-border); color: var(--color-text); text-decoration: none; transition: background .2s ease, box-shadow .2s ease; }
+  .case-study .case-next__link:hover { background: var(--color-surface-strong); }
+  .case-study .case-next__link:focus-visible { outline: 2px solid var(--color-text); outline-offset: 4px; }
+  .case-study .case-next__label { color: var(--color-text-muted); font-size: 14px; font-weight: 500; }
+  .case-study .case-next__title { font-size: 22px; line-height: 1.3; font-weight: 600; letter-spacing: -.015em; text-wrap: balance; }
+  .case-study .case-next__meta { color: var(--color-text-muted); font-size: 14px; }
+  .case-study .case-next__arrow { position: absolute; right: 28px; top: 50%; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--color-text); color: var(--color-bg); transform: translateY(-50%); transition: transform .2s ease; }
+  .case-study .case-next__arrow svg { width: 20px; height: 20px; }
+  .case-study .case-next__link:hover .case-next__arrow { transform: translate(4px, -50%); }
+  @media (max-width: 640px) {
+    .case-study .case-next { margin: 8px auto 64px; }
+    .case-study .case-next__link { padding: 24px 24px 84px; border-radius: 24px; }
+    .case-study .case-next__title { font-size: 19px; }
+    .case-study .case-next__arrow { top: auto; bottom: 24px; left: 24px; right: auto; transform: none; }
+    .case-study .case-next__link:hover .case-next__arrow { transform: translateX(4px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .case-study .case-next__arrow { transition: none; } }
 }

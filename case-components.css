@@ -64,25 +64,6 @@
     padding: clamp(72px, 10vw, 136px) 0;
   }
 
-  .split {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-    gap: clamp(2rem, 6vw, 5rem);
-    align-items: start;
-  }
-
-  .split p {
-    max-width: 690px;
-    color: var(--color-text-muted);
-    font-size: 1.18rem;
-  }
-
-  .testimonial-control:hover:not(:disabled) {
-    border-color: rgba(23, 23, 23, 0.28);
-    background: var(--color-tint-secondary);
-    transform: translateY(-1px);
-  }
-
   .site-footer {
     display: flex;
     align-items: center;
@@ -1010,7 +991,7 @@
       gap: 0.85rem;
     }
 
-    .hero, .split, .case-hero, .case-section, .solution-gallery article, .solution-gallery article:nth-child(even) {
+    .hero, .case-hero, .case-section, .solution-gallery article, .solution-gallery article:nth-child(even) {
       grid-template-columns: 1fr;
     }
 
@@ -1103,7 +1084,7 @@
       padding-bottom: 58px;
     }
 
-    .split p, .case-copy p {
+    .case-copy p {
       font-size: 1rem;
       line-height: 1.6;
     }

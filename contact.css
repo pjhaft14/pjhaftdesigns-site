@@ -13,7 +13,6 @@
 
   .contact-copy{display:grid;gap:24px}
 
-
   .contact-copy h2{margin-top:18px;font-size:38px;font-weight:600;line-height:1.16}
 
   .contact-copy>p{max-width:420px;color:var(--color-text-muted);font-size:16px;line-height:1.7}
@@ -51,8 +50,6 @@
   .contact-form .button.primary:disabled{opacity:.6;cursor:wait}
 
   .form-status{color:var(--color-text-muted);font-size:13px;line-height:1.5}
-
-  .form-status.is-success{color:var(--color-accent)}
 
   .form-status.is-error{color:#ec9292}
 

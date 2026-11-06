@@ -42,7 +42,7 @@
     root.classList.add('architecture-node');
     root.style.setProperty('--d', '.1s');
     const branches = [...mobile.querySelectorAll('.architecture-branch')];
-    const routeGroups = [0, 1, 2, 0, 0, 1, 2];
+    const routeGroups = [0, 1, 1];
     branches.forEach((branch, index) => {
       branch.querySelector('h3').classList.add('architecture-node');
       branch.querySelector('h3').style.setProperty('--d', `${.17 + index * .07}s`);

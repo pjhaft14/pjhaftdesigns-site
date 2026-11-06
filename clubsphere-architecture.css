@@ -251,7 +251,7 @@
 
   .architecture-key .feature-key { background: var(--feature-fill); }
 
-  .architecture-desktop svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .architecture-desktop svg { display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto; overflow: visible; }
 
   .architecture-edge {
     fill: none;
@@ -273,13 +273,9 @@
 
   .architecture-route.route-1 { stroke: #ff9500; }
 
-  .architecture-route.route-2 { stroke: #3b82f6; }
-
   .architecture-routes-key .route-0 { background: #34a853; }
 
   .architecture-routes-key .route-1 { background: #ff9500; }
-
-  .architecture-routes-key .route-2 { background: #3b82f6; }
 
   .architecture-routes-key { margin-top: 12px; }
 

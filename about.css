@@ -15,8 +15,6 @@
 
   .about-opening-copy>p:not(.eyebrow){font-size:17px;line-height:1.7;color:var(--color-text-muted);margin-bottom:20px;max-width:530px}
 
-  .about-opening-copy .text-link{margin-top:8px}
-
   .experience-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;padding:40px 0;margin:48px 0 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
 
   .experience-numbers>div{display:flex;flex-direction:column;gap:12px}
@@ -27,29 +25,9 @@
 
   .experience-companies{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:36px;color:var(--color-text-muted);font-size:17px;font-weight:500}
 
-  .principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:52px}
+  @media(max-width:1000px){.about-intro h1{font-size:56px}.about-opening {gap:48px}.about-opening-copy h2{font-size:32px}}
 
-  .principles article{border-top:1px solid var(--color-border);padding-top:24px}
-
-  .principle-index{font:12px ui-monospace,Consolas,monospace;color:var(--color-text-muted)}
-
-  .principles h3{font-size:24px;font-weight:600;margin:16px 0 12px}
-
-  .principles p{color:var(--color-text-muted);font-size:16px;line-height:1.7}
-
-  .practice-list{margin-top:48px}
-
-  .practice-list>div{display:grid;grid-template-columns:1fr 1fr;gap:100px;border-top:1px solid var(--color-border);padding:25px 0}
-
-  .practice-list h3{font-size:19px;font-weight:500}
-
-  .practice-list p{font-size:16px;line-height:1.7;color:var(--color-text-muted);max-width:540px}
-
-  .personal-project-link{margin-top:26px}
-
-  @media(max-width:1000px){.about-intro h1{font-size:56px}.about-opening,.practice-list>div{gap:48px}.about-opening-copy h2{font-size:32px}.principles{gap:28px}}
-
-  @media(max-width:640px){.about-intro{padding-top:60px;padding-bottom:52px}.about-intro h1{font-size:40px}.about-lede{font-size:17px}.about-opening{grid-template-columns:1fr;gap:32px;margin-top:36px}.about-portrait{width:100%;max-width:360px}.about-opening-copy h2{font-size:31px}.about-opening-copy>p:not(.eyebrow){font-size:16px}.experience-numbers{gap:16px;margin-top:32px;padding-block:28px}.experience-numbers dd{font-size:38px}.experience-numbers dt{font-size:12px;line-height:1.5}.experience-companies{justify-content:flex-start;gap:20px 28px;font-size:15px;margin-top:28px}.principles{grid-template-columns:1fr;gap:28px;margin-top:32px}.principles h3{font-size:23px}.practice-list{margin-top:32px}.practice-list>div{grid-template-columns:1fr;gap:12px;padding-block:22px}.practice-list h3{font-size:18px}.site-footer>div{gap:20px}}
+  @media(max-width:640px){.about-intro{padding-top:60px;padding-bottom:52px}.about-intro h1{font-size:40px}.about-lede{font-size:17px}.about-opening{grid-template-columns:1fr;gap:32px;margin-top:36px}.about-portrait{width:100%;max-width:360px}.about-opening-copy h2{font-size:31px}.about-opening-copy>p:not(.eyebrow){font-size:16px}.experience-numbers{gap:16px;margin-top:32px;padding-block:28px}.experience-numbers dd{font-size:38px}.experience-numbers dt{font-size:12px;line-height:1.5}.experience-companies{justify-content:flex-start;gap:20px 28px;font-size:15px;margin-top:28px}.site-footer>div{gap:20px}}
 
   .experience-companies{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:32px;align-items:center}
 

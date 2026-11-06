@@ -30,17 +30,10 @@
   html .personal-page .experience-numbers dd { font-family: var(--font-sans); }
 
   /* Explicit labels, dates, counters and case styles do not inherit the body font. */
-  html .resume-page .resume-panel h2,
-  html .resume-page .experience-meta p,
-  html .resume-page .experience-item::before,
-  html .testimonial .testimonial-count,
-  html .case-study .early-signals__label,
-  html .conditional-formatting-case,
-  html .case-study .cf-screenshot-pin,
-  html .case-study .ride-screen-pin { font-family: var(--font-sans); }
+  html .resume-page .experience-meta p, html .resume-page .experience-item::before, html .testimonial .testimonial-count, html .case-study .early-signals__label, html .conditional-formatting-case, html .case-study .cf-screenshot-pin, html .case-study .ride-screen-pin { font-family: var(--font-sans); }
 
   /* Keep the hierarchy in size and spacing, with medium rather than bold headings. */
   html body :is(h1, h2, h3, h4) { font-weight: 500; }
 
-  .home-page .intro-impact dt, .personal-page .experience-numbers dd, .resume-page .resume-impact dt, .case-study .impact-grid strong, .case-study .early-signals__grid strong { font-weight: 500; }
+  .home-page .intro-impact dt, .personal-page .experience-numbers dd, .case-study .impact-grid strong, .case-study .early-signals__grid strong { font-weight: 500; }
 }

@@ -32,22 +32,6 @@
 
   .personal-page .about-opening-copy > p:last-child { margin-bottom: 0; }
 
-  .personal-page .about-page .case-chapter { padding: 0 0 80px; }
-
-  .personal-page .chapter-intro { display: block; max-width: 820px; margin-inline: auto; text-align: center; }
-
-  .personal-page .chapter-intro h2 { max-width: none; margin: 12px auto 0; font-size: var(--text-lg); line-height: 1.2; }
-
-  .personal-page .chapter-copy { max-width: 680px; padding: 0; margin: 20px auto 0; text-align: center; }
-
-  .personal-page .chapter-copy p { font-size: 17px; line-height: 1.7; }
-
-  .personal-page .chapter-copy p + p { margin-top: 16px; }
-
-  .personal-page .personal-project-link { margin-top: 24px; }
-
-  .personal-page .text-link:hover { color: var(--color-link); }
-
   .personal-page .experience-panel { margin-top: 40px; padding: 32px; }
 
   .personal-page .experience-numbers { gap: 0; margin: 0; padding: 0 0 32px; border-top: 0; border-bottom: 1px solid var(--color-card-border); }
@@ -70,20 +54,6 @@
 
   :root[data-theme="dark"] .personal-page .experience-companies img { filter: brightness(0) invert(1); opacity: .85; }
 
-  .personal-page .about-page .contact-band { width: min(1060px, calc(100% - 48px)); margin: 0 auto 80px; border: 0; }
-
-  .personal-page .contact-band .contact-layout { width: 100%; padding: 36px; gap: 32px; }
-
-  .personal-page .contact-layout h2 { max-width: 620px; margin: 12px 0 16px; font-size: var(--text-lg); line-height: 1.2; }
-
-  .personal-page .contact-layout p:not(.eyebrow) { font-size: 16px; line-height: 1.65; }
-
-  .personal-page .contact-link { gap: 16px; min-height: 48px; padding: 12px 20px; border: 1px solid var(--color-text); border-radius: 99px; background: var(--color-text); color: var(--color-bg); font-size: 14px; font-weight: 600; }
-
-  .personal-page .contact-link svg { width: 18px; height: 18px; }
-
-  .personal-page .contact-link:hover { color: var(--color-bg); opacity: .86; }
-
   .personal-page .contact-hero { padding-bottom: 52px; border: 0; }
 
   .personal-page .contact-page-section { padding: 40px; }
@@ -105,8 +75,6 @@
   .personal-page .contact-actions .button:is(:hover, :focus-visible) { border-color: var(--color-text-muted); color: var(--color-text); background: var(--color-surface); }
 
   .personal-page .contact-actions .button:focus-visible { outline-color: var(--color-text); }
-
-  
 
   .personal-page .contact-form { gap: 24px; padding: 0 0 0 36px; border: 0; border-left: 1px solid var(--color-card-border); border-radius: 0; background: transparent; }
 
@@ -143,16 +111,14 @@
     .personal-page .about-opening { grid-template-columns: minmax(0, 1fr); margin-top: 36px; padding: 24px; border-radius: 28px; }
     .personal-page .about-portrait { max-width: 420px; margin-inline: auto; }
     .personal-page .about-opening-copy h2 { font-size: 28px; }
-    .personal-page .about-page .case-chapter { padding-bottom: 52px; }
-    .personal-page .chapter-copy p { font-size: 16px; }
+
     .personal-page .experience-panel { padding: 24px; margin-top: 28px; }
     .personal-page .experience-numbers > div { padding: 4px 12px; }
     .personal-page .experience-numbers dd { font-size: 32px; }
     .personal-page .experience-numbers dt { font-size: 12px; }
     .personal-page .experience-companies { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
     .personal-page .experience-companies img { max-width: 110px; }
-    .personal-page .about-page .contact-band { margin-bottom: 52px; }
-    .personal-page .contact-band .contact-layout { padding: 28px; align-items: flex-start; flex-direction: column; gap: 24px; }
+
     .personal-page .contact-hero { padding-bottom: 36px; }
     .personal-page .contact-page-section { padding: 24px; border-radius: 28px; }
     .personal-page .contact-copy h2 { font-size: 26px; }

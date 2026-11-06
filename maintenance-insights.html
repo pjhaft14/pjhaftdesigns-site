@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light"><head><base href="./"><meta charset="utf-8"><script src="theme.js"></script><link rel="stylesheet" href="tokens.css"><link rel="preload" href="assets/fonts/google-sans-flex/latin.woff2" as="font" type="font/woff2" crossorigin><meta name="viewport" content="width=device-width, initial-scale=1"><title>Giving engineers the tools to prevent downtime at Walt Disney World’s Space Mountain | PJ Haft</title><meta name="description" content="From reactive email notifications to component-level evidence and connected maintenance planning. A UX case study by PJ Haft."><link rel="canonical" href="https://www.pjhaftdesigns.com/maintenance-insights"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="case-base.css"><link rel="stylesheet" href="case-components.css"><link rel="stylesheet" href="drafts/maintenance-insights.css?v=20261021-numbered-location"><script src="site-nav.js?v=20261105-phase3" defer></script><link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle"><script src="case-scroll-reveal.js" defer></script><link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels"><script src="case-presentation.js?v=20261011-5" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
+<html lang="en" data-theme="light"><head><base href="./"><meta charset="utf-8"><script src="theme.js"></script><link rel="stylesheet" href="tokens.css"><link rel="preload" href="assets/fonts/google-sans-flex/latin.woff2" as="font" type="font/woff2" crossorigin><meta name="viewport" content="width=device-width, initial-scale=1"><title>Helping engineers catch faults before they cause downtime at Walt Disney World’s Space Mountain | Pejman Haft</title><meta name="description" content="From reactive email notifications to component-level evidence and connected maintenance planning. A UX case study by Pejman Haft."><meta property="og:type" content="article"><meta property="og:site_name" content="Pejman Haft Portfolio"><meta property="og:title" content="Helping engineers catch faults before they cause downtime at Walt Disney World’s Space Mountain | Pejman Haft"><meta property="og:description" content="From reactive email notifications to component-level evidence and connected maintenance planning. A UX case study by Pejman Haft."><meta property="og:url" content="https://www.pjhaftdesigns.com/maintenance-insights"><meta property="og:image" content="https://www.pjhaftdesigns.com/drafts/assets/maintenance-insights/story-1-poster.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Helping engineers catch faults before they cause downtime at Walt Disney World’s Space Mountain | Pejman Haft"><meta name="twitter:image" content="https://www.pjhaftdesigns.com/drafts/assets/maintenance-insights/story-1-poster.jpg"><link rel="canonical" href="https://www.pjhaftdesigns.com/maintenance-insights"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="case-base.css"><link rel="stylesheet" href="case-components.css"><link rel="stylesheet" href="drafts/maintenance-insights.css?v=20261021-numbered-location"><script src="site-nav.js?v=20261105-phase3" defer></script><link rel="stylesheet" href="live-case-theme.css?v=20261008-case-study-refinement"><link rel="stylesheet" href="footer.css"><link rel="stylesheet" href="site-header.css?v=20261008-theme-toggle"><script src="case-scroll-reveal.js" defer></script><link rel="stylesheet" href="case-presentation.css?v=20261103-section-labels"><script src="case-presentation.js?v=20261011-5" defer></script><link rel="stylesheet" href="page-entrance.css?v=20261011-1">
     <script src="case-video-autoplay.js?v=20261017-1" defer></script>
   <link rel="stylesheet" href="portfolio-type.css?v=20261027-font-overrides">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5VQ08BPY3"></script>
@@ -7,7 +7,7 @@
 </head><body>
 <header class="site-header"><a class="brand" href="index.html" aria-label="Pejman Haft home"><img src="assets/favicon.svg" alt="" width="36" height="36"><span>Pejman Haft</span></a><nav aria-label="Main navigation"><a aria-current="location" href="index.html#work">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></nav><div class="header-actions"><button type="button" class="icon-button theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="theme-sky" aria-hidden="true"><span class="theme-sun"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" class="lucide lucide-sun"><use href="assets/icons.svg#sun"></use></svg></span><span class="theme-moon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="moon" class="lucide lucide-moon"><use href="assets/icons.svg#moon"></use></svg></span></span></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" title="Open navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu"><use href="assets/icons.svg#menu"></use></svg></button></div></header>
 <main class="case-study ride-case">
-<section class="case-hero report-builder-hero" aria-labelledby="case-title"><div><p class="eyebrow">Hitachi · Disney ride maintenance</p><h1 id="case-title">Giving engineers the tools to prevent downtime at Walt Disney World’s Space Mountain.</h1><p><strong>Within an hour on site</strong>, one engineer diagnosed an issue, ordered parts, and scheduled a repair for that evening. The Space Mountain pilot served 22 engineers.</p></div><dl class="case-meta case-meta--icon"><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" aria-hidden="true" class="lucide lucide-briefcase"><use href="assets/icons.svg#briefcase"></use></svg>Role</dt><dd>Lead UX designer</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="compass" aria-hidden="true" class="lucide lucide-compass"><use href="assets/icons.svg#compass"></use></svg>Scope</dt><dd>Research, interviews, workflows, experience design</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users"><use href="assets/icons.svg#users"></use></svg>Team</dt><dd>Junior designer supporting production assets</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flag" aria-hidden="true" class="lucide lucide-flag"><use href="assets/icons.svg#flag"></use></svg>Status</dt><dd>Original project reached pilot</dd></div></dl></section>
+<section class="case-hero report-builder-hero" aria-labelledby="case-title"><div><p class="eyebrow">Hitachi · Disney ride maintenance</p><h1 id="case-title">Helping engineers catch faults before they cause downtime at Walt Disney World’s Space Mountain.</h1><p><strong>Within an hour on site</strong>, one engineer diagnosed an issue, requested parts, and scheduled a repair for that evening.</p></div><dl class="case-meta case-meta--icon"><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" aria-hidden="true" class="lucide lucide-briefcase"><use href="assets/icons.svg#briefcase"></use></svg>Role</dt><dd>Lead UX designer, mentoring a junior designer</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="compass" aria-hidden="true" class="lucide lucide-compass"><use href="assets/icons.svg#compass"></use></svg>Scope</dt><dd>Research, interviews, workflows, experience design</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock"><use href="assets/icons.svg#clock"></use></svg>Timeline</dt><dd>6 months</dd></div><div><dt><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flag" aria-hidden="true" class="lucide lucide-flag"><use href="assets/icons.svg#flag"></use></svg>Status</dt><dd>Piloted with 1 engineer · built for a team of 22</dd></div></dl></section>
 
 
 <section class="case-section case-intro" id="problem" aria-labelledby="problem-title">
@@ -16,7 +16,7 @@
     <h2 id="problem-title">Engineers received alerts after ride problems occurred.</h2>
   </div>
   <div class="case-copy">
-    <p>At Space Mountain, an engineer told us the first warning was often an email after a breakdown. With limited sensor coverage, it identified an area of the ride, leaving the engineer to find the faulty component.</p>
+    <p>At Space Mountain, an engineer told us the first warning was often an email after a breakdown. The ride’s existing sensors relayed readings to that email system, but coverage was limited, so the email identified only an area of the ride, leaving the engineer to find the faulty component.</p>
     <p>While the ride was down, the engineer had to locate the fault and contact the parts team by email. Guests waited through the investigation and repair.</p>
 
   </div>
@@ -61,6 +61,7 @@
 <header class="solution-gallery-intro">
   <p class="section-kicker">The solution</p>
   <h2 id="ride-solution-title">From a brake alert to an overnight repair plan.</h2>
+  <p class="ride-nda-note">The screens below are a 1:1 re-creation of the original pilot. Because of an NDA, they don’t show actual ride data.</p>
 </header>
 <article class="flow-story ride-story case-evidence-story">
 <header class="ride-story-copy case-evidence-intro"><p class="section-kicker">Flow 1</p><h3>Review the alert and assess the issue</h3>
@@ -151,61 +152,11 @@
     </dl>
 </div>
 </article>
-<article class="ride-story drawer-explainer case-evidence-story" id="work-request-context">
-<header class="case-evidence-intro">
-    <p class="section-kicker">From evidence to action</p>
-    <h3>Carry the context into the work request</h3>
-    <p>The request opens with the actuator and its evidence already attached.</p>
-
-  </header>
-<div class="case-evidence-card case-evidence-detail">
-<figure class="gallery-figure">
-    <div class="ride-annotated-screen">
-      <img loading="lazy" src="drafts/assets/maintenance-insights/work-request-detail.webp" width="1400" height="1520" alt="Create work request. Numbered markers identify: 1, prefilled component details; 2, attached health evidence; 3, editable work description and notes." aria-describedby="work-request-guide">
-      <span class="ride-screen-pin" style="left:91%;top:18%" aria-hidden="true">1</span>
-      <span class="ride-screen-pin" style="left:91%;top:28.8%" aria-hidden="true">2</span>
-      <span class="ride-screen-pin" style="left:91%;top:40.4%" aria-hidden="true">3</span>
-    </div>
-    <figcaption class="gallery-caption">Prefilled component details and attached evidence reduce the information the engineer needs to re-enter.</figcaption>
-  </figure>
-<dl class="drawer-guide" id="work-request-guide">
-      <div><dt><span class="ride-guide-number">1</span><span>Component details are already there</span></dt><dd>The alert supplies the actuator name, location, and component ID.</dd></div>
-      <div><dt><span class="ride-guide-number">2</span><span>The evidence stays attached</span></dt><dd>The engineer can inspect the readings, normal range, and estimated risk before submitting.</dd></div>
-      <div><dt><span class="ride-guide-number">3</span><span>The engineer defines the work</span></dt><dd>The engineer can edit the proposed work and add inspection notes.</dd></div>
-    </dl>
-</div>
-</article>
-<article class="ride-story drawer-explainer case-evidence-story" id="parts-request-context">
-<header class="case-evidence-intro">
-    <p class="section-kicker">Connected parts coordination</p>
-    <h3>Request the part without starting over</h3>
-    <p>A saved work request is the starting point for ordering parts.</p>
-
-  </header>
-<div class="case-evidence-card case-evidence-detail">
-<figure class="gallery-figure">
-    <div class="ride-annotated-screen">
-      <img loading="lazy" src="drafts/assets/maintenance-insights/parts-request-detail.webp" width="1400" height="1520" alt="Request replacement part. Numbered markers identify: 1, the linked saved work request; 2, suggested replacement part; 3, delivery requirements; 4, availability awaiting confirmation." aria-describedby="parts-request-guide">
-      <span class="ride-screen-pin" style="left:90%;top:15%" aria-hidden="true">1</span>
-      <span class="ride-screen-pin" style="left:90%;top:29%" aria-hidden="true">2</span>
-      <span class="ride-screen-pin" style="left:88%;top:66.2%" aria-hidden="true">3</span>
-      <span class="ride-screen-pin" style="left:90%;top:51.5%" aria-hidden="true">4</span>
-    </div>
-    <figcaption class="gallery-caption">The optional parts step follows the saved work request in the same dialog. The part photo and catalog reference are illustrative.</figcaption>
-  </figure>
-<dl class="drawer-guide" id="parts-request-guide">
-      <div><dt><span class="ride-guide-number">1</span><span>The work request stays linked</span></dt><dd>The engineer can request a part now or return to the saved work request later.</dd></div>
-      <div><dt><span class="ride-guide-number">2</span><span>The suggested part is visible</span></dt><dd>A photo, part name, and catalog reference identify the suggested replacement alongside the affected component.</dd></div>
-      <div><dt><span class="ride-guide-number">3</span><span>Delivery needs are captured</span></dt><dd>Quantity, delivery location, and needed-by time link the order to the overnight window.</dd></div>
-      <div class="ride-guide-pending"><dt><span class="ride-guide-number">4</span><span>Availability stays explicit</span></dt><dd>A <span class="ride-guide-value">pending status</span> shows that compatibility, stock, and delivery timing still need confirmation from the parts team.</dd></div>
-    </dl>
-</div>
-</article>
 </section>
 <section class="case-section case-closing" id="pilot">
-  <div><p class="section-kicker">Results</p><h2>One engineer diagnosed an issue, ordered parts, and scheduled a repair within an hour.</h2></div>
+  <div><p class="section-kicker">Results</p><h2>One engineer diagnosed an issue, requested parts, and scheduled a repair within an hour.</h2></div>
   <div class="case-copy case-test-summary">
-    <p>The pilot served 22 engineers. In the observed visit, the engineer caught a developing fault. Under the previous process, investigation began after the ride had stopped, and arranging the same work could take several hours.</p>
+    <p>Access was limited to one engineer during the pilot, so this result comes from that engineer’s observed visit. The tool was designed for the full 22-person engineering team that would adopt it. In that visit, the engineer caught a developing fault using the ride’s real sensor data, which had previously reached engineers only as email alerts. Under the previous process, investigation began after the ride had stopped, and arranging the same work could take several hours.</p>
   </div>
 </section>
 
@@ -216,9 +167,18 @@
   </div>
   <div class="case-copy">
     <p>Putting the reading, location, and maintenance window together helped the engineer judge whether the issue could wait until evening or needed immediate attention.</p>
+    <p>Working with one engineer meant the risk was designing around one person’s habits. During peak summer season the engineers were stretched thin, and one was all we could get. Next time, I’d push earlier for time with more of them, and test alert urgency and the work-request handoff across shifts before rolling out to the full team of 22.</p>
   </div>
 </section>
-</main><footer class="site-footer site-footer--unified">
+      <nav class="case-next" aria-label="Next case study">
+        <a class="case-next__link" href="clubsphere.html">
+          <span class="case-next__label">Next case study</span>
+          <span class="case-next__title">Connecting a scout’s match notes to a coach’s lineup decisions.</span>
+          <span class="case-next__meta">ClubSphere · Self-initiated · 6 min</span>
+          <span class="case-next__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+      </nav>
+    </main><footer class="site-footer site-footer--unified">
   <span>&copy; 2026 Pejman Haft</span>
   <nav class="footer-links" aria-label="Footer navigation">
     <a href="index.html#work">Work</a>
