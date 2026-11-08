@@ -149,9 +149,12 @@
     /* A smaller portrait keeps the headline and buttons on the first screen. */
     .home-page .intro { padding-top: 40px; }
     .home-page .intro-profile { gap: 20px; }
-    .home-page .intro-portrait { width: min(200px, 60%); border-radius: 22px; }
-    .home-page .intro-actions { gap: 10px; }
-    .home-page .intro-action { padding-inline: 15px; }
+    .home-page .intro-portrait { width: min(200px, 60%); border-radius: 22px; justify-self: center; }
+    /* Center the headline and intro copy under the portrait. */
+    .home-page .intro h1, .home-page .intro-copy { text-align: center; }
+    /* Full-width, equal buttons that line up with the cards below. */
+    .home-page .intro-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .home-page .intro-action { width: 100%; padding-inline: 15px; }
     .home-page .intro-impact { grid-template-columns: 1fr; }
   }
 
