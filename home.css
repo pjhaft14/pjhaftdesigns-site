@@ -111,7 +111,8 @@
 
   .home-page .project-company-logo { display: block; flex: 0 0 24px; width: 24px; height: 24px; border-radius: 6px; object-fit: contain; }
 
-  .home-page .project-meta-separator { color: var(--color-text-muted); }
+  .home-page .project-meta-separator { display: none; }
+  .home-page .project-read-time::before { content: "\2022"; margin-right: 8px; color: var(--color-text-muted); }
 
   .home-page .project h3 { font-size: clamp(19px, 1.5vw, 21px); line-height: 1.3; font-weight: 500; letter-spacing: -.015em; text-wrap: pretty; }
 
