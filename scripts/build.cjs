@@ -51,6 +51,7 @@ function refsInHtml(html) {
 }
 const refsInCss = css => [...css.matchAll(/url\(\s*['"]?([^'")]+)['"]?\s*\)|@import\s+['"]([^'"]+)['"]/g)].map(m => m[1] || m[2]);
 const refsInJs = js => [...js.matchAll(/['"`]((?:\.{0,2}\/)?(?:[\w%-]+\/)*[\w%.-]+\.(?:png|jpe?g|webp|avif|gif|svg|mp4|webm|json|woff2?|pdf|html|css|js))(?:[?#][^'"`]*)?['"`]/g)].map(m => m[1]);
+const inlineScripts = html => [...html.matchAll(/<script\b(?![^>]*\ssrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m => m[1]);
 const refsInSvg = svg => [...svg.matchAll(/\s(?:href|xlink:href)="([^"#][^"]*)"/g)].map(m => m[1]);
 // Paths scripts assemble at runtime, which no static scan can see.
 function dynamicRefs(file, text) {
@@ -70,12 +71,14 @@ while (queue.length) {
   if (!['.html', '.css', '.js', '.svg'].includes(ext)) continue;
   const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
   const refs = ext === '.html' ? refsInHtml(text) : ext === '.css' ? refsInCss(text) : ext === '.js' ? [...refsInJs(text), ...dynamicRefs(file, text)] : refsInSvg(text);
-  for (const ref of refs) {
+  // Inline <script> blocks in pages (e.g. the Report Builder legacy gallery) load files too.
+  const scriptRefs = ext === '.html' ? inlineScripts(text).flatMap(refsInJs) : [];
+  for (const [ref, fromScript] of [...refs.map(r => [r, ext === '.js']), ...scriptRefs.map(r => [r, true])]) {
     const rel = resolveRef(ref, file);
     if (!rel) continue;
     if (exists(rel)) queue.push(rel);
     // Strings in scripts are a heuristic (they may be data, not paths): warn instead of failing.
-    else (ext === '.js' ? warnings : missing).push(`${file} -> ${ref}`);
+    else (fromScript ? warnings : missing).push(`${file} -> ${ref}`);
   }
 }
 if (missing.length) {

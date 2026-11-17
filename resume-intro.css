@@ -58,12 +58,14 @@
     .resume-hero .resume-action:hover { opacity: .86; }
     .resume-hero .resume-links {
       justify-content: center;
+      align-items: center;
       gap: 12px 24px;
       margin-top: 24px;
       font-size: 14px;
       line-height: 1.5;
     }
-    .resume-hero .resume-links a { padding-block: 6px; }
+    .resume-hero .resume-links a,
+    .resume-hero .resume-links span { padding-block: 6px; }
     .resume-hero .resume-links a:hover { color: var(--intro-accent); }
     .resume-hero a:focus-visible { outline-color: var(--intro-accent); }
 
